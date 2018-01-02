@@ -4,6 +4,7 @@
 
 ## net
 - [base](../../../base)
+- [tools](../../../tools)
 - [polipo](../../../polipo)
 - [pptpd](../../../pptpd)
 
