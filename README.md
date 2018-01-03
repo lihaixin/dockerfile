@@ -8,4 +8,12 @@
 - [polipo](../../../polipo)
 - [pptpd](../../../pptpd)
 
+
+speedtest
+
+shadowsocksr
+
+
+shadowsocks
+
 my all docker file
