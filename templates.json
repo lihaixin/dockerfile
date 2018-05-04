@@ -1,0 +1,15 @@
+[
+  {
+    "type": "container",
+    "title": "Registry",
+    "description": "Docker image registry",
+    "categories": ["docker"],
+    "platform": "linux",
+    "logo": "https://portainer.io/images/logos/registry.png",
+    "image": "registry:latest",
+    "ports": [
+      "5000/tcp"
+    ],
+    "volumes": ["/var/lib/registry"]
+  }
+]
