@@ -8,9 +8,10 @@
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/brook.png",
     "image": "lihaixin/brook:latest",
     "ports": [
-      "61089/tcp","61089/udp"
+      "61089/tcp",
+      "61089/udp"
     ],
-    "privileged": true,
+    "privileged": true
   },
   {
     "type": "container",
