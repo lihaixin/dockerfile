@@ -1,7 +1,7 @@
 [
   {
     "type": "container",
-    "title": "Brook",
+    "title": "Brook Server",
     "description": "Brook is a cross-platform proxy software",
     "categories": ["brook"],
     "platform": "linux",
@@ -15,16 +15,26 @@
   },
   {
     "type": "container",
-    "title": "Nginx",
-    "description": "High performance web server",
-    "categories": ["webserver"],
+    "title": "Brook Client",
+    "description": "Brook for Linux Client",
+    "categories": ["brook"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/nginx.png",
-    "image": "nginx:latest",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/brook.png",
+    "image": "lihaixin/brook:client",
     "ports": [
-      "80/tcp",
-      "443/tcp"
-    ],
-    "volumes": ["/etc/nginx", "/usr/share/nginx/html"]
+      "1080/tcp"
+    ]
+  },
+   {
+    "type": "container",
+    "title": "Brook Help",
+    "description": "Brook Client software download and help",
+    "categories": ["brook"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/brook.png",
+    "image": "lihaixin/brook:client",
+    "ports": [
+      "80/tcp"
+    ]
   }
 ]
