@@ -32,7 +32,7 @@
     "categories": ["brook"],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/brook.png",
-    "image": "lihaixin/brook:client",
+    "image": "lihaixin/brook:help",
     "ports": [
       "80/tcp"
     ]
