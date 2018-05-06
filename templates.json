@@ -1,16 +1,16 @@
 [
   {
     "type": "container",
-    "title": "Registry",
-    "description": "Docker image registry",
-    "categories": ["docker"],
+    "title": "Brook",
+    "description": "Brook is a cross-platform proxy software",
+    "categories": ["brook"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/registry.png",
-    "image": "registry:latest",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/brook.png",
+    "image": "lihaixin/brook:latest",
     "ports": [
-      "5000/tcp"
+      "61089/tcp","61089/udp"
     ],
-    "volumes": ["/var/lib/registry"]
+    "privileged": true,
   },
   {
     "type": "container",
