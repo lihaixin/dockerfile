@@ -73,5 +73,17 @@
     "ports": [
       "59028/tcp"
     ]
+  },
+   {
+    "type": "container",
+    "title": "v2ray help",
+    "description": "A Vee Network Solution for client down",
+    "categories": ["v2ray"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ray.png",
+    "image": "lihaixin/v2ray:help",
+    "ports": [
+      "80/tcp"
+    ]
   }
 ]
