@@ -48,5 +48,30 @@
     "ports": [
       "80/tcp"
     ]
+  },
+   {
+    "type": "container",
+    "title": "v2ray server",
+    "description": "A Vee Network Solution server",
+    "categories": ["v2ray"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ray.png",
+    "image": "lihaixin/v2ray",
+    "ports": [
+      "59028/tcp"
+    ],
+    "privileged": true
+  },
+   {
+    "type": "container",
+    "title": "v2ray local",
+    "description": "A Vee Network Solution fro linux client",
+    "categories": ["v2ray"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ray.png",
+    "image": "lihaixin/v2ray:local",
+    "ports": [
+      "59028/tcp"
+    ]
   }
 ]
