@@ -89,8 +89,8 @@
    {
     "type": "container",
     "title": "ylzq",
-    "description": "earn money",
-    "categories": ["v2ray"],
+    "description": "earn money docker run --name=ylzq2_0 -d -e uid=38468 lihaixin/ylzq:v2.0",
+    "categories": ["money"],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/ylzq.png",
     "image": "lihaixin/ylzq:v2.0",
