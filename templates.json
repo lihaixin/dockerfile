@@ -95,11 +95,11 @@
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/ylzq.png",
     "image": "lihaixin/ylzq:v2.0",
     "env": [
-       {
+    {
       "name": "uid",
-      "label": "user id",
+      "label": "uid",
       "set": "38468"
-       }
-     ]
+    }
+  ]
   }
 ]
