@@ -11,7 +11,8 @@
       "61089/tcp",
       "61089/udp"
     ],
-    "privileged": true
+    "privileged": true,
+    "restart_policy": "always"
   },
   {
     "type": "container",
