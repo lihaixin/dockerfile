@@ -58,7 +58,7 @@
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ray.png",
     "image": "lihaixin/v2ray",
     "ports": [
-      "59028/tcp"
+      "1080/tcp"
     ],
     "privileged": true
   },
