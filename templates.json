@@ -103,5 +103,22 @@
       "set": "38468"
     }
   ]
+  },
+   {
+    "type": "container",
+    "title": "softether",
+    "description": "softether server",
+    "categories": ["vpn"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/softether.png",
+    "image": "lihaixin/softether",
+    "ports": [
+      "443/tcp",
+      "1701/udp",
+      "500/udp",
+      "4500/udp"
+    ],
+    "privileged": true,
+    "restart_policy": "always"
   }
 ]
