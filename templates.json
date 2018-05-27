@@ -116,7 +116,10 @@
       "443/tcp",
       "1701/udp",
       "500/udp",
-      "4500/udp"
+      "4500/udp",
+      "1194/udp",
+      "5555/tcp",
+      "992/tcp"
     ],
     "privileged": true,
     "restart_policy": "always"
