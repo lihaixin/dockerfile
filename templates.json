@@ -59,7 +59,8 @@
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ray.png",
     "image": "lihaixin/v2ray",
     "ports": [
-      "59028/tcp"
+      "59028/tcp",
+      "59028/udp"
     ],
     "privileged": true
   },
@@ -72,7 +73,8 @@
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ray.png",
     "image": "lihaixin/v2ray:local",
     "ports": [
-      "1080/tcp"
+      "1080/tcp",
+      "1080/udp"
     ]
   },
    {
