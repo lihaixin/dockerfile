@@ -53,7 +53,7 @@
    {
     "type": "container",
     "title": "v2ray server",
-    "description": "A Vee Network Solution server",
+    "description": "A Vee Network Solution server docker run -d --restart=always --name=59028.v2ray.server -p 59028:59028 -p 59028:59028/udp lihaixin/v2ray",
     "categories": ["v2ray"],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ray.png",
