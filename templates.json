@@ -163,7 +163,7 @@
       "label": "LIMIT_CONN",
       "set": "200"
     }
-  ]
+  ],
     "privileged": true,
     "restart_policy": "always"
   }
