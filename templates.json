@@ -166,5 +166,30 @@
   ],
     "privileged": true,
     "restart_policy": "always"
+  },
+  {
+    "type": "container",
+    "title": "shadowsocks Client",
+    "description": "shadowsocks for Linux Client",
+    "categories": ["shadowsocks"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/brook.png",
+    "image": "lihaixin/shadowsocks:local",
+    "ports": [
+      "1080/tcp",
+      "1080/udp"
+    ]
+  },
+   {
+    "type": "container",
+    "title": "shadowsocks Help",
+    "description": "shadowsocks Client software download and help",
+    "categories": ["shadowsocks"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/brook.png",
+    "image": "lihaixin/shadowsocks:help",
+    "ports": [
+      "80/tcp"
+    ]
   }
 ]
