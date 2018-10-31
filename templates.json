@@ -139,5 +139,32 @@
     "ports": [
       "8787/tcp"
     ]
+  },
+  {
+    "type": "container",
+    "title": "shadowsocks Server",
+    "description": "shadowsocks is a cross-platform proxy software",
+    "categories": ["shadowsocks"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/Shadowsocks.png",
+    "image": "lihaixin/shadowsocks:serverlimit",
+    "ports": [
+      "61080/tcp",
+      "61080/udp"
+    ],
+     "env": [
+    {
+      "name": "RATE",
+      "label": "RATE",
+      "set": "200mbit"
+    },
+     {
+      "name": "LIMIT_CONN",
+      "label": "LIMIT_CONN",
+      "set": "200"
+    }
+  ]
+    "privileged": true,
+    "restart_policy": "always"
   }
 ]
