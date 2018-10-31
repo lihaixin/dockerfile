@@ -173,7 +173,7 @@
     "description": "shadowsocks for Linux Client",
     "categories": ["shadowsocks"],
     "platform": "linux",
-    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/brook.png",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/Shadowsocks.png",
     "image": "lihaixin/shadowsocks:local",
     "ports": [
       "1080/tcp",
@@ -186,7 +186,7 @@
     "description": "shadowsocks Client software download and help",
     "categories": ["shadowsocks"],
     "platform": "linux",
-    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/brook.png",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/Shadowsocks.png",
     "image": "lihaixin/shadowsocks:help",
     "ports": [
       "80/tcp"
