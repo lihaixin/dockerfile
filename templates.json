@@ -147,7 +147,7 @@
     "categories": ["shadowsocks"],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/Shadowsocks.png",
-    "image": "lihaixin/shadowsocks:serverlimit",
+    "image": "lihaixin/shadowsocks:limit",
     "ports": [
       "61080/tcp",
       "61080/udp"
