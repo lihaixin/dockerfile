@@ -92,6 +92,18 @@
   },
    {
     "type": "container",
+    "title": "v2ray URL",
+    "description": "v2ray and ss url ",
+    "categories": ["v2ray"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ray.png",
+    "image": "lihaixin/v2ray:url",
+    "ports": [
+      "80/tcp"
+    ]
+  },
+   {
+    "type": "container",
     "title": "ylzq",
     "description": "earn money docker run --name=ylzq2_0 -d -e uid=38468 lihaixin/ylzq:v2.0",
     "categories": ["money"],
