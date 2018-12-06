@@ -204,5 +204,17 @@
     "ports": [
       "80/tcp"
     ]
+  },
+   {
+    "type": "container",
+    "title": "MT proxy",
+    "description": "Telegram Messenger MTProto zero-configuration proxy server",
+    "categories": ["proxy"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/mtproxy.png",
+    "image": "telegrammessenger/proxy:latest",
+    "ports": [
+      "443/tcp"
+    ]
   }
 ]
