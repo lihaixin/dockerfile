@@ -233,7 +233,7 @@
    {
     "type": "container",
     "title": "trojan socks5 proxy",
-    "description": "trojan socks5 proxy server",
+    "description": "trojan socks5 proxy client",
     "categories": ["proxy"],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/mtproxy.png",
