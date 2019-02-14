@@ -223,7 +223,7 @@
     "description": "trojan socks5 proxy server",
     "categories": ["proxy"],
     "platform": "linux",
-    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/mtproxy.png",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/trojan.png",
     "image": "lihaixin/trojan:server1.8.1",
     "ports": [
       "443/tcp"
@@ -236,7 +236,7 @@
     "description": "trojan socks5 proxy client",
     "categories": ["proxy"],
     "platform": "linux",
-    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/mtproxy.png",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/trojan.png",
     "image": "lihaixin/trojan:client1.8.1",
     "ports": [
       "1080/tcp"
