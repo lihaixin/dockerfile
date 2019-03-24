@@ -264,7 +264,7 @@
     "categories": ["file"],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/h5ai.png",
-    "image": "lihaixin/h5ai",
+    "image": "lihaixin/h5ai:auth",
     "ports": [
       "80/tcp"
     ],
