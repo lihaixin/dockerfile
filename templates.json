@@ -257,6 +257,32 @@
     "restart_policy": "always",
      "volumes": ["/share"]
   },
+  {
+    "type": "container",
+    "title": "h5ai auth",
+    "description": "h5ai file indexer for HTTP web servers",
+    "categories": ["file"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/h5ai.png",
+    "image": "lihaixin/h5ai",
+    "ports": [
+      "80/tcp"
+    ],
+     "env": [
+    {
+      "name": "USER",
+      "label": "USER",
+      "set": "test"
+    },
+     {
+      "name": "PASSWD",
+      "label": "PASSWD",
+      "set": "test"
+    }
+   ],
+    "restart_policy": "always",
+     "volumes": ["/share"]
+  },
    {
     "type": "container",
     "title": "verysync",
