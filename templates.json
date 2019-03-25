@@ -297,5 +297,21 @@
     ],
     "restart_policy": "always",
     "volumes": ["/mnt", "/verysync"]
+  },
+   {
+    "type": "container",
+    "title": "transmission",
+    "description": "bt transmissio web ui",
+    "categories": ["file"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/transmission.png",
+    "image": "lihaixin/transmission",
+    "ports": [
+      "9091/tcp",
+      "51413/tcp",
+      "51413/udp"
+    ],
+    "restart_policy": "always",
+    "volumes": ["/config", "/downloads","/watch"]
   }
 ]
