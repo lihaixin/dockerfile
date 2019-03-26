@@ -1,4 +1,15 @@
-[
+[{
+    "type": "container",
+    "title": "webssh2",
+    "description": "Web SSH Client using WebSSH2",
+    "categories": ["tools"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/webssh2.png",
+    "image": "lihaixin/webssh2:latest",
+    "ports": [
+      "2222/tcp"
+    ]
+  },
   {
     "type": "container",
     "title": "Brook Server",
