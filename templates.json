@@ -26,12 +26,12 @@
     {
       "name": "PGID",
       "label": "PGID",
-      "set": '$(id -g)'
+      "set": "0"
     },
     {
       "name": "PUID",
       "label": "PUID",
-      "set": '$(id -u)'
+      "set": "0"
     }
    ],
     "restart_policy": "always"
