@@ -330,7 +330,9 @@
     "image": "lihaixin/verysync",
     "ports": [
       "8886/tcp",
-      "22330/tcp"
+      "22330/tcp",
+      "22027/udp",
+      "22037/udp"
     ],
     "restart_policy": "always",
     "volumes": ["/mnt", "/verysync"]
