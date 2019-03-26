@@ -22,6 +22,18 @@
       "1999/tcp"
     ],
     "volumes": ["/defaults", "/root/Downloads"],
+    "env": [
+    {
+      "name": "PGID",
+      "label": "PGID",
+      "set": "$(id -g)"
+    },
+    {
+      "name": "PUID",
+      "label": "PUID",
+      "set": "$(id -u)"
+    }
+   ],
     "restart_policy": "always"
   },
   {
