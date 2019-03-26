@@ -10,6 +10,20 @@
       "2222/tcp"
     ]
   },
+ {
+    "type": "container",
+    "title": "baidupcs",
+    "description": "baidupcs in docker",
+    "categories": ["file"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/baidupcs.png",
+    "image": "lihaixin/baidupcs",
+    "ports": [
+      "1999/tcp"
+    ],
+    "volumes": ["/defaults", "/root/Downloads"],
+    "restart_policy": "always"
+  },
   {
     "type": "container",
     "title": "Brook Server",
