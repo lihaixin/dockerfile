@@ -95,7 +95,7 @@
     "categories": ["v2ray"],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ray.png",
-    "image": "lihaixin/v2ray",
+    "image": "lihaixin/v2ray:4.18",
     "ports": [
       "59028/tcp",
       "59028/udp"
@@ -109,10 +109,12 @@
     "categories": ["v2ray"],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ray.png",
-    "image": "lihaixin/v2ray:local",
+    "image": "lihaixin/v2ray:4.18L",
     "ports": [
       "1080/tcp",
-      "1080/udp"
+      "1080/udp",
+      "8080/tcp",
+      "8080/udp"
     ]
   },
    {
