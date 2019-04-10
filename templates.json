@@ -368,7 +368,12 @@
       "name": "TZ",
       "label": "TZ",
       "set": "Asia/Chongqing"
-    }
+    },
+    {
+      "name": "WEBPASSWORD",
+      "label": "WEBPASSWORD",
+      "set": "pihole"
+    }     
    ],
     "ports": [
       "53/tcp",
