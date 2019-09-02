@@ -230,7 +230,7 @@
     "ports": [
       "61080/tcp",
       "61080/udp",
-      "61180/tcp"
+      "61180/udp"
     ],
      "restart_policy": "always"
   },
