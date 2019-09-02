@@ -221,6 +221,21 @@
   },
   {
     "type": "container",
+    "title": "shadowsocks Server and kcptun",
+    "description": "shadowsocks is a cross-platform proxy software and use kcptun",
+    "categories": ["shadowsocks"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/Shadowsocks.png",
+    "image": "lihaixin/shadowsocks:serverkcp",
+    "ports": [
+      "61080/tcp",
+      "61080/udp",
+      "61180/tcp"
+    ],
+     "restart_policy": "always"
+  },
+  {
+    "type": "container",
     "title": "shadowsocks Client",
     "description": "shadowsocks for Linux Client",
     "categories": ["shadowsocks"],
