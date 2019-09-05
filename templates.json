@@ -413,4 +413,52 @@
     "restart_policy": "always",
     "volumes": ["/etc/pihole/","/etc/dnsmasq.d/"]
   }
+],
+ {
+    "type": "container",
+    "title": "frps",
+    "description": "FRP内网穿透服务器",
+    "categories": ["tools"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/frp.png",
+    "image": "lihaixin/frp:latest",
+    "env": [
+    {
+      "name": "DASHBOARD_PWD",
+      "label": "DASHBOARD_PWD",
+      "set": "password"
+    },
+    {
+      "name": "TOKEN",
+      "label": "TOKEN",
+      "set": "12345678"
+    },
+    {
+      "name": "ALLOW_PORTS",
+      "label": "ALLOW_PORTS",
+      "set": "10000-10002"
+    },
+    {
+      "name": "MAX_POOL_COUNT",
+      "label": "MAX_POOL_COUNT",
+      "set": "10"
+    },
+    {
+      "name": "SUBDOMAIN_HOST",
+      "label": "SUBDOMAIN_HOST",
+      "set": "frps.com"
+    }  
+   ],
+    "ports": [
+      "10000-10002/tcp",
+      "10000-10002/udp",
+      "80/tcp",
+      "443/udp",
+      "7000/udp",
+      "7000/tcp",
+      "7001/udp",
+      "7500/tcp"
+    ],
+    "restart_policy": "always"
+  }
 ]
