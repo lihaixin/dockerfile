@@ -413,7 +413,7 @@
     "restart_policy": "always",
     "volumes": ["/etc/pihole/","/etc/dnsmasq.d/"]
   },
- {
+  {
     "type": "container",
     "title": "frps",
     "description": "FRP内网穿透服务器",
