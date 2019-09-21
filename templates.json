@@ -151,6 +151,7 @@
     "restart_policy": "always",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ray.png",
     "image": "lihaixin/v2ray:kcp",
+    "privileged": true,
     "ports": [
       "59028/udp"
     ]
