@@ -142,6 +142,19 @@
       "80/tcp"
     ]
   },
+  {
+    "type": "container",
+    "title": "v2ray kcp",
+    "description": "v2ray use mkcp ",
+    "categories": ["v2ray"],
+    "platform": "linux",
+    "restart_policy": "always",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ray.png",
+    "image": "lihaixin/v2ray:kcp",
+    "ports": [
+      "59028/udp"
+    ]
+  },
    {
     "type": "container",
     "title": "ylzq",
