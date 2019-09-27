@@ -17,7 +17,7 @@
     "categories": ["tools"],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/tinyportmapper.png",
-    "image": "lihaixin/webssh2:latest",
+    "image": "lihaixin/tinyportmapper:latest",
     "ports": [
       "5001/tcp",
       "5001/udp"
