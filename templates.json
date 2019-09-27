@@ -20,7 +20,7 @@
     "image": "lihaixin/webssh2:latest",
     "ports": [
       "5001/tcp",
-      "5001/udp",
+      "5001/udp"
     ]
   },
  {
