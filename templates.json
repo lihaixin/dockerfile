@@ -262,12 +262,12 @@
   },
   {
     "type": "container",
-    "title": "shadowsocks Server and kcptun",
+    "title": "shadowsocks Server and kcptun udpspeed and udp2raw",
     "description": "shadowsocks is a cross-platform proxy software and use kcptun",
     "categories": ["shadowsocks"],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/Shadowsocks.png",
-    "image": "lihaixin/shadowsocks:serverkcp",
+    "image": "lihaixin/shadowsocks:udp",
     "ports": [
       "61080/tcp",
       "61080/udp",
