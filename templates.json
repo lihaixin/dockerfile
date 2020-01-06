@@ -465,5 +465,20 @@
       "7500/tcp"
     ],
     "restart_policy": "always"
+  },
+  {
+    "type": "container",
+    "title": "nps-docker",
+    "description": "NPS内网穿透服务器",
+    "categories": ["tools"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/nps.png",
+    "image": "lihaixin/nps:0.25.3",
+    "ports": [
+      "80/tcp",
+      "443/tcp",
+      "8024/tcp"
+    ],
+    "restart_policy": "always"
   }
 ]
