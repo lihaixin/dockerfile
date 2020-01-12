@@ -81,7 +81,7 @@
     "type": "container",
     "title": "Brook Help",
     "description": "Brook Client software download and help",
-    "categories": ["brook"],
+    "categories": ["brook"],ehang-io/nps/releases
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/brook.png",
     "image": "lihaixin/brook:help",
@@ -459,10 +459,8 @@
       "10002/udp",
       "80/tcp",
       "443/tcp",
-      "7000/udp",
-      "7000/tcp",
-      "7001/udp",
-      "7500/tcp"
+      "80/udp",
+      "443/udp"
     ],
     "restart_policy": "always"
   },
@@ -473,7 +471,7 @@
     "categories": ["tools"],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/nps.png",
-    "image": "lihaixin/nps:0.25.3",
+    "image": "lihaixin/nps:latest",
     "ports": [
       "80/tcp",
       "443/tcp",
