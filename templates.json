@@ -458,8 +458,8 @@
       "10002/tcp",
       "10002/udp",
       "80/tcp",
-      "443/tcp",
       "80/udp",
+      "443/tcp",
       "443/udp"
     ],
     "restart_policy": "always"
