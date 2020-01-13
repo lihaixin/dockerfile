@@ -81,7 +81,7 @@
     "type": "container",
     "title": "Brook Help",
     "description": "Brook Client software download and help",
-    "categories": ["brook"],ehang-io/nps/releases
+    "categories": ["brook"],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/brook.png",
     "image": "lihaixin/brook:help",
