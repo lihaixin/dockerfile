@@ -471,7 +471,7 @@
     "categories": ["tools"],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/nps.png",
-    "image": "lihaixin/nps:latest",
+    "image": "lihaixin/nps-docker:latest",
     "ports": [
       "80/tcp",
       "443/tcp",
