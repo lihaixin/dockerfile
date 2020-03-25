@@ -333,7 +333,7 @@
     "categories": ["proxy"],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/trojan.png",
-    "image": "lihaixin/trojan:server1.8.1",
+    "image": "lihaixin/trojan",
     "ports": [
       "443/tcp"
     ],
@@ -346,7 +346,7 @@
     "categories": ["proxy"],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/trojan.png",
-    "image": "lihaixin/trojan:client1.8.1",
+    "image": "lihaixin/trojan:client",
     "ports": [
       "1080/tcp"
     ],
