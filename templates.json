@@ -120,7 +120,8 @@
     "categories": ["tools"],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/ttyd.png",
-    "image": "lihaixin/toolbox"
+    "image": "lihaixin/toolbox",
+    "network": "host"
   },
    {
     "type": "container",
