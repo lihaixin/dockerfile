@@ -476,6 +476,37 @@
     ],
     "restart_policy": "always"
   },
+ {
+    "type": "container",
+    "title": "dnsmasq",
+    "description": "dnsmasq with a web UI ",
+    "categories": ["tools"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/dnsmasq.jpeg",
+    "image": "jpillora/dnsmasq",
+    "ports": [
+      "53/udp",
+      "5380/tcp"
+    ],
+     "env": [
+    {
+      "name": "HTTP_USER",
+      "label": "HTTP_USER",
+      "set": "foo"
+    },
+     {
+      "name": "HTTP_PASS",
+      "label": "HTTP_PASS",
+      "set": "bar"
+    },
+     {
+      "name": "PORT",
+      "label": "PORT",
+      "set": "5380"
+    }
+   ],
+    "restart_policy": "always"
+  },
   {
     "type": "container",
     "title": "nps-docker",
