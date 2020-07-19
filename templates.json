@@ -108,7 +108,7 @@
     "categories": ["tools"],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/ttyd.png",
-    "image": "tsl0922/ttyd:alpine",
+    "image": "lihaixin/ttyd",
     "ports": [
       "7681/tcp"
     ]
