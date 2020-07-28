@@ -237,7 +237,6 @@
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/chromium.png",
     "image": "lihaixin/chromium:latest",
     "volumes": ["/root/Downloads"],
-    "shm-size": "2g",
     "ports": [
       "8787/tcp"
     ]
@@ -250,7 +249,6 @@
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/chromium.png",
     "image": "lihaixin/chromium:s5",
-    "shm-size": "2g",
     "volumes": ["/root/Downloads"],
     "ports": [
       "8787/tcp"
