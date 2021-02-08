@@ -544,5 +544,19 @@
       "8024/tcp"
     ],
     "restart_policy": "always"
+  },
+  {
+    "type": "container",
+    "title": "Next Terminal",
+    "description": "HTML5的远程桌面网关",
+    "categories": ["tools"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/next-terminal.png",
+    "image": "dushixiang/next-terminal:latest",
+    "ports": [
+      "8088/tcp"
+    ],
+    "restart_policy": "always",
+    "volumes": ["next-terminal","/usr/local/next-terminal/"]
   }
 ]
