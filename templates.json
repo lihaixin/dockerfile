@@ -60,7 +60,7 @@
     "ports": [
       "61089/tcp",
       "61089/udp"
-    ],
+    ],next-terminal:
     "privileged": true,
     "restart_policy": "always"
   },
@@ -557,6 +557,6 @@
       "8088/tcp"
     ],
     "restart_policy": "always",
-    "volumes": ["next-terminal:/usr/local/next-terminal/"]
+    "volumes": ["/usr/local/next-terminal/"]
   }
 ]
