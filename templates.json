@@ -557,6 +557,6 @@
       "8088/tcp"
     ],
     "restart_policy": "always",
-    "volumes": ["next-terminal","/usr/local/next-terminal/"]
+    "volumes": ["/usr/local/next-terminal/"]
   }
 ]
