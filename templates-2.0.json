@@ -117,7 +117,7 @@
 				}]
   			},
   			{
-    			"type": "container",
+    			"type": 1,
     			"title": "h5ai auth",
     			"description": "h5ai file indexer for HTTP web servers",
     			"categories": ["file"],
