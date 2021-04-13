@@ -363,6 +363,29 @@
       				"80/tcp"
     				]
   			},
+		      	{
+    			"type": 1,
+    			"title": "xray",
+    			"description": "xray server",
+    			"categories": ["v2ray"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
+    			"image": "lihaixin/xray",
+			"net": "host",
+			"volumes": {
+      				"container": "/etc/xray/cert"
+    				},
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "DOMAIN",
+      				"set": "xray.youdomain.com"
+    				},
+		     		{
+      				"name": "PASSWORD",
+      				"label": "PASSWORD",
+      				"set": "88888888"
+    				}]
+  			},
    			{
     			"type": 1,
     			"title": "trojan socks5 proxy",
@@ -371,10 +394,10 @@
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/trojan.png",
     			"image": "lihaixin/trojan",
-    			"ports": [
-      				"443/tcp"
-    				],
     			"restart_policy": "always"
+			"ports": [
+      				"443/tcp"
+    				]
   			},
    			{
     			"type": 1,
