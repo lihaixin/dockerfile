@@ -112,7 +112,9 @@
       				"80/tcp"
     				],
     			"restart_policy": "always",
-     			"volumes": ["/share"]
+     			"volumes": [{
+				"container": "/share"
+				}]
   			},
   			{
     			"type": "container",
@@ -136,7 +138,9 @@
       				"set": "test"
     				}],
     			"restart_policy": "always",
-     			"volumes": ["/share"]
+     			"volumes": [{
+				"container": "/share"
+				}]
   			}
 	]
 }
