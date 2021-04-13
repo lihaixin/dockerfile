@@ -162,7 +162,7 @@
 				},
 				{
 				"container": "/verysync"
-				}],
+				}]
   			},
    			{
     			"type": 1,
@@ -177,7 +177,6 @@
       				"51413/tcp",
       				"51413/udp"
     				],
-    			"restart_policy": "always",
 			"restart_policy": "always",
 			"volumes": [{
 				"container": "/config"
