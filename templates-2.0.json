@@ -58,7 +58,7 @@
 				"container": "/usr/local/next-terminal"
 			},
  			{
-    			"type": "container",
+    			"type": 1,
     			"title": "tinyportmapper",
     			"description": "TCP UDP端口转发",
     			"categories": ["tools"],
@@ -71,7 +71,7 @@
     				]
 			},
  			{
-    			"type": "container",
+    			"type": 1,
     			"title": "baidupcs",
     			"description": "不限速百度云客户端",
     			"categories": ["file"],
