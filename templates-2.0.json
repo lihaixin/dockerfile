@@ -371,7 +371,7 @@
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/trojan.png",
     			"image": "lihaixin/trojan",
-    			"restart_policy": "always"
+    			"restart_policy": "always",
 			"ports": [
       				"443/tcp"
     				]
