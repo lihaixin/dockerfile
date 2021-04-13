@@ -371,7 +371,7 @@
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
     			"image": "lihaixin/xray",
-			"net": "host",
+			"network": "host",
 			"volumes": {
       				"container": "/etc/xray/cert"
     				},
