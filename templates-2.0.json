@@ -594,7 +594,8 @@
       				"name": "PASSWORD",
       				"label": "PASSWORD",
       				"set": "88888888"
-    				}]
+    				}],
+			"restart_policy": "always"
 			}
 	]
 }
