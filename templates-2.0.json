@@ -56,6 +56,7 @@
     				],
 			"volumes": [{
 				"container": "/usr/local/next-terminal"
+				}]
 			},
  			{
     			"type": 1,
@@ -81,7 +82,12 @@
     			"ports": [
       				"1999/tcp"
     				],
-    			"volumes": ["/defaults", "/root/Downloads"],
+    			"volumes": [{
+				"container": "/defaults"
+				},
+				{
+				"container": "/root/Downloads"
+				}],
     			"env": [{
       					"name": "PGID",
       					"label": "PGID",
