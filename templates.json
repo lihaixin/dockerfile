@@ -60,7 +60,7 @@
     "ports": [
       "61089/tcp",
       "61089/udp"
-    ],next-terminal:
+    ],
     "privileged": true,
     "restart_policy": "always"
   },
