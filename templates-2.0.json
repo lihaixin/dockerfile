@@ -137,7 +137,7 @@
     				}],
     			"restart_policy": "always",
      			"volumes": ["/share"]
-  			},
+  			}
 	]
 }
                 
