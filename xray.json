@@ -20,7 +20,7 @@
 				"description": "Password used by the MySQL root user."
 			}]
 		},
-		      {
+		{
     			"type": 1,
     			"title": "xray",
     			"description": "xray server",
@@ -35,13 +35,13 @@
 			"env": [{
       				"name": "DOMAIN",
       				"label": "DOMAIN",
-      				"set": "xray.youdomain.com"
+      				"default": "xray.youdomain.com"
     				},
 		     		{
       				"name": "PASSWORD",
       				"label": "PASSWORD",
-      				"set": "88888888"
+      				"default": "88888888"
     				}]
-  			}
+  		}
 	 ]
 }
