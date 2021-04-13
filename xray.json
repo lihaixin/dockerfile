@@ -8,11 +8,11 @@
     		"platform": "linux",
     		"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
     		"image": "lihaixin/xray",
-		"network": "host",
-		"volumes": {
+		    "network": "host",
+		    "volumes": {
       			container": "/etc/xray/cert"
     			},
-		"env": [{
+		    "env": [{
       			"name": "DOMAIN",
       			"label": "DOMAIN",
       			"set": "xray.youdomain.com"
@@ -22,8 +22,8 @@
       			"label": "PASSWORD",
       			"set": "88888888"
     			}]
-  		},
-		{
+  		    },
+		    {
     		"type": 3,
     		"title": "xray",
     		"description": "xray server",
@@ -31,11 +31,11 @@
     		"platform": "linux",
     		"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
     		"image": "lihaixin/xray",
-		"repository": {
-			"url": "https://github.com/lihaixin/dockerfile",
-			"stackfile": "stacks/xray.yml"
-			},
-		"env": [{
+		    "repository": {
+			    "url": "https://github.com/lihaixin/dockerfile",
+			    "stackfile": "stacks/xray.yml"
+			    },
+		    env": [{
       			"name": "DOMAIN",
       			"label": "DOMAIN",
       			"set": "xray.youdomain.com"
