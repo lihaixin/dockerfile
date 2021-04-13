@@ -1,29 +1,28 @@
 {
 	"version": "2",
-	"templates": [
-    {
-    			"type": 1,
-    			"title": "xray",
-    			"description": "xray server",
-    			"categories": ["v2ray"],
-    			"platform": "linux",
-    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
-    			"image": "lihaixin/xray",
-			    "network": "host",
-			    "volumes": {
-      				"container": "/etc/xray/cert"
-    				},
-			    "env": [{
-      				"name": "DOMAIN",
-      				"label": "DOMAIN",
-      				"set": "xray.youdomain.com"
-    				},
-		     		{
-      				"name": "PASSWORD",
-      				"label": "PASSWORD",
-      				"set": "88888888"
-    				}]
-  	},
+	"templates": [{
+		"type": 1,
+    		"title": "xray",
+    		"description": "xray server",
+    		"categories": ["v2ray"],
+    		"platform": "linux",
+    		"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
+    		"image": "lihaixin/xray",
+		"network": "host",
+		"volumes": {
+      			container": "/etc/xray/cert"
+    			},
+		"env": [{
+      			"name": "DOMAIN",
+      			"label": "DOMAIN",
+      			"set": "xray.youdomain.com"
+    			},
+		     	{
+      			"name": "PASSWORD",
+      			"label": "PASSWORD",
+      			"set": "88888888"
+    			}]
+  		},
 		{
     			"type": 3,
     			"title": "xray",
@@ -32,20 +31,20 @@
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
     			"image": "lihaixin/xray",
-			    "repository": {
-				    "url": "https://github.com/lihaixin/dockerfile",
-				    "stackfile": "stacks/xray.yml"
-			    },
-			    "env": [{
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/xray.yml"
+				},
+			"env": [{
       				"name": "DOMAIN",
       				"label": "DOMAIN",
       				"set": "xray.youdomain.com"
-    				    },
-		     		    {
+    				},
+		     		{
       				"name": "PASSWORD",
       				"label": "PASSWORD",
       				"set": "88888888"
-    				    }]
-  	}    
+    				 }]
+  		}    
  	]
 }
