@@ -31,17 +31,7 @@
   			"ports": ["8080:80/tcp", "443/tcp"]
 			"volumes": {
       				"container": "/etc/xray/cert"
-    				},
-			"env": [{
-      				"name": "DOMAIN",
-      				"label": "DOMAIN",
-      				"default": "xray.youdomain.com"
-    				},
-		     		{
-      				"name": "PASSWORD",
-      				"label": "PASSWORD",
-      				"default": "88888888"
-    				}]
+    				}
   		}
 	 ]
 }
