@@ -488,7 +488,39 @@
     			"ports": [
       				"8787/tcp"
     				]
- 			 }
+ 			 },
+		       	{
+    			"type": "container",
+    			"title": "pihole",
+    			"description": "DNS缓存和互联网广告黑洞",
+    			"categories": ["tools"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/pihole.png",
+    			"image": "pihole/pihole:latest",
+    			"env": [{
+      				"name": "TZ",
+      				"label": "TZ",
+      				"set": "Asia/Chongqing"
+    				},
+    				{
+      				"name": "WEBPASSWORD",
+      				"label": "WEBPASSWORD",
+      				"set": "pihole"
+    				}],
+    			"ports": [
+      				"53/tcp",
+      				"53/udp",
+      				"80/tcp",
+      				"443/tcp"
+    				],
+    			"restart_policy": "always",
+			"volumes": [{
+				"container": "/etc/pihole/"
+				},
+				{
+				"container": "/watch"
+				}]
+  			}
 		      	
 	]
 }
