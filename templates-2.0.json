@@ -141,6 +141,212 @@
      			"volumes": [{
 				"container": "/share"
 				}]
+  			},
+   			{
+    			"type": 1,
+    			"title": "verysync",
+    			"description": "file sync uses verysync",
+    			"categories": ["file"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/verysync.png",
+    			"image": "lihaixin/verysync",
+    			"ports": [
+      				"8886/tcp",
+      				"22330/tcp",
+      				"22027/udp",
+      				"22037/udp"
+    				],
+    			"restart_policy": "always",
+			"volumes": [{
+				"container": "/mnt"
+				},
+				{
+				"container": "/verysync"
+				}],
+  			},
+   			{
+    			"type": 1,
+    			"title": "transmission",
+    			"description": "bt transmissio web ui",
+    			"categories": ["file"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/transmission.png",
+    			"image": "lihaixin/transmission",
+    			"ports": [
+      				"9091/tcp",
+      				"51413/tcp",
+      				"51413/udp"
+    				],
+    			"restart_policy": "always",
+			"restart_policy": "always",
+			"volumes": [{
+				"container": "/config"
+				},
+				{
+				"container": "/downloads"
+				}
+				{
+				"container": "/watch"
+				}],
+  			},
+  			{
+    			"type": 1,
+    			"title": "Brook Client",
+    			"description": "Brook for Linux Client",
+    			"categories": ["brook"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/brook.png",
+    			"image": "lihaixin/brook:client",
+    			"ports": [
+      				"1080/tcp",
+      				"1080/udp"
+    				]
+ 			 },
+   			{
+    			"type": 1,
+    			"title": "Brook Help",
+    			"description": "Brook Client software download and help",
+    			"categories": ["brook"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/brook.png",
+    			"image": "lihaixin/brook:help",
+    			"ports": [
+      				"80/tcp"
+    				]
+  			},
+   			{
+    			"type": 1,
+    			"title": "v2ray server",
+    			"description": "A Vee Network Solution server docker run -d --restart=always --name=59028.v2ray.server -p 59028:59028 -p 59028:59028/udp lihaixin/v2ray",
+    			"categories": ["v2ray"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ray.png",
+    			"image": "lihaixin/v2ray",
+    			"ports": [
+      				"59028/tcp",
+      				"59028/udp"
+    				],
+    			"privileged": true
+  			},
+   			{
+    			"type": 1,
+    			"title": "v2ray local",
+    			"description": "A Vee Network Solution fro linux client",
+    			"categories": ["v2ray"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ray.png",
+    			"image": "lihaixin/v2ray:L",
+    			"ports": [
+      				"1080/tcp",
+      				"1080/udp",
+      				"8080/tcp",
+      				"8080/udp"
+    				]
+  			},
+   			{
+    			"type": 1,
+    			"title": "v2ray help",
+    			"description": "A Vee Network Solution for client down",
+    			"categories": ["v2ray"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ray.png",
+    			"image": "lihaixin/v2ray:help",
+    			"ports": [
+      				"80/tcp"
+    				]
+ 			 },
+   			{
+    			"type": 1,
+    			"title": "v2ray URL",
+    			"description": "v2ray and ss url ",
+    			"categories": ["v2ray"],
+    			"platform": "linux",
+    			"restart_policy": "always",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ray.png",
+    			"image": "lihaixin/v2ray:url",
+    			"ports": [
+      				"80/tcp"
+    				]
+  			}{
+    			"type": 1,
+    			"title": "shadowsocks Server limit",
+    			"description": "shadowsocks is a cross-platform proxy software",
+    			"categories": ["shadowsocks"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/Shadowsocks.png",
+    			"image": "lihaixin/shadowsocks:limit",
+    			"ports": [
+      				"61080/tcp",
+      				"61080/udp"
+    				],
+     			"env": [{
+      				"name": "RATE",
+      				"label": "RATE",
+      				"set": "200mbit"
+    				},
+     				{
+      				"name": "LIMIT_CONN",
+      				"label": "LIMIT_CONN",
+      				"set": "200"
+    				}],
+   			"privileged": true,
+    			"restart_policy": "always"
+  			},
+ 			{
+    			"type": 1,
+    			"title": "shadowsocks Server ",
+    			"description": "shadowsocks is a cross-platform proxy software",
+    			"categories": ["shadowsocks"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/Shadowsocks.png",
+    			"image": "lihaixin/shadowsocks:server",
+    			"ports": [
+      				"61080/tcp",
+      				"61080/udp"
+    				],
+    			"restart_policy": "always"
+  			},
+  			{
+    			"type": 1,
+    			"title": "shadowsocks Server and kcptun udpspeed and udp2raw",
+    			"description": "shadowsocks is a cross-platform proxy software and use kcptun",
+    			"categories": ["shadowsocks"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/Shadowsocks.png",
+    			"image": "lihaixin/shadowsocks:udp",
+    			"ports": [
+      				"61080/tcp",
+      				"61080/udp",
+      				"61180/tcp",
+      				"61180/udp"
+    				],
+     			"privileged": true,
+     			"restart_policy": "always"
+  			},
+  			{
+    			"type": 1,
+    			"title": "shadowsocks Client",
+    			"description": "shadowsocks for Linux Client",
+    			"categories": ["shadowsocks"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/Shadowsocks.png",
+    			"image": "lihaixin/shadowsocks:local",
+    			"ports": [
+      				"1080/tcp",
+      				"1080/udp"
+    				]
+  			},
+   			{
+    			"type": 1,
+    			"title": "shadowsocks Help",
+    			"description": "shadowsocks Client software download and help",
+    			"categories": ["shadowsocks"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/Shadowsocks.png",
+    			"image": "lihaixin/shadowsocks:help",
+    			"ports": [
+      				"80/tcp"
+    				]
   			}
 	]
 }
