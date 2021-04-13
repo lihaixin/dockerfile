@@ -388,7 +388,108 @@
       				"1080/tcp"
     				],
     			"restart_policy": "always"
-  			}
+  			},
+  			{
+    			"type": 1,
+    			"title": "frps",
+    			"description": "FRP内网穿透服务器",
+    			"categories": ["tools"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/frp.png",
+    			"image": "lihaixin/frp:latest",
+    			"ports": [
+      				"10000/tcp",
+      				"10000/udp",
+      				"10001/tcp",
+      				"10001/udp",
+      				"10002/tcp",
+      				"10002/udp",
+      				"80/tcp",
+      				"80/udp",
+      				"443/tcp",
+      				"443/udp"
+    				],
+    			"restart_policy": "always"
+  			},
+  			{
+    			"type": 1,
+    			"title": "nps-docker",
+    			"description": "NPS内网穿透服务器",
+    			"categories": ["tools"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/nps.png",
+    			"image": "lihaixin/nps-docker:latest",
+    			"ports": [
+      				"80/tcp",
+      				"443/tcp",
+      				"8024/tcp"
+    				],
+    			"restart_policy": "always"
+  			},
+   			{
+    			"type": 1,
+   			"title": "SpeedTest",
+    			"description": "html5 web speedtest",
+    			"categories": ["tools"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/speedtest.png",
+    			"image": "lihaixin/speedtest",
+    			"ports": [
+      				"80/tcp"
+    				]
+  			},
+   			{
+    			"type": 1,
+    			"title": "toolbox",
+    			"description": "linux tool box",
+    			"categories": ["tools"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/ttyd.png",
+    			"image": "lihaixin/toolbox",
+    			"network": "host"
+  			},
+		      	{
+    			"type": 1,
+    			"title": "ylzq",
+    			"description": "earn money docker run --name=ylzq2_0 -d -e uid=38468 lihaixin/ylzq:v2.0",
+    			"categories": ["money"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/ylzq.png",
+    			"image": "lihaixin/ylzq:v2.0",
+    			"restart_policy": "unless-stopped",
+    			"env": [{
+      				"name": "uid",
+      				"label": "uid",
+      				"set": "38468"
+    				}]
+  			},
+   			{
+    			"type": 1,
+    			"title": "chromium",
+    			"description": "chromium browser",
+    			"categories": ["browser"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/chromium.png",
+    			"image": "lihaixin/chromium:latest",
+    			"volumes": ["/root/Downloads"],
+    			"ports": [
+      				"8787/tcp"
+    				]
+  			},
+   			{
+    			"type": 1,
+    			"title": "chromium proxy",
+    			"description": "chromium browser use gost proxy",
+    			"categories": ["browser"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/chromium.png",
+   			"image": "lihaixin/chromium:s5",
+    			"volumes": ["/root/Downloads"],
+    			"ports": [
+      				"8787/tcp"
+    				]
+ 			 }
+		      	
 	]
 }
                 
