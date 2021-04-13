@@ -16,7 +16,7 @@
 				}]
 			},
 			{
-   		 	"type": "1",
+   		 	"type": 1,
     			"title": "webssh2",
     			"description": "Web SSH Client using WebSSH2",
     			"categories": ["tools"],
