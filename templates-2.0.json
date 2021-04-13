@@ -281,7 +281,8 @@
     			"ports": [
       				"80/tcp"
     				]
-  			}{
+  			},
+		        {
     			"type": 1,
     			"title": "shadowsocks Server limit",
     			"description": "shadowsocks is a cross-platform proxy software",
