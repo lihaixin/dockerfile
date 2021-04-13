@@ -56,7 +56,45 @@
     				],
 			"volumes": [{
 				"container": "/usr/local/next-terminal"
-			}]
+			},
+ 			{
+    			"type": "container",
+    			"title": "tinyportmapper",
+    			"description": "TCP UDP端口转发",
+    			"categories": ["tools"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/tinyportmapper.png",
+    			"image": "lihaixin/tinyportmapper:latest",
+    			"ports": [
+	      			"5001/tcp",
+      				"5001/udp"
+    				]
+			},
+ 			{
+    			"type": "container",
+    			"title": "baidupcs",
+    			"description": "不限速百度云客户端",
+    			"categories": ["file"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/baidupcs.png",
+    			"image": "lihaixin/baidupcs",
+    			"ports": [
+      				"1999/tcp"
+    				],
+    			"volumes": ["/defaults", "/root/Downloads"],
+    			"env": [
+    				{
+      				"name": "PGID",
+      				"label": "PGID",
+      				"set": "0"
+    				},
+    				{
+      				"name": "PUID",
+      				"label": "PUID",
+      				"set": "0"
+    				}
+   				],
+    			"restart_policy": "always"
   			}
 	]
 }
