@@ -362,6 +362,32 @@
     			"ports": [
       				"80/tcp"
     				]
+  			},
+   			{
+    			"type": 1,
+    			"title": "trojan socks5 proxy",
+    			"description": "trojan socks5 proxy server",
+    			"categories": ["trojan"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/trojan.png",
+    			"image": "lihaixin/trojan",
+    			"ports": [
+      				"443/tcp"
+    				],
+    			"restart_policy": "always"
+  			},
+   			{
+    			"type": 1,
+    			"title": "trojan socks5 proxy",
+    			"description": "trojan socks5 proxy client",
+    			"categories": ["trojan"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/trojan.png",
+    			"image": "lihaixin/trojan:client",
+    			"ports": [
+      				"1080/tcp"
+    				],
+    			"restart_policy": "always"
   			}
 	]
 }
