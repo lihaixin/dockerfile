@@ -4,19 +4,29 @@
 			"type": 1,
 			"title": "Registry",
 			"description": "Docker image registry",
-			"categories": [
-				"docker"
-			],
+			"categories": ["docker"],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
 			"image": "registry:latest",
 			"ports": [
 				"5000/tcp"
-			],
+				],
 			"volumes": [{
 				"container": "/var/lib/registry"
-			}]
-		}
+				}]
+			},
+			{
+   		 	"type": "1",
+    			"title": "webssh2",
+    			"description": "Web SSH Client using WebSSH2",
+    			"categories": ["tools"],
+   			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/webssh2.png",
+    			"image": "lihaixin/webssh2:latest",
+    			"ports": [
+      				"2222/tcp"
+    				]
+  			}
 	]
 }
                 
