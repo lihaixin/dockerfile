@@ -12,4 +12,4 @@ services:
       ID: "a677a91f-f458-4627-ae9d-e3f28807af51"
       BACKURL: "127.0.0.1:80"
     volumes:
-      - /root/xray/cert:/etc/xray/cert
+      - xray_cert:/etc/xray/cert
