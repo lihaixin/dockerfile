@@ -32,6 +32,16 @@
 			"volumes": [
 				{
       				"container": "/etc/xray/cert"
+    				}],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "DOMAIN",
+      				"set": "xray.youdomain.com"
+    				},
+		     		{
+      				"name": "PASSWORD",
+      				"label": "PASSWORD",
+      				"set": "88888888"
     				}]
   		}
 	 ]
