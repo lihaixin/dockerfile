@@ -36,13 +36,13 @@
     				}],
 			"env": [{
       				"name": "DOMAIN",
-      				"label": "DOMAIN",
+      				"label": "Your Domain",
 				"description": "The domain name is used to apply for a digital certificate, and the domain name A points to the IP where you deploy the cloud machine",
       				"default": "xray.youdomain.com"
     				},
 		     		{
       				"name": "PASSWORD",
-      				"label": "PASSWORD",
+      				"label": "Trojan Password",
 				"description": "Password is used for trojian verification",
       				"default": "88888888"
     				}]
