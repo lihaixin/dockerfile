@@ -37,13 +37,13 @@
 			"env": [{
       				"name": "DOMAIN",
       				"label": "DOMAIN",
-				"description": "域名用于申请数字证书，域名A指向你部署云机的IP",
+				"description": "The domain name is used to apply for a digital certificate, and the domain name A points to the IP where you deploy the cloud machine",
       				"set": "xray.youdomain.com"
     				},
 		     		{
       				"name": "PASSWORD",
       				"label": "PASSWORD",
-				"description": "密码用于trojian验证",
+				"description": "Password is used for trojian verification",
       				"set": "88888888"
     				}]
   		}
