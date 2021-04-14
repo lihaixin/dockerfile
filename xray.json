@@ -25,7 +25,7 @@
     			"title": "xray",
     			"description": "xray server",
 			"note": "Deploys an xray server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> for production deployments.",
-    			"hostname": "xray"
+    			"hostname": "xray",
 			"categories": ["v2ray"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
