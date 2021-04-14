@@ -37,13 +37,13 @@
 			"env": [{
       				"name": "DOMAIN",
       				"label": "DOMAIN",
-				"description": "域名用于申请数字证书，域名A指向你部署云机的IP"
+				"description": "域名用于申请数字证书，域名A指向你部署云机的IP",
       				"set": "xray.youdomain.com"
     				},
 		     		{
       				"name": "PASSWORD",
       				"label": "PASSWORD",
-				"description": "密码用于trojian验证"
+				"description": "密码用于trojian验证",
       				"set": "88888888"
     				}]
   		}
