@@ -38,13 +38,13 @@
       				"name": "DOMAIN",
       				"label": "DOMAIN",
 				"description": "The domain name is used to apply for a digital certificate, and the domain name A points to the IP where you deploy the cloud machine",
-      				"set": "xray.youdomain.com"
+      				"default": "xray.youdomain.com"
     				},
 		     		{
       				"name": "PASSWORD",
       				"label": "PASSWORD",
 				"description": "Password is used for trojian verification",
-      				"set": "88888888"
+      				"default": "88888888"
     				}]
   		}
 	 ]
