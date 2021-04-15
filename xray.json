@@ -47,7 +47,7 @@
       				"label": "XRAY PORT",
 				"description": "The XRAY Server Port",
       				"default": "443"
-    				}
+    				},
 		     		{
       				"name": "PASSWORD",
       				"label": "Trojan Password",
