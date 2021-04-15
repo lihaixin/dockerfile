@@ -44,8 +44,8 @@
     				},
 				{
       				"name": "PORT",
-      				"label": "XRAY PORT",
-				"description": "The XRAY Server Port.",
+      				"label": "XRAY & Trojan PORT",
+				"description": "The XRAY & Trojan Server Port.",
       				"default": "443"
     				},
 		     		{
