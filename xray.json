@@ -42,6 +42,12 @@
 				"description": "The domain name is used to apply for a digital certificate, and the domain name A points to the IP where you deploy the cloud machine",
       				"default": "xray.youdomain.com"
     				},
+				{
+      				"name": "PORT",
+      				"label": "XRAY PORT",
+				"description": "The XRAY Server Port",
+      				"default": "443"
+    				}
 		     		{
       				"name": "PASSWORD",
       				"label": "Trojan Password",
