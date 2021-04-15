@@ -47,6 +47,40 @@
 				"description": "Password is used for trojian verification",
       				"default": "88888888"
     				}]
+  		},
+		{
+    			"type": 1,
+    			"title": "gosthttps",
+    			"description": "gost https server",
+			"note": "Deploys an https server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> for production deployments.",
+    			"hostname": "gosthttps",
+			"categories": ["gost"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",
+    			"image": "lihaixin/gost:https",
+  			"network": "host",
+			"volumes": [
+				{
+      				"container": "/etc/gost"
+    				}],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "Your Domain",
+				"description": "The domain name is used to apply for a digital certificate, and the domain name A points to the IP where you deploy the cloud machine",
+      				"default": "https.youdomain.com"
+    				},
+				{
+      				"name": "PORT",
+      				"label": "HTTPS PORT",
+				"description": "The HTTPS Server Port",
+      				"default": "58338"
+    				},
+		     		{
+      				"name": "PASSWD",
+      				"label": "HTTPS Password",
+				"description": "Password is used for Https verification",
+      				"default": "88888888"
+    				}]
   		}
 	 ]
 }
