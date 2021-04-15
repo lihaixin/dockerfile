@@ -31,7 +31,7 @@
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
     			"image": "lihaixin/xray:1.4.0",
-  			"ports": ["80:80/tcp", "443/tcp"],
+  			"network": "host",
 			"volumes": [
 				{
       				"container": "/etc/xray/cert"
