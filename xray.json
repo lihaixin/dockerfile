@@ -45,13 +45,13 @@
 				{
       				"name": "PORT",
       				"label": "XRAY PORT",
-				"description": "The XRAY Server Port",
+				"description": "The XRAY Server Port.",
       				"default": "443"
     				},
 		     		{
       				"name": "PASSWORD",
       				"label": "Trojan Password",
-				"description": "Password is used for trojian verification",
+				"description": "Password is used for trojian verification.",
       				"default": "88888888"
     				}]
   		},
