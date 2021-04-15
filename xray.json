@@ -23,6 +23,7 @@
 		{
     			"type": 1,
     			"title": "xray",
+			"name": "xray",
     			"description": "xray server",
 			"note": "Deploys an xray server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> for production deployments.",
     			"hostname": "xray",
@@ -51,6 +52,7 @@
 		{
     			"type": 1,
     			"title": "gosthttps",
+			"name": "gosthttps",
     			"description": "gost https server",
 			"note": "Deploys an https server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> for production deployments.",
     			"hostname": "gosthttps",
