@@ -18,6 +18,7 @@ services:
       - nginx-proxy-manager_letsencrypt:/etc/letsencrypt
     depends_on:
       - db
+  
   db:
     image: 'jc21/mariadb-aria:latest'
     restart: always
@@ -28,3 +29,8 @@ services:
       MYSQL_PASSWORD: 'npm'
     volumes:
       - nginx-proxy-manager_mysql:/var/lib/mysql
+  
+  volumes:
+    nginx-proxy-manager_data:
+    nginx-proxy-manager_letsencrypt:
+    nginx-proxy-manager_mysql:
