@@ -27,7 +27,6 @@
 			"note": "Deploys an nginx-proxy-manager, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> for production deployments.",
 			"categories": ["tools"],
 			"platform": "linux",
-			"network": "host",
 			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/nginx-proxy-manager.png",
 			"repository": {
 				"url": "https://github.com/lihaixin/dockerfile",
