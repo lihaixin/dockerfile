@@ -53,6 +53,7 @@
 			"volumes": [
 				{
       				"container": "/etc/xray/cert"
+				"bind": "/etc/xray/cert"
     				}],
 			"env": [{
       				"name": "DOMAIN",
@@ -87,7 +88,8 @@
   			"network": "host",
 			"volumes": [
 				{
-      				"container": "/etc/gost"
+      				"container": "/etc/gost",
+				"bind": "/etc/gost"
     				}],
 			"env": [{
       				"name": "DOMAIN",
