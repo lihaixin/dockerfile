@@ -14,8 +14,8 @@ services:
       DB_MYSQL_PASSWORD: "npm"
       DB_MYSQL_NAME: "npm"
     volumes:
-      - nginx-proxy-manager_data:/data
-      - nginx-proxy-manager_letsencrypt:/etc/letsencrypt
+      - data:/data
+      - letsencrypt:/etc/letsencrypt
     depends_on:
       - db
   
@@ -28,9 +28,9 @@ services:
       MYSQL_USER: 'npm'
       MYSQL_PASSWORD: 'npm'
     volumes:
-      - nginx-proxy-manager_mysql:/var/lib/mysql
+      - mysql:/var/lib/mysql
 
 volumes:
-  nginx-proxy-manager_data:
-  nginx-proxy-manager_letsencrypt:
-  nginx-proxy-manager_mysql:
+  data:
+  letsencrypt:
+  mysql:
