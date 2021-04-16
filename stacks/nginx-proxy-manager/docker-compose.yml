@@ -29,8 +29,8 @@ services:
       MYSQL_PASSWORD: 'npm'
     volumes:
       - nginx-proxy-manager_mysql:/var/lib/mysql
-  
-  volumes:
-    nginx-proxy-manager_data:
-    nginx-proxy-manager_letsencrypt:
-    nginx-proxy-manager_mysql:
+
+volumes:
+  nginx-proxy-manager_data:
+  nginx-proxy-manager_letsencrypt:
+  nginx-proxy-manager_mysql:
