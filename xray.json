@@ -109,6 +109,46 @@
 				"description": "Password is used for Https verification",
       				"default": "88888888"
     				}]
+  		},
+		{
+    			"type": 1,
+    			"title": "ghproxy",
+			"name": "ghproxy",
+    			"description": "github proxy",
+			"note": "Deploys an github proxy, please refer to <a href=\"https://github.com/hunshcn/gh-proxy\" target=\"_blank\">gost doc</a> for production deployments.",
+    			"hostname": "ghproxy",
+			"categories": ["tools"],
+    			"platform": "linux",
+			"restart_policy": "always"
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/github.png",
+    			"image": "hunsh/gh-proxy-py:latest",
+  			"ports": ["80/tcp"]
+  		},
+		{
+    			"type": 1,
+    			"title": "through-cache",
+			"name": "through-cache",
+    			"description": "through-cache",
+			"note": "Deploys an docker hub through-cache, please refer to <a href=\"https://github.com/hunshcn/gh-proxy\" target=\"_blank\">gost doc</a> for production deployments.",
+    			"hostname": "through-cache",
+			"categories": ["tools"],
+    			"platform": "linux",
+			"restart_policy": "always"
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/registry.png",
+    			"image": "registry",
+  			"ports": ["80/tcp"]
+			"env": [{
+      				"name": "DOCKER_HUB_USERNAME",
+      				"label": "DOCKER_HUB_USERNAME",
+				"description": "DOCKER_HUB_USERNAME",
+      				"default": "your hub name"
+    				},
+		     		{
+      				"name": "DOCKER_HUB_ACCESS_TOKEN",
+      				"label": "DOCKER_HUB_ACCESS_TOKEN",
+				"description": "DOCKER_HUB_ACCESS_TOKEN",
+      				"default": "you hub token"
+    				}]
   		}
 	 ]
 }
