@@ -52,7 +52,7 @@
   			"network": "host",
 			"volumes": [
 				{
-      				"container": "/etc/xray/cert"
+      				"container": "/etc/xray/cert",
 				"bind": "/etc/xray/cert"
     				}],
 			"env": [{
