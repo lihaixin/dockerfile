@@ -136,7 +136,7 @@
 			"restart_policy": "always",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/registry.png",
     			"image": "registry",
-  			"ports": ["80/tcp"],
+  			"ports": ["5000/tcp"],
 			"env": [{
       				"name": "DOCKER_HUB_USERNAME",
       				"label": "DOCKER_HUB_USERNAME",
