@@ -53,7 +53,7 @@
 			"volumes": [
 				{
       				"container": "/etc/xray/cert",
-				"bind": "/etc/xray/cert"
+				"volume": "xray_cert"
     				}],
 			"env": [{
       				"name": "DOMAIN",
