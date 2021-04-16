@@ -119,7 +119,7 @@
     			"hostname": "ghproxy",
 			"categories": ["tools"],
     			"platform": "linux",
-			"restart_policy": "always"
+			"restart_policy": "always",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/github.png",
     			"image": "hunsh/gh-proxy-py:latest",
   			"ports": ["80/tcp"]
@@ -133,10 +133,10 @@
     			"hostname": "through-cache",
 			"categories": ["tools"],
     			"platform": "linux",
-			"restart_policy": "always"
+			"restart_policy": "always",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/registry.png",
     			"image": "registry",
-  			"ports": ["80/tcp"]
+  			"ports": ["80/tcp"],
 			"env": [{
       				"name": "DOCKER_HUB_USERNAME",
       				"label": "DOCKER_HUB_USERNAME",
