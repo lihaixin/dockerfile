@@ -48,7 +48,7 @@
 			"categories": ["v2ray"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
-    			"image": "lihaixin/xray:1.4.0",
+    			"image": "lihaixin/xray",
   			"network": "host",
 			"volumes": [
 				{
