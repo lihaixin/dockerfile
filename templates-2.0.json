@@ -55,16 +55,16 @@
       				"8088/tcp"
     				],
 			"volumes": [{
-				"container": "/usr/local/next-terminal",
-				"bind": "/etc/next-terminal"
-				},
-				{
 				"container": "/usr/local/next-terminal/drive",
 				"bind": "/etc/next-terminal/drive"
 				},
 				{
 				"container": "/usr/local/next-terminal/ecording",
 				"bind": "/etc/next-terminal/ecording"
+				},
+				{
+				"container": "/usr/local/next-terminal",
+				"bind": "/etc/next-terminal"
 				}]
 			},
  			{
