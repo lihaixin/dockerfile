@@ -572,7 +572,157 @@
       				"set": "5380"
     				}],
     			"restart_policy": "always"
-  			}
+  			},
+		        {
+			"type": 3,
+			"title": "Wordpress",
+			"name": "wordpress",
+			"description": "Wordpress setup with a MySQL database",
+			"note": "Deploys a Wordpress instance connected to a MySQL database.",
+			"categories": ["CMS"],
+			"platform": "linux",
+			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/wordpress.png",
+			"repository": {
+				"url": "https://github.com/portainer/templates",
+				"stackfile": "stacks/wordpress/docker-compose.yml"
+			},
+			"env": [{
+				"name": "MYSQL_DATABASE_PASSWORD",
+				"label": "Database root password",
+				"description": "Password used by the MySQL root user."
+			}]
+		},
+		{
+			"type": 3,
+			"title": "nginx-proxy-manager",
+			"name": "nginx-proxy-manager",
+			"description": "Expose your services easily and securely",
+			"note": "Deploys an nginx-proxy-manager, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> for production deployments.",
+			"categories": ["tools"],
+			"platform": "linux",
+			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/nginx-proxy-manager.png",
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/nginx-proxy-manager/docker-compose.yml"
+			},
+			"env": [{
+				"name": "MYSQL_DATABASE_PASSWORD",
+				"label": "Database root password",
+				"description": "Password used by the MySQL root user."
+			}]
+		},
+		{
+    			"type": 1,
+    			"title": "xray",
+			"name": "xray",
+    			"description": "xray server",
+			"note": "Deploys an xray server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> for production deployments.",
+    			"hostname": "xray",
+			"categories": ["v2ray"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
+    			"image": "lihaixin/xray",
+  			"network": "host",
+			"volumes": [
+				{
+      				"container": "/etc/xray",
+				"bind": "/etc/xray"
+    				}],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "Your Domain",
+				"description": "The domain name is used to apply for a digital certificate, and the domain name A points to the IP where you deploy the cloud machine",
+      				"default": "xray.youdomain.com"
+    				},
+				{
+      				"name": "PORT",
+      				"label": "XRAY & Trojan PORT",
+				"description": "The XRAY & Trojan Server Port.",
+      				"default": "443"
+    				},
+		     		{
+      				"name": "PASSWORD",
+      				"label": "Trojan Password",
+				"description": "Password is used for trojian verification.",
+      				"default": "88888888"
+    				}]
+  		},
+		{
+    			"type": 1,
+    			"title": "gosthttps",
+			"name": "gosthttps",
+    			"description": "gost https server",
+			"note": "Deploys an https server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> for production deployments.",
+    			"hostname": "gosthttps",
+			"categories": ["gost"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",
+    			"image": "lihaixin/gost:https",
+  			"network": "host",
+			"volumes": [
+				{
+      				"container": "/etc/gost",
+				"bind": "/etc/gost"
+    				}],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "Your Domain",
+				"description": "The domain name is used to apply for a digital certificate, and the domain name A points to the IP where you deploy the cloud machine",
+      				"default": "https.youdomain.com"
+    				},
+				{
+      				"name": "PORT",
+      				"label": "HTTPS PORT",
+				"description": "The HTTPS Server Port",
+      				"default": "58338"
+    				},
+		     		{
+      				"name": "PASSWD",
+      				"label": "HTTPS Password",
+				"description": "Password is used for Https verification",
+      				"default": "88888888"
+    				}]
+  		},
+		{
+    			"type": 1,
+    			"title": "ghproxy",
+			"name": "ghproxy",
+    			"description": "github proxy",
+			"note": "Deploys an github proxy, please refer to <a href=\"https://github.com/hunshcn/gh-proxy\" target=\"_blank\">gost doc</a> for production deployments.",
+    			"hostname": "ghproxy",
+			"categories": ["tools"],
+    			"platform": "linux",
+			"restart_policy": "always",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/github.png",
+    			"image": "hunsh/gh-proxy-py:latest",
+  			"ports": ["80/tcp"]
+  		},
+		{
+    			"type": 1,
+    			"title": "through-cache",
+			"name": "through-cache",
+    			"description": "through-cache",
+			"note": "Deploys an docker hub through-cache, please refer to <a href=\"https://github.com/hunshcn/gh-proxy\" target=\"_blank\">gost doc</a> for production deployments.",
+    			"hostname": "through-cache",
+			"categories": ["tools"],
+    			"platform": "linux",
+			"restart_policy": "always",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/registry.png",
+    			"image": "registry",
+  			"ports": ["5000/tcp"],
+			"env": [{
+      				"name": "DOCKER_HUB_USERNAME",
+      				"label": "DOCKER_HUB_USERNAME",
+				"description": "DOCKER_HUB_USERNAME",
+      				"default": "your hub name"
+    				},
+		     		{
+      				"name": "DOCKER_HUB_ACCESS_TOKEN",
+      				"label": "DOCKER_HUB_ACCESS_TOKEN",
+				"description": "DOCKER_HUB_ACCESS_TOKEN",
+      				"default": "you hub token"
+    				}]
+  		}
 	]
 }
                 
