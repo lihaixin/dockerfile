@@ -665,6 +665,54 @@
   		},
 		{
     			"type": 1,
+    			"title": "xray",
+			"name": "xray",
+    			"description": "xray server use cloudflare",
+			"note": "Deploys an xray server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> for production deployments.",
+    			"hostname": "xray",
+			"categories": ["v2ray"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
+    			"image": "lihaixin/xray",
+  			"network": "host",
+			"volumes": [
+				{
+      				"container": "/etc/xray",
+				"bind": "/etc/xray"
+    				}],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "Your Domain",
+				"description": "The domain name is used to apply for a digital certificate, and the domain name A points to the IP where you deploy the cloud machine",
+      				"default": "xray.youdomain.com"
+    				},
+				{
+      				"name": "CF_Email",
+      				"label": "Your CF_Email",
+				"description": "CF_Email mailbox account",
+      				"default": "xray@youdomain.com"
+    				},
+				{
+      				"name": "CF_Key",
+      				"label": "Your CF_Key",
+				"description": "CF_Key string",
+      				"default": "558ef6820cea14627f986548c96fcb6cb668a"
+    				},
+				{
+      				"name": "PORT",
+      				"label": "XRAY & Trojan PORT",
+				"description": "The XRAY & Trojan Server Port.",
+      				"default": "443"
+    				},
+		     		{
+      				"name": "PASSWORD",
+      				"label": "Trojan Password",
+				"description": "Password is used for trojian verification.",
+      				"default": "88888888"
+    				}]
+  		},
+		{
+    			"type": 1,
     			"title": "gosthttps",
 			"name": "gosthttps",
     			"description": "gost https server",
