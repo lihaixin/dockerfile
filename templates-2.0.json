@@ -673,7 +673,7 @@
 			"categories": ["v2ray"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
-    			"image": "lihaixin/xray",
+    			"image": "lihaixin/xray:sf",
   			"network": "host",
 			"volumes": [
 				{
@@ -709,6 +709,48 @@
       				"label": "Trojan Password",
 				"description": "Password is used for trojian verification.",
       				"default": "88888888"
+    				}]
+  		},
+		{
+    			"type": 1,
+    			"title": "v2ui",
+			"name": "v2ui",
+    			"description": "Support multi-protocol multi-user v2ray panel",
+			"note": "Deploys an xray server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/v2ui\" target=\"_blank\">v2ui doc</a> for production deployments.",
+    			"hostname": "v2ui",
+			"categories": ["v2ray"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ui.png",
+    			"image": "lihaixin/v2ui",
+  			"network": "host",
+			"volumes": [
+				{
+      				"container": "/etc/v2-ui",
+				"bind": "/etc/v2-ui"
+    				}],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "Your Domain",
+				"description": "The domain name is used to apply for a digital certificate, and the domain name A points to the IP where you deploy the cloud machine",
+      				"default": "v2ui.youdomain.com"
+    				},
+				{
+      				"name": "CF_Email",
+      				"label": "Your CF_Email",
+				"description": "CF_Email mailbox account",
+      				"default": "v2ui@youdomain.com"
+    				},
+				{
+      				"name": "CF_Key",
+      				"label": "Your CF_Key",
+				"description": "CF_Key string",
+      				"default": "558ef6820cea14627f986548c96fcb6cb668a"
+    				},
+				{
+      				"name": "PORT",
+      				"label": "WEB PORT",
+				"description": "The V2UI Server WEB PORT.",
+      				"default": "80"
     				}]
   		},
 		{
