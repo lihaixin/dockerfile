@@ -662,8 +662,8 @@
 		{
     			"type": 1,
     			"title": "xray",
-			"name": "xray",
-    			"description": "xray server",
+			"name": "xray-443",
+    			"description": "xray server use standalone",
 			"note": "Deploys an xray server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> for production deployments.",
     			"hostname": "xray",
 			"categories": ["v2ray"],
@@ -698,7 +698,7 @@
 		{
     			"type": 1,
     			"title": "xray",
-			"name": "xray",
+			"name": "xray-443",
     			"description": "xray server use cloudflare",
 			"note": "Deploys an xray server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> for production deployments.",
     			"hostname": "xray",
@@ -746,7 +746,7 @@
 		{
     			"type": 1,
     			"title": "v2ui",
-			"name": "v2ui",
+			"name": "v2ui-65432",
     			"description": "Support multi-protocol multi-user v2ray panel",
 			"note": "Deploys an xray server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/v2ui\" target=\"_blank\">v2ui doc</a> for production deployments.",
     			"hostname": "v2ui",
@@ -782,13 +782,13 @@
       				"name": "PORT",
       				"label": "WEB PORT",
 				"description": "The V2UI Server WEB PORT.",
-      				"default": "80"
+      				"default": "65432"
     				}]
   		},
 		{
     			"type": 1,
     			"title": "gosthttps",
-			"name": "gosthttps",
+			"name": "gosthttps-58338",
     			"description": "gost https server",
 			"note": "Deploys an https server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> for production deployments.",
     			"hostname": "gosthttps",
@@ -824,7 +824,7 @@
 		{
     			"type": 1,
     			"title": "gost s5 and http",
-			"name": "gosts5",
+			"name": "gosts5-10021",
     			"description": "gost http and socks5 server",
 			"note": "Deploys an https server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> for production deployments.",
     			"hostname": "gosts5",
@@ -860,7 +860,7 @@
 		{
     			"type": 1,
     			"title": "ghproxy",
-			"name": "ghproxy",
+			"name": "ghproxy-84",
     			"description": "github proxy",
 			"note": "Deploys an github proxy, please refer to <a href=\"https://github.com/hunshcn/gh-proxy\" target=\"_blank\">gost doc</a> for production deployments.",
     			"hostname": "ghproxy",
@@ -874,7 +874,7 @@
 		{
     			"type": 1,
     			"title": "through-cache",
-			"name": "through-cache",
+			"name": "through-cache-5000",
     			"description": "through-cache",
 			"note": "Deploys an docker hub through-cache, please refer to <a href=\"https://github.com/hunshcn/gh-proxy\" target=\"_blank\">gost doc</a> for production deployments.",
     			"hostname": "through-cache",
