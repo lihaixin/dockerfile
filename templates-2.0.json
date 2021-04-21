@@ -3,6 +3,7 @@
 	"templates": [{
 			"type": 1,
 			"title": "Registry",
+			"name": "Registry",
 			"description": "Docker image registry",
 			"categories": ["docker"],
 			"platform": "linux",
@@ -18,6 +19,7 @@
 			{
    		 	"type": 1,
     			"title": "webssh2",
+			"name": "webssh2",
     			"description": "Web SSH Client using WebSSH2",
     			"categories": ["ssh"],
    			"platform": "linux",
@@ -31,6 +33,7 @@
 		      	{
     			"type": 1,
     			"title": "ttyd",
+			"name": "ttyd",
     			"description": "ttyd is a simple command line tool for sharing terminal over the web ",
     			"categories": ["ssh"],
     			"platform": "linux",
@@ -44,8 +47,8 @@
   			},
 		      	{
     			"type": 1,
-    			"title": "next-terminal",
-			"name": "next-terminal",
+    			"title": "next-terminal-sqlite",
+			"name": "next-terminal-sqlite",
     			"description": "Next Terminal是使用Golang和React开发的一款HTML5的远程桌面网关，具有小巧、易安装、易使用、资源占用小的特点，支持RDP、SSH、VNC和Telnet协议的连接和管理 ",
     			"categories": ["ssh"],
     			"platform": "linux",
@@ -77,6 +80,7 @@
  			{
     			"type": 1,
     			"title": "tinyportmapper",
+			"name": "tinyportmapper",
     			"description": "TCP UDP端口转发",
     			"categories": ["tools"],
     			"platform": "linux",
@@ -90,6 +94,7 @@
  			{
     			"type": 1,
     			"title": "baidupcs",
+			"name": "baidupcs",
     			"description": "不限速百度云客户端",
     			"categories": ["file"],
     			"platform": "linux",
@@ -119,6 +124,7 @@
    			{
     			"type": 1,
     			"title": "h5ai",
+			"name": "h5ai",
     			"description": "h5ai file indexer for HTTP web servers",
    			"categories": ["file"],
     			"platform": "linux",
@@ -135,6 +141,7 @@
   			{
     			"type": 1,
     			"title": "h5ai auth",
+			"name": "h5ai auth",
     			"description": "h5ai file indexer for HTTP web servers",
     			"categories": ["file"],
     			"platform": "linux",
@@ -161,6 +168,7 @@
    			{
     			"type": 1,
     			"title": "verysync",
+			"name": "verysync",
     			"description": "file sync uses verysync",
     			"categories": ["file"],
     			"platform": "linux",
@@ -183,6 +191,7 @@
    			{
     			"type": 1,
     			"title": "transmission",
+			"name": "transmission",
     			"description": "bt transmissio web ui",
     			"categories": ["file"],
     			"platform": "linux",
@@ -207,6 +216,7 @@
   			{
     			"type": 1,
     			"title": "Brook Server",
+			"name": "Brook Server",
     			"description": "Brook is a cross-platform proxy software",
     			"categories": ["brook"],
     			"platform": "linux",
@@ -235,6 +245,7 @@
    			{
     			"type": 1,
     			"title": "Brook Help",
+			"name": "Brook Help",
     			"description": "Brook Client software download and help",
     			"categories": ["brook"],
     			"platform": "linux",
@@ -247,6 +258,7 @@
    			{
     			"type": 1,
     			"title": "v2ray server",
+			"name": "v2ray server",
     			"description": "A Vee Network Solution server docker run -d --restart=always --name=59028.v2ray.server -p 59028:59028 -p 59028:59028/udp lihaixin/v2ray",
     			"categories": ["v2ray"],
     			"platform": "linux",
@@ -261,6 +273,7 @@
    			{
     			"type": 1,
     			"title": "v2ray local",
+			"name": "v2ray local",
     			"description": "A Vee Network Solution fro linux client",
     			"categories": ["v2ray"],
     			"platform": "linux",
@@ -276,6 +289,7 @@
    			{
     			"type": 1,
     			"title": "v2ray help",
+			"name": "v2ray help",
     			"description": "A Vee Network Solution for client down",
     			"categories": ["v2ray"],
     			"platform": "linux",
@@ -288,6 +302,7 @@
    			{
     			"type": 1,
     			"title": "v2ray URL",
+			"name": "v2ray URL",
     			"description": "v2ray and ss url ",
     			"categories": ["v2ray"],
     			"platform": "linux",
@@ -301,6 +316,7 @@
 		        {
     			"type": 1,
     			"title": "shadowsocks Server limit",
+			"name": "shadowsocks Server limit",
     			"description": "shadowsocks is a cross-platform proxy software",
     			"categories": ["shadowsocks"],
     			"platform": "linux",
@@ -326,6 +342,7 @@
  			{
     			"type": 1,
     			"title": "shadowsocks Server ",
+			"name": "shadowsocks Server ",
     			"description": "shadowsocks is a cross-platform proxy software",
     			"categories": ["shadowsocks"],
     			"platform": "linux",
@@ -340,6 +357,7 @@
   			{
     			"type": 1,
     			"title": "shadowsocks Server and kcptun udpspeed and udp2raw",
+			"name": "shadowsocks Server and kcptun udpspeed and udp2raw",
     			"description": "shadowsocks is a cross-platform proxy software and use kcptun",
     			"categories": ["shadowsocks"],
     			"platform": "linux",
@@ -357,6 +375,7 @@
   			{
     			"type": 1,
     			"title": "shadowsocks Client",
+			"name": "shadowsocks Client",
     			"description": "shadowsocks for Linux Client",
     			"categories": ["shadowsocks"],
     			"platform": "linux",
@@ -370,6 +389,7 @@
    			{
     			"type": 1,
     			"title": "shadowsocks Help",
+			"name": "shadowsocks Help",
     			"description": "shadowsocks Client software download and help",
     			"categories": ["shadowsocks"],
     			"platform": "linux",
@@ -382,6 +402,7 @@
    			{
     			"type": 1,
     			"title": "trojan socks5 proxy",
+			"name": "trojan socks5 proxy",
     			"description": "trojan socks5 proxy server",
     			"categories": ["trojan"],
     			"platform": "linux",
@@ -394,7 +415,8 @@
   			},
    			{
     			"type": 1,
-    			"title": "trojan socks5 proxy",
+    			"title": "trojan socks5 proxy client",
+			"name": "trojan socks5 proxy client",
     			"description": "trojan socks5 proxy client",
     			"categories": ["trojan"],
     			"platform": "linux",
@@ -408,6 +430,7 @@
   			{
     			"type": 1,
     			"title": "frps",
+			"name": "frps",
     			"description": "FRP内网穿透服务器",
     			"categories": ["tools"],
     			"platform": "linux",
@@ -430,6 +453,7 @@
   			{
     			"type": 1,
     			"title": "nps-docker",
+			"name": "nps-docker",
     			"description": "NPS内网穿透服务器",
     			"categories": ["tools"],
     			"platform": "linux",
@@ -445,6 +469,7 @@
    			{
     			"type": 1,
    			"title": "SpeedTest",
+			"name": "SpeedTest",
     			"description": "html5 web speedtest",
     			"categories": ["tools"],
     			"platform": "linux",
@@ -457,6 +482,7 @@
    			{
     			"type": 1,
     			"title": "toolbox",
+			"name": "toolbox",
     			"description": "linux tool box",
     			"categories": ["tools"],
     			"platform": "linux",
@@ -467,6 +493,7 @@
 		      	{
     			"type": 1,
     			"title": "ylzq",
+			"name": "ylzq",
     			"description": "earn money docker run --name=ylzq2_0 -d -e uid=38468 lihaixin/ylzq:v2.0",
     			"categories": ["money"],
     			"platform": "linux",
@@ -482,6 +509,7 @@
    			{
     			"type": 1,
     			"title": "chromium",
+			"name": "chromium",
     			"description": "chromium browser",
     			"categories": ["browser"],
     			"platform": "linux",
@@ -495,6 +523,7 @@
    			{
     			"type": 1,
     			"title": "chromium proxy",
+			"name": "chromium proxy",
     			"description": "chromium browser use gost proxy",
     			"categories": ["browser"],
     			"platform": "linux",
@@ -508,6 +537,7 @@
    			{
     			"type": 1,
     			"title": "firefox proxy",
+			"name": "firefox proxy",
     			"description": "firefox browser use gost proxy",
     			"categories": ["browser"],
     			"platform": "linux",
@@ -531,6 +561,7 @@
 		       	{
     			"type": 1,
     			"title": "pihole",
+			"name": "pihole",
     			"description": "DNS缓存和互联网广告黑洞",
     			"categories": ["tools"],
     			"platform": "linux",
@@ -563,6 +594,7 @@
 		      	{
     			"type": "container",
     			"title": "dnsmasq",
+			"name": "dnsmasq",
     			"description": "dnsmasq with a web UI ",
     			"categories": ["tools"],
     			"platform": "linux",
