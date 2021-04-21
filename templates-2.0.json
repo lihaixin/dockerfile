@@ -524,7 +524,7 @@
     			"type": 1,
     			"title": "chromium proxy",
 			"name": "chromium proxy",
-    			"description": "chromium browser use gost proxy",
+    			"description": "chromium browser use proxy",
     			"categories": ["browser"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/chromium.png",
@@ -819,6 +819,42 @@
       				"label": "HTTPS Password",
 				"description": "Password is used for Https verification",
       				"default": "88888888"
+    				}]
+  		},
+		{
+    			"type": 1,
+    			"title": "gost s5 and http",
+			"name": "gosts5",
+    			"description": "gost http and socks5 server",
+			"note": "Deploys an https server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> for production deployments.",
+    			"hostname": "gosts5",
+			"categories": ["gost"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",
+    			"image": "lihaixin/gost:s5",
+  			"network": "host",
+			"volumes": [
+				{
+      				"container": "/etc/gost",
+				"bind": "/etc/gost"
+    				}],
+			"env": [{
+      				"name": "USER",
+      				"label": "Your USER",
+				"description": "The HTTP AND SOCKS5 Server USER",
+      				"default": "test"
+    				},
+				{
+      				"name": "PORT",
+      				"label": "HTTPS PORT",
+				"description": "The HTTP AND SOCKS5 Server Port",
+      				"default": "10021"
+    				},
+		     		{
+      				"name": "PASSWD",
+      				"label": "HTTPS Password",
+				"description": "Password is used for Http & SOCKS5 verification",
+      				"default": "password"
     				}]
   		},
 		{
