@@ -842,7 +842,7 @@
     			"description": "through-cache",
 			"note": "Deploys an docker hub through-cache, please refer to <a href=\"https://github.com/hunshcn/gh-proxy\" target=\"_blank\">gost doc</a> for production deployments.",
     			"hostname": "through-cache",
-			"categories": ["tools"],
+			"categories": ["docker"],
     			"platform": "linux",
 			"restart_policy": "always",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/registry.png",
