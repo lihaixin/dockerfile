@@ -873,9 +873,9 @@
   		},
 		{
     			"type": 1,
-    			"title": "through-cache",
+    			"title": "through-cache-docker-hub",
 			"name": "through-cache-5000",
-    			"description": "through-cache",
+    			"description": "through-cache-docker-hub",
 			"note": "Deploys an docker hub through-cache, please refer to <a href=\"https://github.com/hunshcn/gh-proxy\" target=\"_blank\">gost doc</a> for production deployments.",
     			"hostname": "through-cache",
 			"categories": ["docker"],
