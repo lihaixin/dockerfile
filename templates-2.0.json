@@ -787,7 +787,7 @@
   		},
 		{
     			"type": 1,
-    			"title": "gosthttps",
+    			"title": "gost https",
 			"name": "gosthttps-58338",
     			"description": "gost https server",
 			"note": "Deploys an https server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> for production deployments.",
