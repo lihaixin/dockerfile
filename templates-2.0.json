@@ -799,8 +799,8 @@
   			"network": "host",
 			"volumes": [
 				{
-      				"container": "/etc/gost",
-				"bind": "/etc/gost"
+      				"container": "/etc/cert",
+				"bind": "/etc/cert"
     				}],
 			"env": [{
       				"name": "DOMAIN",
