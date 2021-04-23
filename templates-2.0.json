@@ -675,6 +675,10 @@
 				{
       				"container": "/etc/xray",
 				"bind": "/etc/xray"
+    				},
+				{
+      				"container": "/etc/cert",
+				"bind": "/etc/cert"
     				}],
 			"env": [{
       				"name": "DOMAIN",
@@ -711,6 +715,10 @@
 				{
       				"container": "/etc/xray",
 				"bind": "/etc/xray"
+    				},
+				{
+      				"container": "/etc/cert",
+				"bind": "/etc/cert"
     				}],
 			"env": [{
       				"name": "DOMAIN",
