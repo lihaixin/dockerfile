@@ -815,9 +815,15 @@
       				"default": "58338"
     				},
 		     		{
+      				"name": "USER",
+      				"label": "HTTPS USER",
+				"description": "user for Https verification",
+      				"default": "88888888"
+    				},
+		     		{
       				"name": "PASSWD",
       				"label": "HTTPS Password",
-				"description": "Password is used for Https verification",
+				"description": "Password for Https verification",
       				"default": "88888888"
     				}]
   		},
@@ -849,6 +855,12 @@
       				"label": "HTTP & SOCKS5 PORT",
 				"description": "The HTTP AND SOCKS5 Server Port",
       				"default": "10021"
+    				},
+				{
+      				"name": "USER",
+      				"label": "HTTPS USER",
+				"description": "user for Https verification",
+      				"default": "88888888"
     				},
 		     		{
       				"name": "PASSWD",
