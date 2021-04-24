@@ -1,0 +1,15 @@
+version: '2'
+services:
+  next-terminal:
+    image: "dushixiang/next-terminal:0.4.0"
+    restart: always
+    ports:
+      - "8088:8088"
+    volumes:
+      - next-terminal:/usr/local/next-terminal
+      - drive:/usr/local/next-terminal/drive
+      - recording:/usr/local/next-terminal/recording
+volumes:
+  next-terminal:
+  drive:
+  recording:
