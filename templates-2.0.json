@@ -780,6 +780,10 @@
 				{
       				"container": "/etc/v2-ui",
 				"bind": "/etc/v2-ui"
+    				},
+				{
+      				"container": "/etc/cert",
+				"bind": "/etc/cert"
     				}],
 			"env": [{
       				"name": "DOMAIN",
