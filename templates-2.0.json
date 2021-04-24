@@ -68,8 +68,8 @@
 				"bind": "/usr/local/next-terminal/drive"
     				},
 				{
-      				"container": "/opt/next-terminal/recording",
-				"bind": "/opt/next-terminal/recording"
+      				"container": "/usr/local/next-terminal/recording",
+				"bind": "/usr/local/next-terminal/recording"
     				}]
 			},
 		      	{
