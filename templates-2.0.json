@@ -804,8 +804,8 @@
       				"default": "558ef6820cea14627f986548c96fcb6cb668a"
     				},
 				{
-      				"name": "PORT",
-      				"label": "WEB PORT",
+      				"name": "WEBPORT",
+      				"label": "V2UI WEB PORT",
 				"description": "The V2UI Server WEB PORT.",
       				"default": "65432"
     				}]
