@@ -644,9 +644,9 @@
 		{
 			"type": 3,
 			"title": "nginx-proxy-manager",
-			"name": "nginx-proxy-manager",
-			"description": "Expose your services easily and securely",
-			"note": "Deploys an nginx-proxy-manager, please refer to <a href=\"https://nginxproxymanager.com\" target=\"_blank\">xray doc</a> for production deployments.",
+			"name": "nginx-proxy-manager-80-81-443",
+			"description": "轻松公开你的服务器",
+			"note": "部署反向代理管理器, 更多信息 <a href=\"https://nginxproxymanager.com\" target=\"_blank\">点击这里</a> ",
 			"categories": ["tools"],
 			"platform": "linux",
 			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/nginx-proxy-manager.png",
