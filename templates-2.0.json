@@ -55,22 +55,10 @@
 			"restart_policy": "always",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/Next-Terminal.png",
     			"image": "dushixiang/next-terminal:0.4.0",
-    			"ports": [
-      				"8088/tcp"
-    				],
-			"volumes": [
-				{
-      				"container": "/usr/local/next-terminal",
-				"bind": "/usr/local/next-terminal"
-    				},
-				{
-      				"container": "/usr/local/next-terminal/drive",
-				"bind": "/usr/local/next-terminal/drive"
-    				},
-				{
-      				"container": "/usr/local/next-terminal/recording",
-				"bind": "/usr/local/next-terminal/recording"
-    				}]
+    			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/next-terminal/docker-compose-sqlite.yml"
+				}
 			},
 		      	{
     			"type": 3,
@@ -82,9 +70,6 @@
 			"restart_policy": "always",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/Next-Terminal.png",
     			"image": "dushixiang/next-terminal:0.4.0",
-    			"ports": [
-      				"8088/tcp"
-    				],
 			"repository": {
 				"url": "https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/next-terminal/docker-compose.yml"
