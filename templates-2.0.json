@@ -48,27 +48,40 @@
 		      	{
     			"type": 1,
     			"title": "next-terminal-sqlite",
-			"name": "next-terminal-sqlite",
+			"name": "next-terminal-sqlite-8088",
     			"description": "Next Terminal是使用Golang和React开发的一款HTML5的远程桌面网关，具有小巧、易安装、易使用、资源占用小的特点，支持RDP、SSH、VNC和Telnet协议的连接和管理 ",
     			"categories": ["ssh"],
     			"platform": "linux",
 			"restart_policy": "always",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/Next-Terminal.png",
-    			"image": "dushixiang/next-terminal:0.3.4",
+    			"image": "dushixiang/next-terminal:0.4.0",
     			"ports": [
       				"8088/tcp"
-    				]
+    				],
+			"volumes": [
+				{
+      				"container": "/usr/local/next-terminal",
+				"bind": "/usr/local/next-terminal"
+    				},
+				{
+      				"container": "/usr/local/next-terminal/drive",
+				"bind": "/usr/local/next-terminal/drive"
+    				},
+				{
+      				"container": "/opt/next-terminal/recording",
+				"bind": "/opt/next-terminal/recording"
+    				}]
 			},
 		      	{
     			"type": 3,
     			"title": "next-terminal-mysql",
-			"name": "next-terminal-mysql",
+			"name": "next-terminal-mysql-8088",
     			"description": "Next Terminal是使用Golang和React开发的一款HTML5的远程桌面网关，具有小巧、易安装、易使用、资源占用小的特点，支持RDP、SSH、VNC和Telnet协议的连接和管理 ",
     			"categories": ["ssh"],
     			"platform": "linux",
 			"restart_policy": "always",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/Next-Terminal.png",
-    			"image": "dushixiang/next-terminal:0.3.4",
+    			"image": "dushixiang/next-terminal:0.4.0",
     			"ports": [
       				"8088/tcp"
     				],
