@@ -1,0 +1,49 @@
+version: '2'
+services:
+  xray:
+    image: 'lihaixin/xray'
+    network_mode: "host"
+    restart: always
+    environment:
+      BACKURL: "127.0.0.1"
+      PASSWORD: "88888888"
+      DOMAIN: "xray.testsanjin.xyz"
+      CF_Email: "v2ui@youdomain.com"
+      CF_Key: "558ef6820cea14627f986548c96fcb6cb****" 
+    volumes:
+      - /etc/cert:/etc/cert
+  app:
+    image: 'jc21/nginx-proxy-manager:latest'
+    ports:
+      - '80:80'
+      - '81:81'
+      - '444:443'
+    restart: always
+    environment:
+      DB_MYSQL_HOST: "db"
+      DB_MYSQL_PORT: 3306
+      DB_MYSQL_USER: "npm"
+      DB_MYSQL_PASSWORD: "npm"
+      DB_MYSQL_NAME: "npm"
+    volumes:
+      - data:/data
+      - letsencrypt:/etc/letsencrypt
+    depends_on:
+      - db
+      - xray
+  
+  db:
+    image: 'jc21/mariadb-aria:latest'
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'npm'
+      MYSQL_DATABASE: 'npm'
+      MYSQL_USER: 'npm'
+      MYSQL_PASSWORD: 'npm'
+    volumes:
+      - mysql:/var/lib/mysql
+
+volumes:
+  data:
+  letsencrypt:
+  mysql:
