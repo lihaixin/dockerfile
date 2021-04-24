@@ -646,7 +646,7 @@
 			"title": "nginx-proxy-manager",
 			"name": "nginx-proxy-manager",
 			"description": "Expose your services easily and securely",
-			"note": "Deploys an nginx-proxy-manager, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> for production deployments.",
+			"note": "Deploys an nginx-proxy-manager, please refer to <a href=\"https://nginxproxymanager.com\" target=\"_blank\">xray doc</a> for production deployments.",
 			"categories": ["tools"],
 			"platform": "linux",
 			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/nginx-proxy-manager.png",
@@ -686,6 +686,12 @@
       				"label": "Your Domain",
 				"description": "The domain name is used to apply for a digital certificate, and the domain name A points to the IP where you deploy the cloud machine",
       				"default": "xray.youdomain.com"
+    				},
+				{
+      				"name": "BACKURL",
+      				"label": "BACKURL",
+				"description": "BACKURL Address",
+      				"default": "127.0.0.1:88"
     				},
 				{
       				"name": "PORT",
@@ -744,6 +750,12 @@
       				"label": "XRAY & Trojan PORT",
 				"description": "The XRAY & Trojan Server Port.",
       				"default": "443"
+    				},
+				{
+      				"name": "BACKURL",
+      				"label": "BACKURL",
+				"description": "BACKURL Address",
+      				"default": "127.0.0.1:88"
     				},
 		     		{
       				"name": "PASSWORD",
