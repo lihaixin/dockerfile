@@ -663,7 +663,7 @@
 		{
     			"type": 1,
     			"title": "xray",
-			"name": "xray-443",
+			"name": "xray-443-88",
     			"description": "xray server use standalone",
 			"note": "Deploys an xray server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> for production deployments.",
     			"hostname": "xray",
@@ -709,7 +709,7 @@
 		{
     			"type": 1,
     			"title": "xray",
-			"name": "xray-443",
+			"name": "xray-443-88",
     			"description": "xray server use cloudflare",
 			"note": "Deploys an xray server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> for production deployments.",
     			"hostname": "xray",
