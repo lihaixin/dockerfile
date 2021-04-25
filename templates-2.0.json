@@ -789,19 +789,19 @@
       				"name": "DOMAIN",
       				"label": "Your Domain",
 				"description": "The domain name is used to apply for a digital certificate, and the domain name A points to the IP where you deploy the cloud machine",
-      				"default": "v2ui.youdomain.com"
+      				"default": "youdomain.com"
     				},
 				{
       				"name": "CF_Email",
       				"label": "Your CF_Email",
 				"description": "CF_Email mailbox account",
-      				"default": "v2ui@youdomain.com"
+      				"default": "info@youdomain.com"
     				},
 				{
       				"name": "CF_Key",
       				"label": "Your CF_Key",
 				"description": "CF_Key string",
-      				"default": "558ef6820cea14627f986548c96fcb6cb668a"
+      				"default": "558ef6820cea14627f986548c96fcb6cb××××"
     				},
 				{
       				"name": "WEBPORT",
