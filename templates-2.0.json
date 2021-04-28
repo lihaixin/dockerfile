@@ -869,6 +869,79 @@
   		},
 		{
     			"type": 1,
+    			"title": "gost vpn",
+			"name": "gostvpn-4096",
+    			"description": "gost vpn游戏加速隧道",
+			"note": "部署gostvpn游戏加速隧道, 更多点击<a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> 了接更多信息",
+    			"hostname": "gostvpnhost",
+			"categories": ["gost"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",
+    			"image": "lihaixin/gost",
+  			"network": "host",
+			"env": [{
+      				"name": "WANNAME",
+      				"label": "宿主机网卡名称",
+				"description": "登陆主机查看，确保正确，否则不能正确转发",
+      				"default": "ens3"
+    				},
+				{
+      				"name": "LANRANGE",
+      				"label": "本地局域网网段",
+				"description": "用于直接路由本地局域网网段",
+      				"default": "192.168.2.0/24"
+    				},
+		     		{
+      				"name": "MODE",
+      				"label": "MODE",
+				"description": "speederv2 模式",
+      				"default": "1"
+    				},
+		     		{
+      				"name": "FEC_OPTIONS",
+      				"label": "FEC_OPTIONS",
+				"description": "FEC_OPTIONS 参数",
+      				"default": "2:4"
+    				},
+		     		{
+      				"name": "PASSWORD",
+      				"label": "PASSWORD",
+				"description": "speederv2 密码",
+      				"default": "sanjin"
+    				},
+		     		{
+      				"name": "TIMEOUT",
+      				"label": "TIMEOUT",
+				"description": "TIMEOUT",
+      				"default": "0"
+    				},
+		     		{
+      				"name": "GOSTMTU",
+      				"label": "GOSTMTU",
+				"description": "GOSTMTU",
+      				"default": "1300"
+    				},
+		     		{
+      				"name": "MTU",
+      				"label": "MTU",
+				"description": "speederv2 MTU",
+      				"default": "1360"
+    				},
+		     		{
+      				"name": "INTERVAL",
+      				"label": "INTERVAL",
+				"description": "INTERVAL",
+      				"default": "0"
+    				},
+		     		{
+      				"name": "OPTION",
+      				"label": "OPTION",
+				"description": "OPTION",
+      				"default": "--disable-obscure"
+    				}]
+  		},
+		{
+    			"type": 1,
     			"title": "gost s5 and http",
 			"name": "gosts5-10021",
     			"description": "gost http and socks5 server",
