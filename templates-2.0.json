@@ -994,7 +994,7 @@
       				"name": "TIMEOUT",
       				"label": "TIMEOUT",
 				"description": "TIMEOUT",
-      				"default": "0"
+      				"default": "1"
     				},
 		     		{
       				"name": "UDPMTU",
