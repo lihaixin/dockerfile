@@ -941,6 +941,105 @@
       				"default": "--disable-obscure"
     				}]
   		},
+		,
+		{
+    			"type": 1,
+    			"title": "wireguard",
+			"name": "wireguard-82",
+    			"description": "wireguardvpn游戏加速隧道",
+			"note": "部署wireguard vpn游戏加速隧道, 更多点击<a href=\"https://hub.docker.com/r/lihaixin/wireguard\" target=\"_blank\">wireguard doc</a> 了接更多信息",
+    			"hostname": "wireguard-host-82",
+			"categories": ["vpn"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/wireguard.png",
+    			"image": "lihaixin/wireguard",
+			"privileged": true,
+  			"network": "host",
+			"env": [{
+      				"name": "WANNAME",
+      				"label": "宿主机网卡名称",
+				"description": "登陆主机查看，确保正确，否则不能正确转发",
+      				"default": "ens3"
+    				},
+				{
+      				"name": "SERVER_PORT",
+      				"label": "SERVER_PORT",
+				"description": "WG监听端口",
+      				"default": "82"
+    				},
+				{
+      				"name": "LANRANGE",
+      				"label": "本地局域网网段",
+				"description": "用于直接路由本地局域网网段",
+      				"default": "192.168.2.0/24"
+    				},
+		     		{
+      				"name": "MODE",
+      				"label": "MODE",
+				"description": "speederv2 模式",
+      				"default": "1"
+    				},
+		     		{
+      				"name": "FEC_OPTIONS",
+      				"label": "FEC_OPTIONS",
+				"description": "FEC_OPTIONS 参数",
+      				"default": "4:1"
+    				},
+		     		{
+      				"name": "PASSWORD",
+      				"label": "PASSWORD",
+				"description": "udp2raw 密码",
+      				"default": "sanjin"
+    				},
+		     		{
+      				"name": "TIMEOUT",
+      				"label": "TIMEOUT",
+				"description": "TIMEOUT",
+      				"default": "0"
+    				},
+		     		{
+      				"name": "UDPMTU",
+      				"label": "UDPMTU",
+				"description": "speederv2 MTU",
+      				"default": "1360"
+    				},
+		     		{
+      				"name": "WGMTU",
+      				"label": "WGMTU",
+				"description": "Wireguard MTU",
+      				"default": "1300"
+    				},
+		     		{
+      				"name": "INTERVAL",
+      				"label": "INTERVAL",
+				"description": "INTERVAL",
+      				"default": "0"
+    				},
+		     		{
+      				"name": "WGNAME",
+      				"label": "WGNAME",
+				"description": "WGNAME",
+      				"default": "wg2"
+    				},
+		     		{
+      				"name": "WGRANGE",
+      				"label": "WGRANGE",
+				"description": "WGRANGE",
+      				"default": "10.1.2.0/24"
+    				},
+		     		{
+      				"name": "WGSERVERIP",
+      				"label": "WGSERVERIP",
+				"description": "WGSERVERIP",
+      				"default": "10.1.2.1/32"
+    				},
+		     		{
+      				"name": "WGCLIENTIP",
+      				"label": "WGCLIENTIP",
+				"description": "WGCLIENTIP",
+      				"default": "10.1.2.2/32"
+    				}]
+  		},
 		{
     			"type": 1,
     			"title": "gost s5 and http",
