@@ -941,7 +941,6 @@
       				"default": "--disable-obscure"
     				}]
   		},
-		,
 		{
     			"type": 1,
     			"title": "wireguard",
