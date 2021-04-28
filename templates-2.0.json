@@ -951,7 +951,7 @@
 			"categories": ["vpn"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/wireguard.png",
-    			"image": "lihaixin/wireguard",
+    			"image": "lihaixin/wireguard:stretch",
 			"privileged": true,
   			"network": "host",
 			"env": [{
