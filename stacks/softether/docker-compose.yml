@@ -1,0 +1,12 @@
+version: '2'
+services:
+  softether:
+    image: "lihaixin/softether"
+    restart: always
+    network_mode: host
+    environment:
+      MTU: "1300"
+    volumes:
+      - vpn_server:/usr/local/vpnserver
+volumes:
+  vpn_server:
