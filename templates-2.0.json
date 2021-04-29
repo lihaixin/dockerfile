@@ -934,7 +934,7 @@
       				"name": "TIMEOUT",
       				"label": "TIMEOUT",
 				"description": "TIMEOUT",
-      				"default": "0"
+      				"default": "1"
     				},
 		     		{
       				"name": "GOSTMTU",
@@ -944,7 +944,7 @@
     				},
 		     		{
       				"name": "MTU",
-      				"label": "MTU",
+      				"label": "SPEEDER UDPMTU",
 				"description": "speederv2 MTU",
       				"default": "1360"
     				},
