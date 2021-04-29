@@ -691,7 +691,8 @@
 			"env": [{
 				"name": "MTU",
 				"label": "DEFAULT MTU",
-				"description": "中转机使用1300、落地机使用1200."
+				"description": "中转机使用1300、落地机使用1200.",
+				"default": "1300"
 			}]
 		},
 		{
