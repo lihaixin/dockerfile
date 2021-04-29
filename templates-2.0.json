@@ -676,6 +676,25 @@
 			}]
 		},
 		{
+			"type": 3,
+			"title": "softethervpn",
+			"name": "softethervpn-80-81-443",
+			"description": "构建多合一（L2TP SSTP OPENVPN）VPN服务器",
+			"note": "部署softether,用到400、4500、443、1701、1194端口, 更多信息 <a href=\"https://hub.docker.com/r/lihaixin/softether\" target=\"_blank\">点击这里</a> ",
+			"categories": ["tools"],
+			"platform": "linux",
+			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/softether.png",
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/softether/docker-compose.yml"
+			},
+			"env": [{
+				"name": "MTU",
+				"label": "DEFAULT MTU",
+				"description": "中转机使用1300、落地机使用1200."
+			}]
+		},
+		{
     			"type": 1,
     			"title": "xray",
 			"name": "xray-443-88",
