@@ -861,7 +861,7 @@
     			"type": 1,
     			"title": "xray",
 			"name": "xray-443-88",
-    			"description": "xray server 一键部署3合一代理",
+    			"description": "一键部署3合一代理,使用主机80端口申请单域名证书",
 			"note": "一键部署3合一代理, 更多参考 <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> 了解",
     			"hostname": "xray",
 			"categories": ["xray"],
