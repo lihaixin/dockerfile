@@ -454,20 +454,20 @@
     			"network": "host",
 			"env": [{
       				"name": "SUBDOMAIN_HOST",
-      				"label": "你的域名",
-				"description": "使用的域名",
-      				"default": "youdomain.com"
+      				"label": "你的frp子域名",
+				"description": "客户端http使用的子域名",
+      				"default": "frp.youdomain.com"
     				},
 				{
       				"name": "DASHBOARD_PWD",
       				"label": "管理面板密码",
-				"description": "登陆管理页面的密码",
+				"description": "登陆https://admin.frp.youdomain.com管理页面的密码",
       				"default": "password"
     				},
 				{
       				"name": "TOKEN",
-      				"label": "客户端登陆的",
-				"description": "客户端登陆的",
+      				"label": "客户端登陆的TOKEN",
+				"description": "客户端验证登陆的TOKEN",
       				"default": "12345678"
     				}],
     			"restart_policy": "always"
