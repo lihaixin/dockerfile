@@ -474,8 +474,8 @@
   			},
   			{
     			"type": 1,
-    			"title": "nps-docker-80-443-8024",
-			"name": "nps-docker-80-443-8024",
+    			"title": "nps-80-443-8024",
+			"name": "nps-80-443-8024",
     			"description": "NPS内网穿透服务器",
     			"categories": ["Reverse Proxy"],
     			"platform": "linux",
