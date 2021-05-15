@@ -456,10 +456,6 @@
 				{
       				"container": "/etc/cert",
 				"bind": "/etc/cert"
-    				},
-				{
-      				"container": "/var/frp/conf",
-				"bind": "/var/ftp/conf"
     				}],
 			"env": [{
       				"name": "DOMAIN",
