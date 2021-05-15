@@ -584,7 +584,7 @@
     			"title": "pihole",
 			"name": "pihole",
     			"description": "DNS缓存和互联网广告黑洞",
-    			"categories": ["tools"],
+    			"categories": ["dns"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/pihole.png",
     			"image": "pihole/pihole:latest",
@@ -611,36 +611,6 @@
 				{
 				"container": "/watch"
 				}]
-  			},
-		      	{
-    			"type": "container",
-    			"title": "dnsmasq",
-			"name": "dnsmasq",
-    			"description": "dnsmasq with a web UI ",
-    			"categories": ["tools"],
-    			"platform": "linux",
-    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/dnsmasq.jpeg",
-    			"image": "jpillora/dnsmasq",
-    			"ports": [
-      				"53/udp",
-      				"5380/tcp"
-    				],
-     			"env": [{
-      				"name": "HTTP_USER",
-      				"label": "HTTP_USER",
-      				"set": "foo"
-    				},
-     				{
-      				"name": "HTTP_PASS",
-      				"label": "HTTP_PASS",
-      				"set": "bar"
-    				},
-     				{
-      				"name": "PORT",
-      				"label": "PORT",
-      				"set": "5380"
-    				}],
-    			"restart_policy": "always"
   			},
 		        {
 			"type": 3,
@@ -1306,6 +1276,39 @@
       				"label": "DOCKER_HUB_ACCESS_TOKEN",
 				"description": "DOCKER_HUB_ACCESS_TOKEN",
       				"default": "you hub token"
+    				}]
+  		},
+		{
+    			"type": 1,
+    			"title": "dnsmasq自定义域名解析",
+			"name": "dnsmasq-53-5380",
+    			"description": "through-cache-docker-hub",
+			"note": "dnsmasq自定义域名解析, 请参考 <a href=\"https://hub.docker.com/r/jpillora/dnsmasq\" target=\"_blank\">dnsmasq doc</a> 了接更多",
+    			"hostname": "dnsmasq",
+			"categories": ["dns"],
+    			"platform": "linux",
+			"restart_policy": "always",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/dnsmasq.png",
+    			"image": "jpillora/dnsmasq",
+			"restart_policy": "always",
+  			"ports": ["53/udp","5380/tcp"],
+			"env": [{
+      				"name": "HTTP_USER",
+      				"label": "HTTP_USER",
+				"description": "HTTP管理登录用户名",
+      				"default": "foo"
+    				},
+		     		{
+      				"name": "HTTP_PASS",
+      				"label": "HTTP_PASS",
+				"description": "HTTP管理登录密码",
+      				"default": "bar"
+    				},
+		     		{
+      				"name": "PORT",
+      				"label": "PORT",
+				"description": "HTTP管理端口",
+      				"default": "5380"
     				}]
   		}
 	]
