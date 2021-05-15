@@ -447,7 +447,7 @@
     			"title": "frps",
 			"name": "frps",
     			"description": "FRP内网穿透服务器",
-    			"categories": ["tools"],
+    			"categories": ["Reverse Proxy"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/frp.png",
     			"image": "lihaixin/frp:latest",
