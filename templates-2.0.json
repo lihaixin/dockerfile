@@ -445,7 +445,7 @@
   			{
     			"type": 1,
     			"title": "frps-443-80",
-			"name": "frps",
+			"name": "frps-443-80",
     			"description": "FRP内网穿透服务器",
     			"categories": ["Reverse Proxy"],
     			"platform": "linux",
