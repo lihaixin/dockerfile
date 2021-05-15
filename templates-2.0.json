@@ -444,8 +444,8 @@
   			},
   			{
     			"type": 1,
-    			"title": "frps-443-80",
-			"name": "frps-443-80",
+    			"title": "frps-80-443",
+			"name": "frps-80-443",
     			"description": "FRP内网穿透服务器",
     			"categories": ["Reverse Proxy"],
     			"platform": "linux",
@@ -456,6 +456,10 @@
 				{
       				"container": "/etc/cert",
 				"bind": "/etc/cert"
+    				},
+				{
+      				"container": "/var/frp",
+				"bind": "/var/ftp"
     				}],
 			"env": [{
       				"name": "DOMAIN",
@@ -478,8 +482,8 @@
 				{
       				"name": "SUBDOMAIN_HOST",
       				"label": "你的域名",
-				"description": "使用的子域名",
-      				"default": "frp.youdomain.com"
+				"description": "使用的域名",
+      				"default": "youdomain.com"
     				},
 				{
       				"name": "DASHBOARD_PWD",
