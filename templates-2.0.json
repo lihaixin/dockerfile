@@ -444,25 +444,55 @@
   			},
   			{
     			"type": 1,
-    			"title": "frps",
+    			"title": "frps-443-80",
 			"name": "frps",
     			"description": "FRP内网穿透服务器",
     			"categories": ["Reverse Proxy"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/frp.png",
     			"image": "lihaixin/frp:latest",
-    			"ports": [
-      				"10000/tcp",
-      				"10000/udp",
-      				"10001/tcp",
-      				"10001/udp",
-      				"10002/tcp",
-      				"10002/udp",
-      				"80/tcp",
-      				"80/udp",
-      				"443/tcp",
-      				"443/udp"
-    				],
+    			"network": "host",
+			"volumes": [
+				{
+      				"container": "/etc/cert",
+				"bind": "/etc/cert"
+    				}],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "申请泛证书的域名",
+				"description": "申请证书的域名，用于证书申请",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "CF_Email",
+      				"label": "Your CF_Email",
+				"description": "CF_Email mailbox account",
+      				"default": "info@youdomain.com"
+    				},
+				{
+      				"name": "CF_Key",
+      				"label": "Your CF_Key",
+				"description": "CF_Key string",
+      				"default": "558ef6820cea14627f986548c96fcb6cb××××"
+    				},
+				{
+      				"name": "SUBDOMAIN_HOST",
+      				"label": "你的域名",
+				"description": "使用的子域名",
+      				"default": "frp.youdomain.com"
+    				},
+				{
+      				"name": "DASHBOARD_PWD",
+      				"label": "管理面板密码",
+				"description": "登陆管理页面的密码",
+      				"default": "password"
+    				},
+				{
+      				"name": "TOKEN",
+      				"label": "客户端登陆的",
+				"description": "客户端登陆的",
+      				"default": "12345678"
+    				}],
     			"restart_policy": "always"
   			},
   			{
