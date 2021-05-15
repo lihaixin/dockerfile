@@ -458,8 +458,8 @@
 				"bind": "/etc/cert"
     				},
 				{
-      				"container": "/var/frp",
-				"bind": "/var/ftp"
+      				"container": "/var/frp/conf",
+				"bind": "/var/ftp/conf"
     				}],
 			"env": [{
       				"name": "DOMAIN",
