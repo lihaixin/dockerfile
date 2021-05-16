@@ -491,6 +491,9 @@
 			"volumes": [{
       				"container": "/etc/cert",
 				"bind": "/etc/cert"
+    				},
+				{
+      				"container": "/conf"
     				}],
 			"env": [{
       				"name": "DOMAIN",
