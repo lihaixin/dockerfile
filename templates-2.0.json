@@ -491,10 +491,6 @@
 			"volumes": [{
       				"container": "/etc/cert",
 				"bind": "/etc/cert"
-    				},
-				{
-      				"container": "/conf",
-				"bind": "/etc/nps"
     				}],
 			"env": [{
       				"name": "DOMAIN",
