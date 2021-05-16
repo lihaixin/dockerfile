@@ -452,6 +452,12 @@
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/frp.png",
     			"image": "lihaixin/frp:latest",
     			"network": "host",
+			"volumes": [
+				{
+      				"container": "/etc/cert",
+				"bind": "/etc/cert"
+    				}]
+  			},
 			"env": [{
       				"name": "SUBDOMAIN_HOST",
       				"label": "你的frp子域名",
