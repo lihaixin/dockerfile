@@ -452,8 +452,7 @@
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/frp.png",
     			"image": "lihaixin/frp:latest",
     			"network": "host",
-			"volumes": [
-				{
+			"volumes": [{
       				"container": "/etc/cert",
 				"bind": "/etc/cert"
     				}]
