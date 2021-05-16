@@ -455,8 +455,7 @@
 			"volumes": [{
       				"container": "/etc/cert",
 				"bind": "/etc/cert"
-    				}]
-  			},
+    				}],
 			"env": [{
       				"name": "SUBDOMAIN_HOST",
       				"label": "你的frp子域名",
