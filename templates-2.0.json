@@ -484,7 +484,7 @@
     			"categories": ["Reverse Proxy"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/nps.png",
-    			"image": "lihaixin/nps-docker:latest",
+    			"image": "lihaixin/nps:latest",
     			"network": "host",
 			"volumes": [{
       				"container": "/etc/cert",
