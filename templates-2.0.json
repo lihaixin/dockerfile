@@ -457,7 +457,7 @@
 				"bind": "/etc/cert"
     				}],
 			"env": [{
-      				"name": "SUBDOMAIN_HOST",
+      				"name": "DOMAIN",
       				"label": "你的frp子域名",
 				"description": "客户端http使用的子域名",
       				"default": "frp.youdomain.com"
