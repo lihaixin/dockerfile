@@ -494,7 +494,7 @@
       				"name": "DOMAIN",
       				"label": "你的域名",
 				"description": "使用的域名",
-      				"default": "youdomain.com"
+      				"default": "nps.youdomain.com"
     				},
 				{
       				"name": "WEB_PASSWORD",
