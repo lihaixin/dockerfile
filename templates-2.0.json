@@ -505,7 +505,7 @@
 				{
       				"name": "PUBLIC_VKEY",
       				"label": "PUBLIC_VKEY",
-				"description": "客户端登陆的",
+				"description": "客户端登陆的公共VKEY",
       				"default": "12345678"
     				}],
     			"restart_policy": "always"
