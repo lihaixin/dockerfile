@@ -458,7 +458,7 @@
     				}],
 			"env": [{
       				"name": "DOMAIN",
-      				"label": "你的frp子域名",
+      				"label": "你的frp域名",
 				"description": "客户端http使用的子域名",
       				"default": "frp.youdomain.com"
     				},
