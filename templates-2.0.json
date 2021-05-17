@@ -530,6 +530,20 @@
   			},
    			{
     			"type": 1,
+   			"title": "unblockneteasemusic-8080",
+			"name": "unblockneteasemusic-8080",
+    			"description": "解锁网易云音乐客户端变灰歌曲",
+			"note": "解锁网易云音乐客户端变灰歌曲 <a href=\"https://github.com/nondanee/UnblockNeteaseMusic/issues/22\" target=\"_blank\">食用指南</a>",
+    			"categories": ["music"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/speedtest.png",
+    			"image": "nondanee/unblockneteasemusic",
+    			"ports": [
+      				"8080/tcp"
+    				]
+  			},
+   			{
+    			"type": 1,
     			"title": "toolbox",
 			"name": "toolbox",
     			"description": "linux tool box",
