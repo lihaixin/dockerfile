@@ -536,7 +536,7 @@
 			"note": "解锁网易云音乐客户端变灰歌曲 <a href=\"https://github.com/nondanee/UnblockNeteaseMusic/issues/22\" target=\"_blank\">食用指南</a>",
     			"categories": ["music"],
     			"platform": "linux",
-    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/speedtest.png",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/163music.png",
     			"image": "nondanee/unblockneteasemusic",
     			"ports": [
       				"8080/tcp"
@@ -550,7 +550,7 @@
 			"note": "在线音乐播放器 <a href=\"https://hub.docker.com/r/oldiy/music-player-docker\" target=\"_blank\">食用指南</a>",
     			"categories": ["music"],
     			"platform": "linux",
-    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/speedtest.png",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/music.png",
     			"image": "nondanee/unblockneteasemusic",
 			"volumes": [{
       				"container": "/var/www/html/cache",
