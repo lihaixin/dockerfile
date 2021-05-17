@@ -555,8 +555,7 @@
 			"volumes": [{
       				"container": "/var/www/html/cache",
 				"bind": "/var/unblockneteasemusic_cache"
-    				}]
-  			},
+    				}],
     			"ports": [
       				"264/tcp"
     				]
