@@ -552,8 +552,7 @@
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/speedtest.png",
     			"image": "nondanee/unblockneteasemusic",
-			"volumes": [
-				{
+			"volumes": [{
       				"container": "/var/www/html/cache",
 				"bind": "/var/unblockneteasemusic_cache"
     				}]
