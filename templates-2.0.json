@@ -104,7 +104,7 @@
 				"url": "https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/netdata/docker-compose.yml"
 				}
-			}
+			},
  			{
     			"type": 1,
     			"title": "tinyportmapper",
