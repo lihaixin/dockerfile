@@ -12,7 +12,7 @@ services:
       - mysql:/var/lib/mysql
       
   next-terminal:
-    image: "dushixiang/next-terminal:0.3.4"
+    image: "dushixiang/next-terminal:0.4.0"
     restart: always
     environment:
       DB: "mysql"
