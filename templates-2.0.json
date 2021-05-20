@@ -750,6 +750,30 @@
 			}]
 		},
 		{
+			"type": 1,
+			"title": "n2n-5645",
+			"name": "n2n-5645",
+			"description": "点对点VPN服务器",
+			"note": "部署点对点VPN服务器 更多信息 <a href=\"https://hub.docker.com/r/supermock/supernode\" target=\"_blank\">点击这里</a> ",
+			"categories": ["vpn"],
+			"platform": "linux",
+			"ports": ["5645/udp"],
+			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/n2n.png",
+			"image": "supermock/supernode:latest-x86_64"
+		},
+		{
+			"type": 1,
+			"title": "zerotier-9993",
+			"name": "zerotier-9993",
+			"description": "点对点VPN服务器",
+			"note": "部署点对点VPN服务器 更多信息 <a href=\"https://hub.docker.com/r/lihaixin/zerotier\" target=\"_blank\">点击这里</a> ",
+			"categories": ["vpn"],
+			"platform": "linux",
+			"network": "host",
+			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/zerotier.png",
+			"image": "lihaixin/zerotier"
+		},
+		{
     			"type": 1,
     			"title": "acme-standalone ",
 			"name": "acme-standalone-80",
