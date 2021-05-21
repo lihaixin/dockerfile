@@ -771,7 +771,13 @@
 			"platform": "linux",
 			"network": "host",
 			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/zerotier.png",
-			"image": "lihaixin/zerotier:debian"
+			"image": "lihaixin/zerotier:debian",
+			"env": [{
+      				"name": "ID",
+      				"label": "你要加入的网络ID",
+				"description": "可以是全球公开的，也可以是私有的",
+      				"default": "8056c2e21c000001"
+    				}]
 		},
 		{
     			"type": 1,
