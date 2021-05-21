@@ -771,7 +771,7 @@
 			"platform": "linux",
 			"network": "host",
 			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/zerotier.png",
-			"image": "lihaixin/zerotier"
+			"image": "lihaixin/zerotier:debian"
 		},
 		{
     			"type": 1,
