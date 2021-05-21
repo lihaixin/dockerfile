@@ -772,6 +772,11 @@
 			"network": "host",
 			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/zerotier.png",
 			"image": "lihaixin/zerotier:debian",
+			"privileged": true,
+			"volumes": [{
+      				"container": "/var/lib/zerotier-one",
+				"bind": "/var/lib/zerotier-one"
+    				}],
 			"env": [{
       				"name": "ID",
       				"label": "你要加入的网络ID",
