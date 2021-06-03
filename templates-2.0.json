@@ -844,6 +844,48 @@
       				"default": "558ef6820cea14627f986548c96fcb6cb××××"
     				}]
   		},
+		 {
+    			"type": 1,
+    			"title": "acme-cf ",
+			"name": "acme-cf",
+    			"description": "Cloudflare接口泛域名数字证书申请,使用别名验证申请,用于.cf .ga .gq .ml .tk这些免费域名,Cloudflare已经不支持通过API设置申请泛域名",
+			"note": "泛域名数字证书申请, 更多<a href=\"https://hub.docker.com/r/lihaixin/acme\" target=\"_blank\">点击这里</a> 了接更多",
+    			"hostname": "acme-cf-alias",
+			"categories": ["cert"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/acme.png",
+    			"image": "lihaixin/acme:cf_alias",
+  			"network": "host",
+			"volumes": [
+				{
+      				"container": "/etc/cert",
+				"bind": "/etc/cert"
+    				}],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "你需要申请证书的域名",
+				"description": "把域名A记录指向云主机IP,同时做好_acme-challenge.DOMAIN别名指向_acme-challenge.aliasDOMAIN",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "aliasDOMAIN",
+      				"label": "利用别名验证的域名",
+				"description": "这个域名托管在cloudflare,下面的CF_Email和CF_Key都是使用这个证书的信息",
+      				"default": "aliasyoudomain.com"
+    				}
+				{
+      				"name": "CF_Email",
+      				"label": "CF_Email",
+				"description": "你在Cloudflare邮箱",
+      				"default": "info@domain.com"
+    				},
+		     		{
+      				"name": "CF_Key",
+      				"label": "CF_Key",
+				"description": "Cloudflare接口密钥",
+      				"default": "558ef6820cea14627f986548c96fcb6cb××××"
+    				}]
+  		},
 		{
     			"type": 1,
     			"title": "acme-namesilo",
