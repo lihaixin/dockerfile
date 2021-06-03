@@ -844,7 +844,7 @@
       				"default": "558ef6820cea14627f986548c96fcb6cb××××"
     				}]
   		},
-		 {
+		{
     			"type": 1,
     			"title": "acme-cf ",
 			"name": "acme-cf",
@@ -872,7 +872,7 @@
       				"label": "利用别名验证的域名",
 				"description": "这个域名托管在cloudflare,下面的CF_Email和CF_Key都是使用这个证书的信息",
       				"default": "aliasyoudomain.com"
-    				}
+    				},
 				{
       				"name": "CF_Email",
       				"label": "CF_Email",
