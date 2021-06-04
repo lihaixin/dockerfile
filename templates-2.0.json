@@ -16,6 +16,27 @@
 				"container": "/var/lib/registry"
 				}]
 			},
+		        {
+			"type": 1,
+			"title": "portainer-9000",
+			"name": "portainer-9000",
+			"description": "自定义portainer管理面包,包含常用模板,管理地址:https://youdomain.com:9000",
+			"categories": ["docker"],
+			"platform": "linux",
+			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/portainer.png",
+			"image": "lihaixin/portainer:ce",
+			"network": "host",
+			"volumes": [{
+				"container": "/etc/cert",
+				"bind": "/etc/cert"
+				}],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "你的域名",
+				"description": "把域名A记录指向云主机IP",
+      				"default": "youdomain.com"
+    				}
+			},
 			{
    		 	"type": 1,
     			"title": "webssh",
