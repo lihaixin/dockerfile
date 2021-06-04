@@ -18,8 +18,8 @@
 			},
 		        {
 			"type": 1,
-			"title": "portainer-9000",
-			"name": "portainer-9000",
+			"title": "portainer",
+			"name": "portainer",
 			"description": "自定义portainer管理面包,包含常用模板,管理地址:https://youdomain.com:9000",
 			"categories": ["docker"],
 			"platform": "linux",
