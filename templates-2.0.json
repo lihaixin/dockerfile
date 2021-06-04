@@ -35,7 +35,7 @@
       				"label": "你的域名",
 				"description": "把域名A记录指向云主机IP",
       				"default": "youdomain.com"
-    				}
+    				}]
 			},
 			{
    		 	"type": 1,
