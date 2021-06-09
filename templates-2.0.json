@@ -69,7 +69,7 @@
 		      	{
     			"type": 1,
     			"title": "ttyd",
-			"name": "ttyd",
+			"name": "ttyd-7681",
     			"description": "ttyd is a simple command line tool for sharing terminal over the web ",
     			"categories": ["ssh"],
     			"platform": "linux",
