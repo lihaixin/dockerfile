@@ -736,7 +736,7 @@
 			"title": "nginx-proxy-manager",
 			"name": "nginx-proxy-manager-80-81-443",
 			"description": "轻松公开你的服务器",
-			"note": "部署反向代理管理器, 更多信息 <a href=\"https://nginxproxymanager.com\" target=\"_blank\">点击这里</a> ",
+			"note": "部署反向代理管理器,使用host网络, 更多信息 <a href=\"https://nginxproxymanager.com\" target=\"_blank\">点击这里</a> ",
 			"categories": ["Reverse Proxy"],
 			"platform": "linux",
 			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/nginx-proxy-manager.png",
