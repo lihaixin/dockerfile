@@ -7,9 +7,9 @@ services:
     environment:
       DB_MYSQL_HOST: "127.0.0.1"
       DB_MYSQL_PORT: 3306
-      DB_MYSQL_USER: "npm"
-      DB_MYSQL_PASSWORD: "npm"
-      DB_MYSQL_NAME: "npm"
+      DB_MYSQL_USER: ${MYSQL_DATABASE_PASSWORD}
+      DB_MYSQL_PASSWORD: ${MYSQL_DATABASE_PASSWORD}
+      DB_MYSQL_NAME: ${MYSQL_DATABASE_PASSWORD}
     volumes:
       - data:/data
       - letsencrypt:/etc/letsencrypt
@@ -20,10 +20,10 @@ services:
     restart: always
     network_mode: host
     environment:
-      MYSQL_ROOT_PASSWORD: 'npm'
-      MYSQL_DATABASE: 'npm'
-      MYSQL_USER: 'npm'
-      MYSQL_PASSWORD: 'npm'
+      MYSQL_ROOT_PASSWORD: ${MYSQL_DATABASE_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE_PASSWORD}
+      MYSQL_USER: ${MYSQL_DATABASE_PASSWORD}
+      MYSQL_PASSWORD: ${MYSQL_DATABASE_PASSWORD}
     volumes:
       - mysql:/var/lib/mysql
  volumes:
