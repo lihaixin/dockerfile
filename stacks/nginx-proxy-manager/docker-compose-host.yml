@@ -26,7 +26,7 @@ services:
       MYSQL_PASSWORD: ${MYSQL_DATABASE_PASSWORD}
     volumes:
       - mysql:/var/lib/mysql
- volumes:
-  data:
-  letsencrypt:
-  mysql:
+  volumes:
+    data:
+    letsencrypt:
+    mysql:
