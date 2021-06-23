@@ -650,11 +650,16 @@
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/tor.png",
     			"image": "lihaixin/tor:latest",
+			"volumes": [{
+				"container": "/etc/cert",
+				"bind": "/etc/cert"
+				}],
     			"ports": [
       				"9050/tcp",
 				"9051/tcp",
 				"9052/tcp",
-				"9052/udp"
+				"9052/udp",
+				"9053/tcp"
     				]
   			},
    			{
