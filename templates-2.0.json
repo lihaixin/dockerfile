@@ -1182,6 +1182,40 @@
   		},
 		{
     			"type": 1,
+    			"title": "x-ui-54321",
+			"name": "x-ui-54321",
+    			"description": "Support multi-protocol multi-user Xray panel",
+			"note": "Deploys an x-ui server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/x-ui\" target=\"_blank\">x-ui doc</a> for production deployments.",
+    			"hostname": "v2ui",
+			"categories": ["xray"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ui.png",
+    			"image": "lihaixin/x-ui",
+  			"network": "host",
+			"volumes": [
+				{
+      				"container": "/etc/x-ui",
+				"bind": "/etc/x-ui"
+    				},
+				{
+      				"container": "/etc/cert",
+				"bind": "/etc/cert"
+    				}],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "Your Domain",
+				"description": "The domain name is used to apply for a digital certificate, and the domain name A points to the IP where you deploy the cloud machine",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "WEBPORT",
+      				"label": "X-UI WEB PORT",
+				"description": "The X-UI Server WEB PORT.",
+      				"default": "54321"
+    				}]
+  		},
+		{
+    			"type": 1,
     			"title": "gost https",
 			"name": "gosthttps-58338",
     			"description": "利用gost打造外贸简单科学上网",
