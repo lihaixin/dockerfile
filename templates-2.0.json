@@ -131,7 +131,7 @@
     			"title": "tinyportmapper",
 			"name": "tinyportmapper",
     			"description": "TCP UDP端口转发",
-    			"categories": ["tools"],
+    			"categories": ["Reverse Proxy"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/tinyportmapper.png",
     			"image": "lihaixin/tinyportmapper:latest",
