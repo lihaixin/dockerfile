@@ -1216,6 +1216,41 @@
   		},
 		{
     			"type": 1,
+    			"title": "xray:local.ssAEAD-10801-10802",
+			"name": "xray:local.ssAEAD-10801-10802",
+    			"description": "xray Shadowsocks AEAD 客户端",
+			"note": "一键部署xray Shadowsocks AEAD 客户端, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> 更多信息",
+    			"hostname": "xray",
+			"categories": ["xray"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
+    			"image": "lihaixin/xray:local",
+  			"ports": [
+      				"10801/tcp",
+      				"10801/udp",
+      				"10802/tcp"
+    				],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "SHADOWSOCKS Domain Address",
+				"description": "The SHADOWSOCKS Domain Address",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "PORT",
+      				"label": "SHADOWSOCKS PORT",
+				"description": "The shadowsocks Server PORT.",
+      				"default": "54321"
+    				},
+			        {
+      				"name": "PASSWORD",
+      				"label": "SHADOWSOCKS PASSWORD",
+				"description": "The shadowsocks Server PASSWORD.",
+      				"default": "88888888"
+    				}]
+  		},
+		{
+    			"type": 1,
     			"title": "gost https",
 			"name": "gosthttps-58338",
     			"description": "利用gost打造外贸简单科学上网",
