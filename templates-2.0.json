@@ -1251,6 +1251,41 @@
   		},
 		{
     			"type": 1,
+    			"title": "xray.local.trojan.tcp.tls-10801-10802",
+			"name": "xray.local.trojan.tcp.tls-10801-10802",
+    			"description": "xray trojan TCP tls 客户端",
+			"note": "一键部署xray trojan TCP tls 客户端, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> 更多信息",
+    			"hostname": "xray",
+			"categories": ["xray"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
+    			"image": "lihaixin/xray:local.trojan.tcp.tls",
+  			"ports": [
+      				"10801/tcp",
+      				"10801/udp",
+      				"10802/tcp"
+    				],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "Trojan地址",
+				"description": "The Trojan Domain Address",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "PORT",
+      				"label": "Trojan端口",
+				"description": "The Trojan Server PORT.",
+      				"default": "54321"
+    				},
+			        {
+      				"name": "PASSWORD",
+      				"label": "Trojan密码",
+				"description": "The Trojan Server PASSWORD.",
+      				"default": "88888888"
+    				}]
+  		},
+		{
+    			"type": 1,
     			"title": "xray.local.vmess-10801-10802",
 			"name": "xray.local.vmess-10801-10802",
     			"description": "xray vmess TCP 客户端",
@@ -1267,14 +1302,14 @@
     				],
 			"env": [{
       				"name": "DOMAIN",
-      				"label": "SHADOWSOCKS地址",
-				"description": "The SHADOWSOCKS Domain Address",
+      				"label": "VMESS地址",
+				"description": "The VMESS Domain Address",
       				"default": "youdomain.com"
     				},
 				{
       				"name": "PORT",
-      				"label": "SHADOWSOCKS端口",
-				"description": "The shadowsocks Server PORT.",
+      				"label": "VMESS端口",
+				"description": "The VMESS Server PORT.",
       				"default": "54321"
     				},
 			        {
@@ -1283,7 +1318,43 @@
 				"description": "The VMESS ID.",
       				"default": "0e62fe37-c183-4591-e13b-8726824bbc5b"
     				}]
-  		},     
+  		},
+		,
+		{
+    			"type": 1,
+    			"title": "xray.local.vless.tcp.xtls-10801-10802",
+			"name": "xray.local.vless.tcp.xtls-10801-10802",
+    			"description": "xray vless TCP XTLS客户端",
+			"note": "一键部署xray vless TCP XTLS 客户端, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> 更多信息",
+    			"hostname": "xray",
+			"categories": ["xray"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
+    			"image": "lihaixin/xray:local.vless.tcp.xtls",
+  			"ports": [
+      				"10801/tcp",
+      				"10801/udp",
+      				"10802/tcp"
+    				],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "VLESS地址",
+				"description": "The VLESS Domain Address",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "PORT",
+      				"label": "VLESS端口",
+				"description": "The VLESS Server PORT.",
+      				"default": "54321"
+    				},
+			        {
+      				"name": "ID",
+      				"label": "VLESS ID",
+				"description": "The VLESS ID.",
+      				"default": "0e62fe37-c183-4591-e13b-8726824bbc5b"
+    				}]
+  		},
 		{
     			"type": 1,
     			"title": "gost https",
