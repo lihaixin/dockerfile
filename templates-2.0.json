@@ -1032,7 +1032,7 @@
   		},
 		{
     			"type": 1,
-    			"title": "xray",
+    			"title": "xray-443-88",
 			"name": "xray-443-88",
     			"description": "一键部署3合一代理,使用主机80端口申请单域名证书",
 			"note": "一键部署3合一代理, 更多参考 <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> 了解",
@@ -1078,7 +1078,7 @@
   		},
 		{
     			"type": 1,
-    			"title": "xray",
+    			"title": "xray-44-88",
 			"name": "xray-443-88",
     			"description": "一键部署7合一代理，使用cloudflare申请泛域名证书",
 			"note": "一键部署7合一代理, 使用cloudflare申请泛域名证书，更多参考 <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> 了解",
@@ -1136,7 +1136,7 @@
   		},
 		{
     			"type": 1,
-    			"title": "v2ui",
+    			"title": "v2ui-65432",
 			"name": "v2ui-65432",
     			"description": "Support multi-protocol multi-user v2ray panel",
 			"note": "Deploys an xray server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/v2ui\" target=\"_blank\">v2ui doc</a> for production deployments.",
