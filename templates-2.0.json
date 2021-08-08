@@ -1319,7 +1319,6 @@
       				"default": "0e62fe37-c183-4591-e13b-8726824bbc5b"
     				}]
   		},
-		,
 		{
     			"type": 1,
     			"title": "xray.local.vless.tcp.xtls-10801-10802",
