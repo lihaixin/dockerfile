@@ -1078,7 +1078,7 @@
   		},
 		{
     			"type": 1,
-    			"title": "xray-44-88",
+    			"title": "xray-443-88",
 			"name": "xray-443-88",
     			"description": "一键部署7合一代理，使用cloudflare申请泛域名证书",
 			"note": "一键部署7合一代理, 使用cloudflare申请泛域名证书，更多参考 <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> 了解",
