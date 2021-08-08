@@ -1224,7 +1224,7 @@
 			"categories": ["xray"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
-    			"image": "lihaixin/xray:ssAEAD",
+    			"image": "lihaixin/xray:local.ssAEAD",
   			"ports": [
       				"10801/tcp",
       				"10801/udp",
@@ -1267,13 +1267,13 @@
     				],
 			"env": [{
       				"name": "DOMAIN",
-      				"label": "SHADOWSOCKS Domain Address",
+      				"label": "SHADOWSOCKS地址",
 				"description": "The SHADOWSOCKS Domain Address",
       				"default": "youdomain.com"
     				},
 				{
       				"name": "PORT",
-      				"label": "SHADOWSOCKS PORT",
+      				"label": "SHADOWSOCKS端口",
 				"description": "The shadowsocks Server PORT.",
       				"default": "54321"
     				},
