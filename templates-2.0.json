@@ -1216,15 +1216,15 @@
   		},
 		{
     			"type": 1,
-    			"title": "xray.local.ssAEAD-10801-10802",
-			"name": "xray.local.ssAEAD-10801-10802",
+    			"title": "xray.local.ss.AEAD-10801-10802",
+			"name": "xray.local.ss.AEAD-10801-10802",
     			"description": "xray Shadowsocks AEAD 客户端",
-			"note": "一键部署xray Shadowsocks AEAD 客户端, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> 更多信息",
+			"note": "一键部署xray Shadowsocks AEAD 客户端, please refer to <a href=\"https://github.com/lihaixin/xray/blob/local.ss.AEAD/README.md\" target=\"_blank\">xray doc</a> 更多信息",
     			"hostname": "xray",
 			"categories": ["xray"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
-    			"image": "lihaixin/xray:local.ssAEAD",
+    			"image": "lihaixin/xray:local.ss.AEAD",
   			"ports": [
       				"10801/tcp",
       				"10801/udp",
@@ -1241,6 +1241,12 @@
       				"label": "SHADOWSOCKS端口",
 				"description": "The shadowsocks Server PORT.",
       				"default": "54321"
+    				},
+				{
+      				"name": "METHOD",
+      				"label": "SHADOWSOCKS加密方式",
+				"description": "The shadowsocks Server 加密METHOD.",
+      				"default": "chacha20-poly1305"
     				},
 			        {
       				"name": "PASSWORD",
