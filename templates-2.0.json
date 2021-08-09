@@ -1368,6 +1368,41 @@
   		},
 		{
     			"type": 1,
+    			"title": "xray.local.vless.grpc.tls-10801-10802",
+			"name": "xray.local.vless.grpc.tls-10801-10802",
+    			"description": "xray vless grpc TLS客户端",
+			"note": "一键部署xray vless grpc TLS 客户端, please refer to <a href=\"https://github.com/lihaixin/xray/blob/local.vless.grpc.tls/README.md" target=\"_blank\">xray doc</a> 更多信息",
+    			"hostname": "xray",
+			"categories": ["xray"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
+    			"image": "lihaixin/xray:local.vless.grpc.tls",
+  			"ports": [
+      				"10801/tcp",
+      				"10801/udp",
+      				"10802/tcp"
+    				],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "VLESS地址",
+				"description": "The VLESS Domain Address",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "PORT",
+      				"label": "VLESS端口",
+				"description": "The VLESS Server PORT.",
+      				"default": "54321"
+    				},
+			        {
+      				"name": "ID",
+      				"label": "VLESS ID",
+				"description": "The VLESS ID.",
+      				"default": "0e62fe37-c183-4591-e13b-8726824bbc5b"
+    				}]
+  		},
+		{
+    			"type": 1,
     			"title": "gost https",
 			"name": "gosthttps-58338",
     			"description": "利用gost打造外贸简单科学上网",
