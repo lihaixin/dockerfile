@@ -1410,6 +1410,30 @@
   		},
 		{
     			"type": 1,
+    			"title": "gost mult",
+			"name": "gostmult-10021-8338-58338",
+    			"description": "利用gost打造动态IP代理 ",
+			"note": "部署动态IP代理服务器, 更多参考点击 <a href=\"https://github.com/lihaixin/gost/blob/main/mult/README.md\" target=\"_blank\">gost doc</a> 了接",
+    			"hostname": "gostmult",
+			"categories": ["gost"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",
+    			"image": "lihaixin/gost:mult",
+  			"network": "host",
+			"volumes": [
+				{
+      				"container": "/etc/cert",
+				"bind": "/etc/cert"
+    				}],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "Your Domain",
+				"description": "The domain name is used to apply for a digital certificate, and the domain name A points to the IP where you deploy the cloud machine",
+      				"default": "youdomain.com"
+    				}]
+  		},
+		{
+    			"type": 1,
     			"title": "gost vpn",
 			"name": "gostvpn-4096",
     			"description": "gost vpn游戏加速隧道",
