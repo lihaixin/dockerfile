@@ -646,6 +646,7 @@
     			"title": "tor-9050-9051-9052",
 			"name": "tor-9050-9051-9052",
     			"description": "tor socks5 http and shodowsocks proxy",
+			"note": "一键部署tor动态ip代理 <a href=\"https://github.com/lihaixin/tor/blob/main/README.md\" target=\"_blank\">tor doc</a> 端口9051 为tor带密码的socks5/http代理",
     			"categories": ["browser"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/tor.png",
@@ -655,11 +656,7 @@
 				"bind": "/etc/cert"
 				}],
     			"ports": [
-      				"9050/tcp",
-				"9051/tcp",
-				"9052/tcp",
-				"9052/udp",
-				"9053/tcp"
+				"9051/tcp"
     				],
 			"env": [{
       				"name": "DOMAIN",
