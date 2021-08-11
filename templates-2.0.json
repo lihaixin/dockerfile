@@ -660,7 +660,37 @@
 				"9052/tcp",
 				"9052/udp",
 				"9053/tcp"
-    				]
+    				],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "HTTPS地址",
+				"description": "https 代理域名,使用配置证书",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "EXITNODES",
+      				"label": "落地国家",
+				"description": "配置tor落地国家代码",
+      				"default": "{us},{ca}"
+    				},
+			        {
+      				"name": "USER",
+      				"label": "用户名",
+				"description": "配置ss http socks5 https用户名",
+      				"default": "a1"
+    				},
+				{
+      				"name": "PASSWD",
+      				"label": "用户密码",
+				"description": "配置ss http socks5 https密码",
+      				"default": "a1"
+    				},
+			       {
+      				"name": "KILLTIME",
+      				"label": "切换时间",
+				"description": "tor切换时间",
+      				"default": "60"
+    				}]
   			},
    			{
     			"type": 1,
