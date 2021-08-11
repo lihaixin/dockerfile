@@ -643,8 +643,8 @@
   			},
    			{
     			"type": 1,
-    			"title": "tor-9050-9051-9052",
-			"name": "tor-9050-9051-9052",
+    			"title": "tor-9051",
+			"name": "tor-9051",
     			"description": "tor socks5 http and shodowsocks proxy",
 			"note": "一键部署tor动态ip代理 <a href=\"https://github.com/lihaixin/tor/blob/main/README.md\" target=\"_blank\">tor doc</a> 端口9051 为tor带密码的socks5/http代理",
     			"categories": ["browser"],
