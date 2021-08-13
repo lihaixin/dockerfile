@@ -1213,7 +1213,7 @@
 			"name": "x-ui-54321",
     			"description": "Support multi-protocol multi-user Xray panel",
 			"note": "Deploys an x-ui server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/x-ui\" target=\"_blank\">x-ui doc</a> for production deployments.",
-    			"hostname": "v2ui",
+    			"hostname": "x-ui",
 			"categories": ["xray"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ui.png",
