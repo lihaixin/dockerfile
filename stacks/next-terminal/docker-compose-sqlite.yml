@@ -1,7 +1,7 @@
 version: '2'
 services:
   next-terminal:
-    image: "dushixiang/next-terminal:0.4.0"
+    image: "dushixiang/next-terminal:0.5.0"
     restart: always
     ports:
       - "8088:8088"
