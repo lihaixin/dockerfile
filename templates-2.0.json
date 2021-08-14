@@ -1263,7 +1263,7 @@
       				"name": "PORT",
       				"label": "SHADOWSOCKS端口",
 				"description": "The shadowsocks Server PORT.",
-      				"default": "54321"
+      				"default": "443"
     				},
 				{
       				"name": "METHOD",
@@ -1339,7 +1339,7 @@
       				"name": "PORT",
       				"label": "Trojan端口",
 				"description": "The Trojan Server PORT.",
-      				"default": "54321"
+      				"default": "443"
     				},
 			        {
       				"name": "PASSWORD",
@@ -1394,7 +1394,7 @@
       				"name": "PORT",
       				"label": "VMESS端口",
 				"description": "The VMESS Server PORT.",
-      				"default": "54321"
+      				"default": "443"
     				},
 			        {
       				"name": "ID",
@@ -1455,7 +1455,7 @@
       				"name": "PORT",
       				"label": "VLESS端口",
 				"description": "The VLESS Server PORT.",
-      				"default": "54321"
+      				"default": "443"
     				},
 			        {
       				"name": "ID",
@@ -1510,7 +1510,7 @@
       				"name": "PORT",
       				"label": "VLESS端口",
 				"description": "The VLESS Server PORT.",
-      				"default": "54321"
+      				"default": "443"
     				},
 			        {
       				"name": "ID",
