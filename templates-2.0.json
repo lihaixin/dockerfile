@@ -1319,8 +1319,8 @@
   		},
 		{
     			"type": 1,
-    			"title": "xray.local.trojan.tcp.tls-10801-10802",
-			"name": "xray.local.trojan.tcp.tls-10801-10802",
+    			"title": "xray.local.trojan.tcp.tls-10801.20801",
+			"name": "xray.local.trojan.tcp.tls-10801.20801",
     			"description": "xray trojan TCP tls 客户端",
 			"note": "一键部署xray trojan TCP tls 客户端, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> 更多信息",
     			"hostname": "xray",
@@ -1328,11 +1328,7 @@
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
     			"image": "lihaixin/xray:local.trojan.tcp.tls",
-  			"ports": [
-      				"10801/tcp",
-      				"10801/udp",
-      				"10802/tcp"
-    				],
+  			"network": "host",
 			"env": [{
       				"name": "DOMAIN",
       				"label": "Trojan地址",
@@ -1350,12 +1346,36 @@
       				"label": "Trojan密码",
 				"description": "The Trojan Server PASSWORD.",
       				"default": "88888888"
+    				},
+				{
+      				"name": "LSPORT",
+      				"label": "本地socks5端口",
+				"description": "The socks5 PORT.",
+      				"default": "10801"
+    				},
+				{
+      				"name": "LHPORT",
+      				"label": "本地http端口",
+				"description": "The http PORT.",
+      				"default": "20801"
+    				},
+			        {
+      				"name": "myusername",
+      				"label": "socks5 http 用户名",
+				"description": "The socks5 & http username.",
+      				"default": "a1"
+    				},
+			        {
+      				"name": "mypassword",
+      				"label": "socks5 http 密码",
+				"description": "The socks5 & http PASSWORD.",
+      				"default": "a1"
     				}]
   		},
 		{
     			"type": 1,
-    			"title": "xray.local.vmess.tcp-10801-10802",
-			"name": "xray.local.vmess.tcp-10801-10802",
+    			"title": "xray.local.vmess.tcp-10801.20801",
+			"name": "xray.local.vmess.tcp-10801-10801",
     			"description": "xray vmess TCP 客户端",
 			"note": "一键部署xray vmess TCP 客户端, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> 更多信息",
     			"hostname": "xray",
@@ -1363,11 +1383,7 @@
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
     			"image": "lihaixin/xray:local.vmess.tcp",
-  			"ports": [
-      				"10801/tcp",
-      				"10801/udp",
-      				"10802/tcp"
-    				],
+  			"network": "host",
 			"env": [{
       				"name": "DOMAIN",
       				"label": "VMESS地址",
@@ -1384,19 +1400,43 @@
       				"name": "ID",
       				"label": "VMESS ID",
 				"description": "The VMESS ID.",
-      				"default": "0e62fe37-c183-4591-e13b-8726824bbc5b"
+      				"default": "45347e61-2495-58f3-a6eb-8ec7946a39f4"
     				},
-			       {
+			        {
       				"name": "alterID",
       				"label": "VMESS alterID",
 				"description": "The VMESS alterID.",
       				"default": "0"
+    				},
+				{
+      				"name": "LSPORT",
+      				"label": "本地socks5端口",
+				"description": "The socks5 PORT.",
+      				"default": "10801"
+    				},
+				{
+      				"name": "LHPORT",
+      				"label": "本地http端口",
+				"description": "The http PORT.",
+      				"default": "20801"
+    				},
+			        {
+      				"name": "myusername",
+      				"label": "socks5 http 用户名",
+				"description": "The socks5 & http username.",
+      				"default": "a1"
+    				},
+			        {
+      				"name": "mypassword",
+      				"label": "socks5 http 密码",
+				"description": "The socks5 & http PASSWORD.",
+      				"default": "a1"
     				}]
   		},
 		{
     			"type": 1,
-    			"title": "xray.local.vless.tcp.xtls-10801-10802",
-			"name": "xray.local.vless.tcp.xtls-10801-10802",
+    			"title": "xray.local.vless.tcp.xtls-10801.20801",
+			"name": "xray.local.vless.tcp.xtls-10801.20801",
     			"description": "xray vless TCP XTLS客户端",
 			"note": "一键部署xray vless TCP XTLS 客户端, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> 更多信息",
     			"hostname": "xray",
@@ -1404,11 +1444,7 @@
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
     			"image": "lihaixin/xray:local.vless.tcp.xtls",
-  			"ports": [
-      				"10801/tcp",
-      				"10801/udp",
-      				"10802/tcp"
-    				],
+  			"network": "host",
 			"env": [{
       				"name": "DOMAIN",
       				"label": "VLESS地址",
@@ -1425,13 +1461,37 @@
       				"name": "ID",
       				"label": "VLESS ID",
 				"description": "The VLESS ID.",
-      				"default": "0e62fe37-c183-4591-e13b-8726824bbc5b"
+      				"default": "45347e61-2495-58f3-a6eb-8ec7946a39f4"
+    				},
+				{
+      				"name": "LSPORT",
+      				"label": "本地socks5端口",
+				"description": "The socks5 PORT.",
+      				"default": "10801"
+    				},
+				{
+      				"name": "LHPORT",
+      				"label": "本地http端口",
+				"description": "The http PORT.",
+      				"default": "20801"
+    				},
+			        {
+      				"name": "myusername",
+      				"label": "socks5 http 用户名",
+				"description": "The socks5 & http username.",
+      				"default": "a1"
+    				},
+			        {
+      				"name": "mypassword",
+      				"label": "socks5 http 密码",
+				"description": "The socks5 & http PASSWORD.",
+      				"default": "a1"
     				}]
   		},
 		{
     			"type": 1,
-    			"title": "xray.local.vless.grpc.tls-10801-10802",
-			"name": "xray.local.vless.grpc.tls-10801-10802",
+    			"title": "xray.local.vless.grpc.tls-10801.20801",
+			"name": "xray.local.vless.grpc.tls-10801.20801",
     			"description": "xray vless grpc TLS客户端",
 			"note": "一键部署xray vless grpc TLS 客户端, please refer to <a href=\"https://github.com/lihaixin/xray/blob/local.vless.grpc.tls/README.md\" target=\"_blank\">xray doc</a> 更多信息",
     			"hostname": "xray",
@@ -1439,11 +1499,7 @@
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
     			"image": "lihaixin/xray:local.vless.grpc.tls",
-  			"ports": [
-      				"10801/tcp",
-      				"10801/udp",
-      				"10802/tcp"
-    				],
+  			"network": "host",
 			"env": [{
       				"name": "DOMAIN",
       				"label": "VLESS地址",
@@ -1460,7 +1516,31 @@
       				"name": "ID",
       				"label": "VLESS ID",
 				"description": "The VLESS ID.",
-      				"default": "0e62fe37-c183-4591-e13b-8726824bbc5b"
+      				"default": "45347e61-2495-58f3-a6eb-8ec7946a39f4"
+    				},
+				{
+      				"name": "LSPORT",
+      				"label": "本地socks5端口",
+				"description": "The socks5 PORT.",
+      				"default": "10801"
+    				},
+				{
+      				"name": "LHPORT",
+      				"label": "本地http端口",
+				"description": "The http PORT.",
+      				"default": "20801"
+    				},
+			        {
+      				"name": "myusername",
+      				"label": "socks5 http 用户名",
+				"description": "The socks5 & http username.",
+      				"default": "a1"
+    				},
+			        {
+      				"name": "mypassword",
+      				"label": "socks5 http 密码",
+				"description": "The socks5 & http PASSWORD.",
+      				"default": "a1"
     				}]
   		},
 		{
