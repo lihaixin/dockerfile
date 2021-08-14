@@ -1269,7 +1269,22 @@
       				"name": "METHOD",
       				"label": "SHADOWSOCKS加密方式",
 				"description": "The shadowsocks Server 加密METHOD.",
-      				"default": "chacha20-poly1305"
+				"select": [
+        			   {
+          				"text": "chacha20-poly1305",
+          				"value": "chacha20-poly1305",
+          				"default": "chacha20-poly1305"
+        			   },
+        			   {
+          				"text": "aes-256-gcm",
+          				"value": "aes-256-gcm"
+        			   },
+        			   {
+          				"text": "aes-128-gcm",
+          				"value": "aes-128-gcm"
+        			   }
+      				],
+      				"description": "支持的加密方式"
     				},
 			        {
       				"name": "PASSWORD",
