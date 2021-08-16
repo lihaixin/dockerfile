@@ -810,7 +810,7 @@
 			"repository": {
 				"url": "https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/nginx-proxy-manager/docker-compose-host-sqlite.yml"
-			}]
+			}
 		},
 		{
 			"type": 3,
