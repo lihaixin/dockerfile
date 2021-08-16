@@ -1496,6 +1496,67 @@
   		},
 		{
     			"type": 1,
+    			"title": "xray.local.http.tcp-10801.20801",
+			"name": "xray.local.http.tcp-10801.10801",
+    			"description": "xray HTTP TCP 客户端",
+			"note": "一键部署xray HTTP TCP 客户端, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> 更多信息",
+    			"hostname": "xray",
+			"categories": ["xray"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
+    			"image": "lihaixin/xray:local.http.tcp",
+  			"network": "host",
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "HTTP地址",
+				"description": "The HTTP Domain Address",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "PORT",
+      				"label": "HTTP端口",
+				"description": "The HTTP Server PORT.",
+      				"default": "443"
+    				},
+			        {
+      				"name": "USERNAME",
+      				"label": "HTTP 用户名",
+				"description": "The HTTP USERNAME.",
+      				"default": "test"
+    				},
+			        {
+      				"name": "PASSWORD",
+      				"label": "HTTP 密码",
+				"description": "The HTTP PASSWORD.",
+      				"default": "test"
+    				},
+				{
+      				"name": "LSPORT",
+      				"label": "本地socks5端口",
+				"description": "The socks5 PORT.",
+      				"default": "10801"
+    				},
+				{
+      				"name": "LHPORT",
+      				"label": "本地http端口",
+				"description": "The http PORT.",
+      				"default": "20801"
+    				},
+			        {
+      				"name": "myusername",
+      				"label": "socks5 http 用户名",
+				"description": "The socks5 & http username.",
+      				"default": "a1"
+    				},
+			        {
+      				"name": "mypassword",
+      				"label": "socks5 http 密码",
+				"description": "The socks5 & http PASSWORD.",
+      				"default": "a1"
+    				}]
+  		},
+		{
+    			"type": 1,
     			"title": "xray.local.vless.tcp.xtls-10801.20801",
 			"name": "xray.local.vless.tcp.xtls-10801.20801",
     			"description": "xray vless TCP XTLS客户端",
