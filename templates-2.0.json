@@ -1348,6 +1348,12 @@
       				"default": "88888888"
     				},
 				{
+      				"name": "SERVERNAME",
+      				"label": "Trojan 证书的域名地址",
+				"description": "The Trojan CRT Domain Address",
+      				"default": "servername.com"
+    				},
+				{
       				"name": "LSPORT",
       				"label": "本地socks5端口",
 				"description": "The socks5 PORT.",
