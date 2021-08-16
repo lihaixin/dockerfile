@@ -781,8 +781,8 @@
 		},
 		{
 			"type": 3,
-			"title": "nginx-proxy-manager-80.81.443",
-			"name": "nginx-proxy-manager-80.81.443",
+			"title": "nginx-proxy-manager-80-81-443",
+			"name": "nginx-proxy-manager-80-81-443",
 			"description": "轻松公开你的服务器",
 			"note": "部署反向代理管理器,使用host网络, 更多信息 <a href=\"https://nginxproxymanager.com\" target=\"_blank\">点击这里</a> ",
 			"categories": ["Reverse Proxy"],
@@ -794,14 +794,14 @@
 			},
 			"env": [{
 				"name": "MYSQL_DATABASE_PASSWORD",
-				"label": "Database root password",
+				"label": "数据库root密码",
 				"description": "Password used by the MySQL root user."
 			}]
 		},
 		{
 			"type": 3,
-			"title": "nginx-proxy-manager-sqlite-80.81.443",
-			"name": "nginx-proxy-manager-sqlite-80.81.443",
+			"title": "nginx-proxy-manager-sqlite-80-81-443",
+			"name": "nginx-proxy-manager-sqlite-80-81-443",
 			"description": "轻松公开你的服务器",
 			"note": "部署反向代理管理器,使用host网络, 更多信息 <a href=\"https://nginxproxymanager.com\" target=\"_blank\">点击这里</a> ",
 			"categories": ["Reverse Proxy"],
