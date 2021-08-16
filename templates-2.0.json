@@ -1876,7 +1876,7 @@
       				"name": "WGMTU",
       				"label": "WGMTU",
 				"description": "Wireguard MTU",
-      				"default": "1300"
+      				"default": "1320"
     				},
 		     		{
       				"name": "INTERVAL",
@@ -1911,8 +1911,8 @@
   		},
 		{
     			"type": 1,
-    			"title": "gost s5 and http",
-			"name": "gosts5-10021",
+    			"title": "gosts5.http.ss_10021.8838",
+			"name": "gosts5.http.ss_10021.8838",
     			"description": "利用gost打造s5 http SS三协议代理",
 			"note": "一键部署socks5 http shadowsocks 三种代理, please refer to <a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> for production deployments.",
     			"hostname": "gosts5",
