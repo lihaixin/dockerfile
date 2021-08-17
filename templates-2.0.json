@@ -605,6 +605,9 @@
 			"note": "常用linux工具集合、包括dig iperf3 htop 等 <a href=\"https://hub.docker.com/r/lihaixin/toolbox\" target=\"_blank\">更多查看</a>",
     			"image": "lihaixin/toolbox",
     			"administrator_only": true,
+			"network": "host",
+			"privileged": true,
+			"pid": "host",
 			"volumes": [
 				{
       				"container": "/root/.ssh/id_rsa",
