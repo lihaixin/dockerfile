@@ -1780,12 +1780,6 @@
       				"default": "192.168.2.0/24"
     				},
 				{
-      				"name": "SPEEDERV2_PORT",
-      				"label": "SPEEDERV2 UDP加速端口",
-				"description": "用于SPEEDERV2 UDP加速端口,默认为4096,不需要调整,除非4096被其他程序占用",
-      				"default": "4096"
-    				},
-				{
       				"name": "GOST_PORT",
       				"label": "GOST UDP 隧道端口",
 				"description": "用于GOST端口,默认为8421,不需要调整,除非8421被其他程序占用",
@@ -1820,6 +1814,12 @@
       				"label": "GOSTMTU 隧道接口MTU值",
 				"description": "GOSTMTU 隧道接口MTU值,默认tun0,不需要调整",
       				"default": "1320"
+    				},
+				{
+      				"name": "SPEEDERV2_PORT",
+      				"label": "SPEEDERV2 UDP加速端口",
+				"description": "用于SPEEDERV2 UDP加速端口,默认为4096,不需要调整,除非4096被其他程序占用",
+      				"default": "4096"
     				},
 		     		{
       				"name": "MODE",
