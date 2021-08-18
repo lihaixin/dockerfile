@@ -1885,6 +1885,12 @@
       				"default": "ens5"
     				},
 				{
+      				"name": "WANIP",
+      				"label": "WANIP 宿主机网卡IP",
+				"description": "登陆主机查看，确保正确(很多云主机绑定的是内网IP,绑定啥就填写啥),用于iptables",
+      				"default": "10.0.7.18"
+    				},
+				{
       				"name": "fPorts",
       				"label": "fPorts 转发起始端口",
 				"description": "fPorts 转发起始端口，用于把连接本机起始端口通过隧道转发到服务器端",
@@ -1893,8 +1899,8 @@
 				{
       				"name": "ePorts",
       				"label": "ePorts 转发结束端口",
-				"description": "fPorts 转发结束端口，用于把连接本机起始端口通过隧道转发到服务器端",
-      				"default": "10001"
+				"description": "ePorts 转发结束端口，用于把连接本机起始端口通过隧道转发到服务器端",
+      				"default": "20000"
     				},
 				{
       				"name": "GOST_PORT",
