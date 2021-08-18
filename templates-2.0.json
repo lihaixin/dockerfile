@@ -1980,7 +1980,7 @@
     			"type": 1,
     			"title": "wireguard-server-82",
 			"name": "wireguard-server-82",
-    			"description": "wireguard vpn游戏加速隧道",
+    			"description": "wireguard vpn游戏加速隧道服务器端",
 			"note": "部署wireguard vpn游戏加速隧道, 更多点击<a href=\"https://hub.docker.com/r/lihaixin/wireguard\" target=\"_blank\">wireguard doc</a> 了接更多信息",
     			"hostname": "wireguard-server",
 			"categories": ["vpn"],
@@ -2036,6 +2036,142 @@
       				"label": "WGRANGE",
 				"description": "WGRANGE",
       				"default": "10.1.2.0/24"
+    				},
+				{
+      				"name": "WGMTU",
+      				"label": "WGMTU",
+				"description": "Wireguard MTU",
+      				"default": "1320"
+    				},
+		     		{
+      				"name": "MODE",
+      				"label": "SPEEDERV2 MODE",
+				"description": "speederv2 模式",
+      				"default": "1"
+    				},
+		     		{
+      				"name": "FEC_OPTIONS",
+      				"label": "SPEEDERV2 FEC_OPTIONS",
+				"description": "FEC_OPTIONS 参数",
+      				"default": "2:2"
+    				},
+		     		{
+      				"name": "TIMEOUT",
+      				"label": "SPEEDERV2 TIMEOUT",
+				"description": "TIMEOUT",
+      				"default": "1"
+    				},
+		     		{
+      				"name": "UDPMTU",
+      				"label": "SPEEDERV2 UDPMTU",
+				"description": "speederv2 MTU",
+      				"default": "1360"
+    				},
+		     		{
+      				"name": "OPTION",
+      				"label": "SPEEDERV2 OPTION",
+				"description": "SPEEDERV2 OPTION 可以额外添加参数",
+      				"default": "--disable-obscure"
+    				},
+				{
+      				"name": "PASSWORD",
+      				"label": "UDP2RAW PASSWORD *",
+				"description": "UDP2RAW 密码,服务器和客户端要一致",
+      				"default": "password"
+    				}]
+  		},
+		{
+    			"type": 1,
+    			"title": "wireguard-client-82",
+			"name": "wireguard-client-82",
+    			"description": "wireguard vpn游戏加速隧道客户端",
+			"note": "部署wireguard vpn游戏加速隧道, 更多点击<a href=\"https://hub.docker.com/r/lihaixin/wireguard\" target=\"_blank\">wireguard doc</a> 了接更多信息",
+    			"hostname": "wireguard-server",
+			"categories": ["vpn"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/wireguard.png",
+    			"image": "lihaixin/wireguard:server",
+			"privileged": true,
+  			"network": "host",
+			"env": [
+				
+				{
+      				"name": "SERVER_IP",
+      				"label": "服务器宿主机IP",
+				"description": "服务器端IP",
+      				"default": " "
+    				},
+				{
+      				"name": "SERVER_PORT",
+      				"label": "服务器WG监听端口",
+				"description": "WG监听端口,使用UDP协议",
+      				"default": "82"
+    				},
+				{
+      				"name": "WANNAME",
+      				"label": "宿主机网卡名称 *",
+				"description": "登陆主机查看，确保正确，否则不能正确转发",
+      				"default": "ens3"
+    				},
+				{
+      				"name": "WANIP",
+      				"label": "WANIP 宿主机网卡IP *",
+				"description": "登陆主机查看，确保正确(很多云主机绑定的是内网IP,绑定啥就填写啥),用于iptables",
+      				"default": "10.0.7.18"
+    				},
+				{
+      				"name": "fPorts",
+      				"label": "fPorts 转发起始端口",
+				"description": "fPorts 转发起始端口，用于把连接本机起始端口通过隧道转发到服务器端",
+      				"default": "10001"
+    				},
+				{
+      				"name": "ePorts",
+      				"label": "ePorts 转发结束端口",
+				"description": "ePorts 转发结束端口，用于把连接本机起始端口通过隧道转发到服务器端",
+      				"default": "20000"
+    				},
+				{
+      				"name": "WGNAME",
+      				"label": "WGNAME",
+				"description": "WGNAME",
+      				"default": "wg2"
+    				},
+		     		{
+      				"name": "WGSERVERIP",
+      				"label": "WGSERVERIP",
+				"description": "WGSERVERIP",
+      				"default": "10.1.2.1"
+    				},
+		     		{
+      				"name": "WGCLIENTIP",
+      				"label": "WGCLIENTIP",
+				"description": "WGCLIENTIP",
+      				"default": "10.1.2.2"
+    				},
+				{
+      				"name": "WGRANGE",
+      				"label": "WGRANGE",
+				"description": "WGRANGE",
+      				"default": "10.1.2.0/24"
+    				},
+				{
+      				"name": "cprivatekey",
+      				"label": "客户端密钥",
+				"description": "服务器端生成的客户端密钥",
+      				"default": ""
+    				},
+		     		{
+      				"name": "spublickey",
+      				"label": "服务端公钥",
+				"description": "服务器端生成的服务器端公钥",
+      				"default": ""
+    				},
+				{
+      				"name": "presharedkey",
+      				"label": "预共享key",
+				"description": "用于额外的加密KEY,没有就为空",
+      				"default": ""
     				},
 				{
       				"name": "WGMTU",
