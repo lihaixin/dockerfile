@@ -2086,16 +2086,14 @@
 			"name": "wireguard-client-82",
     			"description": "wireguard vpn游戏加速隧道客户端",
 			"note": "部署wireguard vpn游戏加速隧道, 更多点击<a href=\"https://hub.docker.com/r/lihaixin/wireguard\" target=\"_blank\">wireguard doc</a> 了接更多信息",
-    			"hostname": "wireguard-server",
+    			"hostname": "wireguard-client",
 			"categories": ["vpn"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/wireguard.png",
     			"image": "lihaixin/wireguard:client",
 			"privileged": true,
   			"network": "host",
-			"env": [
-				
-				{
+			"env": [{
       				"name": "SERVER_IP",
       				"label": "服务器宿主机IP *",
 				"description": "服务器端IP",
@@ -2133,26 +2131,26 @@
     				},
 				{
       				"name": "WGNAME",
-      				"label": "WG本地接口名称",
-				"description": "WGNAME",
+      				"label": "Wireguard 本地接口名称",
+				"description": "Wireguard 本地接口名称 ",
       				"default": "wg2"
     				},
 		     		{
       				"name": "WGSERVERIP",
-      				"label": "WGSERVERIP",
-				"description": "WGSERVERIP",
+      				"label": "Wireguard SERVERIP",
+				"description": "Wireguard SERVERIP 服务器端隧道IP ",
       				"default": "10.1.2.1"
     				},
 		     		{
       				"name": "WGCLIENTIP",
-      				"label": "WG客户端IP *",
-				"description": "WGCLIENTIP",
+      				"label": "Wireguard 客户端IP *",
+				"description": "WGCLIENTIP 客户端端隧道IP,需要修改",
       				"default": "10.1.2.18"
     				},
 				{
       				"name": "WGRANGE",
-      				"label": "WGRANGE",
-				"description": "WGRANGE",
+      				"label": "Wireguard RANGE",
+				"description": "WGRANGE  隧道网段",
       				"default": "10.1.2.0/24"
     				},
 				{
@@ -2168,15 +2166,9 @@
       				"default": ""
     				},
 				{
-      				"name": "presharedkey",
-      				"label": "预共享key",
-				"description": "用于额外的加密KEY,没有就为空",
-      				"default": ""
-    				},
-				{
       				"name": "WGMTU",
-      				"label": "WGMTU",
-				"description": "Wireguard MTU",
+      				"label": "Wireguard MTU",
+				"description": "Wireguard MTU 最大传输单元",
       				"default": "1320"
     				},
 		     		{
@@ -2194,13 +2186,13 @@
 		     		{
       				"name": "TIMEOUT",
       				"label": "SPEEDERV2 TIMEOUT",
-				"description": "TIMEOUT",
+				"description": "SPEEDERV2 TIMEOUT 超时时间,游戏调整为1秒",
       				"default": "1"
     				},
 		     		{
       				"name": "UDPMTU",
       				"label": "SPEEDERV2 UDPMTU",
-				"description": "speederv2 MTU",
+				"description": "SPEEDERV2 MTU 最大传输单元",
       				"default": "1360"
     				},
 		     		{
