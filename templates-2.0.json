@@ -1758,8 +1758,8 @@
     			"type": 1,
     			"title": "gost vpn server 4096.8421",
 			"name": "gost vpn server 4096.8421",
-    			"description": "gost vpn游戏加速隧道",
-			"note": "部署gostvpn游戏加速隧道, 更多点击<a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> 了接更多信息",
+    			"description": "gost vpn游戏加速隧道服务器端",
+			"note": "部署gostvpn游戏加速隧道, 有<*>选项需要调整 更多点击<a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> 了接更多信息",
     			"hostname": "gostvpnhost",
 			"categories": ["gost"],
     			"platform": "linux",
@@ -1769,9 +1769,9 @@
   			"network": "host",
 			"env": [{
       				"name": "WANNAME",
-      				"label": "WANNAME 宿主机网卡名称",
+      				"label": "WANNAME 宿主机网卡名称 *",
 				"description": "登陆主机查看，确保正确，否则不能正确转发",
-      				"default": "ens3"
+      				"default": "ens5"
     				},
 				{
       				"name": "LANRANGE",
@@ -1835,7 +1835,7 @@
     				},
 		     		{
       				"name": "PASSWORD",
-      				"label": "SPEEDERV2 PASSWORD",
+      				"label": "SPEEDERV2 PASSWORD *",
 				"description": "SPEEDERV2 密码,服务器和客户端一致,需要调整",
       				"default": "password"
     				},
@@ -1869,8 +1869,8 @@
     			"type": 1,
     			"title": "gost vpn client 4096.8421",
 			"name": "gost vpn client 4096.8421",
-    			"description": "gost vpn游戏加速隧道",
-			"note": "部署gostvpn游戏加速隧道, 更多点击<a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> 了接更多信息",
+    			"description": "gost vpn游戏加速隧道客户端",
+			"note": "部署gostvpn游戏加速隧道, 有<*>选项需要调整更多点击<a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> 了接更多信息",
     			"hostname": "gostvpnhost",
 			"categories": ["gost"],
     			"platform": "linux",
@@ -1880,13 +1880,13 @@
   			"network": "host",
 			"env": [{
       				"name": "WANNAME",
-      				"label": "WANNAME 宿主机网卡名称",
+      				"label": "WANNAME 宿主机网卡名称 *",
 				"description": "登陆主机查看，确保正确，否则不能正确转发,用于iptables",
       				"default": "ens5"
     				},
 				{
       				"name": "WANIP",
-      				"label": "WANIP 宿主机网卡IP",
+      				"label": "WANIP 宿主机网卡IP *",
 				"description": "登陆主机查看，确保正确(很多云主机绑定的是内网IP,绑定啥就填写啥),用于iptables",
       				"default": "10.0.7.18"
     				},
@@ -1928,7 +1928,7 @@
     				},
 				{
       				"name": "SPEEDERV2_IP",
-      				"label": "SPEEDERV2 UDP加速IP",
+      				"label": "SPEEDERV2 UDP加速IP *",
 				"description": "用于SPEEDERV2 UDP加速IP,需要调整,改为服务端IP",
       				"default": "8.8.8.8"
     				},
@@ -1952,7 +1952,7 @@
     				},
 		     		{
       				"name": "PASSWORD",
-      				"label": "SPEEDERV2 PASSWORD",
+      				"label": "SPEEDERV2 PASSWORD *",
 				"description": "SPEEDERV2 密码,服务器和客户端一致,需要调整",
       				"default": "password"
     				},
