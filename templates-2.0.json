@@ -2003,8 +2003,8 @@
     				},
 				{
       				"name": "SERVER_PORT",
-      				"label": "SERVER_PORT",
-				"description": "WG监听端口",
+      				"label": "服务器WG监听端口",
+				"description": "WG监听端口,使用UDP协议",
       				"default": "82"
     				},
 				{
