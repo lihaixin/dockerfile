@@ -1867,6 +1867,117 @@
   		},
 		{
     			"type": 1,
+    			"title": "gost vpn client 4096.8421",
+			"name": "gost vpn client 4096.8421",
+    			"description": "gost vpn游戏加速隧道",
+			"note": "部署gostvpn游戏加速隧道, 更多点击<a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> 了接更多信息",
+    			"hostname": "gostvpnhost",
+			"categories": ["gost"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",
+    			"image": "lihaixin/gost:vpn.client",
+			"privileged": true,
+  			"network": "host",
+			"env": [{
+      				"name": "WANNAME",
+      				"label": "WANNAME 宿主机网卡名称",
+				"description": "登陆主机查看，确保正确，否则不能正确转发,用于iptables",
+      				"default": "ens5"
+    				},
+				{
+      				"name": "fPorts",
+      				"label": "fPorts 转发起始端口",
+				"description": "fPorts 转发起始端口，用于把连接本机起始端口通过隧道转发到服务器端",
+      				"default": "10001"
+    				},
+				{
+      				"name": "ePorts",
+      				"label": "ePorts 转发结束端口",
+				"description": "fPorts 转发结束端口，用于把连接本机起始端口通过隧道转发到服务器端",
+      				"default": "10001"
+    				},
+				{
+      				"name": "GOST_PORT",
+      				"label": "GOST UDP 隧道端口",
+				"description": "用于GOST端口,默认为8421,不需要调整,除非8421被其他程序占用",
+      				"default": "8421"
+    				},
+				{
+      				"name": "GOSTCLIENTIP",
+      				"label": "GOSTCLIENTIP 隧道客户端IP",
+				"description": "GOSTCLIENTIP 隧道客户端IP,默认192.168.123.2/24,不需要调整,除非本机有这个内部网段,如有多个客户端,只需要修改IP最后一位数字",
+      				"default": "192.168.123.2/24"
+    				},
+				{
+      				"name": "GOSTNAME",
+      				"label": "GOSTNAME 隧道接口名称",
+				"description": "GOSTNAME 隧道接口名称,默认tun0,不需要调整",
+      				"default": "tun0"
+    				},
+				{
+      				"name": "GOSTMTU",
+      				"label": "GOSTMTU 隧道接口MTU值",
+				"description": "GOSTMTU 隧道接口MTU值,默认tun0,不需要调整",
+      				"default": "1320"
+    				},
+				{
+      				"name": "SPEEDERV2_IP",
+      				"label": "SPEEDERV2 UDP加速IP",
+				"description": "用于SPEEDERV2 UDP加速IP,需要调整,改为服务端IP",
+      				"default": "8.8.8.8"
+    				},
+				{
+      				"name": "SPEEDERV2_PORT",
+      				"label": "SPEEDERV2 UDP加速端口",
+				"description": "用于SPEEDERV2 UDP加速端口,默认为4096,不需要调整,除非4096被其他程序占用",
+      				"default": "4096"
+    				},
+		     		{
+      				"name": "MODE",
+      				"label": "SPEEDERV2 MODE",
+				"description": "SPEEDERV2 模式,默认1,不需要调整",
+      				"default": "1"
+    				},
+		     		{
+      				"name": "FEC_OPTIONS",
+      				"label": "SPEEDERV2 FEC_OPTIONS 参数",
+				"description": "SPEEDERV2 FEC_OPTIONS 参数,根据网络质量进行调整",
+      				"default": "2:4"
+    				},
+		     		{
+      				"name": "PASSWORD",
+      				"label": "SPEEDERV2 PASSWORD",
+				"description": "SPEEDERV2 密码,服务器和客户端一致,需要调整",
+      				"default": "password"
+    				},
+		     		{
+      				"name": "TIMEOUT",
+      				"label": "SPEEDERV2 TIMEOUT",
+				"description": "SPEEDERV2 TIMEOUT,游戏用户保持默认为1就好,一般不需要调整",
+      				"default": "1"
+    				},
+		     		
+		     		{
+      				"name": "MTU",
+      				"label": "SPEEDERV2 UDPMTU",
+				"description": "SPEEDERV2 UDPMTU,SPEEDERV2传输最大MTU,保持默认,不需要调整",
+      				"default": "1360"
+    				},
+		     		{
+      				"name": "INTERVAL",
+      				"label": "SPEEDERV2 INTERVAL",
+				"description": "SPEEDERV2 INTERVAL,将每个 fec 组分散到 <INTERVAL> ms 的间隔内，以防止突发丢包,默认值：0 保持默认,不需要调整",
+      				"default": "0"
+    				},
+		     		{
+      				"name": "OPTION",
+      				"label": "SPEEDERV2 OPTION",
+				"description": "SPEEDERV2 OPTION,这里添加额外的SPEEDERV2 参数",
+      				"default": "--disable-obscure"
+    				}]
+  		},
+		{
+    			"type": 1,
     			"title": "wireguard",
 			"name": "wireguard-82",
     			"description": "wireguardvpn游戏加速隧道",
