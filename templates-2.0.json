@@ -1992,19 +1992,19 @@
 			"env": [{
       				"name": "DOMAIN",
       				"label": "宿主机域名或IP *",
-				"description": "服务器端域名,域名会自动解析成IP",
+				"description": "填写服务器端域名或者IP地址,域名会自动解析成IP",
       				"default": " "
     				},
 				{
       				"name": "WANNAME",
       				"label": "宿主机网卡名称 *",
 				"description": "登陆主机查看，确保正确，否则不能正确转发",
-      				"default": "ens3"
+      				"default": "ens5"
     				},
 				{
       				"name": "SERVER_PORT",
-      				"label": "服务器WG监听端口",
-				"description": "WG监听端口,使用UDP协议",
+      				"label": "服务器Wireguard监听端口",
+				"description": "Wireguard监听端口,使用UDP 端口",
       				"default": "82"
     				},
 				{
@@ -2015,26 +2015,26 @@
     				},
 				{
       				"name": "WGNAME",
-      				"label": "WGNAME",
-				"description": "WGNAME",
+      				"label": "服务器Wireguard接口名称",
+				"description": "服务器Wireguard接口名称,也就是隧道名称",
       				"default": "wg2"
     				},
 		     		{
       				"name": "WGSERVERIP",
-      				"label": "WGSERVERIP",
-				"description": "WGSERVERIP",
+      				"label": "Wireguard SERVERIP",
+				"description": "Wireguard SERVERIP 服务器端隧道IP",
       				"default": "10.1.2.1"
     				},
 		     		{
       				"name": "WGCLIENTIP",
-      				"label": "WGCLIENTIP",
-				"description": "WGCLIENTIP",
-      				"default": "10.1.2.2"
+      				"label": "Wireguard CLIENTIP",
+				"description": "Wireguard CLIENTIP 客户端隧道IP",
+      				"default": "10.1.2.18"
     				},
 				{
       				"name": "WGRANGE",
       				"label": "WGRANGE",
-				"description": "WGRANGE",
+				"description": "Wireguard WGRANGE 隧道网段",
       				"default": "10.1.2.0/24"
     				},
 				{
@@ -2109,11 +2109,11 @@
       				"name": "WANNAME",
       				"label": "宿主机网卡名称 *",
 				"description": "登陆主机查看，确保正确，否则不能正确转发",
-      				"default": "ens3"
+      				"default": "ens5"
     				},
 				{
       				"name": "WANIP",
-      				"label": "WANIP 宿主机网卡IP *",
+      				"label": "宿主机网卡IP *",
 				"description": "登陆主机查看，确保正确(很多云主机绑定的是内网IP,绑定啥就填写啥),用于iptables",
       				"default": "10.0.7.18"
     				},
@@ -2181,7 +2181,7 @@
       				"name": "FEC_OPTIONS",
       				"label": "SPEEDERV2 FEC_OPTIONS",
 				"description": "FEC_OPTIONS 参数",
-      				"default": "2:2"
+      				"default": "4:2"
     				},
 		     		{
       				"name": "TIMEOUT",
