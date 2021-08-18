@@ -1991,19 +1991,13 @@
   			"network": "host",
 			"env": [{
       				"name": "DOMAIN",
-      				"label": "服务器宿主机域名",
-				"description": "服务器端留空,客户端可输入远端主机域名或IP",
+      				"label": "服务器宿主机域名或IP",
+				"description": "服务器端域名,域名会自动解析成IP",
       				"default": " "
     				},
 				{
       				"name": "WANNAME",
       				"label": "宿主机网卡名称 *",
-				"description": "登陆主机查看，确保正确，否则不能正确转发",
-      				"default": "ens3"
-    				},
-				{
-      				"name": "WANIP",
-      				"label": "宿主机网卡IP *",
 				"description": "登陆主机查看，确保正确，否则不能正确转发",
       				"default": "ens3"
     				},
