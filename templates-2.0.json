@@ -1756,8 +1756,8 @@
   		},
 		{
     			"type": 1,
-    			"title": "gost vpn server 4096.8421",
-			"name": "gost vpn server 4096.8421",
+    			"title": "gost_vpn_server 4096-8421",
+			"name": "gost_vpn_server 4096-8421",
     			"description": "gost vpn游戏加速隧道服务器端",
 			"note": "部署gostvpn游戏加速隧道, 有<*>选项需要调整 更多点击<a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> 了接更多信息",
     			"hostname": "gostvpnhost",
@@ -1867,8 +1867,8 @@
   		},
 		{
     			"type": 1,
-    			"title": "gost vpn client 4096.8421",
-			"name": "gost vpn client 4096.8421",
+    			"title": "gost_vpn_client_4096-8421",
+			"name": "gost_vpn_client_4096-8421",
     			"description": "gost vpn游戏加速隧道客户端",
 			"note": "部署gostvpn游戏加速隧道, 有<*>选项需要调整更多点击<a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> 了接更多信息",
     			"hostname": "gostvpnhost",
