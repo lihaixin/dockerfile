@@ -2090,20 +2090,20 @@
 			"categories": ["vpn"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/wireguard.png",
-    			"image": "lihaixin/wireguard:server",
+    			"image": "lihaixin/wireguard:client",
 			"privileged": true,
   			"network": "host",
 			"env": [
 				
 				{
       				"name": "SERVER_IP",
-      				"label": "服务器宿主机IP",
+      				"label": "服务器宿主机IP *",
 				"description": "服务器端IP",
       				"default": " "
     				},
 				{
       				"name": "SERVER_PORT",
-      				"label": "服务器WG监听端口",
+      				"label": "服务器WG监听端口 *",
 				"description": "WG监听端口,使用UDP协议",
       				"default": "82"
     				},
@@ -2133,7 +2133,7 @@
     				},
 				{
       				"name": "WGNAME",
-      				"label": "WGNAME",
+      				"label": "WG本地接口名称",
 				"description": "WGNAME",
       				"default": "wg2"
     				},
@@ -2145,9 +2145,9 @@
     				},
 		     		{
       				"name": "WGCLIENTIP",
-      				"label": "WGCLIENTIP",
+      				"label": "WG客户端IP *",
 				"description": "WGCLIENTIP",
-      				"default": "10.1.2.2"
+      				"default": "10.1.2.18"
     				},
 				{
       				"name": "WGRANGE",
@@ -2157,13 +2157,13 @@
     				},
 				{
       				"name": "cprivatekey",
-      				"label": "客户端密钥",
+      				"label": "客户端密钥 *",
 				"description": "服务器端生成的客户端密钥",
       				"default": ""
     				},
 		     		{
       				"name": "spublickey",
-      				"label": "服务端公钥",
+      				"label": "服务端公钥 *",
 				"description": "服务器端生成的服务器端公钥",
       				"default": ""
     				},
