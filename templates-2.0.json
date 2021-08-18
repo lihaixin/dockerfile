@@ -1978,20 +1978,32 @@
   		},
 		{
     			"type": 1,
-    			"title": "wireguard",
-			"name": "wireguard-82",
-    			"description": "wireguardvpn游戏加速隧道",
+    			"title": "wireguard-server-82",
+			"name": "wireguard-server-82",
+    			"description": "wireguard vpn游戏加速隧道",
 			"note": "部署wireguard vpn游戏加速隧道, 更多点击<a href=\"https://hub.docker.com/r/lihaixin/wireguard\" target=\"_blank\">wireguard doc</a> 了接更多信息",
-    			"hostname": "wireguard-host-82",
+    			"hostname": "wireguard-server",
 			"categories": ["vpn"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/wireguard.png",
-    			"image": "lihaixin/wireguard:stretch",
+    			"image": "lihaixin/wireguard:server",
 			"privileged": true,
   			"network": "host",
 			"env": [{
+      				"name": "DOMAIN",
+      				"label": "服务器宿主机域名",
+				"description": "服务器端留空,客户端可输入远端主机域名或IP",
+      				"default": " "
+    				},
+				{
       				"name": "WANNAME",
-      				"label": "宿主机网卡名称",
+      				"label": "宿主机网卡名称 *",
+				"description": "登陆主机查看，确保正确，否则不能正确转发",
+      				"default": "ens3"
+    				},
+				{
+      				"name": "WANIP",
+      				"label": "宿主机网卡IP *",
 				"description": "登陆主机查看，确保正确，否则不能正确转发",
       				"default": "ens3"
     				},
@@ -2007,59 +2019,11 @@
 				"description": "用于直接路由本地局域网网段",
       				"default": "192.168.2.0/24"
     				},
-		     		{
-      				"name": "MODE",
-      				"label": "MODE",
-				"description": "speederv2 模式",
-      				"default": "1"
-    				},
-		     		{
-      				"name": "FEC_OPTIONS",
-      				"label": "FEC_OPTIONS",
-				"description": "FEC_OPTIONS 参数",
-      				"default": "4:1"
-    				},
-		     		{
-      				"name": "PASSWORD",
-      				"label": "PASSWORD",
-				"description": "udp2raw 密码",
-      				"default": "sanjin"
-    				},
-		     		{
-      				"name": "TIMEOUT",
-      				"label": "TIMEOUT",
-				"description": "TIMEOUT",
-      				"default": "1"
-    				},
-		     		{
-      				"name": "UDPMTU",
-      				"label": "UDPMTU",
-				"description": "speederv2 MTU",
-      				"default": "1360"
-    				},
-		     		{
-      				"name": "WGMTU",
-      				"label": "WGMTU",
-				"description": "Wireguard MTU",
-      				"default": "1320"
-    				},
-		     		{
-      				"name": "INTERVAL",
-      				"label": "INTERVAL",
-				"description": "INTERVAL",
-      				"default": "0"
-    				},
-		     		{
+				{
       				"name": "WGNAME",
       				"label": "WGNAME",
 				"description": "WGNAME",
       				"default": "wg2"
-    				},
-		     		{
-      				"name": "WGRANGE",
-      				"label": "WGRANGE",
-				"description": "WGRANGE",
-      				"default": "10.1.2.0/24"
     				},
 		     		{
       				"name": "WGSERVERIP",
@@ -2072,6 +2036,54 @@
       				"label": "WGCLIENTIP",
 				"description": "WGCLIENTIP",
       				"default": "10.1.2.2/32"
+    				},
+				{
+      				"name": "WGRANGE",
+      				"label": "WGRANGE",
+				"description": "WGRANGE",
+      				"default": "10.1.2.0/24"
+    				},
+				{
+      				"name": "WGMTU",
+      				"label": "WGMTU",
+				"description": "Wireguard MTU",
+      				"default": "1320"
+    				},
+		     		{
+      				"name": "MODE",
+      				"label": "SPEEDERV2 MODE",
+				"description": "speederv2 模式",
+      				"default": "1"
+    				},
+		     		{
+      				"name": "FEC_OPTIONS",
+      				"label": "SPEEDERV2 FEC_OPTIONS",
+				"description": "FEC_OPTIONS 参数",
+      				"default": "2:2"
+    				},
+		     		{
+      				"name": "TIMEOUT",
+      				"label": "SPEEDERV2 TIMEOUT",
+				"description": "TIMEOUT",
+      				"default": "1"
+    				},
+		     		{
+      				"name": "UDPMTU",
+      				"label": "SPEEDERV2 UDPMTU",
+				"description": "speederv2 MTU",
+      				"default": "1360"
+    				},
+		     		{
+      				"name": "OPTION",
+      				"label": "SPEEDERV2 OPTION",
+				"description": "SPEEDERV2 OPTION 可以额外添加参数",
+      				"default": "--disable-obscure"
+    				},
+				{
+      				"name": "PASSWORD",
+      				"label": "UDP2RAW PASSWORD *",
+				"description": "UDP2RAW 密码,服务器和客户端要一致",
+      				"default": "password"
     				}]
   		},
 		{
