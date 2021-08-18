@@ -1904,9 +1904,9 @@
     				},
 				{
       				"name": "GOSTCLIENTIP",
-      				"label": "GOSTCLIENTIP 隧道客户端IP",
-				"description": "GOSTCLIENTIP 隧道客户端IP,默认192.168.123.2/24,不需要调整,除非本机有这个内部网段,如有多个客户端,只需要修改IP最后一位数字",
-      				"default": "192.168.123.2/24"
+      				"label": "GOSTCLIENTIP 隧道客户端IP *",
+				"description": "GOSTCLIENTIP 隧道客户端IP,默认192.168.123.2,不需要调整,除非本机有这个内部网段,如有多个客户端,只需要修改IP最后一位数字",
+      				"default": "192.168.123.2"
     				},
 				{
       				"name": "GOSTNAME",
