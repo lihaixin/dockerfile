@@ -1690,8 +1690,8 @@
   		},
 		{
     			"type": 1,
-    			"title": "gost https",
-			"name": "gosthttps-58338",
+    			"title": "gost_https-58338",
+			"name": "gost_https-58338",
     			"description": "利用gost打造外贸简单科学上网",
 			"note": "部署https代理服务器, 更多参考点击 <a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> 了接",
     			"hostname": "gosthttps",
@@ -1732,8 +1732,8 @@
   		},
 		{
     			"type": 1,
-    			"title": "gost mult",
-			"name": "gostmult-10021-8338-58338",
+    			"title": "gost_mult-10021-8338-58338",
+			"name": "gost_mult-10021-8338-58338",
     			"description": "利用gost打造动态IP代理 ",
 			"note": "部署动态IP代理服务器, 更多参考点击 <a href=\"https://github.com/lihaixin/gost/blob/main/mult/README.md\" target=\"_blank\">gost doc</a> 了接",
     			"hostname": "gostmult",
@@ -1756,8 +1756,8 @@
   		},
 		{
     			"type": 1,
-    			"title": "gost_vpn_server 4096-8421",
-			"name": "gost_vpn_server 4096-8421",
+    			"title": "gost_vpn_server_4096-8421",
+			"name": "gost_vpn_server_4096-8421",
     			"description": "gost vpn游戏加速隧道服务器端",
 			"note": "部署gostvpn游戏加速隧道, 有<*>选项需要调整 更多点击<a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> 了接更多信息",
     			"hostname": "gostvpnhost",
