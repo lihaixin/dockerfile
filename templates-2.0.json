@@ -2157,13 +2157,13 @@
       				"name": "cprivatekey",
       				"label": "客户端密钥 *",
 				"description": "服务器端生成的客户端密钥",
-      				"default": "your client privatekey"
+      				"default": "your_client_privatekey"
     				},
 		     		{
       				"name": "spublickey",
       				"label": "服务端公钥 *",
 				"description": "服务器端生成的服务器端公钥",
-      				"default": "your server publickey"
+      				"default": "your_server_publickey"
     				},
 				{
       				"name": "WGMTU",
