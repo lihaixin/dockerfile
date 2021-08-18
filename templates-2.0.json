@@ -2023,13 +2023,13 @@
       				"name": "WGSERVERIP",
       				"label": "WGSERVERIP",
 				"description": "WGSERVERIP",
-      				"default": "10.1.2.1/32"
+      				"default": "10.1.2.1"
     				},
 		     		{
       				"name": "WGCLIENTIP",
       				"label": "WGCLIENTIP",
 				"description": "WGCLIENTIP",
-      				"default": "10.1.2.2/32"
+      				"default": "10.1.2.2"
     				},
 				{
       				"name": "WGRANGE",
