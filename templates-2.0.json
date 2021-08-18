@@ -1981,7 +1981,7 @@
     			"title": "wireguard-server-82",
 			"name": "wireguard-server-82",
     			"description": "wireguard vpn游戏加速隧道服务器端",
-			"note": "部署wireguard vpn游戏加速隧道, 更多点击<a href=\"https://hub.docker.com/r/lihaixin/wireguard\" target=\"_blank\">wireguard doc</a> 了接更多信息",
+			"note": "部署wireguard vpn游戏加速隧道, 有<*>选项需要调整  更多点击<a href=\"https://hub.docker.com/r/lihaixin/wireguard\" target=\"_blank\">wireguard doc</a> 了接更多信息",
     			"hostname": "wireguard-server",
 			"categories": ["vpn"],
     			"platform": "linux",
@@ -1991,7 +1991,7 @@
   			"network": "host",
 			"env": [{
       				"name": "DOMAIN",
-      				"label": "服务器宿主机域名或IP",
+      				"label": "宿主机域名或IP *",
 				"description": "服务器端域名,域名会自动解析成IP",
       				"default": " "
     				},
