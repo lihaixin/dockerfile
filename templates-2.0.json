@@ -2154,13 +2154,13 @@
       				"default": "10.1.2.0/24"
     				},
 				{
-      				"name": "cprivatekey",
+      				"name": "Cprivatekey",
       				"label": "客户端密钥 *",
 				"description": "服务器端生成的客户端密钥",
       				"default": "your_client_privatekey"
     				},
 		     		{
-      				"name": "spublickey",
+      				"name": "Spublickey",
       				"label": "服务端公钥 *",
 				"description": "服务器端生成的服务器端公钥",
       				"default": "your_server_publickey"
