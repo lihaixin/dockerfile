@@ -1861,7 +1861,7 @@
       				"name": "FEC_OPTIONS",
       				"label": "SPEEDERV2 FEC_OPTIONS 参数",
 				"description": "SPEEDERV2 FEC_OPTIONS 参数,根据网络质量进行调整,两边可以不一样,调整发包率,服务器带宽足,可以调整为2:2(2倍)发包",
-      				"default": "2:2"
+      				"default": "40:1"
     				},
 		     		{
       				"name": "PASSWORD",
@@ -1873,7 +1873,7 @@
       				"name": "TIMEOUT",
       				"label": "SPEEDERV2 TIMEOUT",
 				"description": "SPEEDERV2 TIMEOUT,游戏用户保持默认为1就好,一般不需要调整",
-      				"default": "1"
+      				"default": "0"
     				},
 		     		
 		     		{
@@ -1978,7 +1978,7 @@
       				"name": "FEC_OPTIONS",
       				"label": "SPEEDERV2 FEC_OPTIONS 参数",
 				"description": "SPEEDERV2 FEC_OPTIONS 参数,根据网络质量进行调整,两边可以不一样,调整发包率,客户端带宽一般比较小,可以调整4:2(1.5倍)发包,或者4:1(1.25倍)发包",
-      				"default": "4:2"
+      				"default": "40:1"
     				},
 		     		{
       				"name": "PASSWORD",
@@ -1990,7 +1990,7 @@
       				"name": "TIMEOUT",
       				"label": "SPEEDERV2 TIMEOUT",
 				"description": "SPEEDERV2 TIMEOUT,游戏用户保持默认为1就好,一般不需要调整",
-      				"default": "1"
+      				"default": "0"
     				},
 		     		
 		     		{
