@@ -896,15 +896,51 @@
   		},
 		{
     			"type": 1,
-    			"title": "acme-cf ",
-			"name": "acme-cf",
-    			"description": "Cloudflare接口泛域名数字证书申请",
+    			"title": "acme-cf.letsencrypt ",
+			"name": "acme-cf.letsencrypt",
+    			"description": "Cloudflare接口泛域名数字证书申请,使用letsencrypt提供商",
 			"note": "泛域名数字证书申请, 更多<a href=\"https://hub.docker.com/r/lihaixin/acme\" target=\"_blank\">点击这里</a> 了接更多",
     			"hostname": "acme-cf",
 			"categories": ["cert"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/acme.png",
-    			"image": "lihaixin/acme:cf",
+    			"image": "lihaixin/acme:cf.letsencrypt",
+  			"network": "host",
+			"volumes": [
+				{
+      				"container": "/etc/cert",
+				"bind": "/etc/cert"
+    				}],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "你的域名",
+				"description": "把域名A记录指向云主机IP",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "CF_Email",
+      				"label": "CF_Email",
+				"description": "你在Cloudflare邮箱",
+      				"default": "info@domain.com"
+    				},
+		     		{
+      				"name": "CF_Key",
+      				"label": "CF_Key",
+				"description": "Cloudflare接口密钥",
+      				"default": "558ef6820cea14627f986548c96fcb6cb××××"
+    				}]
+  		},
+		{
+    			"type": 1,
+    			"title": "acme-cf.zerossl",
+			"name": "acme-cf.zerossl",
+    			"description": "Cloudflare接口泛域名数字证书申请,使用zerossl提供商",
+			"note": "泛域名数字证书申请, 更多<a href=\"https://hub.docker.com/r/lihaixin/acme\" target=\"_blank\">点击这里</a> 了接更多",
+    			"hostname": "acme-cf",
+			"categories": ["cert"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/acme.png",
+    			"image": "lihaixin/acme:cf.zerossl",
   			"network": "host",
 			"volumes": [
 				{
