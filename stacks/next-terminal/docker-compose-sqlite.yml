@@ -1,4 +1,4 @@
-version: '3.3'
+version: '2'
 services:
   guacd:
     image: dushixiang/guacd:1.3.0
@@ -7,7 +7,7 @@ services:
     restart:
           always
   next-terminal:
-    image: dushixiang/next-terminal:latest
+    image: dushixiang/next-terminal:1.0.0
     environment:
       DB: sqlite
       GUACD_HOSTNAME: guacd
