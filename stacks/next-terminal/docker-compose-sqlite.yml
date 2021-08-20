@@ -1,0 +1,25 @@
+version: '3.3'
+services:
+  guacd:
+    image: dushixiang/guacd:1.3.0
+    volumes:
+      - data:/usr/local/next-terminal/data
+    restart:
+          always
+  next-terminal:
+    image: dushixiang/next-terminal:latest
+    environment:
+      DB: sqlite
+      GUACD_HOSTNAME: guacd
+      GUACD_PORT: 4822
+    ports:
+      - "8088:8088"
+    volumes:
+      - machine-id:/etc/machine-id
+      - /etc/localtime:/etc/localtime
+      - data:/usr/local/next-terminal/data
+    restart:
+          always
+volumes:
+  data:
+  machine-id:
