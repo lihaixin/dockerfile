@@ -15,11 +15,14 @@ services:
     ports:
       - "8088:8088"
     volumes:
-      - machine-id:/etc/machine-id
+      - /etc/machine-id:/etc/machine-id
       - /etc/localtime:/etc/localtime
       - data:/usr/local/next-terminal/data
+      - drive:/usr/local/next-terminal/drive
+      - recording:/usr/local/next-terminal/recording
     restart:
           always
 volumes:
   data:
-  machine-id:
+  drive:
+  recording:
