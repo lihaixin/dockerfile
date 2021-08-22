@@ -6,10 +6,10 @@ services:
     network_mode: host
     privileged: true
     environment:
-      MTU: "1300"
-      INTERFACE: "ens3"
-      USERNAME: "test"
-      PASSWORD: "test"
+      MTU: ${MTU}
+      INTERFACE: ${INTERFACE}
+      USERNAME: ${USERNAME}
+      PASSWORD: ${PASSWORD}
     volumes:
       - server:/usr/local/vpnserver
 volumes:
