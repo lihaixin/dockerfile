@@ -1,7 +1,7 @@
 version: '2'
 services:
   vpn:
-    image: "lihaixin/softether"
+    image: "lihaixin/softether:v4.28.server.ubuntu16.4"
     restart: always
     network_mode: host
     privileged: true
