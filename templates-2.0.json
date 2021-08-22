@@ -876,7 +876,7 @@
 				"name": "PASSWORD",
 				"label": "默认创建VPN的用户名的密码",
 				"description": "系统自动创建,每个HUB都有",
-				"default": ""
+				"default": "test"
 			}]
 		},
 		{
