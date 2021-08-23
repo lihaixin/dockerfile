@@ -1602,7 +1602,7 @@
     			"title": "xray.local-10801.20801",
 			"name": "xray.local-10801.20801",
     			"description": "xray socks http 本机多IP多出口 客户端",
-			"note": "一键部署xray socks http 本机多IP多出口 客户端客户端, please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> 更多信息",
+			"note": "一键部署xray socks http shadowsocks 本机多IP多出口 客户端客户端,ss支持aes-128-gcm|aes-256-gcm|chacha20-poly1305 please refer to <a href=\"https://hub.docker.com/r/lihaixin/xray\" target=\"_blank\">xray doc</a> 更多信息",
     			"hostname": "xray",
 			"categories": ["xray"],
     			"platform": "linux",
@@ -1627,6 +1627,12 @@
 				"description": "The http PORT.",
       				"default": "20801"
     				},
+				{
+      				"name": "SSPORT",
+      				"label": "本地SS端口",
+				"description": "The shadowsocks PORT.",
+      				"default": "30801"
+    				},
 			        {
       				"name": "myusername",
       				"label": "socks5 http 用户名",
@@ -1635,8 +1641,8 @@
     				},
 			        {
       				"name": "mypassword",
-      				"label": "socks5 http 密码",
-				"description": "The socks5 & http PASSWORD.",
+      				"label": "socks5 http shadowsocks 密码",
+				"description": "The socks5 & http shadowsocks PASSWORD.",
       				"default": "a1"
     				}]
   		},
