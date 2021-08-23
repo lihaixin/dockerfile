@@ -849,12 +849,18 @@
 				"stackfile": "stacks/softether/docker-compose-v4.28.yml"
 			},
 			"env": [{
+				"name": "DOMAIN",
+				"label": "域名",
+				"description": "用于OPENVPN和SSTP传输过程中,导入数据证书,提前使用lihaixin/acme容器创建好证书",
+				"default": "youdomain.com"
+			},
+			{
 				"name": "MTU",
 				"label": "DEFAULT MTU",
 				"description": "中转机使用1300、落地机使用1200.",
 				"default": "1300"
 			},
-			 {
+			{
 				"name": "INTERFACE",
 				"label": "服务器网卡接口",
 				"description": "如果有多个IP,指定后可以批量处理,多IP出口",
