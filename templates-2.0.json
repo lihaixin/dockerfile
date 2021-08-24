@@ -1613,7 +1613,7 @@
 			"categories": ["xray"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
-    			"image": "lihaixin/xray:local",
+    			"image": "lihaixin/xray:local.single",
   			"network": "host",
 			"env": [{
       				"name": "LocalIP",
