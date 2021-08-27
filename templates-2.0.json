@@ -2420,18 +2420,6 @@
       				"label": "HTTP & SOCKS5 端口",
 				"description": "The HTTP AND SOCKS5 Server Port",
       				"default": "10021"
-    				},
-				{
-      				"name": "SSPASSWD",
-      				"label": "SHADOWSOCKS 密码",
-				"description": "for SS verification",
-      				"default": "pwd1688"
-    				},
-				{
-      				"name": "SSPORT",
-      				"label": "SHADOWSOCKS 端口",
-				"description": "for SS PORT",
-      				"default": "8338"
     				}]
   		},
 		{
