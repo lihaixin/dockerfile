@@ -833,7 +833,7 @@
 			}]
 		},
 		{
-			"type": 3,
+			"type": 1,
 			"title": "softethervpn",
 			"name": "softether-500-4500-1194-1701",
 			"description": "构建多合一（L2TP SSTP OPENVPN）VPN服务器,多出口",
