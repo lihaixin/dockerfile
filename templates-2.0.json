@@ -2398,12 +2398,19 @@
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",
     			"image": "lihaixin/gost:s5",
   			"network": "host",
-			"volumes": [
-				{
-      				"container": "/etc/gost",
-				"bind": "/etc/gost"
-    				}],
 			"env": [{
+      				"name": "TYPE",
+      				"label": "本地还是中转",
+				"description": "提供local socks5 http https,local为本地运行代理,其他为转发上游代理",
+      				"default": "local"
+    				},
+				{
+      				"name": "PORT",
+      				"label": "HTTP & SOCKS5 端口",
+				"description": "The HTTP AND SOCKS5 Server Port",
+      				"default": "10021"
+    				},
+				{
       				"name": "USER",
       				"label": "HTTP & SOCKS5用户名",
 				"description": "The HTTP AND SOCKS5 Server USER",
@@ -2413,13 +2420,31 @@
       				"name": "PASSWD",
       				"label": "HTTP & SOCKS5 密码",
 				"description": "Password is used for Http & SOCKS5 verification",
-      				"default": "password"
+      				"default": "test"
+    				},
+			        {
+      				"name": "RURL",
+      				"label": "中转上游地址",
+				"description": "输入转发上游代理",
+      				"default": "8.8.8.8"
     				},
 				{
-      				"name": "PORT",
-      				"label": "HTTP & SOCKS5 端口",
-				"description": "The HTTP AND SOCKS5 Server Port",
-      				"default": "10021"
+      				"name": "RPORT",
+      				"label": "中转上游端口",
+				"description": "中转上游代理端口",
+      				"default": "22225"
+    				},
+				{
+      				"name": "RUSER",
+      				"label": "中转上游用户名",
+				"description": "中转上游代理验证用户名",
+      				"default": "ruser"
+    				},
+		     		{
+      				"name": "RPASSWD",
+      				"label": "中转上游密码",
+				"description": "中转上游代理验证密码",
+      				"default": "rpass"
     				}]
   		},
 		{
