@@ -824,6 +824,7 @@
 			"categories": ["vpn"],
 			"platform": "linux",
 			"network": "host",
+			"privileged": true,
 			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/softether.png",			
 			"image": "lihaixin/softether",
 			"env": [{
@@ -842,6 +843,7 @@
 			"categories": ["vpn"],
 			"platform": "linux",
 			"network": "host",
+			"privileged": true,
 			"volumes": [{
 				"container": "/etc/cert",
 				"bind": "/etc/cert"
