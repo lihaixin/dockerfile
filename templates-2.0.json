@@ -823,6 +823,7 @@
 			"note": "部署softether,用到450、4500、443、1701、1194端口, 管理密码: softether 更多信息 <a href=\"https://hub.docker.com/r/lihaixin/softether\" target=\"_blank\">点击这里</a> ",
 			"categories": ["vpn"],
 			"platform": "linux",
+			"network": "host",
 			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/softether.png",			
 			"image": "lihaixin/softether",
 			"env": [{
@@ -840,6 +841,11 @@
 			"note": "部署softether,用到450、4500、443、1701、1194端口, 管理密码: softether 更多信息 <a href=\"https://hub.docker.com/r/lihaixin/softether\" target=\"_blank\">点击这里</a> ",
 			"categories": ["vpn"],
 			"platform": "linux",
+			"network": "host",
+			"volumes": [{
+				"container": "/etc/cert",
+				"bind": "/etc/cert"
+				}],
 			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/softether.png",
 			"image": "lihaixin/softether:v4.38.server.ubuntu16.4",
 			"env": [{
