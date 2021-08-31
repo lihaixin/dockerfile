@@ -2,6 +2,7 @@ version: '2'
 services:
   client:
     image: "lihaixin/softether:client"
+    container_name: vpngate1
     ports:
       - "9930:9930"
     restart: always
@@ -17,7 +18,7 @@ services:
   server:
     image: "lihaixin/softether"
     restart: always
-    network_mode: "container:client"
+    network_mode: "container:vpngate1"
     privileged: true
     depends_on:
       - client
