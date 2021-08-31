@@ -2,6 +2,8 @@ version: '2'
 services:
   client:
     image: "lihaixin/softether:client"
+    ports:
+      - "9930:9930"
     restart: always
     privileged: true
     network_mode: "bridge"
