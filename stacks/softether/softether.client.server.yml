@@ -11,7 +11,7 @@ services:
     environment:
       VPN_SERVER: vpn425286490.opengw.net
       VPN_PORT: 1361
-      VIRTUAL_HUB: WINGATE
+      VIRTUAL_HUB: VPNGATE
       ACCOUNT_USER: vpn
       ACCOUNT_PASS: vpn
       TAP_IPADDR: dhcp 
