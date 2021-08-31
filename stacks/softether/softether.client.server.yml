@@ -1,10 +1,9 @@
 version: '2'
 services:
-  client:
+  vpngate:
     image: "lihaixin/softether:client"
-    container_name: vpngate1
     ports:
-      - "9930:9930"
+      - "9930:9930" //开启远程客户端链接端口
     restart: always
     privileged: true
     network_mode: "bridge"
@@ -15,7 +14,7 @@ services:
       ACCOUNT_USER: vpn
       ACCOUNT_PASS: vpn
       TAP_IPADDR: dhcp 
-  server:
+  vpnserver:
     image: "lihaixin/softether"
     restart: always
     network_mode: "container:vpngate1"
