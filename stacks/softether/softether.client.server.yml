@@ -2,11 +2,11 @@ version: '2'
 services:
   vpngate:
     image: "lihaixin/softether:client"
-    ports:
-      - "9930:9930" //开启远程客户端链接端口
+    # ports:
+    #   - "9930:9930" //开启远程客户端链接端口
     restart: always
     privileged: true
-    network_mode: "bridge"
+    # network_mode: "bridge"  //使用桥接网络
     environment:
       VPN_SERVER: vpn425286490.opengw.net
       VPN_PORT: 1361
@@ -17,7 +17,7 @@ services:
   vpnserver:
     image: "lihaixin/softether"
     restart: always
-    network_mode: "container:vpngate1"
+    # network_mode: "container:vpngate1" //调整和容器vpngate使用同一IP地址
     privileged: true
     depends_on:
       - client
