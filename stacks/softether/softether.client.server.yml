@@ -4,6 +4,7 @@ services:
     image: "lihaixin/softether:client"
     restart: always
     privileged: true
+    network_mode: "bridge"
     environment:
       VPN_SERVER: vpn425286490.opengw.net
       VPN_PORT: 1361
@@ -14,7 +15,7 @@ services:
   server:
     image: "lihaixin/softether"
     restart: always
-    network_mode: container:client
+    network_mode: "container:client"
     privileged: true
     depends_on:
       - client
