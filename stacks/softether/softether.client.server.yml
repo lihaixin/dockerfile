@@ -1,0 +1,22 @@
+version: '2'
+services:
+  client:
+    image: "lihaixin/softether:client"
+    restart: always
+    privileged: true
+    environment:
+      VPN_SERVER: vpn425286490.opengw.net
+      VPN_PORT: 1361
+      VIRTUAL_HUB: WINGATE
+      ACCOUNT_USER: vpn
+      ACCOUNT_PASS: vpn
+      TAP_IPADDR: dhcp 
+  server:
+    image: "lihaixin/softether"
+    restart: always
+    network_mode: container:client
+    privileged: true
+    depends_on:
+      - client
+    environment:
+      MTU: 1200
