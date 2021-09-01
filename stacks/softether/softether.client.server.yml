@@ -7,6 +7,8 @@ services:
     restart: always
     privileged: true
     # network_mode: "bridge"  # 使用桥接网络
+    networks:
+      - my-network
     environment:
       VPN_SERVER: vpn425286490.opengw.net
       VPN_PORT: 1361
@@ -18,8 +20,14 @@ services:
     image: "lihaixin/softether"
     restart: always
     # network_mode: "container:vpngate1" # 调整和容器vpngate使用同一IP地址
+    networks:
+      - my-network
     privileged: true
     depends_on:
       - vpngate
     environment:
       MTU: 1200
+      
+networks:
+  my-network:
+    name: vpngate-s5-network
