@@ -10,8 +10,8 @@ services:
     networks:
       - my-network
     environment:
-      VPN_SERVER: vpn425286490.opengw.net #支持域名和IP *
-      VPN_PORT: 1361                      #修改端口 *
+      VPN_SERVER: vpn287448755.opengw.net #支持域名和IP *
+      VPN_PORT: 995                      #修改端口 *
       VIRTUAL_HUB: VPNGATE
       ACCOUNT_USER: vpn
       ACCOUNT_PASS: vpn
@@ -31,3 +31,10 @@ services:
 networks:
   my-network:
     name: vpngate-vpn-network
+    ipam:
+     config:
+       - subnet: 172.20.0.0/16
+         gateway: 172.20.0.1/16
+         aux_addresses:
+          vpngate: 172.20.1.1/16
+          vpnserver: 172.20.2.1/16
