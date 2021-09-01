@@ -29,5 +29,5 @@ networks:
     name: vpngate-vpn-network
     ipam:
      config:
-       - subnet: 172.20.0.0/16
-         gateway: 172.20.0.1
+       - subnet: 10.20.0.0/16
+         gateway: 10.20.0.1
