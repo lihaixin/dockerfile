@@ -1,4 +1,5 @@
 version: '3'
+# 使用自定义网络,记得在母机开机启动添加  iptables -t nat -I POSTROUTING -p tcp -d 172.19.0.0/16 --dport 1080 -j SNAT --to-source 172.19.0.1
 services:
   vpngate:
     image: "lihaixin/softether:client"
