@@ -15,7 +15,7 @@ services:
       VIRTUAL_HUB: VPNGATE
       ACCOUNT_USER: vpn
       ACCOUNT_PASS: vpn
-      TAP_IPADDR: dhcp 
+      TAP_IPADDR: dhcp
   vpnserver:
     image: "lihaixin/softether"
     restart: always
