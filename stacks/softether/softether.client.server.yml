@@ -2,16 +2,14 @@ version: '3'
 services:
   vpngate:
     image: "lihaixin/softether:client"
-    # ports:
-    #   - "9930:9930" # 开启远程客户端链接端口
     restart: always
     privileged: true
-    # network_mode: "bridge"  # 使用桥接网络
     networks:
-      - my-network
+      my-network:
+        ipv4_address: 10.20.1.11          #修改IP *  
     environment:
       VPN_SERVER: vpn287448755.opengw.net #支持域名和IP *
-      VPN_PORT: 995                      #修改端口 *
+      VPN_PORT: 995                       #修改端口 *
       VIRTUAL_HUB: VPNGATE
       ACCOUNT_USER: vpn
       ACCOUNT_PASS: vpn
@@ -19,9 +17,7 @@ services:
   vpnserver:
     image: "lihaixin/softether"
     restart: always
-    # network_mode: "container:vpngate1" # 调整和容器vpngate使用同一IP地址
-    networks:
-      - my-network
+    network_mode: "none"                  # 调整和容器vpngate使用同一IP地址
     privileged: true
     depends_on:
       - vpngate
@@ -35,6 +31,3 @@ networks:
      config:
        - subnet: 172.20.0.0/16
          gateway: 172.20.0.1/16
-         aux_addresses:
-          vpngate: 172.20.1.1/16
-          vpnserver: 172.20.2.1/16
