@@ -30,4 +30,4 @@ services:
       
 networks:
   my-network:
-    name: vpngate-s5-network
+    name: vpngate-vpn-network
