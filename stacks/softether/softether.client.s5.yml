@@ -1,23 +1,27 @@
-version: '2'
+version: '3'
 services:
   vpngate:
     image: "lihaixin/softether:client"
     ports:
-      - "9930:1080" # 开启socks5端口映射
+      - "10801:1080" # 开启socks5端口映射
     restart: always
     privileged: true
-    network_mode: "bridge"  # 使用桥接网络
+    #network_mode: "bridge"  # 使用桥接网络
+    networks:
+      - my-network
     environment:
-      VPN_SERVER: vpn425286490.opengw.net
-      VPN_PORT: 1361
+      VPN_SERVER: 211.48.118.80
+      VPN_PORT: 995
       VIRTUAL_HUB: VPNGATE
       ACCOUNT_USER: vpn
       ACCOUNT_PASS: vpn
-      TAP_IPADDR: dhcp 
+      TAP_IPADDR: dhcp
   socks5:
     image: "lihaixin/gost:s5"
     restart: always
-    network_mode: "bridge" # 启动后通过portainer调整和vpngate一个容器网络
+    #network_mode: "bridge" # 启动后通过portainer调整和vpngate一个容器网络
+    networks:
+      - my-network
     privileged: true
     depends_on:
       - vpngate
@@ -25,3 +29,7 @@ services:
       USER: a1
       PASSWD: a1
       PORT: 1080
+      
+networks:
+  my-network:
+    name: vpngate-s5-network
