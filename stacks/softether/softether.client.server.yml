@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   vpngate:
     image: "lihaixin/softether:client"
@@ -10,8 +10,8 @@ services:
     networks:
       - my-network
     environment:
-      VPN_SERVER: vpn425286490.opengw.net
-      VPN_PORT: 1361
+      VPN_SERVER: vpn425286490.opengw.net #支持域名和IP *
+      VPN_PORT: 1361                      #修改端口 *
       VIRTUAL_HUB: VPNGATE
       ACCOUNT_USER: vpn
       ACCOUNT_PASS: vpn
