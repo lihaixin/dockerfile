@@ -1,18 +1,19 @@
 version: '3'
-# 使用自定义网络,记得在母机开机启动添加  iptables -t nat -I POSTROUTING -p tcp -d 172.19.0.0/16 --dport 1080 -j SNAT --to-source 172.19.0.1
+# 开启伪装转发 iptables -t nat -I POSTROUTING -p tcp -d 10.29.0.0/16 --dport 1080 -j SNAT --to-source 10.29.0.1
 services:
   vpngate:
     image: "lihaixin/softether:client"
     ports:
-      - "10801:1080" # 开启socks5端口映射
+      - "10801:1080" # 开启socks5端口映射,修改端口映射
     restart: always
     privileged: true
     #network_mode: "bridge"  # 使用桥接网络
     networks:
-      - my-network
+      my-network:
+        ipv4_address: 10.29.1.11
     environment:
-      VPN_SERVER: 211.48.118.80
-      VPN_PORT: 995
+      VPN_SERVER: vpn755254049.opengw.net # 修改地址
+      VPN_PORT: 995                       # 修改端口
       VIRTUAL_HUB: VPNGATE
       ACCOUNT_USER: vpn
       ACCOUNT_PASS: vpn
@@ -20,10 +21,11 @@ services:
   socks5:
     image: "lihaixin/gost:s5"
     restart: always
-    #network_mode: "bridge" # 启动后通过portainer调整和vpngate一个容器网络
-    networks:
-      - my-network
-    privileged: true
+    network_mode: "none" # 启动后通过portainer调整和vpngate一个容器网络
+    #networks:
+    #  my-network:
+    #    ipv4_address: 10.29.2.11
+
     depends_on:
       - vpngate
     environment:
@@ -33,4 +35,8 @@ services:
       
 networks:
   my-network:
-    name: vpngate-s5-network
+    name: vpngate-s6-network
+    ipam:
+      config:
+        - subnet: 10.29.0.0/16
+          gateway: 10.29.0.1
