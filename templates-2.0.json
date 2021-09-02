@@ -912,6 +912,34 @@
 			}]
 		},
 		{
+			"type": 3,
+			"title": "softether-client-vpn",
+			"name": "softether-500-4500-1194-1701",
+			"description": "构建VPNGATE VPN服务器",
+			"note": "部署VPNGATE VPN服务器, 管理密码: softether .默认帐号和密码为:vpnhua,然后通过宿主机vpn桥接更多信息 <a href=\"https://hub.docker.com/r/lihaixin/softether\" target=\"_blank\">点击这里</a> ",
+			"categories": ["vpn"],
+			"platform": "linux",
+			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/softether.png",			
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/softether/softether.client.server.yml"
+			}
+		},
+		{
+			"type": 3,
+			"title": "softether-client-s5",
+			"name": "softether-10801",
+			"description": "构建VPNGATE S5服务器",
+			"note": "部署VPNGATE S5服务器, 管理密码: softether .默认帐号和密码为:vpnhua,然后通过宿主机vpn桥接更多信息 <a href=\"https://hub.docker.com/r/lihaixin/softether\" target=\"_blank\">点击这里</a> ",
+			"categories": ["vpn"],
+			"platform": "linux",
+			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/softether.png",			
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/softether/softether.client.s5.yml"
+			}
+		},
+		{
 			"type": 1,
 			"title": "n2n-7654",
 			"name": "n2n-7654",
