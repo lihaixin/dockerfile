@@ -855,7 +855,7 @@
 			"repository": {
 				"url": "https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/softether/docker-compose-v4.28.yml"
-			}
+			},
 			"env": [{
 				"name": "DOMAIN",
 				"label": "域名",
