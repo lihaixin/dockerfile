@@ -11,7 +11,7 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - vnstatdb:/var/lib/vnstat
     environment:
-      - HTTP_PORT=8685                          #http服务器端口,默认8685，用于0禁用http服务器
+      - HTTP_PORT=0                             #http服务器端口,或者调整8685，用于0禁用http服务器
       - HTTP_BIND=*                             #用于绑定http服务器的IP地址，用于127.0.0.1仅绑定到本地主机并防止远程访问
       - HTTP_LOG=/dev/stdout                    #Http服务器日志输出文件，/dev/stdout用于输出到控制台和/dev/null禁用日志记录
       - LARGE_FONTS=0                           #在图像中使用大字体（0：否，1：是）
