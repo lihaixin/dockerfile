@@ -9,8 +9,12 @@ services:
       DOMAIN: ${DOMAIN}
       MTU: ${MTU}
       INTERFACE: ${INTERFACE}
+      OPENVPN_PORT: ${OPENVPN_PORT}
       USERNAME: ${USERNAME}
       PASSWORD: ${PASSWORD}
+      MaxUpload: ${MaxUpload}
+      MaxDownload: ${MaxDownload}
+      MultiLogins: ${MultiLogins}
     volumes:
       - server:/usr/local/vpnserver
       - /etc/cert:/etc/cert
