@@ -614,6 +614,20 @@
 				"bind": "/root/.ssh/id_rsa"
     				}]
   			},
+		        {
+			"type": 3,
+			"title": "vnstat-8685",
+			"name": "vnstat-8685",
+			"description": "vnStat 是一个网络流量监视器,使用内核提供的网络接口统计信息,确保少量使用系统资源",
+			"note": "部署网络流量监视器,使用host网络, 更多信息 <a href=\"https://github.com/vergoh/vnstat-docker\" target=\"_blank\">点击这里</a> ",
+			"categories": ["tools"],
+			"platform": "linux",
+			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/vnstat.png",
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/vnstat/docker-compose.yml"
+				}
+		        },
 		      	{
     			"type": 1,
     			"title": "ylzq",
