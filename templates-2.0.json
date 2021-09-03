@@ -1964,8 +1964,8 @@
   		},
 		{
     			"type": 1,
-    			"title": "gost_mult-10021-8338-58338",
-			"name": "gost_mult-10021-8338-58338",
+    			"title": "gost_mult-10021",
+			"name": "gost_mult-10021",
     			"description": "利用gost打造动态IP代理 ",
 			"note": "部署动态IP代理服务器, 更多参考点击 <a href=\"https://github.com/lihaixin/gost/blob/main/mult/README.md\" target=\"_blank\">gost doc</a> 了接",
     			"hostname": "gostmult",
@@ -1974,16 +1974,23 @@
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",
     			"image": "lihaixin/gost:mult",
   			"network": "host",
-			"volumes": [
-				{
-      				"container": "/etc/cert",
-				"bind": "/etc/cert"
-    				}],
 			"env": [{
-      				"name": "DOMAIN",
-      				"label": "Your Domain",
-				"description": "The domain name is used to apply for a digital certificate, and the domain name A points to the IP where you deploy the cloud machine",
-      				"default": "youdomain.com"
+      				"name": "PORT",
+      				"label": "S5 PORT",
+				"description": "S5 http 监听端口",
+      				"default": "10021"
+    				},
+		     		{
+      				"name": "USER",
+      				"label": "S5 USER",
+				"description": "user for S5 verification",
+      				"default": "88888888"
+    				},
+		     		{
+      				"name": "PASSWD",
+      				"label": "S5 Password",
+				"description": "Password for S5 verification",
+      				"default": "88888888"
     				}]
   		},
 		{
@@ -2442,10 +2449,10 @@
   		},
 		{
     			"type": 1,
-    			"title": "gosts5.http.s5_10021",
-			"name": "gosts5.http.ss_10021",
+    			"title": "gost.s5.http_10021",
+			"name": "gost.s5.http_10021",
     			"description": "利用gost打造s5 http 代理和转发",
-			"note": "一键部署socks5 http 代理和转发, ple和转发ase refer to <a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> for production deployments.",
+			"note": "一键部署socks5 http 代理和转发, please refer to <a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> for production deployments.",
     			"hostname": "gosts5",
 			"categories": ["gost"],
     			"platform": "linux",
