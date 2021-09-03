@@ -1991,6 +1991,18 @@
       				"label": "S5 Password",
 				"description": "Password for S5 verification",
       				"default": "88888888"
+    				},
+		     		{
+      				"name": "KILLTIME",
+      				"label": "自动切换时间",
+				"description": "多久切换IP",
+      				"default": "60"
+    				},
+		     		{
+      				"name": "EXITNODES",
+      				"label": "落地国家代码",
+				"description": "可以多设置几个国家,中间用空格隔开",
+      				"default": "us ca"
     				}]
   		},
 		{
