@@ -1984,13 +1984,13 @@
       				"name": "USER",
       				"label": "S5 USER",
 				"description": "user for S5 verification",
-      				"default": "88888888"
+      				"default": "a1"
     				},
 		     		{
       				"name": "PASSWD",
       				"label": "S5 Password",
 				"description": "Password for S5 verification",
-      				"default": "88888888"
+      				"default": "a1"
     				},
 		     		{
       				"name": "KILLTIME",
@@ -2002,7 +2002,7 @@
       				"name": "EXITNODES",
       				"label": "落地国家代码",
 				"description": "可以多设置几个国家,中间用空格隔开",
-      				"default": "us ca"
+      				"default": "us"
     				}]
   		},
 		{
