@@ -27,7 +27,7 @@
       				"name": "HOSTNAME",
       				"label": "主机名",
 				"description": "主机名称,顶级域名下面的一个主机名",
-      				"default": "h7"
+      				"default": "h6"
     				},
 				{
       				"name": "PORT",
