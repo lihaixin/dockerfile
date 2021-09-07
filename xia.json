@@ -2,8 +2,8 @@
 	"version": "2",
 	"templates": [{
     			"type": 1,
-    			"title": "30001_luminati_https",
-			"name": "30001_luminati_https",
+    			"title": "40001_luminati_https",
+			"name": "40001_luminati_https",
     			"description": "一键加速转发luminati https代理",
 			"note": "部署https代理服务器,一键加速转发luminati https代理 ",
     			"hostname": "https",
@@ -33,7 +33,7 @@
       				"name": "PORT",
       				"label": "HTTPS 端口",
 				"description": "* 本机 HTTPS Server 端口",
-      				"default": "30001"
+      				"default": "40001"
     				},
 		     		{
       				"name": "USER",
