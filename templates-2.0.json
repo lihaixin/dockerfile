@@ -1935,27 +1935,63 @@
     				}],
 			"env": [{
       				"name": "DOMAIN",
-      				"label": "Your Domain",
-				"description": "The domain name is used to apply for a digital certificate, and the domain name A points to the IP where you deploy the cloud machine",
-      				"default": "https.youdomain.com"
+      				"label": "顶级域名",
+				"description": "你的顶级域名,申请泛证书用",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "HOSTNAME",
+      				"label": "主机名",
+				"description": "主机名称,顶级域名下面的一个主机名",
+      				"default": "h8"
+    				},
+				{
+      				"name": "TYPE",
+      				"label": "本地还是中转",
+				"description": "提供local socks5 http https,local为本地运行https代理,其他为转发上游代理",
+      				"default": "local"
     				},
 				{
       				"name": "PORT",
-      				"label": "HTTPS PORT",
-				"description": "The HTTPS Server Port",
+      				"label": "HTTPS 端口",
+				"description": "本机 HTTPS Server 端口",
       				"default": "58338"
     				},
 		     		{
       				"name": "USER",
-      				"label": "HTTPS USER",
-				"description": "user for Https verification",
+      				"label": "HTTPS 用户名",
+				"description": "本机 Https 用户名",
       				"default": "88888888"
     				},
 		     		{
       				"name": "PASSWD",
-      				"label": "HTTPS Password",
-				"description": "Password for Https verification",
+      				"label": "HTTPS 密码",
+				"description": "本机 Https 密码",
       				"default": "88888888"
+    				},
+			        {
+      				"name": "RURL",
+      				"label": "中转上游地址",
+				"description": "输入转发上游代理地址",
+      				"default": "8.8.8.8"
+    				},
+				{
+      				"name": "RPORT",
+      				"label": "中转上游端口",
+				"description": "中转上游代理端口",
+      				"default": "22225"
+    				},
+				{
+      				"name": "RUSER",
+      				"label": "中转上游用户名",
+				"description": "中转上游代理验证用户名",
+      				"default": "ruser"
+    				},
+		     		{
+      				"name": "RPASSWD",
+      				"label": "中转上游密码",
+				"description": "中转上游代理验证密码",
+      				"default": "rpass"
     				}]
   		},
 		{
