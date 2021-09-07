@@ -5,7 +5,7 @@
     			"title": "40001_luminati_https",
 			"name": "40001_luminati_https",
     			"description": "一键加速转发luminati https代理",
-			"note": "部署https代理服务器,一键加速转发luminati https代理 ",
+			"note": "部署https代理服务器,一键加速转发luminati https代理 ,成功后就可以通过新域名和端口转发上游代理",
     			"hostname": "https",
 			"categories": ["luminati"],
     			"platform": "linux",
