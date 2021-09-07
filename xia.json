@@ -21,19 +21,13 @@
       				"name": "DOMAIN",
       				"label": "顶级域名",
 				"description": "你的顶级域名,申请泛证书用",
-      				"default": "youdomain.com"
+      				"default": "15099.net"
     				},
 				{
       				"name": "HOSTNAME",
       				"label": "主机名",
 				"description": "主机名称,顶级域名下面的一个主机名",
-      				"default": "h8"
-    				},
-				{
-      				"name": "TYPE",
-      				"label": "本地还是中转",
-				"description": "提供local socks5 http https,local为本地运行https代理,其他为转发上游代理",
-      				"default": "local"
+      				"default": "h7"
     				},
 				{
       				"name": "PORT",
@@ -53,11 +47,18 @@
 				"description": "本机 Https 密码",
       				"default": "88888888"
     				},
+				{
+      				"name": "TYPE",
+      				"label": "中转类型",
+				"description": "提供socks5 http https,转发上游代理",
+      				"default": "https"
+    				}
+				,
 			        {
       				"name": "RURL",
       				"label": "中转上游地址",
 				"description": "输入转发上游代理地址",
-      				"default": "8.8.8.8"
+      				"default": "zproxy.lum-superproxy.io"
     				},
 				{
       				"name": "RPORT",
@@ -68,13 +69,13 @@
 				{
       				"name": "RUSER",
       				"label": "中转上游用户名",
-				"description": "中转上游代理验证用户名",
-      				"default": "ruser"
+				"description": "中转上游代理用户名",
+      				"default": "lum-customer-***"
     				},
 		     		{
       				"name": "RPASSWD",
       				"label": "中转上游密码",
-				"description": "中转上游代理验证密码",
+				"description": "中转上游代理密码",
       				"default": "rpass"
     				}]
   		}
