@@ -20,7 +20,7 @@
 			"env": [{
       				"name": "DOMAIN",
       				"label": "顶级域名",
-				"description": "你的顶级域名,申请泛证书用",
+				"description": "你的顶级域名,绑定证书用",
       				"default": "15099.net"
     				},
 				{
@@ -38,14 +38,14 @@
 		     		{
       				"name": "USER",
       				"label": "HTTPS 用户名 *",
-				"description": "本机 Https 用户名,可以修改和上游帐号一致,这样用户就不需要调整用户名,只需要修改域名地址和端口",
-      				"default": "88888888"
+				"description": "本机 Https Server 用户名,可以修改和上游帐号一致,这样用户就不需要调整用户名,只需要修改域名地址和端口",
+      				"default": "a1"
     				},
 		     		{
       				"name": "PASSWD",
       				"label": "HTTPS 密码 *",
-				"description": "本机 Https 密码,可以修改和上游密码一致,这样用户就不需要调整用户名,只需要修改域名地址和端口",
-      				"default": "88888888"
+				"description": "本机 Https Server 密码,可以修改和上游密码一致,这样用户就不需要调整用户名,只需要修改域名地址和端口",
+      				"default": "a1"
     				},
 				{
       				"name": "TYPE",
