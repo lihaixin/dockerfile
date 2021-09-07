@@ -1,5 +1,5 @@
 {
-	"version": "2",
+	"version": "1",
 	"templates": [{
     			"type": 1,
     			"title": "luminati_https-30001",
@@ -33,7 +33,7 @@
       				"name": "PORT",
       				"label": "HTTPS 端口",
 				"description": "本机 HTTPS Server 端口",
-      				"default": "58338"
+      				"default": "30001"
     				},
 		     		{
       				"name": "USER",
