@@ -50,7 +50,7 @@
 				{
       				"name": "TYPE",
       				"label": "中转类型",
-				"description": "转发上游代理类型,提供socks5 http https,默认是https",
+				"description": "转发上游代理类型,默认是https",
       				"default": "https"
     				},
 			        {
