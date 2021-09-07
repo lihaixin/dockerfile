@@ -1991,14 +1991,20 @@
 		     		{
       				"name": "KILLTIME",
       				"label": "自动切换时间",
-				"description": "多久切换IP",
-      				"default": "60"
+				"description": "多久切换IP,默认5分钟,设置0为固定IP",
+      				"default": "300"
     				},
 		     		{
       				"name": "EXITNODES",
       				"label": "落地国家代码",
 				"description": "可以多设置几个国家,中间用空格隔开",
       				"default": "us"
+    				},
+		     		{
+      				"name": "HTTP_PORT",
+      				"label": "是否开启网页换IP",
+				"description": "填写网页端口,输入0关闭lighttpd网页",
+      				"default": "0"
     				}]
   		},
 		{
