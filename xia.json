@@ -1,11 +1,11 @@
 {
-	"version": "1",
+	"version": "2",
 	"templates": [{
     			"type": 1,
-    			"title": "luminati_https-30001",
-			"name": "luminati_https-30001",
+    			"title": "30001_luminati_https",
+			"name": "30001_luminati_https",
     			"description": "一键加速转发luminati https代理",
-			"note": "部署https代理服务器, ",
+			"note": "部署https代理服务器,一键加速转发luminati https代理 ",
     			"hostname": "https",
 			"categories": ["luminati"],
     			"platform": "linux",
