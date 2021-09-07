@@ -1,23 +1,82 @@
 {
 	"version": "2",
 	"templates": [{
-			"type": 3,
-			"title": "Wordpress",
-			"name": "wordpress",
-			"description": "Wordpress setup with a MySQL database",
-			"note": "Deploys a Wordpress instance connected to a MySQL database.",
-			"categories": ["CMS"],
-			"platform": "linux",
-			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/wordpress.png",
-			"repository": {
-				"url": "https://github.com/portainer/templates",
-				"stackfile": "stacks/wordpress/docker-compose.yml"
-			},
+    			"type": 1,
+    			"title": "luminati_https-30001",
+			"name": "luminati_https-30001",
+    			"description": "一键加速转发luminati https代理",
+			"note": "部署https代理服务器, ",
+    			"hostname": "https",
+			"categories": ["luminati"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",
+    			"image": "lihaixin/gost:https",
+  			"network": "host",
+			"volumes": [
+				{
+      				"container": "/etc/cert",
+				"bind": "/etc/cert"
+    				}],
 			"env": [{
-				"name": "MYSQL_DATABASE_PASSWORD",
-				"label": "Database root password",
-				"description": "Password used by the MySQL root user."
-			}]
-		}
+      				"name": "DOMAIN",
+      				"label": "顶级域名",
+				"description": "你的顶级域名,申请泛证书用",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "HOSTNAME",
+      				"label": "主机名",
+				"description": "主机名称,顶级域名下面的一个主机名",
+      				"default": "h8"
+    				},
+				{
+      				"name": "TYPE",
+      				"label": "本地还是中转",
+				"description": "提供local socks5 http https,local为本地运行https代理,其他为转发上游代理",
+      				"default": "local"
+    				},
+				{
+      				"name": "PORT",
+      				"label": "HTTPS 端口",
+				"description": "本机 HTTPS Server 端口",
+      				"default": "58338"
+    				},
+		     		{
+      				"name": "USER",
+      				"label": "HTTPS 用户名",
+				"description": "本机 Https 用户名",
+      				"default": "88888888"
+    				},
+		     		{
+      				"name": "PASSWD",
+      				"label": "HTTPS 密码",
+				"description": "本机 Https 密码",
+      				"default": "88888888"
+    				},
+			        {
+      				"name": "RURL",
+      				"label": "中转上游地址",
+				"description": "输入转发上游代理地址",
+      				"default": "8.8.8.8"
+    				},
+				{
+      				"name": "RPORT",
+      				"label": "中转上游端口",
+				"description": "中转上游代理端口",
+      				"default": "22225"
+    				},
+				{
+      				"name": "RUSER",
+      				"label": "中转上游用户名",
+				"description": "中转上游代理验证用户名",
+      				"default": "ruser"
+    				},
+		     		{
+      				"name": "RPASSWD",
+      				"label": "中转上游密码",
+				"description": "中转上游代理验证密码",
+      				"default": "rpass"
+    				}]
+  		}
 	 ]
 }
