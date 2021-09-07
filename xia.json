@@ -38,26 +38,25 @@
 		     		{
       				"name": "USER",
       				"label": "HTTPS 用户名",
-				"description": "本机 Https 用户名",
+				"description": "本机 Https 用户名,可以修改和上游帐号一致,这样用户就不需要调整用户名,只需要修改域名地址和端口",
       				"default": "88888888"
     				},
 		     		{
       				"name": "PASSWD",
       				"label": "HTTPS 密码",
-				"description": "本机 Https 密码",
+				"description": "本机 Https 密码,可以修改和上游密码一致,这样用户就不需要调整用户名,只需要修改域名地址和端口",
       				"default": "88888888"
     				},
 				{
       				"name": "TYPE",
       				"label": "中转类型",
-				"description": "提供socks5 http https,转发上游代理",
+				"description": "转发上游代理类型,提供socks5 http https,默认是https",
       				"default": "https"
-    				}
-				,
+    				},
 			        {
       				"name": "RURL",
       				"label": "中转上游地址",
-				"description": "输入转发上游代理地址",
+				"description": "输入转发上游代理地址,默认是luminati超级节点",
       				"default": "zproxy.lum-superproxy.io"
     				},
 				{
@@ -68,14 +67,14 @@
     				},
 				{
       				"name": "RUSER",
-      				"label": "中转上游用户名",
-				"description": "中转上游代理用户名",
+      				"label": "中转上游代理用户名",
+				"description": "中转上游代理用户名,输入你代理提供商的IP代理用户名",
       				"default": "lum-customer-***"
     				},
 		     		{
       				"name": "RPASSWD",
       				"label": "中转上游密码",
-				"description": "中转上游代理密码",
+				"description": "中转上游代理密码,输入你代理提供商的IP代理密码",
       				"default": "rpass"
     				}]
   		}
