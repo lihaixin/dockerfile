@@ -6,6 +6,7 @@ services:
     container_name: vnstat
     restart: unless-stopped
     network_mode: "host"
+    privileged: true
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
