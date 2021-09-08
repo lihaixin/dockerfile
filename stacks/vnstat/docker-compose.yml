@@ -2,7 +2,7 @@ version: "3.7"
 services:
 
   vnstat:
-    image: vergoh/vnstat:latest
+    image: lihaixin/vnstat:latest
     container_name: vnstat
     restart: unless-stopped
     network_mode: "host"
@@ -18,6 +18,9 @@ services:
       - CACHE_TIME=1                            #在给定的分钟数内缓存创建的图像（0：禁用）
       - RATE_UNIT=1                             #使用的流量速率单位，0：字节，1：比特
       - PAGE_REFRESH=0                          #页面自动刷新间隔以秒为单位（0：禁用）
+      - MAXTX=950                               #最大传出流量,默认为G
+      - MAXALL=1000                             #进出双向最大流量.默认为G
+      - MAXLIMTYPE=GiB                          #流量统计单位
 
 volumes:
   vnstatdb:
