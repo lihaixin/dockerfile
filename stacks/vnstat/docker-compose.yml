@@ -22,6 +22,9 @@ services:
       - MAXTX=950                               #最大传出流量,默认为G
       - MAXALL=1000                             #进出双向最大流量.默认为G
       - MAXLIMTYPE=GiB                          #流量统计单位
+      - RATE=1mbit                              #流量超过设定值后限制最大的带宽
+      - BURST=2kb                               #令牌桶的大小
+      - LATENCY=50ms                            #数据请求超过令牌通,等待多久的延迟,如果延迟时间到,还没有令牌,就丢弃
 
 volumes:
   vnstatdb:
