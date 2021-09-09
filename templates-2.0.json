@@ -2570,6 +2570,12 @@
       				"label": "中转上游密码",
 				"description": "中转上游代理验证密码",
       				"default": "rpass"
+    				},
+		     		{
+      				"name": "OPTIONS",
+      				"label": "中间代理链",
+				"description": "中间代理链,可以用来做速度提升.默认为空,格式:-F socks5://a13:a13@150.158.7.77:33114",
+      				"default": ""
     				}]
   		},
 		{
