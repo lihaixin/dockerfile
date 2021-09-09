@@ -628,6 +628,20 @@
 				"stackfile": "stacks/vnstat/docker-compose.yml"
 				}
 		        },
+		        {
+			"type": 3,
+			"title": "iptables",
+			"name": "iptables",
+			"description": "iptables 限制容器指定的端口TCP连接数,最大带宽,部署网络流量监视器,月最大传输量",
+			"note": "iptables 限制容器指定的端口TCP连接数,使用container网络, 更多信息 <a href=\"https://github.com/lihaixin/iptables\" target=\"_blank\">点击这里</a> ",
+			"categories": ["tools"],
+			"platform": "linux",
+			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/iptables.png",
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/iptables/docker-compose.yml"
+				}
+		        },
 		      	{
     			"type": 1,
     			"title": "ylzq",
