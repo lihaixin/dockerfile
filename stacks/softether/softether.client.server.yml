@@ -1,5 +1,15 @@
 version: '3'
 services:
+  vpnserver:
+    image: "lihaixin/softether"
+    restart: always
+    network_mode: "none"                  # 调整和容器vpngate使用同一IP地址
+    privileged: true
+    depends_on:
+      - vpngate
+    environment:
+      MTU: 1200
+      
   vpngate:
     image: "lihaixin/softether:client"
     restart: always
@@ -14,16 +24,7 @@ services:
       ACCOUNT_USER: vpn
       ACCOUNT_PASS: vpn
       TAP_IPADDR: dhcp
-  vpnserver:
-    image: "lihaixin/softether"
-    restart: always
-    network_mode: "none"                  # 调整和容器vpngate使用同一IP地址
-    privileged: true
-    depends_on:
-      - vpngate
-    environment:
-      MTU: 1200
-      
+     
 networks:
   my-network:
     name: vpngate-vpn-network
