@@ -3,7 +3,7 @@ services:
   gosts5:
     image: lihaixin/gost:s5
     environment:
-      - TYPE=socks5                            #配置类型,local为本地,socks5,http,https为中转上游代理
+      - TYPE=local                             #配置类型,local为本地,socks5,http,https为中转上游代理
       - PORT=1080                              #容器里监听的端口
       - USER=a1                                #本地代理用户名
       - PASSWD=a1                              #本地代理密码
@@ -34,7 +34,6 @@ services:
       - LIMIT_PORT=8388                         #应用使用的端口
     cap_add:
       - NET_ADMIN
-    restart: always
 
 volumes:
   vnstatdb:
