@@ -31,7 +31,7 @@ services:
       - RATE=1mbit                              #流量超过设定值后限制最大的带宽
       - BURST=2kb                               #令牌桶的大小
       - LATENCY=50ms                            #数据请求超过令牌通,等待多久的延迟,如果延迟时间到,还没有令牌,就丢弃
-      - LIMIT_PORT=8388                         #应用使用的端口
+      - LIMIT_PORT=1080                         #应用使用的端口,和上一个容器监听端口一致
     cap_add:
       - NET_ADMIN
 
