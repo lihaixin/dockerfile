@@ -3,7 +3,7 @@ services:
   vpnserver:
     image: "lihaixin/softether"
     restart: always
-    network_mode: "none"                  # 调整和容器vpngate使用同一IP地址
+    network_mode: "container:vpngate"                  # 调整和容器vpngate使用同一IP地址,container:iptables
     privileged: true
     depends_on:
       - vpngate
