@@ -11,7 +11,7 @@ services:
       - RPORT=22225                            #上游代理端口
       - RUSER=ruser                            #上游代理帐号
       - RPASSWD=rpass                          #上游代理密码
-    network_mode: "container:iptables"
+    network_mode: "container:gosts5_iptables_1"
     restart: always
 
   iptables:
