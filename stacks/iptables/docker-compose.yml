@@ -1,0 +1,40 @@
+version: "3.7"
+services:
+  gosts5:
+    image: lihaixin/gost:s5
+    environment:
+      - TYPE=socks5                            #配置类型,local为本地,socks5,http,https为中转上游代理
+      - PORT=1080                              #容器里监听的端口
+      - USER=a1                                #本地代理用户名
+      - PASSWD=a1                              #本地代理密码
+      - RURL=8.8.8.8                           #上游代理地址
+      - RPORT=22225                            #上游代理端口
+      - RUSER=ruser                            #上游代理帐号
+      - RPASSWD=rpass                          #上游代理密码
+    net: container:iptables
+    restart: always
+
+  iptables:
+    image: lihaixin/iptables
+    container_name: iptables
+    restart: unless-stopped
+    volumes:
+      - vnstatdb:/var/lib/vnstat
+    ports:
+      - "10001:1080"                            #调整对外的端口 *
+    environment:
+      - TCP_PORTS=80,443                        #默认容器output允许的TCP端口
+      - UDP_PORTS=53                            #默认容器output允许的UDP端口
+      - MAXTX=950                               #最大传出流量,默认为G
+      - MAXALL=1000                             #进出双向最大流量.默认为G
+      - MAXLIMTYPE=GiB                          #流量统计单位
+      - RATE=1mbit                              #流量超过设定值后限制最大的带宽
+      - BURST=2kb                               #令牌桶的大小
+      - LATENCY=50ms                            #数据请求超过令牌通,等待多久的延迟,如果延迟时间到,还没有令牌,就丢弃
+      - LIMIT_PORT=8388                         #应用使用的端口
+    cap_add:
+      - NET_ADMIN
+    restart: always
+
+volumes:
+  vnstatdb:
