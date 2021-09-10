@@ -2071,12 +2071,6 @@
 			"privileged": true,
   			"network": "host",
 			"env": [{
-      				"name": "WANNAME",
-      				"label": "WANNAME 宿主机网卡名称 *",
-				"description": "登陆主机查看，确保正确，否则不能正确转发",
-      				"default": "ens5"
-    				},
-				{
       				"name": "LANRANGE",
       				"label": "LANRANGE 本地局域网网段",
 				"description": "用于直接路由本地局域网网段,根据本地局域网网段,进行调整,如果用在机房里,保持默认,不需要调整",
@@ -2128,7 +2122,7 @@
       				"name": "FEC_OPTIONS",
       				"label": "SPEEDERV2 FEC_OPTIONS 参数",
 				"description": "SPEEDERV2 FEC_OPTIONS 参数,根据网络质量进行调整,两边可以不一样,调整发包率,服务器带宽足,可以调整为2:2(2倍)发包",
-      				"default": "40:1"
+      				"default": "20:2"
     				},
 		     		{
       				"name": "PASSWORD",
@@ -2176,18 +2170,6 @@
 			"privileged": true,
   			"network": "host",
 			"env": [{
-      				"name": "WANNAME",
-      				"label": "WANNAME 宿主机网卡名称 *",
-				"description": "登陆主机查看，确保正确，否则不能正确转发,用于iptables",
-      				"default": "ens5"
-    				},
-				{
-      				"name": "WANIP",
-      				"label": "WANIP 宿主机网卡IP *",
-				"description": "登陆主机查看，确保正确(很多云主机绑定的是内网IP,绑定啥就填写啥),用于iptables",
-      				"default": "10.0.7.18"
-    				},
-				{
       				"name": "fPorts",
       				"label": "fPorts 转发起始端口",
 				"description": "fPorts 转发起始端口，用于把连接本机起始端口通过隧道转发到服务器端",
@@ -2245,7 +2227,7 @@
       				"name": "FEC_OPTIONS",
       				"label": "SPEEDERV2 FEC_OPTIONS 参数",
 				"description": "SPEEDERV2 FEC_OPTIONS 参数,根据网络质量进行调整,两边可以不一样,调整发包率,客户端带宽一般比较小,可以调整4:2(1.5倍)发包,或者4:1(1.25倍)发包",
-      				"default": "40:1"
+      				"default": "20:2"
     				},
 		     		{
       				"name": "PASSWORD",
