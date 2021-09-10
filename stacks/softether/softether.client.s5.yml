@@ -1,13 +1,29 @@
 version: '3'
 # 开启伪装转发 iptables -t nat -I POSTROUTING -p tcp -d 10.29.0.0/16 --dport 1080 -j SNAT --to-source 10.29.0.1
 services:
+  
+  socks5:
+    image: "lihaixin/gost:s5"
+    restart: always
+    network_mode: "service:vpngate"  # #"bridge" "host"  "none" "service:[service name]"  "container:[container name/id]"
+    #networks:
+    #  my-network:
+    #    ipv4_address: 10.29.2.11
+    
+    depends_on:
+      - vpngate
+    environment:
+      USER: a1
+      PASSWD: a1
+      PORT: 1080
+      
   vpngate:
     image: "lihaixin/softether:client"
     ports:
       - "10801:1080" # 开启socks5端口映射,修改端口映射
     restart: always
     privileged: true
-    #network_mode: "bridge"  # 使用桥接网络
+    network_mode: "bridge"  # 使用桥接网络
     networks:
       my-network:
         ipv4_address: 10.29.1.11
@@ -18,24 +34,10 @@ services:
       ACCOUNT_USER: vpn
       ACCOUNT_PASS: vpn
       TAP_IPADDR: dhcp
-  socks5:
-    image: "lihaixin/gost:s5"
-    restart: always
-    network_mode: "none" # 启动后通过portainer调整和vpngate一个容器网络
-    #networks:
-    #  my-network:
-    #    ipv4_address: 10.29.2.11
-
-    depends_on:
-      - vpngate
-    environment:
-      USER: a1
-      PASSWD: a1
-      PORT: 1080
       
 networks:
   my-network:
-    name: vpngate-s6-network
+    name: vpngate-S5-network
     ipam:
       config:
         - subnet: 10.29.0.0/16
