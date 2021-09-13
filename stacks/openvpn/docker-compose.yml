@@ -3,6 +3,7 @@ version: '3.7'
 services:
  socks5:
     image: "lihaixin/gost:s5"
+    hostname: socks5
     restart: unless-stopped                  # unless-stopped  always
     network_mode: "service:openvpn"          #"bridge" "host"  "none" "service:[service name]"  "container:[container name/id]"
     depends_on:
@@ -14,6 +15,7 @@ services:
       
  softether:
     image: "lihaixin/softether:server.alpine"
+    hostname: softether
     restart: unless-stopped
     network_mode: "service:openvpn"
     privileged: true
@@ -38,6 +40,7 @@ services:
       - DNS="8.8.8.8,1.1.1.1"    
  openvpn:
     image: "lihaixin/openvpn"
+    hostname: openvpn
     restart: unless-stopped
     privileged: true 
     environment:
