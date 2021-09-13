@@ -3,11 +3,10 @@ version: '3.7'
 services:
  socks5:
     image: "lihaixin/gost:s5"
-    hostname: socks5
     restart: unless-stopped                  # unless-stopped  always
-    network_mode: "service:openvpn"          #"bridge" "host"  "none" "service:[service name]"  "container:[container name/id]"
+    network_mode: "service:openvpn1"          #"bridge" "host"  "none" "service:[service name]"  "container:[container name/id]"
     depends_on:
-      - openvpn
+      - openvpn1
     environment:
       USER: a1
       PASSWD: a1
@@ -15,12 +14,11 @@ services:
       
  softether:
     image: "lihaixin/softether:server.alpine"
-    hostname: softether
     restart: unless-stopped
-    network_mode: "service:openvpn"
+    network_mode: "service:openvpn1"
     privileged: true
     depends_on:
-      - openvpn    
+      - openvpn1    
     environment:
       - DOMAIN=15099.net
       - HOST=kr2
@@ -38,20 +36,19 @@ services:
       - L2TP=0
       - OPENVPN_PORT=11194
       - DNS="8.8.8.8,1.1.1.1"    
- openvpn:
+ openvpn1:
     image: "lihaixin/openvpn"
-    hostname: openvpn
     restart: unless-stopped
     privileged: true 
     environment:
       - PROTO=udp
       - TYPE=vpngate
-      - URL="public-vpn-254.opengw.net 1195"
+      - URL=public-vpn-254.opengw.net 1195
     ports:
-      - "10801:1080"                           # 开启socks5端口映射,修改端口映射
+      - "10802:1080"                           # 开启socks5端口映射,修改端口映射
     networks:
       my-network:
-        ipv4_address: 10.21.1.11
+        ipv4_address: 10.21.1.12
     
 networks:
   my-network:
