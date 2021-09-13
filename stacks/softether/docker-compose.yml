@@ -1,7 +1,7 @@
 version: '2'
 services:
   vpn:
-    image: "lihaixin/softether"
+    image: "lihaixin/softether:server.alpine"
     restart: always
     network_mode: host
     privileged: true
