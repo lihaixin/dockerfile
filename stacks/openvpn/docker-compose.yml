@@ -17,12 +17,8 @@ services:
     depends_on:
       - openvpn
     restart: unless-stopped
-    network_mode: "host"
+    network_mode: "service:openvpn"
     privileged: true
-    volumes:
-      - /etc/cert:/etc/cert
-      - softether:/usr/vpnserver
-      - softether-logs:/var/log/vpnserver
     environment:
       - DOMAIN=15099.net
       - HOST=kr2
@@ -37,7 +33,7 @@ services:
       - MTU=1200
       - SSTP=0
       - OPENVPN=0
-      - L2TP=1
+      - L2TP=0
       - OPENVPN_PORT=11194
       - DNS="8.8.8.8,1.1.1.1"    
   openvpn:
@@ -54,11 +50,10 @@ services:
     networks:
       my-network:
         ipv4_address: 10.29.1.11
-
-      
+    
 networks:
   my-network:
-    name: openvpn-S5-network
+    name: openvpn-S5-vpn-network
     ipam:
       config:
         - subnet: 10.29.0.0/16
