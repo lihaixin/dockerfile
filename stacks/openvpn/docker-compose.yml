@@ -1,0 +1,65 @@
+version: '3.7'
+# 开启伪装转发 iptables -t nat -I POSTROUTING -p tcp -d 10.29.0.0/16 --dport 1080 -j SNAT --to-source 10.29.0.1
+services:
+ socks5:
+    image: "lihaixin/gost:s5"
+    restart: unless-stopped                  # unless-stopped  always
+    network_mode: "service:openvpn"          #"bridge" "host"  "none" "service:[service name]"  "container:[container name/id]"
+    depends_on:
+      - openvpn
+    environment:
+      USER: a1
+      PASSWD: a1
+      PORT: 1080
+      
+  softether:
+    image: lihaixin/softether:server.alpine
+    depends_on:
+      - openvpn
+    restart: unless-stopped
+    network_mode: "host"
+    privileged: true
+    volumes:
+      - /etc/cert:/etc/cert
+      - softether:/usr/vpnserver
+      - softether-logs:/var/log/vpnserver
+    environment:
+      - DOMAIN=15099.net
+      - HOST=kr2
+      - MainINF=tun+                             #默认为空,让程序自动检查,如果是走openvpn出去,设置为tun+     
+      - USERNAME=test
+      - PASSWORD=test
+      - PSK=vpnvpn88
+      - SPW=softether
+      - MaxUpload=5000000
+      - MaxDownload=5000000
+      - MultiLogins=3
+      - MTU=1200
+      - SSTP=0
+      - OPENVPN=0
+      - L2TP=1
+      - OPENVPN_PORT=11194
+      - DNS="8.8.8.8,1.1.1.1"    
+  openvpn:
+    image: "lihaixin/openvpn"
+    restart: unless-stopped
+    privileged: true 
+    environment:
+      - PROTO=udp
+      - TYPE=vpngate
+      - URL="public-vpn-254.opengw.net 1195"
+    ports:
+      - "10801:1080"                           # 开启socks5端口映射,修改端口映射
+    network_mode: "bridge"                     # 使用桥接网络
+    networks:
+      my-network:
+        ipv4_address: 10.29.1.11
+
+      
+networks:
+  my-network:
+    name: openvpn-S5-network
+    ipam:
+      config:
+        - subnet: 10.29.0.0/16
+          gateway: 10.29.0.1
