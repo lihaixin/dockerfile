@@ -46,15 +46,14 @@ services:
       - URL="public-vpn-254.opengw.net 1195"
     ports:
       - "10801:1080"                           # 开启socks5端口映射,修改端口映射
-    network_mode: "bridge"                     # 使用桥接网络
     networks:
       my-network:
-        ipv4_address: 10.29.1.11
+        ipv4_address: 10.21.1.11
     
 networks:
   my-network:
     name: openvpn-S5-vpn-network
     ipam:
       config:
-        - subnet: 10.29.0.0/16
-          gateway: 10.29.0.1
+        - subnet: 10.21.0.0/16
+          gateway: 10.21.0.1
