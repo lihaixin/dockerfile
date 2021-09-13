@@ -12,8 +12,8 @@ services:
       PASSWD: a1
       PORT: 1080
       
-  softether:
-    image: lihaixin/softether:server.alpine
+ softether:
+    image: "lihaixin/softether:server.alpine"
     restart: unless-stopped
     network_mode: "service:openvpn"
     privileged: true
@@ -36,7 +36,7 @@ services:
       - L2TP=0
       - OPENVPN_PORT=11194
       - DNS="8.8.8.8,1.1.1.1"    
-  openvpn:
+ openvpn:
     image: "lihaixin/openvpn"
     restart: unless-stopped
     privileged: true 
