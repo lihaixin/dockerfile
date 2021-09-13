@@ -14,11 +14,11 @@ services:
       
   softether:
     image: lihaixin/softether:server.alpine
-    depends_on:
-      - openvpn
     restart: unless-stopped
     network_mode: "service:openvpn"
     privileged: true
+    depends_on:
+      - openvpn    
     environment:
       - DOMAIN=15099.net
       - HOST=kr2
