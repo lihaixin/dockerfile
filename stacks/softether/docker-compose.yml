@@ -1,4 +1,4 @@
-version: '2'
+version: '3.7'
 services:
   vpn:
     image: "lihaixin/softether:server.alpine"
@@ -6,8 +6,27 @@ services:
     network_mode: host
     privileged: true
     environment:
-      MTU: "1300"
+      DOMAIN: ${DOMAIN}
+      HOST: ${HOST}
+      MTU: ${MTU}
+      MainINF: ${MainINF}                    #默认为空,让程序自动检查,如果是走openvpn出去,设置为tun+ 
+      OPENVPN_PORT: ${OPENVPN_PORT}
+      USERNAME: ${USERNAME}
+      PASSWORD: ${PASSWORD}
+      PSK: ${PSK}
+      SPW: ${SPW}
+      MaxUpload: ${MaxUpload}
+      MaxDownload: ${MaxDownload}
+      MultiLogins: ${MultiLogins}
+      SSTP: ${SSTP}
+      OPENVPN: ${OPENVPN}
+      L2TP: ${L2TP}
+      DNS: ${DNS}
     volumes:
-      - server:/usr/local/vpnserver
+      - /etc/cert:/etc/cert
+      - softether:/usr/local/vpnserver
+      - softether-logs:/var/log/vpnserver
+
 volumes:
-  server:
+  softether:
+  softether-logs:
