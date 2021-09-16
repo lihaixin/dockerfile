@@ -1,21 +1,9 @@
 version: '3.7'
-# 开启伪装转发 iptables -t nat -I POSTROUTING -p tcp -d 10.29.0.0/16 --dport 1080 -j SNAT --to-source 10.29.0.1
 services:
- socks5:
-    image: "lihaixin/gost:s5"
-    restart: unless-stopped                  # unless-stopped  always
-    network_mode: "service:openvpn1"          #"bridge" "host"  "none" "service:[service name]"  "container:[container name/id]"
-    depends_on:
-      - openvpn1
-    environment:
-      USER: a1
-      PASSWD: a1
-      PORT: 1080
-      
  softether:
     image: "lihaixin/softether:server.alpine"
-    restart: unless-stopped
-    network_mode: "service:openvpn1"
+    restart: unless-stopped                      # unless-stopped  always
+    network_mode: "service:openvpn1"             #"bridge" "host"  "none" "service:[service name]"  "container:[container name/id]"
     privileged: true
     depends_on:
       - openvpn1    
@@ -35,21 +23,28 @@ services:
       - OPENVPN=0
       - L2TP=0
       - OPENVPN_PORT=11194
-      - DNS="8.8.8.8,1.1.1.1"    
+      - DNS="8.8.8.8,1.1.1.1"
+      
  openvpn1:
     image: "lihaixin/openvpn"
     restart: unless-stopped
     privileged: true 
     environment:
+      - TYPE=vyprvpn
       - PROTO=udp
-      - TYPE=vpngate
-      - URL=public-vpn-254.opengw.net 1195
-    ports:
-      - "10802:1080"                           # 开启socks5端口映射,修改端口映射
+      - ADDR=ar1.vyprvpn.com
+      - PORT=443
+      - USER=user
+      - PASSWD=passwd
+      - SOCKS5=1
+      - SUSER=a1
+      - SPASSWD=a1
+      - HTTP_PORT=80
+      - MAXNUM=50
     networks:
       my-network:
-        ipv4_address: 10.21.1.12
-    
+        ipv4_address: 10.21.1.11
+        
 networks:
   my-network:
     name: openvpn-S5-vpn-network
