@@ -2478,13 +2478,13 @@
       				"name": "fPorts",
       				"label": "fPorts 转发起始端口",
 				"description": "fPorts 转发起始端口，用于把连接本机起始端口通过隧道转发到服务器端",
-      				"default": "10001"
+      				"default": "30001"
     				},
 				{
       				"name": "ePorts",
       				"label": "ePorts 转发结束端口",
 				"description": "ePorts 转发结束端口，用于把连接本机起始端口通过隧道转发到服务器端",
-      				"default": "20000" 
+      				"default": "40000" 
     				},
 				{
       				"name": "VPNPORT",
