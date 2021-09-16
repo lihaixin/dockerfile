@@ -2397,8 +2397,8 @@
 		     		{
       				"name": "WGCLIENTIP",
       				"label": "Wireguard CLIENTIP",
-				"description": "Wireguard CLIENTIP 客户端隧道IP",
-      				"default": "10.1.2.18"
+				"description": "保持默认就可以Wireguard CLIENTIP 客户端隧道IP,这个是带预共享密钥的客户端,同时会生成IP第四位为10.1.2.11-20 十个没有预共享密钥的客户端配置文件",
+      				"default": "10.1.2.2"
     				},
 				{
       				"name": "WGRANGE",
@@ -2507,8 +2507,8 @@
 		     		{
       				"name": "WGCLIENTIP",
       				"label": "Wireguard 客户端IP *",
-				"description": "WGCLIENTIP 客户端端隧道IP,需要修改",
-      				"default": "10.1.2.18"
+				"description": "WGCLIENTIP 客户端端隧道IP,需要修改,支持10.1.2.11-20 十个客户端,每个客户端公钥和密钥不一样,请到服务器端查看",
+      				"default": "10.1.2.11"
     				},
 				{
       				"name": "WGRANGE",
