@@ -1,30 +1,5 @@
 version: '3.7'
 services:
- softether:
-    image: "lihaixin/softether:server.alpine"
-    restart: unless-stopped                      # unless-stopped  always
-    network_mode: "service:openvpn1"             #"bridge" "host"  "none" "service:[service name]"  "container:[container name/id]"
-    privileged: true
-    depends_on:
-      - openvpn1    
-    environment:
-      - DOMAIN=15099.net
-      - HOST=kr2
-      - MainINF=tun+                             #默认为空,让程序自动检查,如果是走openvpn出去,设置为tun+     
-      - USERNAME=test
-      - PASSWORD=test
-      - PSK=vpnvpn88
-      - SPW=softether
-      - MaxUpload=5000000
-      - MaxDownload=5000000
-      - MultiLogins=3
-      - MTU=1200
-      - SSTP=0
-      - OPENVPN=0
-      - L2TP=0
-      - OPENVPN_PORT=11194
-      - DNS="8.8.8.8,1.1.1.1"
-      
  openvpn1:
     image: "lihaixin/openvpn"
     restart: unless-stopped
