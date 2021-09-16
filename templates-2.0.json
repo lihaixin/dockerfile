@@ -2484,7 +2484,13 @@
       				"name": "ePorts",
       				"label": "ePorts 转发结束端口",
 				"description": "ePorts 转发结束端口，用于把连接本机起始端口通过隧道转发到服务器端",
-      				"default": "20000"
+      				"default": "20000" 
+    				},
+				{
+      				"name": "VPNPORT",
+      				"label": "是否开启VPN转发",
+				"description": "默认开启L2TP,PPTP,OPENVPN 端口转发,设置为0关闭转发",
+      				"default": "1" 
     				},
 				{
       				"name": "WGNAME",
