@@ -9,7 +9,7 @@ services:
       - PASSWD=password
       - PORT=1080
       - KILLTIME=3600
-      - EXITNODES "us ca" 
+      - EXITNODES=us ca 
       - HTTP_PORT=80
       - maxnum=200
     networks:
