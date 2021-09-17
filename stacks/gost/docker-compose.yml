@@ -1,6 +1,6 @@
 version: '3.7'
 services:
- openvpn1:
+ gost:
     image: "lihaixin/gost:mult"
     restart: unless-stopped
     privileged: true 
