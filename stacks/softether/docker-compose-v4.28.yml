@@ -16,7 +16,7 @@ services:
       MaxDownload: ${MaxDownload}
       MultiLogins: ${MultiLogins}
     volumes:
-      - server:/usr/local/vpnserver
+      - softether:/usr/local/vpnserver
       - /etc/cert:/etc/cert
 volumes:
-  server:
+  softether:
