@@ -24,7 +24,7 @@ services:
       DNS: ${DNS}
     volumes:
       - /etc/cert:/etc/cert
-      - softether:/usr/local/vpnserver
+      - softether:/usr/vpnserver
       - softether-logs:/var/log/vpnserver
 
 volumes:
