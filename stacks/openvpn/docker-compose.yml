@@ -1,6 +1,6 @@
 version: '3.7'
 services:
- openvpn1:
+ openvpn1:                                     # 服务名称
     image: "lihaixin/openvpn"
     restart: unless-stopped
     privileged: true 
