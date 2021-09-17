@@ -1,0 +1,24 @@
+version: '3.7'
+services:
+ openvpn1:
+    image: "lihaixin/gost:mult"
+    restart: unless-stopped
+    privileged: true 
+    environment:
+      - USER=user
+      - PASSWD=password
+      - PORT=1080
+      - KILLTIME=3600
+      - EXITNODES "us ca" 
+      - HTTP_PORT=80
+      - maxnum=200
+    networks:
+      my-network:
+        ipv4_address: 10.22.1.11      
+networks:
+  my-network:
+    name: openvpn-s5-network-1
+    ipam:
+      config:
+        - subnet: 10.22.1.0/24
+          gateway: 10.22.1.1
