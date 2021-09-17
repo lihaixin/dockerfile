@@ -11,7 +11,7 @@ services:
       - KILLTIME=3600               # 自动切换时间,多久切换IP,默认5分钟,设置0为固定IP
       - EXITNODES=us ca             # 落地国家代码,可以多设置几个国家,中间用空格隔开
       - HTTP_PORT=80                # 是否开启网页换IP,填写网页端口,输入0关闭lighttpd网页
-      - maxnum=200                  # 最大切换次数
+      - MAXNUM=200                  # 最大切换次数
     networks:
       my-network:
         ipv4_address: 10.22.1.11      
