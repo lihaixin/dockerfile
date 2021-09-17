@@ -2119,53 +2119,19 @@
     				}]
   		},
 		{
-    			"type": 1,
-    			"title": "gost_mult-10021",
-			"name": "gost_mult-10021",
+    			"type": 3,
+    			"title": "gost_mult",
+			"name": "gost_mult",
     			"description": "利用gost打造动态IP代理 ",
 			"note": "部署动态IP代理服务器, 更多参考点击 <a href=\"https://github.com/lihaixin/gost/blob/main/mult/README.md\" target=\"_blank\">gost doc</a> 了接",
     			"hostname": "gostmult",
 			"categories": ["gost"],
     			"platform": "linux",
-    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",
-    			"image": "lihaixin/gost:mult",
-  			"network": "host",
-			"env": [{
-      				"name": "PORT",
-      				"label": "S5 PORT",
-				"description": "S5 http 监听端口",
-      				"default": "10021"
-    				},
-		     		{
-      				"name": "USER",
-      				"label": "S5 USER",
-				"description": "user for S5 verification",
-      				"default": "a1"
-    				},
-		     		{
-      				"name": "PASSWD",
-      				"label": "S5 Password",
-				"description": "Password for S5 verification",
-      				"default": "a1"
-    				},
-		     		{
-      				"name": "KILLTIME",
-      				"label": "自动切换时间",
-				"description": "多久切换IP,默认5分钟,设置0为固定IP",
-      				"default": "300"
-    				},
-		     		{
-      				"name": "EXITNODES",
-      				"label": "落地国家代码",
-				"description": "可以多设置几个国家,中间用空格隔开",
-      				"default": "us"
-    				},
-		     		{
-      				"name": "HTTP_PORT",
-      				"label": "是否开启网页换IP",
-				"description": "填写网页端口,输入0关闭lighttpd网页",
-      				"default": "0"
-    				}]
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",			
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/gost/docker-compose.yml"
+			}
   		},
 		{
     			"type": 1,
