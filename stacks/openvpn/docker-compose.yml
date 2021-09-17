@@ -14,16 +14,17 @@ services:
       - SOCKS5=1
       - SUSER=a1
       - SPASSWD=a1
-      - HTTP_PORT=0
+      - HTTP_PORT=0                              # 设置为0,关闭网页
       - MAXNUM=50
+      - MAXRATE=4mbit
     networks:
       my-network:
         ipv4_address: 10.21.1.11
         
 networks:
   my-network:
-    name: openvpn-S5-vpn-network
+    name: openvpn-S5-vpn-network-1
     ipam:
       config:
-        - subnet: 10.21.0.0/16
-          gateway: 10.21.0.1
+        - subnet: 10.21.1.0/24
+          gateway: 10.21.1.1
