@@ -1410,21 +1410,21 @@
       				"default": "558ef6820cea14627f986548c96fcb6cb668a"
     				},
 				{
-      				"name": "PORT",
-      				"label": "XRAY & Trojan PORT",
-				"description": "The XRAY & Trojan Server Port.",
-      				"default": "443"
+      				"name": "BACKURL",
+      				"label": "回落地址",
+				"description": "回落地址,可以自定,不支持http开通",
+      				"default": "127.0.0.1:88"
     				},
 				{
-      				"name": "BACKURL",
-      				"label": "BACKURL",
-				"description": "BACKURL Address",
-      				"default": "127.0.0.1:88"
+      				"name": "PORT",
+      				"label": "XRAY & Trojan 端口",
+				"description": "XRAY & Trojan 端口,保持默认443",
+      				"default": "443"
     				},
 		     		{
       				"name": "PASSWORD",
-      				"label": "Trojan Password",
-				"description": "Password is used for trojian verification.",
+      				"label": "Trojan 密码",
+				"description": "Trojan 密码,同时使用这个密码生产UUID",
       				"default": "88888888"
     				}]
   		},
