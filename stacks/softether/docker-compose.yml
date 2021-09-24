@@ -1,4 +1,8 @@
 version: '3.7'
+volumes:
+  softether:
+  softether-logs:
+  
 services:
   vpn:
     image: "lihaixin/softether:server.alpine"
@@ -26,7 +30,3 @@ services:
       - /etc/cert:/etc/cert
       - softether:/usr/vpnserver
       - softether-logs:/var/log/vpnserver
-
-volumes:
-  softether:
-  softether-logs:
