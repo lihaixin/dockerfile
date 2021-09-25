@@ -1,4 +1,6 @@
-version: '2'
+version: '3.7'
+volumes:
+  softether:
 services:
   vpn:
     image: "lihaixin/softether:v4.38.server.ubuntu16.4"
@@ -18,5 +20,4 @@ services:
     volumes:
       - softether:/usr/local/vpnserver
       - /etc/cert:/etc/cert
-volumes:
-  softether:
+
