@@ -1519,7 +1519,7 @@
     			"title": "xray-door",
 			"name": "xray-door",
     			"description": "通过xray的dokodemo-door入口做端口批量转发",
-			"note": "通过xray的dokodemo-door入口做端口批量转发 <a href=\"https://github.com/lihaixin/xray/blob/dokodemo-door/README.md" target=\"_blank\">x-ui doc</a> for production deployments.",
+			"note": "通过xray的dokodemo-door入口做端口批量转发 <a href=\"https://github.com/lihaixin/xray/blob/dokodemo-door/README.md\" target=\"_blank\">x-ui doc</a> for production deployments.",
     			"hostname": "xray-door",
 			"categories": ["xray"],
     			"platform": "linux",
