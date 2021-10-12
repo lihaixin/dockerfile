@@ -1516,6 +1516,37 @@
   		},
 		{
     			"type": 1,
+    			"title": "xray-door",
+			"name": "xray-door",
+    			"description": "通过xray的dokodemo-door入口做端口批量转发",
+			"note": "通过xray的dokodemo-door入口做端口批量转发 <a href=\"https://github.com/lihaixin/xray/blob/dokodemo-door/README.md" target=\"_blank\">x-ui doc</a> for production deployments.",
+    			"hostname": "xray-door",
+			"categories": ["xray"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
+    			"image": "lihaixin/xray:dokodemo-door",
+  			"network": "host",
+			"env": [{
+      				"name": "PORT",
+      				"label": "本地监听的端口",
+				"description": "The domain name is used to apply for a digital certificate, and the domain name A points to the IP where you deploy the cloud machine",
+      				"default": "31901"
+    				},
+				{
+      				"name": "RADDRESS",
+      				"label": "被转发的地址",
+				"description": "你的目的地址.",
+      				"default": "8.8.8.8"
+    				},
+			        {
+      				"name": "RPORT",
+      				"label": "被转发的端口",
+				"description": "你的目的端口",
+      				"default": "8338"
+    				}]
+  		},
+		{
+    			"type": 1,
     			"title": "xray.local.ss.AEAD-10801.20801",
 			"name": "xray.local.ss.AEAD-10801.20801",
     			"description": "xray Shadowsocks AEAD 客户端",
