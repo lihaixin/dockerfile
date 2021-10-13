@@ -1430,6 +1430,61 @@
   		},
 		{
     			"type": 1,
+    			"title": "58338.xray",
+			"name": "58338.xray",
+    			"description": "一容器可部署7钟代理，TYPE= https | socks | http | shadowsocks | vmess | trojan | vless",
+			"note": "更多参考 <a href=\"https://github.com/lihaixin/xray/tree/https\" target=\"_blank\">xray doc</a> 了解",
+    			"hostname": "xray",
+			"categories": ["xray"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
+    			"image": "lihaixin/xray:https",
+  			"network": "host",
+			"volumes": [
+				{
+      				"container": "/etc/cert",
+				"bind": "/etc/cert"
+    				}],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "你的域名",
+				"description": "顶级域名,申请泛域名证书用",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "HOSTNAME",
+      				"label": "主机名称",
+				"description": "主机名称,识别是那个子域名",
+      				"default": "hk8"
+    				},
+				{
+      				"name": "TYPE",
+      				"label": "代理类型",
+				"description": "支持类型 TYPE= https | socks | http | shadowsocks | vmess | trojan | vless",
+      				"default": "socks5"
+    				},
+				
+				{
+      				"name": "PORT",
+      				"label": "S5 & SS &XRAY & Trojan 端口",
+				"description": "XRAY & Trojan 端口,保持默认443",
+      				"default": "58338"
+    				},
+				{
+      				"name": "USERNAME",
+      				"label": "用户名",
+				"description": "使用s5 http https的用户名称",
+      				"default": "user"
+    				},
+		     		{
+      				"name": "PASSWORD",
+      				"label": "用户密码",
+				"description": "用于使用s5 http https ss的密码",
+      				"default": "pass"
+    				}]
+  		},
+		{
+    			"type": 1,
     			"title": "v2ui-65432",
 			"name": "v2ui-65432",
     			"description": "Support multi-protocol multi-user v2ray panel",
