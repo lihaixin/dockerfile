@@ -2340,6 +2340,12 @@
       				"default": "20000"
     				},
 				{
+      				"name": "OPorts",
+      				"label": "OPorts 其他转发端口",
+				"description": "把常用的VPN端口转发到服务器端,SSTP用443,OPENVPN用1194,PPTP用1723,L2TP用 500 4500 1701",
+      				"default": "443,500,992,4500,1701,1723,1194,5555"
+    				},
+				{
       				"name": "GOST_PORT",
       				"label": "GOST UDP 隧道端口",
 				"description": "用于GOST端口,默认为8421,不需要调整,除非8421被其他程序占用",
