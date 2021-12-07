@@ -2342,8 +2342,8 @@
 				{
       				"name": "OPorts",
       				"label": "OPorts 其他转发端口",
-				"description": "把常用的VPN端口转发到服务器端,SSTP用443,OPENVPN用1194,PPTP用1723,L2TP用 500 4500 1701",
-      				"default": "443,500,992,4500,1701,1723,1194,5555"
+				"description": "把常用的VPN端口转发到服务器端,SSTP用443,OPENVPN用1194,PPTP用1723,L2TP用 500 4500 1701,SSVPN 用992 5555",
+      				"default": "500 4500 1701 5555"
     				},
 				{
       				"name": "GOST_PORT",
