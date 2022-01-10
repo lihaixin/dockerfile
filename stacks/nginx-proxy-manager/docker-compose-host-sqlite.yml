@@ -1,7 +1,7 @@
 version: '2'
 services:
   app:
-    image: 'jc21/nginx-proxy-manager:2.9.7'
+    image: 'jc21/nginx-proxy-manager:latest'
     restart: always
     network_mode: host
     environment:
@@ -14,7 +14,7 @@ services:
       # and remove all DB_MYSQL_* lines above
       DB_SQLITE_FILE: "/data/database.sqlite"
       # Uncomment this if IPv6 is not enabled on your host
-      DISABLE_IPV6: 'true'
+      # DISABLE_IPV6: 'true'
     volumes:
       - data:/data
       - letsencrypt:/etc/letsencrypt
