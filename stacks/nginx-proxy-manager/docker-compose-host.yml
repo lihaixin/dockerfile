@@ -1,7 +1,7 @@
 version: '2'
 services:
   app:
-    image: 'jc21/nginx-proxy-manager:2.9.7'
+    image: 'jc21/nginx-proxy-manager'
     restart: always
     network_mode: host
     environment:
