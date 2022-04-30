@@ -1,0 +1,30 @@
+    { 
+    // 5.1 默认转发VPS,需要调整出口只要调整 5.1
+    // 一定放在第一个，在routing 3.5 里面已经说明了，这等于是默认规则，所有不符合任何规则的流量都走这个
+      "tag": "$OUTBOUNDTAG",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "$RDOMAIN",  // 替换成你的真实域名
+            "port": $RPORT,
+            "users": [
+              {
+                "id": "$UUID", //填写你的 UUID
+		            "flow": "$FLOW",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "xtls",  // 需要使用 XTLS
+        "xtlsSettings": {
+	  "fingerprint": "chrome",
+          "serviceName": "$RDOMAIN" //填写你的 ServiceName
+         }
+      }
+    }
+    ,
