@@ -1349,7 +1349,7 @@
       				"name": "DOMAIN",
       				"label": "你的域名",
 				"description": "子域名已做好A指向到云主机,同时主机80端口未被占用",
-      				"default": "xray.youdomain.com"
+      				"default": "youdomain.com"
     				},
 				{
       				"name": "HOSTNAME",
@@ -1358,40 +1358,28 @@
       				"default": "hk8"
     				},
 				{
-      				"name": "CF_Email",
-      				"label": "Your CF_Email",
-				"description": "CF_Email mailbox account",
-      				"default": "info@youdomain.com"
-    				},
-				{
-      				"name": "CF_Key",
-      				"label": "Your CF_Key",
-				"description": "CF_Key string",
-      				"default": "558ef6820cea14627f986548c96fcb6cb668a"
-    				},
-				{
       				"name": "BACKURL",
       				"label": "回落地址",
 				"description": "回落地址,可以自定,不支持http开通",
-      				"default": "127.0.0.1:88"
+      				"default": "127.0.0.1:54321"
     				},
 				{
       				"name": "PORT",
-      				"label": "XRAY & Trojan 端口",
+      				"label": "XRAY & VLESS & TROJAN 端口",
 				"description": "XRAY & Trojan 端口,保持默认443",
       				"default": "443"
     				},
 				{
       				"name": "USERNAME",
       				"label": "用户名",
-				"description": "使用s5 http https的用户名称",
-      				"default": "user"
+				"description": "账户 用户名称",
+      				"default": "username"
     				},
 		     		{
       				"name": "PASSWORD",
-      				"label": "Trojan 密码",
-				"description": "Trojan 密码,同时使用这个密码生产UUID",
-      				"default": "88888888"
+      				"label": "账户 密码",
+				"description": "密码,同时使用是UUID",
+      				"default": "password"
     				}]
   		},
 		{
