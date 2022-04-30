@@ -1,0 +1,33 @@
+      {
+      // 5.1 默认转发VPS,需要调整出口只要调整 5.1
+      // 一定放在第一个，在routing 3.5 里面已经说明了，这等于是默认规则，所有不符合任何规则的流量都走这个
+       "tag": "$OUTBOUNDTAG",
+       "protocol": "vless",
+       "settings": {
+          "vnext": [
+                    {
+                        "address": "$RDOMAIN",
+                        "port": $RPORT,  // 也可以用 8443 nginx 的默认 http3 端口 https://quic.nginx.org/readme.html
+                        "users": [
+                            {
+                                "id": "$UUID",  //填写你的 UUID
+				"encryption":"none",
+				"security": "zero"
+                            }
+                        ]
+                    }
+                ]
+         },
+	 "mux": {
+		  "enabled": true,
+  		"concurrency": 8
+    },
+	 "streamSettings": {
+		 "network": "grpc",
+      "security": "tls",
+      "grpcSettings": {
+                 "servername": "$RDOMAIN" //填写你的 ServiceName
+       }
+     }
+    }
+    ,
