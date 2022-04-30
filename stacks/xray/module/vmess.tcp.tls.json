@@ -11,7 +11,7 @@
             "users": [
               {
                 "id": "$UUID", //填写你的 UUID
-                "security": "none",
+                "security": "none"
               }
             ]
           }
