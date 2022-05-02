@@ -494,8 +494,14 @@
 			"env": [{
       				"name": "DOMAIN",
       				"label": "你的frp域名",
-				"description": "客户端http使用的子域名",
-      				"default": "frp.youdomain.com"
+				"description": "客户端http使用的域名",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "HOSTNAME",
+      				"label": "你的frp主机名",
+				"description": "客户端http使用的主机",
+      				"default": "frp"
     				},
 				{
       				"name": "DASHBOARD_PWD",
