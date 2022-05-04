@@ -548,6 +548,18 @@
       				"default": "nps"
     				},
 				{
+      				"name": "HTTP_PROXY_PORT",
+      				"label": "HTTP域名代理端口",
+				"description": "域名代理http代理监听端口，可以设置为8024，共享一个端口",
+      				"default": "80"
+    				},
+				{
+      				"name": "HTTPS_PROXY_PORT",
+      				"label": "HTTPS域名代理端口",
+				"description": "域名代理https代理监听端口，可以设置为8024，共享一个端口",
+      				"default": "443"
+    				},
+				{
       				"name": "WEB_PASSWORD",
       				"label": "管理面板密码",
 				"description": "登陆管理页面的密码",
