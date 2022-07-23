@@ -1,0 +1,22 @@
+      {
+      // 5.1 默认转发VPS,需要调整出口只要调整 5.1
+      // 一定放在第一个，在routing 3.5 里面已经说明了，这等于是默认规则，所有不符合任何规则的流量都走这个
+       "tag": "$OUTBOUNDTAG",
+       "protocol": "dokodemo-door",
+       "settings": {
+        "address": "$RDOMAIN",
+        "port": $RPORT,
+        "network": "tcp,udp"
+        },
+       "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+            }
+          }
+        },
+       "sniffing": {}
+     }
+    ,
