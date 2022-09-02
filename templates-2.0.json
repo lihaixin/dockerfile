@@ -632,7 +632,6 @@
 			"network": "host",
 			"privileged": true,
 			"interactive": true,
-			"pid": "host",
 			"volumes": [
 				{
       				"container": "/root/.ssh/id_rsa",
