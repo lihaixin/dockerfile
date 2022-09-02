@@ -631,6 +631,7 @@
     			"administrator_only": true,
 			"network": "host",
 			"privileged": true,
+			"interactive": true,
 			"pid": "host",
 			"volumes": [
 				{
