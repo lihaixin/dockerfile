@@ -1693,7 +1693,7 @@
       				"name": "GOSTMTU",
       				"label": "GOSTMTU 隧道接口MTU值",
 				"description": "GOSTMTU 隧道接口MTU值,默认tun0,不需要调整",
-      				"default": "1320"
+      				"default": "1350"
     				},
 				{
       				"name": "SPEEDERV2_PORT",
@@ -1711,7 +1711,7 @@
       				"name": "FEC_OPTIONS",
       				"label": "SPEEDERV2 FEC_OPTIONS 参数",
 				"description": "SPEEDERV2 FEC_OPTIONS 参数,根据网络质量进行调整,两边可以不一样,调整发包率,服务器带宽足,可以调整为2:2(2倍)发包",
-      				"default": "40:1"
+      				"default": "1:2,2:4,8:6,20:10"
     				},
 		     		{
       				"name": "PASSWORD",
@@ -1730,13 +1730,13 @@
       				"name": "MTU",
       				"label": "SPEEDERV2 UDPMTU",
 				"description": "SPEEDERV2 UDPMTU,SPEEDERV2传输最大MTU,保持默认,不需要调整",
-      				"default": "1360"
+      				"default": "1390"
     				},
 		     		{
       				"name": "INTERVAL",
       				"label": "SPEEDERV2 INTERVAL",
 				"description": "SPEEDERV2 INTERVAL,将每个 fec 组分散到 <INTERVAL> ms 的间隔内，以防止突发丢包,默认值：0 保持默认,不需要调整",
-      				"default": "0"
+      				"default": "1:4"
     				},
 		     		{
       				"name": "OPTION",
@@ -1798,7 +1798,7 @@
       				"name": "GOSTMTU",
       				"label": "GOSTMTU 隧道接口MTU值",
 				"description": "GOSTMTU 隧道接口MTU值,默认tun0,不需要调整",
-      				"default": "1320"
+      				"default": "1350"
     				},
 				{
       				"name": "SPEEDERV2_IP",
@@ -1822,7 +1822,7 @@
       				"name": "FEC_OPTIONS",
       				"label": "SPEEDERV2 FEC_OPTIONS 参数",
 				"description": "SPEEDERV2 FEC_OPTIONS 参数,根据网络质量进行调整,两边可以不一样,调整发包率,客户端带宽一般比较小,可以调整4:2(1.5倍)发包,或者4:1(1.25倍)发包",
-      				"default": "40:1"
+      				"default": "1:2,2:4,8:6,20:10"
     				},
 		     		{
       				"name": "PASSWORD",
@@ -1841,13 +1841,13 @@
       				"name": "MTU",
       				"label": "SPEEDERV2 UDPMTU",
 				"description": "SPEEDERV2 UDPMTU,SPEEDERV2传输最大MTU,保持默认,不需要调整",
-      				"default": "1360"
+      				"default": "1390"
     				},
 		     		{
       				"name": "INTERVAL",
       				"label": "SPEEDERV2 INTERVAL",
 				"description": "SPEEDERV2 INTERVAL,将每个 fec 组分散到 <INTERVAL> ms 的间隔内，以防止突发丢包,默认值：0 保持默认,不需要调整",
-      				"default": "0"
+      				"default": "1:4"
     				},
 		     		{
       				"name": "OPTION",
@@ -1862,7 +1862,7 @@
 			"name": "wireguard-server-82",
     			"description": "wireguard vpn游戏加速隧道服务器端",
 			"note": "部署wireguard vpn游戏加速隧道, 有<*>选项需要调整  更多点击<a href=\"https://hub.docker.com/r/lihaixin/wireguard\" target=\"_blank\">wireguard doc</a> 了接更多信息",
-    			"hostname": "wireguard-server",
+    			"hostname": "wgvpnserver",
 			"categories": ["vpn"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/wireguard.png",
@@ -1921,7 +1921,7 @@
       				"name": "FEC_OPTIONS",
       				"label": "SPEEDERV2 FEC_OPTIONS",
 				"description": "FEC_OPTIONS 参数",
-      				"default": "40:1"
+      				"default": "1:2,2:4,8:6,20:10"
     				},
 		     		{
       				"name": "TIMEOUT",
@@ -1954,7 +1954,7 @@
 			"name": "wireguard-client-82",
     			"description": "wireguard vpn游戏加速隧道客户端",
 			"note": "部署wireguard vpn游戏加速隧道, 更多点击<a href=\"https://hub.docker.com/r/lihaixin/wireguard\" target=\"_blank\">wireguard doc</a> 了接更多信息",
-    			"hostname": "wireguard-client",
+    			"hostname": "wgvpnclient",
 			"categories": ["vpn"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/wireguard.png",
@@ -1974,6 +1974,12 @@
       				"default": "82"
     				},
 				{
+      				"name": "FORWARD",
+      				"label": "是否开启端口转发",
+				"description": "开启连续端口转发,设置为0关闭转发",
+      				"default": "0" 
+    				},
+				{
       				"name": "fPorts",
       				"label": "fPorts 转发起始端口",
 				"description": "fPorts 转发起始端口，用于把连接本机起始端口通过隧道转发到服务器端",
@@ -1988,8 +1994,8 @@
 				{
       				"name": "VPNPORT",
       				"label": "是否开启VPN转发",
-				"description": "默认开启L2TP,PPTP,OPENVPN 端口转发,设置为0关闭转发",
-      				"default": "1" 
+				"description": "开启L2TP,PPTP,OPENVPN 端口转发,设置为0关闭转发",
+      				"default": "0" 
     				},
 				{
       				"name": "WGNAME",
@@ -2134,73 +2140,6 @@
       				"name": "OPTIONS",
       				"label": "中间代理链",
 				"description": "中间代理链,可以用来做速度提升.默认为空,格式: socks5://a13:a13@150.158.7.77:33114",
-      				"default": ""
-    				}]
-  		},
-		{
-    			"type": 1,
-    			"title": "gost.s5.s5.v2",
-			"name": "gost.s5.s5.v2",
-    			"description": "利用gost打造s5换帐号双端口代理和v2转发",
-			"note": "一键部署socks5 http 代理和转发, please refer to <a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> for production deployments.",
-    			"hostname": "gosts5",
-			"categories": ["gost"],
-    			"platform": "linux",
-    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",
-    			"image": "lihaixin/gost:s5s5v2",
-  			"network": "host",
-			"env": [{
-      				"name": "TYPE",
-      				"label": "本地还是中转",
-				"description": "提供local socks5 http https,local为本地运行代理,其他为转发上游代理",
-      				"default": "socks5"
-    				},
-				{
-      				"name": "PORT",
-      				"label": "HTTP & SOCKS5 端口",
-				"description": "The HTTP AND SOCKS5 Server Port",
-      				"default": "10021"
-    				},
-				{
-      				"name": "USER",
-      				"label": "HTTP & SOCKS5用户名",
-				"description": "The HTTP AND SOCKS5 Server USER",
-      				"default": "test"
-    				},
-		     		{
-      				"name": "PASSWD",
-      				"label": "HTTP & SOCKS5 密码",
-				"description": "Password is used for Http & SOCKS5 verification",
-      				"default": "test"
-    				},
-			        {
-      				"name": "RURL",
-      				"label": "中转上游地址",
-				"description": "输入转发上游代理",
-      				"default": "8.8.8.8"
-    				},
-				{
-      				"name": "RPORT",
-      				"label": "中转上游端口",
-				"description": "中转上游代理端口",
-      				"default": "10021"
-    				},
-				{
-      				"name": "RUSER",
-      				"label": "中转上游用户名",
-				"description": "中转上游代理验证用户名",
-      				"default": "ruser"
-    				},
-		     		{
-      				"name": "RPASSWD",
-      				"label": "中转上游密码",
-				"description": "中转上游代理验证密码",
-      				"default": "rpass"
-    				},
-		     		{
-      				"name": "OPTIONS",
-      				"label": "中间代理链",
-				"description": "中间代理链,可以用来做速度提升.默认为空,格式:-F socks5://a13:a13@150.158.7.77:33114",
       				"default": ""
     				}]
   		},
