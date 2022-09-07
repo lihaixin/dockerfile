@@ -1351,6 +1351,11 @@
   			"network": "host",
 			"volumes": [
 				{
+				"name": "QQ",
+				"label": "QQ联系方式 *",
+				"description": "终端显示你的QQ联系方式."
+				},
+				{
       				"container": "/etc/cert",
 				"bind": "/etc/cert"
     				}],
@@ -1413,6 +1418,11 @@
 				"bind": "/etc/cert"
     				}],
 			"env": [{
+				"name": "QQ",
+				"label": "QQ联系方式 *",
+				"description": "终端显示你的QQ联系方式."
+				},
+				{
       				"name": "DOMAIN",
       				"label": "Your Domain",
 				"description": "The domain name is used to apply for a digital certificate, and the domain name A points to the IP where you deploy the cloud machine",
@@ -1552,6 +1562,11 @@
   			"network": "host",
 			"volumes": [
 				{
+				"name": "QQ",
+				"label": "QQ联系方式 *",
+				"description": "终端显示你的QQ联系方式."
+				},
+				{
       				"container": "/etc/cert",
 				"bind": "/etc/cert"
     				}],
@@ -1645,6 +1660,11 @@
 			"privileged": true,
   			"network": "host",
 			"env": [{
+				"name": "QQ",
+				"label": "QQ联系方式 *",
+				"description": "终端显示你的QQ联系方式."
+				},
+				{
       				"name": "LANRANGE",
       				"label": "LANRANGE 本地局域网网段",
 				"description": "用于直接路由本地局域网网段,根据本地局域网网段,进行调整,如果用在机房里,保持默认,不需要调整",
@@ -1744,6 +1764,11 @@
 			"privileged": true,
   			"network": "host",
 			"env": [{
+				"name": "QQ",
+				"label": "QQ联系方式 *",
+				"description": "终端显示你的QQ联系方式."
+				},
+				{
       				"name": "fPorts",
       				"label": "fPorts 转发起始端口",
 				"description": "fPorts 转发起始端口，用于把连接本机起始端口通过隧道转发到服务器端",
@@ -1855,6 +1880,11 @@
 			"privileged": true,
   			"network": "host",
 			"env": [{
+				"name": "QQ",
+				"label": "QQ联系方式 *",
+				"description": "终端显示你的QQ联系方式."
+				},
+				{
       				"name": "SERVER_PORT",
       				"label": "服务器Wireguard监听端口",
 				"description": "Wireguard监听端口,使用UDP 端口",
@@ -1947,6 +1977,11 @@
 			"privileged": true,
   			"network": "host",
 			"env": [{
+				"name": "QQ",
+				"label": "QQ联系方式 *",
+				"description": "终端显示你的QQ联系方式."
+				},
+				{
       				"name": "SERVER_IP",
       				"label": "服务器宿主机IP *",
 				"description": "服务器端IP",
@@ -2074,6 +2109,11 @@
     			"image": "lihaixin/gost:s5",
   			"network": "host",
 			"env": [{
+				"name": "QQ",
+				"label": "QQ联系方式 *",
+				"description": "终端显示你的QQ联系方式."
+				},
+				{
       				"name": "TYPE",
       				"label": "本地还是中转",
 				"description": "提供local socks5 http https,local为本地运行代理,其他为转发上游代理",
