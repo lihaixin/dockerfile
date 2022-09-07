@@ -9,6 +9,7 @@ services:
   next-terminal:
     image: dushixiang/next-terminal:1.0.0
     environment:
+      QQ：${QQ}
       DB: sqlite
       GUACD_HOSTNAME: guacd
       GUACD_PORT: 4822
