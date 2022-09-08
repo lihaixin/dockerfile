@@ -5,6 +5,9 @@ services:
     restart: unless-stopped
     privileged: true 
     environment:
+      - DOMAIN=68900.net            # 域名证书
+      - HOSTNAME=hk9                # 主机名
+      - TYPE=socks5                 # 代理类型 https, socks5,http
       - USER=user                   # 代理帐号
       - PASSWD=password             # 代理密码
       - PORT=1080                   # 代理监听端口
