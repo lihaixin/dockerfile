@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     privileged: true 
     environment:
-      - QQ={$QQ}
+      - QQ=${QQ}                    # 在终端显示联系方式
       - USER=user                   # 代理帐号
       - PASSWD=password             # 代理密码
       - PORT=1080                   # 代理监听端口
@@ -14,7 +14,7 @@ services:
       - HTTP_PORT=80                # 是否开启网页换IP,填写网页端口,输入0关闭lighttpd网页
       - MAXNUM=200                  # 最大切换次数
       - GITUSER=lihaixin            # 自动下载peers的git帐号
-      - GITPASSWD={$GITPASSWD}      # 自动下载peers的git密码
+      - GITPASSWD=${GITPASSWD}      # 自动下载peers的git密码
     networks:
       my-network:
         ipv4_address: 10.23.1.1      
