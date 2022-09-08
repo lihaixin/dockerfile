@@ -1636,14 +1636,24 @@
   		},
 		{
     			"type": 3,
-    			"title": "gost_mult",
+    			"title": "gost_mult *",
 			"name": "gost_mult",
-    			"description": "利用gost打造动态IP代理 ",
+    			"description": "利用gost打造动态IP代理（私有专用） ",
 			"note": "部署动态IP代理服务器, 更多参考点击 <a href=\"https://github.com/lihaixin/gost/blob/main/mult/README.md\" target=\"_blank\">gost doc</a> 了接",
     			"hostname": "gostmult",
 			"categories": ["gost"],
     			"platform": "linux",
-    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",			
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",
+			"env": [{
+				"name": "QQ",
+				"label": "QQ联系方式",
+				"description": "终端显示你的QQ联系方式."
+				},
+				{
+				"name": "GITPASSWD",
+				"label": "GIT更新密码",
+				"description": "用于更新各国IP数据库的密码."
+				}],
 			"repository": {
 				"url": "https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/gost/docker-compose.yml"
