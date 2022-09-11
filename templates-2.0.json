@@ -91,7 +91,7 @@
 				"name": "QQ",
 				"label": "QQ联系方式",
 				"description": "终端显示你的QQ联系方式."
-			}],
+				}],
 			"volumes": [
 				{
       				"container": "/etc/cert",
@@ -100,7 +100,7 @@
 			        {
       				"container": "/usr/local/next-terminal/data",
 				"bind": "/usr/local/next-terminal/data"
-    			}],
+    				}],
     			"ports": [
       				"8088/tcp"
     				]
