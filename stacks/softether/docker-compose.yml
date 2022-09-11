@@ -5,7 +5,7 @@ volumes:
   
 services:
   vpn:
-    image: "lihaixin/softether:server.alpine.20220911"
+    image: "lihaixin/softether:server.alpine"
     restart: always
     network_mode: host
     privileged: true
