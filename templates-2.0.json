@@ -100,8 +100,7 @@
 			        {
       				"container": "/usr/local/next-terminal/data",
 				"bind": "/usr/local/next-terminal/data"
-    				}]
-  			},
+    			}],
     			"ports": [
       				"8088/tcp"
     				]
