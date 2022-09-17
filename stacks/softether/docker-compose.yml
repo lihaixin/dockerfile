@@ -10,8 +10,9 @@ services:
     network_mode: host
     privileged: true
     environment:
+      QQ: {QQ}
       DOMAIN: ${DOMAIN}
-      HOST: ${HOST}
+      HOSTNAME: ${HOSTNAME}
       MTU: ${MTU}
       MainINF: ${MainINF}                    #默认为空,让程序自动检查,如果是走openvpn出去,设置为tun+ 
       OPENVPN_PORT: ${OPENVPN_PORT}
@@ -26,6 +27,7 @@ services:
       OPENVPN: ${OPENVPN}
       L2TP: ${L2TP}
       DNS: ${DNS}
+      DNS2: ${DNS2}
     volumes:
       - /etc/cert:/etc/cert
       - softether:/usr/vpnserver
