@@ -882,13 +882,19 @@
 				"stackfile": "stacks/softether/docker-compose.yml"
 			},
 			"env": [{
+				"name": "QQ",
+				"label": "QQ *",
+				"description": "用于终端展示QQ",
+				"default": ""
+			},
+			{
 				"name": "DOMAIN",
 				"label": "域名",
 				"description": "用于OPENVPN和SSTP传输过程中,导入数据证书,提前使用lihaixin/acme容器创建好证书",
 				"default": "youdomain.com"
 			},
 			{
-				"name": "HOST",
+				"name": "HOSTNAME",
 				"label": "主机名",
 				"description": "主机名,主机名+域名构成完整URL",
 				"default": "kr2"
@@ -914,13 +920,13 @@
 			{
 				"name": "USERNAME",
 				"label": "默认创建VPN的用户名",
-				"description": "系统自动创建,每个HUB都有",
+				"description": "系统自动创建",
 				"default": "test"
 			},
 			{
 				"name": "PASSWORD",
 				"label": "默认创建VPN的用户名的密码",
-				"description": "系统自动创建,每个HUB都有",
+				"description": "系统自动创建",
 				"default": "test"
 			},
 			{
@@ -975,7 +981,13 @@
 				"name": "DNS",
 				"label": "自定义VPN客户端DNS",
 				"description": "默认为国外 8.8.8.8,1.1.1.1,国内就设置 233.5.5.5,114.114.114.114",
-				"default": "8.8.8.8,1.1.1.1"
+				"default": "8.8.8.8"
+			},
+			{
+				"name": "DNS2",
+				"label": "自定义VPN客户端DNS2",
+				"description": "默认为国外 8.8.8.8,1.1.1.1,国内就设置 233.5.5.5,114.114.114.114",
+				"default": "1.1.1.1"
 			}]
 		},
 		{
