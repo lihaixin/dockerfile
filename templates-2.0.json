@@ -1450,8 +1450,14 @@
 				{
       				"name": "DOMAIN",
       				"label": "Your Domain",
-				"description": "The domain name is used to apply for a digital certificate, and the domain name A points to the IP where you deploy the cloud machine",
+				"description": "利用lihaixin/acme容器申请域名通用证书",
       				"default": "youdomain.com"
+    				},
+				{
+      				"name": "HOSTNAME",
+      				"label": "Your HOSTNAME",
+				"description": "同一域名下不同主机名",
+      				"default": "hostname"
     				},
 				{
       				"name": "WEBPORT",
