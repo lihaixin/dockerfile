@@ -1,0 +1,28 @@
+version: "3.7"
+services:
+  alist:
+    image: lihaixin/alist:latest
+    container_name: alist
+    hostname: alist
+    restart: unless-stopped
+    network_mode: "host"
+    logging:
+      driver: json-file
+      options:
+        max-size: 1m
+    privileged: true
+    volumes:
+      - alistdata:/opt/alist/data                 # 永久存放alist存储数据
+      - /etc/cert:/etc/cert                       # 调用和自签证书存放位置
+    environment: 
+      - QQ=***                                    # 终端界面显示的联系方式
+      - PUID=$UID                                 # 用户和用户组的环境变量
+      - PGID=$GID                                 # 用户和用户组的环境变量
+      - DOMAIN=youdomain.com                      # 你主机域名
+      - HOSTNAME=hostname                         # 你主机对应的主机名（标记用）
+      - ALIST_PORT=5244                           # 网页管理端口
+      - CADDY_PORT=8080                           # ariang 页面登陆端口
+      - BASIC_AUTH_USERNAME=li                    # ariang 页面登陆账户
+      - BASIC_AUTH_PASSWORD=li                    # ariang 页面登陆密码
+volumes:
+  alistdata:
