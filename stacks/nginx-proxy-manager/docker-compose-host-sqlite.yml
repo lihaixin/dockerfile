@@ -1,7 +1,7 @@
 version: '2'
 services:
   app:
-    image: 'lihaixin/nginx-proxy-manager:latest'
+    image: 'lihaixin/npm:latest'
     restart: always
     network_mode: host
     environment:
