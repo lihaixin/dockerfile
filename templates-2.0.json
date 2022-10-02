@@ -57,6 +57,11 @@
 			"restart_policy": "always",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/webssh2.png",
     			"image": "lihaixin/webssh",
+			"env": [{
+				"name": "QQ",
+				"label": "QQ联系方式",
+				"description": "终端显示你的QQ联系方式."
+			}],
     			"ports": [
       				"8888/tcp"
     				]
