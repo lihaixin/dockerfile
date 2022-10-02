@@ -51,7 +51,7 @@
     			"title": "webssh-8888",
 			"name": "webssh-8888",
     			"description": "新的SSH网页客户端",
-			"note": "新的SSH网页客户端,请点击 <a href=\"https://hub.docker.com/r/lihaixin/webssh2\" target=\"_blank\">webssh2</a> 更多消息",
+			"note": "新的SSH网页客户端,请点击 <a href=\"https://hub.docker.com/r/lihaixin/webssh\" target=\"_blank\">webssh</a> 更多消息",
     			"categories": ["ssh"],
    			"platform": "linux",
 			"restart_policy": "always",
