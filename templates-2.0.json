@@ -79,7 +79,40 @@
     			"ports": [
       				"7681/tcp"
     				],
-			"command": "ttyd -c root:password -P 3600 bash"
+			"env": [{
+				"name": "QQ",
+				"label": "QQ联系方式",
+				"description": "终端显示你的QQ联系方式."
+				},
+				{
+      				"name": "DOMAIN",
+      				"label": "TTYD证书域名",
+				"description": "TYYD使用的域名",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "HOSTNAME",
+      				"label": "TTYD主机名",
+				"description": "TTYD使用的主机",
+      				"default": "hostname"
+    				},
+				{
+      				"name": "USERNAME",
+      				"label": "用户名",
+				"description": "TYYD登陆用户名",
+      				"default": "root"
+    				},
+				{
+      				"name": "PASSWORD",
+      				"label": "密码",
+				"description": "TTYD登陆密码",
+      				"default": "password"
+    				}],
+			"volumes": [
+				{
+      				"container": "/etc/cert",
+				"bind": "/etc/cert"
+    				}]
   			},
 		      	{
     			"type": 1,
