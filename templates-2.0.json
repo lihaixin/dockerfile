@@ -50,6 +50,7 @@
    		 	"type": 1,
     			"title": "webssh-8888",
 			"name": "webssh-8888",
+			"hostname": "webssh",
     			"description": "新的SSH网页客户端",
 			"note": "新的SSH网页客户端,请点击 <a href=\"https://hub.docker.com/r/lihaixin/webssh\" target=\"_blank\">webssh</a> 更多消息",
     			"categories": ["ssh"],
@@ -74,6 +75,7 @@
     			"categories": ["ssh"],
     			"platform": "linux",
 			"restart_policy": "always",
+			"hostname": "ttyd",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/ttyd.png",
     			"image": "lihaixin/ttyd",
     			"ports": [
