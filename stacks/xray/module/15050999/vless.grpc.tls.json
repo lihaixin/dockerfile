@@ -25,10 +25,6 @@
        "streamSettings": {
 		 "network": "grpc",
       		 "security": "tls",
-	         "tlsSettings": {
-          		"allowInsecure": false,
-         		 "serverName": ""
-        	},
                  "grpcSettings": {
                  	"servername": "grpc.qq.com" //填写你的 ServiceName
        		}
