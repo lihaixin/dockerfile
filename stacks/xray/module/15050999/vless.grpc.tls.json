@@ -1,4 +1,4 @@
-      {
+     {
       // 5.1 默认转发VPS,需要调整出口只要调整 5.1
       // 一定放在第一个，在routing 3.5 里面已经说明了，这等于是默认规则，所有不符合任何规则的流量都走这个
        "tag": "$OUTBOUNDTAG",
@@ -11,23 +11,24 @@
                         "users": [
                             {
                                 "id": "$UUID",  //填写你的 UUID
-				"encryption":"none",
-				"security": "auto"
+                                "encryption":"none",
+                                "security": "auto"
                             }
                         ]
                     }
                 ]
          },
-	 "mux": {
-		"enabled": true,
-  		"concurrency": -1
+         "mux": {
+                "enabled": true,
+                "concurrency": -1
         },
-       "streamSettings": {
-		 "network": "grpc",
-      		 "security": "tls",
-                 "grpcSettings": {
-                 	"servername": "grpc.qq.com" //填写你的 ServiceName
-       		}
-     	}
-    }
+        "streamSettings": {
+        "network": "grpc",
+        "security": "tls",
+        "grpcSettings": {
+          "serviceName": "grpc.qq.com" //填写你的 ServiceName
+          //"initial_windows_size": 524288 //通过 Cloudflare CDN 时，防止 Cloudflare CDN 发送意外的 h2 GOAWAY 帧以关闭现有连接。
+        }
+      }
+     }
     ,
