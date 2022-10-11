@@ -7,27 +7,31 @@
           "vnext": [
                     {
                         "address": "$RDOMAIN",
-                        "port": $RPORT,  // 也可以用 8443 nginx 的默认 http3 端口 https://quic.nginx.org/readme.html
+                        "port": $RPORT,  //  http2的默认端口443 https://quic.nginx.org/readme.html
                         "users": [
                             {
                                 "id": "$UUID",  //填写你的 UUID
 				"encryption":"none",
-				"security": "zero"
+				"security": "auto"
                             }
                         ]
                     }
                 ]
          },
 	 "mux": {
-		  "enabled": true,
-  		"concurrency": 8
-    },
-	 "streamSettings": {
+		"enabled": true,
+  		"concurrency": -1
+        },
+       "streamSettings": {
 		 "network": "grpc",
-      "security": "tls",
-      "grpcSettings": {
-                 "servername": "$RDOMAIN" //填写你的 ServiceName
-       }
-     }
+      		 "security": "tls",
+	         "tlsSettings": {
+          		"allowInsecure": false,
+         		 "serverName": ""
+        	},
+                 "grpcSettings": {
+                 	"servername": "grpc.qq.com" //填写你的 ServiceName
+       		}
+     	}
     }
     ,
