@@ -1,3 +1,12 @@
+# 构建
+
+```
+#docker buildx create --use --name=mybuilder-cn --driver docker-container --driver-opt image=dockerpracticesig/buildkit:master
+docker run --rm --privileged tonistiigi/binfmt:latest --install all
+docker buildx create --name mybuilder --driver docker-container
+docker buildx use mybuilder
+```
+
 # 联系我
 
 ![https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/weixin.png](https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/weixin.png)
