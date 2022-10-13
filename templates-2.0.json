@@ -1719,7 +1719,7 @@
 			"categories": ["gost"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",
-    			"image": "lihaixin/gost:vpn.server",
+    			"image": "lihaixin/gost:vpn.s",
 			"privileged": true,
   			"network": "host",
 			"env": [{
@@ -1746,24 +1746,6 @@
       				"default": "192.168.123.1"
     				},
 				{
-      				"name": "GOSTRANGE",
-      				"label": "GOSTRANGE 隧道网段",
-				"description": "GOSTRANGE 隧道网段,默认192.168.123.0/24,不需要调整,除非本机有这个内部网段",
-      				"default": "192.168.123.0/24"
-    				},
-				{
-      				"name": "GOSTNAME",
-      				"label": "GOSTNAME 隧道接口名称",
-				"description": "GOSTNAME 隧道接口名称,默认tun0,不需要调整",
-      				"default": "tun0"
-    				},
-				{
-      				"name": "GOSTMTU",
-      				"label": "GOSTMTU 隧道接口MTU值",
-				"description": "GOSTMTU 隧道接口MTU值,默认tun0,不需要调整",
-      				"default": "1350"
-    				},
-				{
       				"name": "SPEEDERV2_PORT",
       				"label": "SPEEDERV2 UDP加速端口",
 				"description": "用于SPEEDERV2 UDP加速端口,默认为4096,不需要调整,除非4096被其他程序占用",
@@ -1785,20 +1767,13 @@
       				"name": "PASSWORD",
       				"label": "SPEEDERV2 PASSWORD *",
 				"description": "SPEEDERV2 密码,服务器和客户端一致,需要调整",
-      				"default": "password"
+      				"default": "pasSw0rd"
     				},
 		     		{
       				"name": "TIMEOUT",
       				"label": "SPEEDERV2 TIMEOUT",
 				"description": "SPEEDERV2 TIMEOUT,游戏用户保持默认为1就好,一般不需要调整",
-      				"default": "1"
-    				},
-		     		
-		     		{
-      				"name": "MTU",
-      				"label": "SPEEDERV2 UDPMTU",
-				"description": "SPEEDERV2 UDPMTU,SPEEDERV2传输最大MTU,保持默认,不需要调整",
-      				"default": "1390"
+      				"default": "4"
     				},
 		     		{
       				"name": "INTERVAL",
@@ -1823,7 +1798,7 @@
 			"categories": ["gost"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",
-    			"image": "lihaixin/gost:vpn.client",
+    			"image": "lihaixin/gost:vpn.c",
 			"privileged": true,
   			"network": "host",
 			"env": [{
@@ -1831,6 +1806,12 @@
 				"label": "QQ联系方式 *",
 				"description": "终端显示你的QQ联系方式."
 				},
+				{
+      				"name": "FORWARD",
+      				"label": "是否开启批量转发",
+				"description": "设置1启用，设置0关闭",
+      				"default": "0"
+    				},
 				{
       				"name": "fPorts",
       				"label": "fPorts 转发起始端口",
@@ -1844,10 +1825,16 @@
       				"default": "20000"
     				},
 				{
+      				"name": "VPNPORT",
+      				"label": "是否开启VPN端口转发",
+				"description": "设置1启用，设置0关闭",
+      				"default": "0"
+    				},
+				{
       				"name": "OPorts",
       				"label": "OPorts 其他转发端口",
 				"description": "把常用的VPN端口转发到服务器端,SSTP用443,OPENVPN用1194,PPTP用1723,L2TP用 500 4500 1701,SSVPN 用992 5555",
-      				"default": "500 4500 1701 5555"
+      				"default": "5555 4500 1723 1701 1194 992 500"
     				},
 				{
       				"name": "GOST_PORT",
@@ -1859,19 +1846,13 @@
       				"name": "GOSTCLIENTIP",
       				"label": "GOSTCLIENTIP 隧道客户端IP *",
 				"description": "GOSTCLIENTIP 隧道客户端IP,默认192.168.123.2,不需要调整,除非本机有这个内部网段,如有多个客户端,只需要修改IP最后一位数字",
-      				"default": "192.168.123.2"
+      				"default": "192.168.123.11"
     				},
 				{
       				"name": "GOSTNAME",
       				"label": "GOSTNAME 隧道接口名称",
 				"description": "GOSTNAME 隧道接口名称,默认tun0,不需要调整",
       				"default": "tun0"
-    				},
-				{
-      				"name": "GOSTMTU",
-      				"label": "GOSTMTU 隧道接口MTU值",
-				"description": "GOSTMTU 隧道接口MTU值,默认tun0,不需要调整",
-      				"default": "1350"
     				},
 				{
       				"name": "SPEEDERV2_IP",
@@ -1901,20 +1882,13 @@
       				"name": "PASSWORD",
       				"label": "SPEEDERV2 PASSWORD *",
 				"description": "SPEEDERV2 密码,服务器和客户端一致,需要调整",
-      				"default": "password"
+      				"default": "pasSw0rd"
     				},
 		     		{
       				"name": "TIMEOUT",
       				"label": "SPEEDERV2 TIMEOUT",
 				"description": "SPEEDERV2 TIMEOUT,游戏用户保持默认为1就好,一般不需要调整",
-      				"default": "1"
-    				},
-		     		
-		     		{
-      				"name": "MTU",
-      				"label": "SPEEDERV2 UDPMTU",
-				"description": "SPEEDERV2 UDPMTU,SPEEDERV2传输最大MTU,保持默认,不需要调整",
-      				"default": "1390"
+      				"default": "4"
     				},
 		     		{
       				"name": "INTERVAL",
