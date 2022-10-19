@@ -1167,7 +1167,6 @@
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/acme.png",
     			"image": "lihaixin/acme",
-  			"network": "host",
 			"volumes": [
 				{
       				"container": "/etc/cert",
