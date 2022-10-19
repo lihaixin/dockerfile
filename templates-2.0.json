@@ -1158,9 +1158,9 @@
 		},
 		{
     			"type": 1,
-    			"title": "acme-standalone ",
-			"name": "acme-standalone-80",
-    			"description": "单独域名数字证书申请",
+    			"title": "acme ",
+			"name": "acme",
+    			"description": "域名数字证书申请",
 			"note": "单独域名数字证书申请, 需要用到80端口，同时域名指向云主机 更多<a href=\"https://hub.docker.com/r/lihaixin/acme\" target=\"_blank\">点击这里</a> 了接更多",
     			"hostname": "acme",
 			"categories": ["cert"],
@@ -1174,10 +1174,86 @@
 				"bind": "/etc/cert"
     				}],
 			"env": [{
+				"name": "QQ",
+				"label": "QQ *",
+				"description": "用于终端展示QQ",
+				"default": ""
+				},
+				{
+      				"name": "TYPE",
+      				"label": "证书提供商 *",
+				"select": [
+        			   		{
+          					"text": "zerossl",
+          					"value": "zerossl",
+          					"default": "zerossl"
+        			   		},
+        			   		{
+          					"text": "letsencrypt",
+          					"value": "letsencrypt"
+        			   		}
+      				          ],
+      				"description": "选择证书提供商"
+    				},
+				{
+      				"name": "DNS",
+      				"label": "域名管理商",
+				"select": [
+        			   		{
+          					"text": "dns_cf",
+          					"value": "dns_cf",
+          					"default": "dns_cf"
+        			   		},
+        			   		{
+          					"text": "dns_namecom",
+          					"value": "dns_namecom"
+        			   		},,
+        			   		{
+          					"text": "dns_gd",
+          					"value": "dns_gd"
+        			   		}
+        			   		{
+          					"text": "dns_namesilo",
+          					"value": "dns_namesilo"
+        			   		},
+        			   		{
+          					"text": "dns_dp",
+          					"value": "dns_dp"
+        			   		},
+        			   		{
+          					"text": "dns_ali",
+          					"value": "dns_ali"
+        			   		},
+        			   		{
+          					"text": "dns_other",
+          					"value": ""
+        			   		}
+      				          ],
+				"description": "选择域名管理提供商"
+    				},
+				{
       				"name": "DOMAIN",
       				"label": "你的域名",
 				"description": "申请证书的域名",
       				"default": "youdomain.com"
+    				},
+				{
+      				"name": "aliasDOMAIN",
+      				"label": "利用别名验证的域名",
+				"description": "这个域名托管在cloudflare,不能直接使用api申请证书，只能通过别名，使用别名下面的ID和KEY来申请证书的信息",
+      				"default": ""
+    				},
+			        {
+      				"name": "ID",
+      				"label": "ID",
+				"description": "域名提供商的ID | CF_Email | Namecom_Username | GD_Key | DP_Id | Ali_Key",
+      				"default": "info@domain.com"
+    				},
+		     		{
+      				"name": "KEY",
+      				"label": "KEY",
+				"description": "域名提供商的接口密钥 KEY | CF_Key | Namecom_Token | GD_Secret | Namesilo_Key | DP_Key | Ali_Secret ",
+      				"default": "558ef6820cea14627f986548c96fcb6cb××××"
     				}]
   		},
 		{
