@@ -1207,11 +1207,11 @@
         			   		{
           					"text": "dns_namecom",
           					"value": "dns_namecom"
-        			   		},,
+        			   		},
         			   		{
           					"text": "dns_gd",
           					"value": "dns_gd"
-        			   		}
+        			   		},
         			   		{
           					"text": "dns_namesilo",
           					"value": "dns_namesilo"
