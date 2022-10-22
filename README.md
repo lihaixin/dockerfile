@@ -13,7 +13,7 @@ docker buildx build -f Dockerfile.3.14 --platform linux/arm64,linux/amd64 -t lih
 
 ![https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/weixin.png](https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/weixin.png)
 
-##所有的Docker file
+## 所有的Docker 模板
 
 ## net
 - [base](../../../base)
