@@ -15,6 +15,12 @@ docker buildx build -f Dockerfile.3.14 --platform linux/arm64,linux/amd64 -t lih
 
 ## 所有的Docker 模板
 
+### coker
+|序号|容器名称|默认端口|地址|备注|
+|:----|:----:|:----|:----|:----|
+|docker-1|Registry|5000|[Registry](https://hub.docker.com/_/registry)|用于在portainer上便捷访问宿主机|
+|docker-2|portainer|9000 9443 8000|[portainer](https://hub.docker.com/r/lihaixin/portainer)|用于创建宿主机docker图形化WEB管理界面|
+
 ### tools
 |序号|容器名称|默认端口|地址|备注|
 |:----|:----:|:----|:----|:----|
@@ -45,3 +51,12 @@ docker buildx build -f Dockerfile.3.14 --platform linux/arm64,linux/amd64 -t lih
 | gost-3|multi|10021|[gost:multi](https://hub.docker.com/r/lihaixin/gost/tags)|一键部署gost动态IP代理|
 | gost-4|vpn-server|4096 8421|[gost:vpn.server](https://hub.docker.com/r/lihaixin/gost/tags)|一键部署gost国内外隧道|
 | gost-5|vpn-client|4096 8421|[gost:vpn.client](https://hub.docker.com/r/lihaixin/gost/tags)|一键部署gost国内外隧道|
+
+### ssh
+|序号|容器名称|默认端口|地址|备注|
+|:----|:----:|:----|:----|:----|
+| ssh-1|webssh|8888|[webssh](https://hub.docker.com/r/lihaixin/webssh)|一键部署webssh客户端，支持证书登录|
+| ssh-2|ttyd|7681|[ttyd](https://hub.docker.com/r/lihaixin/ttyd)|一键部署ttyd，支持rzsz文件传输|
+| ssh-3|next-terminal|8088|[next-terminal](https://hub.docker.com/r/lihaixin/next-terminal)|一键部署下一代终端，支持ssh、rdp、vnc、telnet |
+
+
