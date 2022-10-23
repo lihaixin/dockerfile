@@ -15,7 +15,7 @@ docker buildx build -f Dockerfile.3.14 --platform linux/arm64,linux/amd64 -t lih
 
 ## 所有的Docker 模板
 
-### coker
+### docker
 |序号|容器名称|默认端口|地址|备注|
 |:----|:----:|:----|:----|:----|
 |docker-1|Registry|5000|[Registry](https://hub.docker.com/_/registry)|用于在portainer上便捷访问宿主机|
@@ -58,5 +58,13 @@ docker buildx build -f Dockerfile.3.14 --platform linux/arm64,linux/amd64 -t lih
 | ssh-1|webssh|8888|[webssh](https://hub.docker.com/r/lihaixin/webssh)|一键部署webssh客户端，支持证书登录|
 | ssh-2|ttyd|7681|[ttyd](https://hub.docker.com/r/lihaixin/ttyd)|一键部署ttyd，支持rzsz文件传输|
 | ssh-3|next-terminal|8088|[next-terminal](https://hub.docker.com/r/lihaixin/next-terminal)|一键部署下一代终端，支持ssh、rdp、vnc、telnet |
+
+### vpn
+|序号|容器名称|默认端口|地址|备注|
+|:----|:----:|:----|:----|:----|
+| vpn-1|ovpn|1723 1723 500 1701 4500 1194 5555 |[softether](https://hub.docker.com/r/lihaixin/softether)|一键部署 PPTP L2TP OPENVPN SSTP 服务器|
+| vpn-2|ovpn:multi|1723 1723 500 1701 4500 1194 5555 |[softether:multi](https://hub.docker.com/r/lihaixin/softether/tags)|一键部署 PPTP L2TP OPENVPN SSTP 服务器|
+
+
 
 
