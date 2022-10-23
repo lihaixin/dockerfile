@@ -34,25 +34,11 @@
 			},
 			{
    		 	"type": 1,
-    			"title": "webssh",
-			"name": "webssh-2222",
-    			"description": "Web SSH Client using WebSSH2",
-    			"categories": ["ssh"],
-   			"platform": "linux",
-			"restart_policy": "always",
-    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/webssh2.png",
-    			"image": "lihaixin/webssh2:latest",
-    			"ports": [
-      				"2222/tcp"
-    				]
-  			},
-			{
-   		 	"type": 1,
     			"title": "webssh-8888",
 			"name": "webssh-8888",
 			"hostname": "webssh",
-    			"description": "新的SSH网页客户端",
-			"note": "新的SSH网页客户端,请点击 <a href=\"https://hub.docker.com/r/lihaixin/webssh\" target=\"_blank\">webssh</a> 更多消息",
+    			"description": "新版SSH网页客户端",
+			"note": "新版SSH网页客户端,请点击 <a href=\"https://hub.docker.com/r/lihaixin/webssh\" target=\"_blank\">webssh</a> 更多消息",
     			"categories": ["ssh"],
    			"platform": "linux",
 			"restart_policy": "always",
