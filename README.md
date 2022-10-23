@@ -23,7 +23,7 @@ docker buildx build -f Dockerfile.3.14 --platform linux/arm64,linux/amd64 -t lih
 |tools-3|vnstat|80|[vnstat](https://hub.docker.com/r/lihaixin/vnstat)|用于创建提供宿主机网络流量监视器,防止流量超额|
 |tools-4|iptables|无|[iptables](https://hub.docker.com/r/lihaixin/iptables)|用于限制容器TCP最大连接数，最大带宽|
 |tools-5|netdata|19999|[netdata](https://hub.docker.com/r/lihaixin/netdata)|用于创建提供宿主机性能监控工具|
-|tools-6|lg|19999|[looking-glass](https://hub.docker.com/r/lihaixin/looking-glass)|用于创建提供宿主机访问其他网络的小工具|
+|tools-6|lg|80|[looking-glass](https://hub.docker.com/r/lihaixin/looking-glass)|用于创建提供宿主机访问其他网络的小工具|
 
 ### cert 
 |序号|容器名称|默认端口|地址|备注|
@@ -34,10 +34,14 @@ docker buildx build -f Dockerfile.3.14 --platform linux/arm64,linux/amd64 -t lih
 |序号|容器名称|默认端口|地址|备注|
 |:----|:----:|:----|:----|:----|
 | xray-1|xray|443 88|[xray](https://hub.docker.com/r/lihaixin/xray)|一键部署十三合一代理|
-| xray-1|x-ui|54321|[x-ui](https://hub.docker.com/r/lihaixin/x-ui)|一键部署xray图形化面板|
+| xray-2|XRAY:MULTI|10801 20801 30801 |[xray:multi](https://hub.docker.com/r/lihaixin/xray/tags)|站群服务器（多IP服务器）一键部署|
+| xray-3|x-ui|54321|[x-ui](https://hub.docker.com/r/lihaixin/x-ui)|一键部署xray图形化面板|
 
 ### gost
 |序号|容器名称|默认端口|地址|备注|
 |:----|:----:|:----|:----|:----|
-| gost-1|xray|443 88|[xray](https://hub.docker.com/r/lihaixin/xray)|一键部署十三合一代理|
-| gost-1|x-ui|54321|[x-ui](https://hub.docker.com/r/lihaixin/x-ui)|一键部署xray图形化面板|
+| gost-1|https|58338|[gost:https](https://hub.docker.com/r/lihaixin/gost/tags)|一键部署https代理，外贸首选|
+| gost-2|socks5|10021|[gost:s5](https://hub.docker.com/r/lihaixin/gost/tags)|一键部署socks5代理，支持批量中转，提供加速接口|
+| gost-3|multi|10021|[gost:multi](https://hub.docker.com/r/lihaixin/gost/tags)|一键部署gost动态IP代理|
+| gost-4|vpn-server|4096 8421|[gost:vpn.server](https://hub.docker.com/r/lihaixin/gost/tags)|一键部署gost国内外隧道|
+| gost-5|vpn-client|4096 8421|[gost:vpn.client](https://hub.docker.com/r/lihaixin/gost/tags)|一键部署gost国内外隧道|
