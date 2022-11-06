@@ -87,14 +87,14 @@
 				{
       				"name": "USERNAME",
       				"label": "用户名",
-				"description": "TYYD登陆用户名",
-      				"default": "root"
+				"description": "TYYD登陆用户名,输入noauth为不用登陆就能访问",
+      				"default": "noauth"
     				},
 				{
       				"name": "PASSWORD",
       				"label": "密码",
-				"description": "TTYD登陆密码",
-      				"default": "password"
+				"description": "TTYD登陆密码,输入noauth为不用登陆就能访问",
+      				"default": "noauth"
     				},
 				{
       				"name": "TTYD_OPT",
