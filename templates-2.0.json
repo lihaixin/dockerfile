@@ -95,6 +95,12 @@
       				"label": "密码",
 				"description": "TTYD登陆密码",
       				"default": "password"
+    				},
+				{
+      				"name": "TTYD_OPT",
+      				"label": "执行程序",
+				"description": "输入需要执行的程序，默认bash 可选择输入iftop tmux",
+      				"default": "bash"
     				}],
 			"volumes": [
 				{
