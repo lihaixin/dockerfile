@@ -21,7 +21,7 @@
       				"name": "TYPE",
       				"label": "本地还是中转",
 				"description": "提供local socks5 http https,local为本地运行代理,其他为转发上游代理",
-      				"default": "local"
+      				"default": "socks5"
     				},
 				{
       				"name": "PORT",
