@@ -15,7 +15,8 @@
 			"env": [{
 				"name": "QQ",
 				"label": "QQ联系方式 *",
-				"description": "15050999."
+				"description": "会员联系QQ",
+				"default": "15050999"
 				},
 				{
       				"name": "TYPE",
