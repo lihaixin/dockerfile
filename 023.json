@@ -5,7 +5,7 @@
     			"title": "gost.s5.http_10021",
 			"name": "gost.s5.http_10021",
     			"description": "利用gost打造s5 http 代理和转发",
-			"note": "一键部署socks5 http 代理和转发, please refer to <a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> for production deployments.",
+			"note": "一键部署socks5 http 代理和转发, 详细请 <a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> 了解更多.",
     			"hostname": "gosts5",
 			"categories": ["gost"],
     			"platform": "linux",
@@ -15,7 +15,7 @@
 			"env": [{
 				"name": "QQ",
 				"label": "QQ联系方式 *",
-				"description": "终端显示你的QQ联系方式."
+				"description": "15050999."
 				},
 				{
       				"name": "TYPE",
@@ -26,44 +26,44 @@
 				{
       				"name": "PORT",
       				"label": "HTTP & SOCKS5 端口",
-				"description": "The HTTP AND SOCKS5 Server Port",
-      				"default": "10021"
+				"description": "填写本地端口",
+      				"default": ""
     				},
 				{
       				"name": "USER",
       				"label": "HTTP & SOCKS5用户名",
 				"description": "The HTTP AND SOCKS5 Server USER",
-      				"default": "test"
+      				"default": "023S5"
     				},
 		     		{
       				"name": "PASSWD",
       				"label": "HTTP & SOCKS5 密码",
 				"description": "Password is used for Http & SOCKS5 verification",
-      				"default": "test"
+      				"default": "023S5"
     				},
 			        {
       				"name": "RURL",
       				"label": "中转上游地址",
-				"description": "输入转发上游代理",
-      				"default": "8.8.8.8"
+				"description": "输入转发上游代理,填写IP地址",
+      				"default": ""
     				},
 				{
       				"name": "RPORT",
       				"label": "中转上游端口",
 				"description": "中转上游代理端口",
-      				"default": "22225"
+      				"default": "10021"
     				},
 				{
       				"name": "RUSER",
       				"label": "中转上游用户名",
 				"description": "中转上游代理验证用户名",
-      				"default": "ruser"
+      				"default": "023S5"
     				},
 		     		{
       				"name": "RPASSWD",
       				"label": "中转上游密码",
 				"description": "中转上游代理验证密码",
-      				"default": "rpass"
+      				"default": "023S5"
     				},
 		     		{
       				"name": "OPTIONS",
