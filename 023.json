@@ -2,8 +2,8 @@
 	"version": "2",
 	"templates": [{
     			"type": 1,
-    			"title": "gost.s5.http_10021",
-			"name": "gost.s5.http_10021",
+    			"title": "gost.s5.http",
+			"name": "gost.s5.http",
     			"description": "利用gost打造s5 http 代理和转发",
 			"note": "一键部署socks5 http 代理和转发, 详细请 <a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> 了解更多.",
     			"hostname": "gosts5",
