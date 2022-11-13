@@ -1,0 +1,76 @@
+{
+	"version": "2",
+	"templates": [{
+    			"type": 1,
+    			"title": "gost.s5.http_10021",
+			"name": "gost.s5.http_10021",
+    			"description": "利用gost打造s5 http 代理和转发",
+			"note": "一键部署socks5 http 代理和转发, please refer to <a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> for production deployments.",
+    			"hostname": "gosts5",
+			"categories": ["gost"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",
+    			"image": "lihaixin/gost:s5",
+  			"network": "host",
+			"env": [{
+				"name": "QQ",
+				"label": "QQ联系方式 *",
+				"description": "终端显示你的QQ联系方式."
+				},
+				{
+      				"name": "TYPE",
+      				"label": "本地还是中转",
+				"description": "提供local socks5 http https,local为本地运行代理,其他为转发上游代理",
+      				"default": "local"
+    				},
+				{
+      				"name": "PORT",
+      				"label": "HTTP & SOCKS5 端口",
+				"description": "The HTTP AND SOCKS5 Server Port",
+      				"default": "10021"
+    				},
+				{
+      				"name": "USER",
+      				"label": "HTTP & SOCKS5用户名",
+				"description": "The HTTP AND SOCKS5 Server USER",
+      				"default": "test"
+    				},
+		     		{
+      				"name": "PASSWD",
+      				"label": "HTTP & SOCKS5 密码",
+				"description": "Password is used for Http & SOCKS5 verification",
+      				"default": "test"
+    				},
+			        {
+      				"name": "RURL",
+      				"label": "中转上游地址",
+				"description": "输入转发上游代理",
+      				"default": "8.8.8.8"
+    				},
+				{
+      				"name": "RPORT",
+      				"label": "中转上游端口",
+				"description": "中转上游代理端口",
+      				"default": "22225"
+    				},
+				{
+      				"name": "RUSER",
+      				"label": "中转上游用户名",
+				"description": "中转上游代理验证用户名",
+      				"default": "ruser"
+    				},
+		     		{
+      				"name": "RPASSWD",
+      				"label": "中转上游密码",
+				"description": "中转上游代理验证密码",
+      				"default": "rpass"
+    				},
+		     		{
+      				"name": "OPTIONS",
+      				"label": "中间代理链",
+				"description": "中间代理链,可以用来做速度提升.默认为空,格式: socks5://a13:a13@150.158.7.77:33114",
+      				"default": ""
+    				}]
+  		}
+ 	]
+}     
