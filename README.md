@@ -71,8 +71,8 @@ docker buildx build -f Dockerfile.3.14 --platform linux/arm64,linux/amd64 -t lih
 |:----|:----:|:----|:----|:----|
 | RProxy-1|nps:s|80 443 8024 |[nps:s](https://hub.docker.com/r/lihaixin/nps)|一键部署NPS 内网穿透服务器|
 | RProxy-2|nps:c|无 |[nps:c](https://hub.docker.com/r/lihaixin/nps)|一键部署NPS 内网穿透客户端|
-| RProxy-3|frp:s|80 443 7500 |[nps:s](https://hub.docker.com/r/lihaixin/nps)|一键部署FRP 内网穿透服务器|
+| RProxy-3|frp:s|80 443 7500 |[nps:s](https://hub.docker.com/r/lihaixin/frp)|一键部署FRP 内网穿透服务器|
 | RProxy-4|frp:c|无 |[frp:c](https://hub.docker.com/r/lihaixin/frp)|一键部署FRP 内网穿透客户端|
 | RProxy-5|ghproxy|80 |[ghproxy](https://hub.docker.com/r/lihaixin/ghproxy)|一键部署反向代理github|
-| RProxy-6|npm|80 81 443 |[npm](https://hub.docker.com/r/lihaixin/ghproxy)|一键部署反向代理各类网站|
+| RProxy-6|npm|80 81 443 |[npm](https://hub.docker.com/r/lihaixin/npm)|一键部署反向代理各类网站|
 | RProxy-7| cache-docker|5000 |[cache-docker](https://hub.docker.com/_/registry)|一键部署反向代理hub.docker.com|
