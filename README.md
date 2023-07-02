@@ -3,8 +3,7 @@
 ```
 #docker buildx create --use --name=mybuilder-cn --driver docker-container --driver-opt image=dockerpracticesig/buildkit:master
 docker run --rm --privileged tonistiigi/binfmt:latest --install all
-docker buildx create --name mybuilder --driver docker-container
-docker buildx use mybuilder
+docker buildx  create --use --name mybuilder --driver docker-container
 docker buildx build --platform linux/arm64,linux/amd64 -t lihaixin/gost:vpn.s . --push
 docker buildx build -f Dockerfile.3.14 --platform linux/arm64,linux/amd64 -t lihaixin/gost:vpn.s --push
 ```
