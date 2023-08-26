@@ -1674,12 +1674,6 @@
 				"description": "终端显示你的QQ联系方式."
 				},
 				{
-      				"name": "LANRANGE",
-      				"label": "LANRANGE 本地局域网网段",
-				"description": "用于直接路由本地局域网网段,根据本地局域网网段,进行调整,如果用在机房里,保持默认,不需要调整",
-      				"default": "192.168.2.0/24"
-    				},
-				{
       				"name": "GOST_PORT",
       				"label": "GOST UDP 隧道端口",
 				"description": "用于GOST端口,默认为8421,不需要调整,除非8421被其他程序占用",
@@ -1690,12 +1684,6 @@
       				"label": "GOSTSERVERIP 隧道服务端IP",
 				"description": "GOSTSERVERIP 隧道服务端IP,默认192.168.123.1,不需要调整,除非本机有这个内部网段",
       				"default": "192.168.123.1"
-    				},
-				{
-      				"name": "SPEEDERV2_PORT",
-      				"label": "SPEEDERV2 UDP加速端口",
-				"description": "用于SPEEDERV2 UDP加速端口,默认为4096,不需要调整,除非4096被其他程序占用",
-      				"default": "4096"
     				},
 		     		{
       				"name": "MODE",
@@ -1789,28 +1777,16 @@
       				"default": "8421"
     				},
 				{
-      				"name": "GOSTCLIENTIP",
-      				"label": "GOSTCLIENTIP 隧道客户端IP *",
-				"description": "GOSTCLIENTIP 隧道客户端IP,默认192.168.123.2,不需要调整,除非本机有这个内部网段,如有多个客户端,只需要修改IP最后一位数字",
-      				"default": "192.168.123.11"
-    				},
-				{
-      				"name": "GOSTNAME",
-      				"label": "GOSTNAME 隧道接口名称",
-				"description": "GOSTNAME 隧道接口名称,默认tun0,不需要调整",
-      				"default": "tun0"
-    				},
-				{
       				"name": "SPEEDERV2_IP",
       				"label": "SPEEDERV2 UDP加速IP *",
 				"description": "用于SPEEDERV2 UDP加速IP,需要调整,改为服务端IP",
       				"default": "8.8.8.8"
     				},
 				{
-      				"name": "SPEEDERV2_PORT",
-      				"label": "SPEEDERV2 UDP加速端口",
-				"description": "用于SPEEDERV2 UDP加速端口,默认为4096,不需要调整,除非4096被其他程序占用",
-      				"default": "4096"
+      				"name": "GOSTCLIENTIP",
+      				"label": "GOSTCLIENTIP 隧道客户端IP *",
+				"description": "GOSTCLIENTIP 隧道客户端IP,默认192.168.123.2,不需要调整,除非本机有这个内部网段,如有多个客户端,只需要修改IP最后一位数字",
+      				"default": "192.168.123.11"
     				},
 		     		{
       				"name": "MODE",
