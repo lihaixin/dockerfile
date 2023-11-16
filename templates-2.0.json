@@ -110,19 +110,19 @@
   			},
 		        {
     			"type": 1,
-    			"title": "udptoolserver",
+    			"title": "udptoolsserver",
 			"name": "udptoolserver",
-    			"description": "udptool server ",
+    			"description": "udptools server UDP数据加速服务端，常用加速openvpn 和 wireguard 等UDP传输的VPN",
     			"categories": ["tools"],
     			"platform": "linux",
 			"restart_policy": "always",
-			"hostname": "udptoolserver",
+			"hostname": "udptoolsserver",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/udptools.png",
     			"image": "lihaixin/udptools:server",
     			"network": "host",
 			"env": [{
 				"name": "QQ",
-				"label": "QQ联系方式",
+				"label": "你QQ联系方式，也是会员账号",
 				"description": "终端显示你的QQ联系方式."
 				},
 				{
@@ -159,18 +159,18 @@
 		        {
     			"type": 1,
     			"title": "udptoolsclient",
-			"name": "udptoolclient",
-    			"description": "udptool client ",
+			"name": "udptoolsclient",
+    			"description": "udptools client UDP数据加速客户端，常用加速openvpn 和 wireguard 等UDP传输的VPN ",
     			"categories": ["tools"],
     			"platform": "linux",
 			"restart_policy": "always",
-			"hostname": "udptoolclient",
+			"hostname": "udptoolsclient",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/udptools.png",
     			"image": "lihaixin/udptools:client",
     			"network": "host",
 			"env": [{
 				"name": "QQ",
-				"label": "QQ联系方式",
+				"label": "你QQ联系方式，也是会员账号",
 				"description": "终端显示你的QQ联系方式."
 				},
 				{
