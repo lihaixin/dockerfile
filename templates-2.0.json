@@ -1778,8 +1778,8 @@
 				{
       				"name": "GOSTSERVERIP",
       				"label": "GOSTSERVERIP 隧道服务端IP",
-				"description": "GOSTSERVERIP 隧道服务端IP,默认192.168.123.1,不需要调整,除非本机有这个内部网段",
-      				"default": "192.168.123.1"
+				"description": "GOSTSERVERIP 隧道服务端IP,默认192.168.121.1,不需要调整,除非本机有这个内部网段",
+      				"default": "192.168.121.1"
     				},
 		     		{
       				"name": "FEC_MODE",
@@ -1881,8 +1881,8 @@
 				{
       				"name": "GOSTCLIENTIP",
       				"label": "GOSTCLIENTIP 隧道客户端IP *",
-				"description": "GOSTCLIENTIP 隧道客户端IP,默认192.168.123.2,不需要调整,除非本机有这个内部网段,如有多个客户端,只需要修改IP最后一位数字",
-      				"default": "192.168.123.11"
+				"description": "GOSTCLIENTIP 隧道客户端IP,默认192.168.121.11,不需要调整,除非本机有这个内部网段,如有多个客户端,只需要修改IP最后一位数字",
+      				"default": "192.168.121.11"
     				},
 		     		{
       				"name": "FEC_MODE",
