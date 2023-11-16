@@ -154,8 +154,7 @@
       				"label": "远端UDP服务器端口",
 				"description": "远端UDP服务器端口,一般为openvpn UDP端口",
       				"default": "1194"
-    				}
-			]
+    				}]
   			},
 		        {
     			"type": 1,
@@ -203,8 +202,7 @@
       				"label": "远端UDPTOOLS服务器端口",
 				"description": "远端UDPTOOLS服务器端口",
       				"default": "12001"
-    				}
-			]
+    				}]
   			},
 		      	{
     			"type": 1,
