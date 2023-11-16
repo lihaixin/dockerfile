@@ -1782,7 +1782,7 @@
       				"default": "192.168.123.1"
     				},
 		     		{
-      				"name": "MODE",
+      				"name": "FEC_MODE",
       				"label": "SPEEDERV2 MODE",
 				"description": "SPEEDERV2 模式,默认1,不需要调整",
       				"default": "1"
@@ -1885,7 +1885,7 @@
       				"default": "192.168.123.11"
     				},
 		     		{
-      				"name": "MODE",
+      				"name": "FEC_MODE",
       				"label": "SPEEDERV2 MODE",
 				"description": "SPEEDERV2 模式,默认1,不需要调整",
       				"default": "1"
