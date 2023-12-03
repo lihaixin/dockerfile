@@ -1982,7 +1982,7 @@
       				"default": "1320"
     				},
 		     		{
-      				"name": "MODE",
+      				"name": "FEC_MODE",
       				"label": "SPEEDERV2 MODE",
 				"description": "speederv2 模式",
       				"default": "1"
@@ -1991,13 +1991,13 @@
       				"name": "FEC_OPTIONS",
       				"label": "SPEEDERV2 FEC_OPTIONS",
 				"description": "FEC_OPTIONS 参数",
-      				"default": "1:2,2:4,8:6,20:10"
+      				"default": "4:1"
     				},
 		     		{
       				"name": "TIMEOUT",
       				"label": "SPEEDERV2 TIMEOUT",
 				"description": "SPEEDERV2 TIMEOUT 超时时间,游戏调整为0秒",
-      				"default": "1"
+      				"default": "4"
     				},
 		     		{
       				"name": "UDPMTU",
@@ -2115,7 +2115,7 @@
       				"default": "1320"
     				},
 		     		{
-      				"name": "MODE",
+      				"name": "FEC_MODE",
       				"label": "SPEEDERV2 MODE",
 				"description": "speederv2 模式",
       				"default": "1"
@@ -2124,13 +2124,13 @@
       				"name": "FEC_OPTIONS",
       				"label": "SPEEDERV2 FEC_OPTIONS",
 				"description": "FEC_OPTIONS 参数",
-      				"default": "40:1"
+      				"default": "4:1"
     				},
 		     		{
       				"name": "TIMEOUT",
       				"label": "SPEEDERV2 TIMEOUT",
 				"description": "SPEEDERV2 TIMEOUT 超时时间,游戏调整为0秒",
-      				"default": "1"
+      				"default": "4"
     				},
 		     		{
       				"name": "UDPMTU",
