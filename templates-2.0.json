@@ -2049,6 +2049,12 @@
       				"default": "82"
     				},
 				{
+      				"name": "UDPTOOL",
+      				"label": "是否启用udptool *",
+				"description": "启用udptool工具，开启加速和TCP伪装",
+      				"default": "0"
+    				},
+				{
       				"name": "FORWARD",
       				"label": "是否开启端口转发",
 				"description": "开启连续端口转发,设置为0关闭转发",
