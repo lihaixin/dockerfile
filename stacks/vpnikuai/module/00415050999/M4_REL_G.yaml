@@ -15,7 +15,7 @@ tproxy-port: 7892
 #---------------------------------------------------#
 ## 配置文件需要放置在 /etc/clash/*.yaml
 allow-lan: true
-mode: rule                             # rule / global / direct / (default is rule)
+mode: global                             # rule / global / direct / (default is rule)
 log-level: info                        # info / warning / error / debug / silent
 external-controller: 0.0.0.0:9090
 external-ui: /etc/clash/ui
@@ -157,7 +157,7 @@ proxy-providers:
       interval: 300
       
 proxy-groups:
-  - name: PROXY
+  - name: GLOBAL
     type: select
     # disable-udp: true
     url: https://www.gstatic.com/generate_204
