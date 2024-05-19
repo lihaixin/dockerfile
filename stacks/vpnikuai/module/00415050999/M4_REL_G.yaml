@@ -167,7 +167,7 @@ proxy-groups:
       - 链式落地
       - 中转代理
       - PROXY
-    - name: PROXY
+  - name: PROXY
     type: select
     # disable-udp: true
     url: https://www.gstatic.com/generate_204
