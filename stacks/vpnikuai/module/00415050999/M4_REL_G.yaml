@@ -340,7 +340,7 @@ rules:
   - RULE-SET,apple,DIRECT
   - RULE-SET,google,PROXY
   - RULE-SET,proxy,PROXY
-  - RULE-SET,direct,DIRECT
+  - RULE-SET,direct,PROXY
   - RULE-SET,lancidr,DIRECT
   - RULE-SET,cncidr,PROXY
   - RULE-SET,telegramcidr,PROXY
