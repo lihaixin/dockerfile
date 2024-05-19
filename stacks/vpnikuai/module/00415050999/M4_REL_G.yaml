@@ -166,6 +166,16 @@ proxy-groups:
       - 链式中转
       - 链式落地
       - 中转代理
+      - PROXY
+    - name: PROXY
+    type: select
+    # disable-udp: true
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 链式中转
+      - 链式落地
+      - 中转代理
   # 分隔,下面是地区分组
   - name: 香港
     type: load-balance
@@ -340,10 +350,10 @@ rules:
   - RULE-SET,apple,DIRECT
   - RULE-SET,google,PROXY
   - RULE-SET,proxy,PROXY
-  - RULE-SET,direct,PROXY
+  - RULE-SET,direct,DIRECT
   - RULE-SET,lancidr,DIRECT
-  - RULE-SET,cncidr,PROXY
+  - RULE-SET,cncidr,DIRECT
   - RULE-SET,telegramcidr,PROXY
   - GEOIP,LAN,DIRECT
-  - GEOIP,CN,PROXY
+  - GEOIP,CN,DIRECT
   - MATCH,PROXY
