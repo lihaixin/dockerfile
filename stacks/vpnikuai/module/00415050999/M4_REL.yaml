@@ -167,6 +167,14 @@ proxy-groups:
       - 链式中转
       - 链式落地
       - DIRECT
+  - name: 中转代理
+    type: select
+    # disable-udp: true
+    proxies:
+      - 香港
+      - 日本
+      - 韩国
+      - 美国
   # 分隔,下面是地区分组
   - name: 香港
     type: load-balance
@@ -209,14 +217,6 @@ proxy-groups:
     proxies:
       - 中转代理
       - 链式落地
-  - name: 中转代理
-    type: select
-    # disable-udp: true
-    proxies:
-      - 香港
-      - 日本
-      - 韩国
-      - 美国
 proxies:
   - name: 链式落地
     type: $RTYPE
