@@ -198,7 +198,7 @@ proxy-groups:
     interval: 3600 
     url: http://www.gstatic.com/generate_204
     strategy: consistent-hashing # 可选 round-robin 和 sticky-sessions
-    filter: "(?i)韩|hk200|korea"
+    filter: "(?i)韩|hk20|korea"
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/KR.png"
     use:
       - $CLASH_SUBNAME
