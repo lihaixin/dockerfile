@@ -166,6 +166,7 @@ proxy-groups:
       - DIRECT
       - 链式中转
       - 链式落地
+      - 中转代理
   - name: 中转代理
     type: select
     # disable-udp: true
