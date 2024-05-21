@@ -163,9 +163,10 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - 中转代理
       - 链式中转
       - 链式落地
-      - 中转代理
+      - DIRECT
   # 分隔,下面是地区分组
   - name: 香港
     type: load-balance
@@ -334,6 +335,7 @@ rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN,ipinfo.io,DIRECT
   - RULE-SET,private,DIRECT
   - RULE-SET,reject,REJECT
   - RULE-SET,icloud,DIRECT
