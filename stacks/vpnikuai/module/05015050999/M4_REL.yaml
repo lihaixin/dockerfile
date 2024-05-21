@@ -170,12 +170,11 @@ proxy-groups:
     type: select
     # disable-udp: true
     proxies:
-      - 香港
-      - 日本
-      - 韩国
-      - 美国
+      - 香港1
+      - 香港2
+      - 香港3
   # 分隔,下面是地区分组
-  - name: 香港
+  - name: 香港1
     type: load-balance
     interval: 3600 
     url: http://www.gstatic.com/generate_204
@@ -184,7 +183,7 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/HK.png"
     use:
       - $CLASH_SUBNAME
-  - name: 日本
+  - name: 香港2
     type: load-balance
     interval: 3600 
     url: http://www.gstatic.com/generate_204
@@ -193,22 +192,13 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/JP.png"
     use:
       - $CLASH_SUBNAME
-  - name: 韩国
+  - name: 香港3
     type: load-balance
     interval: 3600 
     url: http://www.gstatic.com/generate_204
     strategy: consistent-hashing # 可选 round-robin 和 sticky-sessions
     filter: "(?i)韩|hk20|korea"
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/KR.png"
-    use:
-      - $CLASH_SUBNAME
-  - name: 美国
-    type: load-balance
-    interval: 3600 
-    url: http://www.gstatic.com/generate_204
-    strategy: consistent-hashing # 可选 round-robin 和 sticky-sessions
-    filter: "(?i)美|us|unitedstates|united states"
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/US.png"
     use:
       - $CLASH_SUBNAME
   - name: 链式中转
