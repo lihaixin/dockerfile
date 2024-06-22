@@ -247,7 +247,7 @@ proxies:
     udp: true
     xudp: true
     flow: xtls-rprx-vision
-    servername: www.icloud.com
+    servername: www.cloudflare.com
     reality-opts:
       public-key: "R2gKMF0Tetlnesc1pPkZH9NaOeehw-f5_U9JKG_cLjU"
       short-id: ""
