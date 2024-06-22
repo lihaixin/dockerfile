@@ -226,6 +226,7 @@ proxies:
     benchmark-timeout: 5
     username: $RUSER
     password: $RPASS
+    udp: true
     tls: false # https
     skip-cert-verify: true
     
