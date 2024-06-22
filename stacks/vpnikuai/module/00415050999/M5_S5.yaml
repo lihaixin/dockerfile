@@ -263,7 +263,7 @@ proxies:
     tls: true
     udp: true
     xudp: true
-    flow: xtls-rprx-vision
+    flow: 
     servername: www.icloud.com
     reality-opts:
       public-key: "IiuIighvDsor2v-vb5s3IJbNiqwLw568auiqoXxc7FM"
