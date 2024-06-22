@@ -163,9 +163,9 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - DIRECT
       - 直连落地
       - 链式落地
-      - DIRECT
   - name: 中转落地
     type: select
     # disable-udp: true
