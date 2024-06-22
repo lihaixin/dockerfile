@@ -1,0 +1,361 @@
+###############################################################
+# 本范例来源为网友
+# 正常上网用 添加链式代理
+# 意为「没有命中规则的网络流量，统统使用代理」
+# 适用于服务器线路网络质量稳定、快速，不缺服务器流量的用户
+# 爱快004中继代理亚马逊专用版
+# https://github.com/Loyalsoldier/clash-rules
+###############################################################
+
+socks-port: $S5PORT
+port: $HTTPPORT
+mixed-port: $CLASH_MIXED_PORT
+redir-port: 7891
+tproxy-port: 7892
+#---------------------------------------------------#
+## 配置文件需要放置在 /etc/clash/*.yaml
+allow-lan: true
+mode: rule                             # rule / global / direct / (default is rule)
+log-level: info                        # info / warning / error / debug / silent
+external-controller: 0.0.0.0:9090
+external-ui: /etc/clash/ui
+# secret: "11051855-1667-4c8d-8c86-a3e3a47430bb"
+# TCP并发连接将使用所有IP进行TCP握手，并使用最先握手的IP进行后续请求
+tcp-concurrent: true
+store-selected: true
+#  find-process-mode has 3 values:always, strict, off
+#  - always, 开启，强制匹配所有进程
+#  - strict, 默认，由 mihomo 判断是否开启
+#  - off, 不匹配进程，推荐在路由器上使用此模式
+find-process-mode: off
+
+sniffer:                               #【Meta专属】sniffer域名嗅探器
+  enable: true                         # 嗅探开关
+  sniffing:                            # 嗅探协议对象：目前支持tls/http
+    - tls
+    - http
+
+  skip-domian:                         # 列表中的sni字段，保留mapping结果，不通过嗅探还原域名，优先级比force-domain高
+    - 'Mijia Cloud'                    # 米家设备，建议加
+    - 'dlg.io.mi.com'
+    - '+.apple.com'                    # 苹果域名，建议加
+  # - '*.baidu.com'                    # 支持通配符
+
+  force-domain:                        # 需要强制嗅探的域名，默认只对IP嗅探
+  # - ''                               # 去掉注释后等于全局嗅探
+    - '+.google.com'
+    - '+.v2ex.com'
+    
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - any:53
+dns:
+  enable: true                         # DNS开关(false/true)
+  listen: 0.0.0.0:1053                 # DNS监听地址
+  # enhanced-mode: redir-host
+  ipv6: false                          # IP6解析开关；如果为false，将返回ip6结果为空
+
+  nameserver:                         # 默认DNS服务器，支持udp/tcp/dot/doh/doq
+    - tls://223.6.6.6:853
+    - tls://223.5.5.5:853
+
+  fallback:                           # 回落DNS服务器，支持udp/tcp/dot/doh/doq
+    - tls://1.1.1.1:853               #【Meta专属】"#DNS"代表该DNS服务器通过名为"DNS"的proxy Group访问
+    - tls://9.9.9.9:853
+
+  fallback-filter:                    # 回落DNS服务器过滤
+    geoip: true                       # 为真时，不匹配为geoip规则的使用fallback返回结果
+    geoip-code: CN                    # geoip匹配区域设定
+    ipcidr:                           # 列表中的ip使用fallback返回解析结果
+      - 0.0.0.0/8
+      - 10.0.0.0/8
+      - 100.64.0.0/10
+      - 127.0.0.0/8
+      - 169.254.0.0/16
+      - 172.16.0.0/12
+      - 192.0.0.0/24
+      - 192.0.2.0/24
+      - 192.88.99.0/24
+      - 192.168.0.0/16
+      - 198.18.0.0/15
+      - 198.51.100.0/24
+      - 203.0.113.0/24
+      - 224.0.0.0/4
+      - 233.252.0.0/24
+      - 240.0.0.0/4
+      - 255.255.255.255/32
+      - 74.125.127.102/32
+      - 74.125.155.102/32
+      - 74.125.39.102/32
+      - 74.125.39.113/32
+      - 209.85.229.138/32
+      - 128.121.126.139/32
+      - 159.106.121.75/32
+      - 169.132.13.103/32
+      - 192.67.198.6/32
+      - 202.106.1.2/32
+      - 202.181.7.85/32
+      - 203.161.230.171/32
+      - 203.98.7.65/32
+      - 207.12.88.98/32
+      - 208.56.31.43/32
+      - 209.145.54.50/32
+      - 209.220.30.174/32
+      - 209.36.73.33/32
+      - 211.94.66.147/32
+      - 213.169.251.35/32
+      - 216.221.188.182/32
+      - 216.234.179.13/32
+      - 37.61.54.158/32
+      - 4.36.66.178/32
+      - 46.82.174.68/32
+      - 59.24.3.173/32
+      - 64.33.88.161/32
+      - 64.33.99.47/32
+      - 64.66.163.251/32
+      - 65.104.202.252/32
+      - 65.160.219.113/32
+      - 66.45.252.237/32
+      - 69.55.52.253/32
+      - 72.14.205.104/32
+      - 72.14.205.99/32
+      - 78.16.49.15/32
+      - 8.7.198.45/32
+      - 93.46.8.89/32
+      - 37.61.54.158/32
+      - 190.93.247.4/32
+      - 190.93.246.4/32
+      - 190.93.245.4/32
+      - 190.93.244.4/32
+      - 65.49.2.178/32
+      - 189.163.17.5/32
+      - 23.89.5.60/32
+      - 49.2.123.56/32
+      - 54.76.135.1/32
+      - 77.4.7.92/32
+      - 118.5.49.6/32
+      - 159.24.3.173/32
+      - 188.5.4.96/32
+      - 197.4.4.12/32
+      - 220.250.64.24/32
+      
+# 节点配置文件统一存放在 /etc/clash/proxies/ 目录中
+proxy-providers:
+  # 从链接导入的配置文件
+  $CLASH_SUBNAME:
+    type: $CLASH_SUBTYPE
+    path: /etc/clash/proxies/$CLASH_SUBNAME.yaml
+    url: $CLASH_SUBURL
+    interval: 3600 
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+      
+proxy-groups:
+  - name: PROXY
+    type: select
+    # disable-udp: true
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 中转落地
+      - 直连落地
+      - 链式落地
+      - DIRECT
+  - name: 中转代理
+    type: select
+    # disable-udp: true
+    proxies:
+      - 香港
+      - 日本
+      - 韩国
+      - 美国
+  # 分隔,下面是地区分组
+  - name: 香港
+    type: load-balance
+    interval: 3600 
+    url: http://www.gstatic.com/generate_204
+    strategy: consistent-hashing # 可选 round-robin 和 sticky-sessions
+    filter: "(?i)港|hk|hongkong|hong kong"
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/HK.png"
+    use:
+      - $CLASH_SUBNAME
+  - name: 日本
+    type: load-balance
+    interval: 3600 
+    url: http://www.gstatic.com/generate_204
+    strategy: consistent-hashing # 可选 round-robin 和 sticky-sessions
+    filter: "(?i)日|jp|japan"
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/JP.png"
+    use:
+      - $CLASH_SUBNAME
+  - name: 韩国
+    type: load-balance
+    interval: 3600 
+    url: http://www.gstatic.com/generate_204
+    strategy: consistent-hashing # 可选 round-robin 和 sticky-sessions
+    filter: "(?i)韩|kr|korea"
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/KR.png"
+    use:
+      - $CLASH_SUBNAME
+  - name: 美国
+    type: load-balance
+    interval: 3600 
+    url: http://www.gstatic.com/generate_204
+    strategy: consistent-hashing # 可选 round-robin 和 sticky-sessions
+    filter: "(?i)美|us|unitedstates|united states"
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/US.png"
+    use:
+      - $CLASH_SUBNAME
+
+proxies:
+  - name: 链式落地
+    type: $RTYPE
+    server: $RSERVER
+    port: $RPORT
+    benchmark-url: http://www.apple.com
+    benchmark-timeout: 5
+    username: $RUSER
+    password: $RPASS
+    udp: true
+    tls: false # https
+    skip-cert-verify: true
+    dialer-proxy: 中转落地
+proxies:
+  - name: 直连落地
+    type: $RTYPE
+    server: $RSERVER
+    port: $RPORT
+    benchmark-url: http://www.apple.com
+    benchmark-timeout: 5
+    username: $RUSER
+    password: $RPASS
+    udp: true
+    tls: false # https
+    skip-cert-verify: true
+    
+# clash-rules项目提供的规则集
+# 规则文件统一存放在 /etc/clash/rules/ 目录中
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: /etc/clash/rules/reject.yaml
+    interval: 86400
+
+  icloud:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
+    path: /etc/clash/rules/icloud.yaml
+    interval: 86400
+
+  apple:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
+    path: /etc/clash/rules/apple.yaml
+    interval: 86400
+
+  google:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+    path: /etc/clash/rules/google.yaml
+    interval: 86400
+
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    path: /etc/clash/rules/proxy.yaml
+    interval: 86400
+
+  direct:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: /etc/clash/rules/direct.yaml
+    interval: 86400
+
+  private:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: /etc/clash/rules/private.yaml
+    interval: 86400
+
+  gfw:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    path: /etc/clash/rules/gfw.yaml
+    interval: 86400
+
+  greatfire:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/greatfire.txt"
+    path: /etc/clash/rules/greatfire.yaml
+    interval: 86400
+
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
+    path: /etc/clash/rules/tld-not-cn.yaml
+    interval: 86400
+
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    path: /etc/clash/rules/telegramcidr.yaml
+    interval: 86400
+
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+    path: /etc/clash/rules/cncidr.yaml
+    interval: 86400
+
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: /etc/clash/rules/lancidr.yaml
+    interval: 86400
+    
+  applications:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
+    path: /etc/clash/rules/applications.yaml
+    interval: 86400
+
+# 规则
+rules:
+  - RULE-SET,applications,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN,ipinfo.io,PROXY
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,REJECT
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,google,PROXY
+  - RULE-SET,proxy,PROXY
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - RULE-SET,telegramcidr,PROXY
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,PROXY
