@@ -212,7 +212,6 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/US.png"
     use:
       - $CLASH_SUBNAME
-
 proxies:
   - name: 链式落地
     type: $RTYPE
@@ -226,7 +225,6 @@ proxies:
     tls: false # https
     skip-cert-verify: true
     dialer-proxy: 中转落地
-proxies:
   - name: 直连落地
     type: $RTYPE
     server: $RSERVER
