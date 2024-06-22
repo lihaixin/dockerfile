@@ -166,7 +166,6 @@ proxy-groups:
       - DIRECT
       - 直连落地
       - 链式落地
-      - reality
   - name: 中转落地
     type: select
     # disable-udp: true
@@ -175,6 +174,8 @@ proxy-groups:
       - 日本
       - 韩国
       - 美国
+      - reality1
+      - reality2
   # 分隔,下面是地区分组
   - name: 香港
     type: select
@@ -236,7 +237,7 @@ proxies:
     udp: true
     tls: false # https
     skip-cert-verify: true
-  - name: reality
+  - name: reality1
     type: vless
     server: 8.210.204.165
     port: 43686
@@ -249,6 +250,21 @@ proxies:
     servername: www.icloud.com
     reality-opts:
       public-key: "R2gKMF0Tetlnesc1pPkZH9NaOeehw-f5_U9JKG_cLjU"
+      short-id: ""
+    client-fingerprint: chrome
+  - name: reality2
+    type: vless
+    server: 8.210.204.165
+    port: 28589
+    uuid: 7f0730b4-2864-47a5-c720-8b59e0b9e603
+    network: grpc
+    tls: true
+    udp: true
+    xudp: true
+    flow: xtls-rprx-vision
+    servername: www.icloud.com
+    reality-opts:
+      public-key: "IiuIighvDsor2v-vb5s3IJbNiqwLw568auiqoXxc7FM"
       short-id: ""
     client-fingerprint: chrome
     
