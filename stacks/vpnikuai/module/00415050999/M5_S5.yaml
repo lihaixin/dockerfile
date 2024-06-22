@@ -163,7 +163,6 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 中转落地
       - 直连落地
       - 链式落地
       - DIRECT
@@ -177,7 +176,7 @@ proxy-groups:
       - 美国
   # 分隔,下面是地区分组
   - name: 香港
-    type: load-balance
+    type: select
     interval: 3600 
     url: http://www.gstatic.com/generate_204
     strategy: consistent-hashing # 可选 round-robin 和 sticky-sessions
