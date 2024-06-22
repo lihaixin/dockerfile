@@ -166,6 +166,7 @@ proxy-groups:
       - DIRECT
       - 直连落地
       - 链式落地
+      - reality
   - name: 中转落地
     type: select
     # disable-udp: true
@@ -235,6 +236,21 @@ proxies:
     udp: true
     tls: false # https
     skip-cert-verify: true
+  - name: reality
+    type: vless
+    server: 8.210.204.165
+    port: 43686
+    uuid: 75e6dd09-61fd-483f-fd97-f3f30a828dfd
+    network: tcp
+    tls: true
+    udp: true
+    xudp: true
+    flow: xtls-rprx-vision
+    servername: www.icloud.com
+    reality-opts:
+      public-key: "R2gKMF0Tetlnesc1pPkZH9NaOeehw-f5_U9JKG_cLjU"
+      short-id: ""
+    client-fingerprint: chrome
     
 # clash-rules项目提供的规则集
 # 规则文件统一存放在 /etc/clash/rules/ 目录中
