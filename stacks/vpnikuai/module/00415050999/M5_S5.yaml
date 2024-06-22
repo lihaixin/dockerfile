@@ -258,6 +258,8 @@ proxies:
     port: 28589
     uuid: 7f0730b4-2864-47a5-c720-8b59e0b9e603
     network: grpc
+    grpc-opts:
+      grpc-service-name: "grpc"
     tls: true
     udp: true
     xudp: true
