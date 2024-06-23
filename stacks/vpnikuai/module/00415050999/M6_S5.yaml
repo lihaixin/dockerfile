@@ -273,6 +273,7 @@ rules:
   - DOMAIN,yacd.haishan.me,DIRECT
   - DOMAIN,cdn.jsdelivr.net,DIRECT
   - DOMAIN,ipinfo.io,PROXY
+  - DOMAIN-SUFFIX,ipinfo.io,PROXY
   - RULE-SET,private,DIRECT
   - RULE-SET,reject,REJECT
   - RULE-SET,icloud,DIRECT
