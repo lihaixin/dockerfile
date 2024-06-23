@@ -149,8 +149,8 @@ proxy-groups:
   - name: PROXY
     type: select
     # disable-udp: true
-    url: https://www.gstatic.com/generate_204
-    interval: 300
+    # url: https://www.gstatic.com/generate_204
+    # interval: 300
     proxies:
       - SOCKS5
       - DIRECT
@@ -159,8 +159,6 @@ proxies:
     type: $RTYPE
     server: $RSERVER
     port: $RPORT
-    url: "https://cp.cloudflare.com/generate_204"
-    interval: 300
     username: $RUSER
     password: $RPASS
     udp: true
