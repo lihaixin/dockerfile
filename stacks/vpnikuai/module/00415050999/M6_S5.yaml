@@ -164,67 +164,6 @@ proxy-groups:
     interval: 300
     proxies:
       - 直连落地
-      - 链式落地
-      - 中转落地
-  - name: 中转落地
-    type: select
-    # disable-udp: true
-    proxies:
-      - 香港
-      - 日本
-      - 韩国
-      - 美国
-      - reality1
-  # 分隔,下面是地区分组
-  - name: 香港
-    type: select
-    interval: 3600 
-    url: http://www.gstatic.com/generate_204
-    strategy: consistent-hashing # 可选 round-robin 和 sticky-sessions
-    filter: "(?i)港|hk|hongkong|hong kong"
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/HK.png"
-    use:
-      - $CLASH_SUBNAME
-  - name: 日本
-    type: load-balance
-    interval: 3600 
-    url: http://www.gstatic.com/generate_204
-    strategy: consistent-hashing # 可选 round-robin 和 sticky-sessions
-    filter: "(?i)日|jp|japan"
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/JP.png"
-    use:
-      - $CLASH_SUBNAME
-  - name: 韩国
-    type: load-balance
-    interval: 3600 
-    url: http://www.gstatic.com/generate_204
-    strategy: consistent-hashing # 可选 round-robin 和 sticky-sessions
-    filter: "(?i)韩|kr|korea"
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/KR.png"
-    use:
-      - $CLASH_SUBNAME
-  - name: 美国
-    type: load-balance
-    interval: 3600 
-    url: http://www.gstatic.com/generate_204
-    strategy: consistent-hashing # 可选 round-robin 和 sticky-sessions
-    filter: "(?i)美|us|unitedstates|united states"
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/US.png"
-    use:
-      - $CLASH_SUBNAME
-proxies:
-  - name: 链式落地
-    type: $RTYPE
-    server: $RSERVER
-    port: $RPORT
-    benchmark-url: http://www.apple.com
-    benchmark-timeout: 5
-    username: $RUSER
-    password: $RPASS
-    udp: true
-    tls: false # https
-    skip-cert-verify: true
-    dialer-proxy: 中转落地
   - name: 直连落地
     type: $RTYPE
     server: $RSERVER
@@ -236,38 +175,6 @@ proxies:
     udp: true
     tls: false # https
     skip-cert-verify: true
-  - name: reality1
-    type: vless
-    server: 8.210.204.165
-    port: 43686
-    uuid: 75e6dd09-61fd-483f-fd97-f3f30a828dfd
-    network: tcp
-    tls: true
-    udp: true
-    xudp: true
-    flow: xtls-rprx-vision
-    servername: www.cloudflare.com
-    reality-opts:
-      public-key: "R2gKMF0Tetlnesc1pPkZH9NaOeehw-f5_U9JKG_cLjU"
-      short-id: ""
-    client-fingerprint: chrome
-  - name: reality2
-    type: vless
-    server: 8.210.204.165
-    port: 28589
-    uuid: 7f0730b4-2864-47a5-c720-8b59e0b9e603
-    network: grpc
-    grpc-opts:
-      grpc-service-name: "grpc"
-    tls: true
-    udp: true
-    xudp: true
-    flow: 
-    servername: www.icloud.com
-    reality-opts:
-      public-key: "IiuIighvDsor2v-vb5s3IJbNiqwLw568auiqoXxc7FM"
-      short-id: ""
-    client-fingerprint: chrome
     
 # clash-rules项目提供的规则集
 # 规则文件统一存放在 /etc/clash/rules/ 目录中
