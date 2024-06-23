@@ -144,19 +144,9 @@ dns:
       - 220.250.64.24/32
       
 # 节点配置文件统一存放在 /etc/clash/proxies/ 目录中
-proxy-providers:
-  # 从链接导入的配置文件
-  $CLASH_SUBNAME:
-    type: $CLASH_SUBTYPE
-    path: /etc/clash/proxies/$CLASH_SUBNAME.yaml
-    url: $CLASH_SUBURL
-    interval: 3600 
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
+
       
-proxy-groups:
+proxies:
   - name: PROXY
     type: select
     # disable-udp: true
@@ -164,6 +154,7 @@ proxy-groups:
     interval: 300
     proxies:
       - 直连落地
+      - DIRECT
   - name: 直连落地
     type: $RTYPE
     server: $RSERVER
