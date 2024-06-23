@@ -176,6 +176,7 @@ proxy-groups:
     proxies:
       - 直连落地
       - 链式落地
+      - 中转落地
   - name: 中转落地
     type: select
     # disable-udp: true
