@@ -271,6 +271,7 @@ rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN,cdn.jsdelivr.net,DIRECT
   - DOMAIN,ipinfo.io,PROXY
   - RULE-SET,private,DIRECT
   - RULE-SET,reject,REJECT
