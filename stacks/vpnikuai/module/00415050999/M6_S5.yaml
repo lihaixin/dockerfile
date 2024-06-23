@@ -167,6 +167,7 @@ proxy-groups:
       - REJECT
       - 直连落地
       - 链式落地
+      - 中转落地
       - PROXY
   - name: PROXY
     type: select
