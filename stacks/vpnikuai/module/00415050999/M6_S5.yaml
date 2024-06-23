@@ -159,8 +159,8 @@ proxies:
     type: $RTYPE
     server: $RSERVER
     port: $RPORT
-    benchmark-url: http://www.apple.com
-    benchmark-timeout: 5
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
     username: $RUSER
     password: $RPASS
     udp: true
