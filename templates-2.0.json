@@ -1630,8 +1630,9 @@
     				}],
 			"env": [{
 				"name": "QQ",
-				"label": "QQ联系方式 *",
-				"description": "终端显示你的QQ联系方式."
+				"label": "模板QQ标签 *",
+				"description": "不同QQ标签，应用不同的模板."，
+				"default": "0001071852436"
 				},
 				{
       				"name": "DOMAIN",
@@ -1676,8 +1677,9 @@
     				}],
 			"env": [{
 				"name": "QQ",
-				"label": "QQ联系方式 *",
-				"description": "终端显示你的QQ联系方式."
+				"label": "模板QQ标签 *",
+				"description": "不同QQ标签，应用不同的模板."，
+				"default": "0001071852436"
 				},
 				{
       				"name": "DOMAIN",
@@ -1770,8 +1772,9 @@
   			"network": "host",
 			"env": [{
 				"name": "QQ",
-				"label": "QQ联系方式 *",
-				"description": "终端显示你的QQ联系方式."
+				"label": "模板QQ标签 *",
+				"description": "不同QQ标签，应用不同的模板."，
+				"default": "0001071852436"
 				},
 				{
       				"name": "GOST_PORT",
@@ -1837,8 +1840,9 @@
   			"network": "host",
 			"env": [{
 				"name": "QQ",
-				"label": "QQ联系方式 *",
-				"description": "终端显示你的QQ联系方式."
+				"label": "模板QQ标签 *",
+				"description": "不同QQ标签，应用不同的模板."，
+				"default": "0001071852436"
 				},
 				{
       				"name": "FORWARD",
@@ -2175,8 +2179,9 @@
   			"network": "host",
 			"env": [{
 				"name": "QQ",
-				"label": "QQ联系方式 *",
-				"description": "终端显示你的QQ联系方式."
+				"label": "模板QQ标签 *",
+				"description": "不同QQ标签，应用不同的模板."，
+				"default": "0001071852436"
 				},
 				{
       				"name": "TYPE",
