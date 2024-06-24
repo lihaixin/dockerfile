@@ -1631,7 +1631,7 @@
 			"env": [{
 				"name": "QQ",
 				"label": "模板QQ标签 *",
-				"description": "不同QQ标签，应用不同的模板."，
+				"description": "不同QQ标签，应用不同的模板.",
 				"default": "0001071852436"
 				},
 				{
@@ -1678,7 +1678,7 @@
 			"env": [{
 				"name": "QQ",
 				"label": "模板QQ标签 *",
-				"description": "不同QQ标签，应用不同的模板."，
+				"description": "不同QQ标签，应用不同的模板.",
 				"default": "0001071852436"
 				},
 				{
@@ -1773,7 +1773,7 @@
 			"env": [{
 				"name": "QQ",
 				"label": "模板QQ标签 *",
-				"description": "不同QQ标签，应用不同的模板."，
+				"description": "不同QQ标签，应用不同的模板.",
 				"default": "0001071852436"
 				},
 				{
@@ -1841,7 +1841,7 @@
 			"env": [{
 				"name": "QQ",
 				"label": "模板QQ标签 *",
-				"description": "不同QQ标签，应用不同的模板."，
+				"description": "不同QQ标签，应用不同的模板.",
 				"default": "0001071852436"
 				},
 				{
@@ -2180,7 +2180,7 @@
 			"env": [{
 				"name": "QQ",
 				"label": "模板QQ标签 *",
-				"description": "不同QQ标签，应用不同的模板."，
+				"description": "不同QQ标签，应用不同的模板.",
 				"default": "0001071852436"
 				},
 				{
