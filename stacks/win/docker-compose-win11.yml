@@ -1,0 +1,39 @@
+version: "3.7"
+services:
+  windows:
+    image: dockurr/windows
+    container_name: windows
+    devices:
+      - /dev/kvm
+      - /dev/vhost-net
+    device_cgroup_rules:
+      - 'c *:* rwm'
+    cap_add:
+      - NET_ADMIN
+    stop_grace_period: 2m
+    restart: on-failure
+    environment:
+      VERSION: "win11" # 系统标识
+      RAM_SIZE: "4G" # 分配的内存
+      CPU_CORES: "4" # 分配的核心
+      DISK_SIZE: "40G" # 分配储存空间
+      LANGUAGE: "Chinese"
+      DHCP: "Y"
+      
+    volumes:
+      - /var/win:/storage
+      - /var/lib/vz/template/iso/win11.iso:/custom.iso
+    networks:
+      wan1:
+      # ipv4_address: 192.168.2.11             # 修改不同的IP *
+      
+networks:
+  wan1:
+    name: 1macvlan
+    driver: macvlan
+    driver_opts:
+      parent: vmbr0                                  # 对接虚拟机网卡名称，爱快内置的debian12虚拟机第一个网卡默认 ens3
+    ipam:
+      config:
+        - subnet: 192.168.2.0/24                    # 局域网网段范围
+          gateway: 192.168.2.254                     # 局域网网关
