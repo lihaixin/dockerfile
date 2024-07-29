@@ -1,0 +1,30 @@
+version: "3.7"
+services:
+  macos:
+    image: dockurr/macos
+    container_name: macos
+    devices:
+      - /dev/kvm
+    cap_add:
+      - NET_ADMIN
+    stop_grace_period: 2m
+    restart: on-failure
+    environment:
+      VERSION: "ventura" # 系统标识  支持 sonoma ventura monterey big-sur
+      
+    volumes:
+      - /var/macos:/storage
+    networks:
+      wan1:
+        ipv4_address: 192.168.2.11             # 修改不同的IP *
+      
+networks:
+  wan1:
+    name: 1macvlan
+    driver: macvlan
+    driver_opts:
+      parent: vmbr0                                  # 对接虚拟机网卡名称，爱快内置的debian12虚拟机第一个网卡默认 ens3
+    ipam:
+      config:
+        - subnet: 192.168.2.0/24                    # 局域网网段范围
+          gateway: 192.168.2.254                     # 局域网网关
