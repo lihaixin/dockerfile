@@ -14,7 +14,7 @@ services:
       WEB_VNC: true
       
     volumes:
-      - /var/macos:/storage
+      - /var/android:/storage
     networks:
       wan1:
         ipv4_address: 192.168.2.12            # 修改不同的IP *
