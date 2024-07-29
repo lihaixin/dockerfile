@@ -1,0 +1,31 @@
+version: "3.7"
+services:
+  macos:
+    image: budtmo/docker-android:emulator_11.0
+    container_name: android
+    devices:
+      - /dev/kvm
+    cap_add:
+      - NET_ADMIN
+    stop_grace_period: 2m
+    restart: on-failure
+    environment:
+      MULATOR_DEVICE: "Samsung Galaxy S10" # 系统标识
+      WEB_VNC: true
+      
+    volumes:
+      - /var/macos:/storage
+    networks:
+      wan1:
+        ipv4_address: 192.168.2.12            # 修改不同的IP *
+      
+networks:
+  wan1:
+    name: 1macvlan
+    driver: macvlan
+    driver_opts:
+      parent: vmbr0                                  # 对接虚拟机网卡名称，爱快内置的debian12虚拟机第一个网卡默认 ens3
+    ipam:
+      config:
+        - subnet: 192.168.2.0/24                    # 局域网网段范围
+          gateway: 192.168.2.254                     # 局域网网关
