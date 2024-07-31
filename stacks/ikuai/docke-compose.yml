@@ -1,0 +1,32 @@
+version: "3.7"
+services:
+  macos:
+    image: qemux/qemu-docker
+    container_name: ikuai
+    devices:
+      - /dev/kvm
+    cap_add:
+      - NET_ADMIN
+    stop_grace_period: 2m
+    restart: on-failure
+    environment:
+      BOOT: "https://patch.ikuai8.com/3.x/iso/iKuai8_x32_3.7.13_Build202406212115.iso"
+      DISK_SIZE: "2G"
+      WEB_VNC: true
+      
+    volumes:
+      - /var/ikuai:/storage
+    networks:
+      wan1:
+        ipv4_address: 192.168.2.12            # 修改不同的IP *
+      
+networks:
+  wan1:
+    name: 1macvlan
+    driver: macvlan
+    driver_opts:
+      parent: vmbr0                                  # 对接虚拟机网卡名称，爱快内置的debian12虚拟机第一个网卡默认 ens3
+    ipam:
+      config:
+        - subnet: 192.168.2.0/24                    # 局域网网段范围
+          gateway: 192.168.2.254                     # 局域网网关
