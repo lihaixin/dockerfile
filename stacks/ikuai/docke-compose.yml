@@ -1,6 +1,6 @@
 version: "3.7"
 services:
-  macos:
+  ikuai:
     image: qemux/qemu-docker
     container_name: ikuai
     devices:
