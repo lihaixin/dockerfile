@@ -5,20 +5,26 @@ services:
     container_name: ikuai
     devices:
       - /dev/kvm
+      - /dev/vhost-net
+    device_cgroup_rules:
+      - 'c *:* rwm'
     cap_add:
       - NET_ADMIN
     stop_grace_period: 2m
     restart: on-failure
     environment:
-      BOOT: "https://patch.ikuai8.com/3.x/iso/iKuai8_x32_3.7.13_Build202406212115.iso"
-      DISK_SIZE: "2G"
+      ARGUMENTS: "-netdev user,id=hostnet1 -device virtio-net-pci,romfile=,netdev=hostnet1,id=net1"
+      BOOT: "https://patch.ikuai8.com/3.x/iso/iKuai8_x64_3.7.13_Build202406212115.iso"
+      DISK_SIZE: "4G"
+      RAM_SIZE: "4G"
       WEB_VNC: true
+      DHCP: "Y"
       
     volumes:
       - /var/ikuai:/storage
     networks:
       wan1:
-        ipv4_address: 192.168.2.12            # 修改不同的IP *
+
       
 networks:
   wan1:
