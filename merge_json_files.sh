@@ -15,7 +15,7 @@ TEMPEOF
 
 # 使用find命令查找当前子目录中的.json文件
 # 然后使用cat命令将它们的内容追加到输出文件中
-find . -type f -name "*.json" -not -path "./index.json" | while read file; do
+find . -type f \( -name "1.json" -o -name "2.json" -o -name "3.json" \) ! -path "./index.json" | while read file; do
     cat "$file" >> "$output_file"
 done
 
