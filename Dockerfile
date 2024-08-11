@@ -1,6 +1,6 @@
 FROM --platform=${TARGETPLATFORM} alpine:latest
 ARG TARGETARCH
-RUN apk update &&apk add nginx
+RUN apk update && apk add nginx pandoc
 # COPY templates.json /usr/share/nginx/html/templates.json
 COPY --chmod=755 ./stacks /usr/share/nginx/html/
 COPY --chmod=755 merge_json_files.sh /usr/bin/merge_json_files.sh
