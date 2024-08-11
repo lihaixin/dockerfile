@@ -1,8 +1,8 @@
-name: Update Docker Hub Image Description from README
+name: Update Docker Hub README
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
     paths:
       - 'README.md'
 
