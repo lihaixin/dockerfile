@@ -8,4 +8,4 @@ COPY --chmod=755 ./merge_json_files.sh /usr/bin/merge_json_files.sh
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 EXPOSE 80
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT [""/entrypoint.sh""]
