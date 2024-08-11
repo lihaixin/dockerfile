@@ -13,7 +13,8 @@ docker buildx build -f Dockerfile.3.14 --platform linux/arm64,linux/amd64 -t lih
 
 [点击call me](./contactme.md)
 
-## 所有的Docker 模板
+## 所有的Docker 模板 
+[模板格式](https://docs.portainer.io/advanced/app-templates/format#administrator-only)
 
 ### docker
 |序号|容器名称|默认端口|地址|备注|
