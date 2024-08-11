@@ -11,7 +11,7 @@ cat >> $output_file<< TEMPEOF
 	"version": "2",
 	"templates": [
 TEMPEOF
-fi
+
 
 # 使用find命令查找当前子目录中的.json文件
 # 然后使用cat命令将它们的内容追加到输出文件中
