@@ -3,7 +3,7 @@
 
 ## 联系我
 
-+V: Gsanjin01
++V: Gsanjin01 记得注明来源
 
 ## 所有的Docker 模板 
 [模板格式](https://docs.portainer.io/advanced/app-templates/format#administrator-only)
