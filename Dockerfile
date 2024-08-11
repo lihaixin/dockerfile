@@ -1,4 +1,4 @@
-FROM --platform=${TARGETPLATFORM} alpine:latest
+FROM alpine:latest
 ARG TARGETARCH
 RUN apk update && apk add nginx pandoc
 # COPY templates.json /usr/share/nginx/html/templates.json
