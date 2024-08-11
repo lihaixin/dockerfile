@@ -1,0 +1,21 @@
+		{
+			"type": 1,
+			"title": "portainer",
+			"name": "portainer",
+			"description": "自定义portainer管理面包,包含常用模板,管理地址:https://<ip>:9443",
+			"categories": ["docker"],
+			"platform": "linux",
+			"restart_policy": "always",
+			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/portainer.png",
+			"image": "lihaixin/portainer:2.19.1",
+			"network": "host",
+			"volumes": [{
+				"container": "/var/run/docker.sock",
+				"bind": "/var/run/docker.sock"
+				},
+				{
+				"volume": "portainer_data",
+				"container": "/data" 
+				}]
+			}
+      ,
