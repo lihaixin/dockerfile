@@ -1,0 +1,25 @@
+{
+    			"type": 1,
+    			"title": "firefox proxy",
+			"name": "firefox proxy",
+    			"description": "firefox browser use gost proxy",
+    			"categories": ["browser"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/firefox.png",
+   			"image": "lihaixin/firefox:s5",
+    			"volumes": ["/root/Downloads"],
+			"env": [{
+      				"name": "TZ",
+      				"label": "TZ",
+      				"set": "Asia/Chongqing"
+    				},
+    				{
+      				"name": "VNC_PW",
+      				"label": "VNC_PW",
+      				"set": "test"
+    				}],
+    			"ports": [
+      				"8787/tcp"
+    				]
+ 			 }
+,
