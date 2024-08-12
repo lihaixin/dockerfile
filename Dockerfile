@@ -9,4 +9,4 @@ COPY --chmod=755 ./README.md /usr/share/nginx/html/
 COPY --chmod=755 ./merge_json_files.sh /usr/bin/merge_json_files.sh
 COPY --chmod=755 ./entrypoint.sh /entrypoint.sh
 
-CMD ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
