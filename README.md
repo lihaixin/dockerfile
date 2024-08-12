@@ -17,6 +17,13 @@ containrrr/watchtower --cleanup dockerfile
 
 +V: Gsanjin01 记得注明来源
 
+## 模板说明
+
+提供两种模板方式，一种使用docker容器，一种使用docker stacks部署
+
+1. 容器 使用docker 桥接部署网络
+2. stacks使用自定义桥接或者macvlan网络
+
 ## 所有的Docker 模板 
 [模板格式](https://docs.portainer.io/advanced/app-templates/format#administrator-only)
 
