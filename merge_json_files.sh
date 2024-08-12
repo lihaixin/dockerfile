@@ -37,7 +37,7 @@ TEMPEOF
 	]
 }
 TEMPEOF
-    echo "合并完成，所有.json文件内容已保存至 $output_file"
+    echo "合并完成，所有"$files"文件内容已保存至 $output_file"
 }
 
 # 示例用法：
