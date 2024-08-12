@@ -1,0 +1,69 @@
+{
+    			"type": 1,
+    			"title": "gost_vpn_server_8421",
+			"name": "gost_vpn_server_8421",
+    			"description": "gost vpn游戏加速隧道服务器端",
+			"note": "部署gostvpn游戏加速隧道, 有<*>选项需要调整 更多点击<a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> 了接更多信息",
+    			"hostname": "gostvpnserver",
+			"categories": ["gost"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",
+    			"image": "lihaixin/gost:vpn.s",
+			"privileged": true,
+  			"network": "host",
+			"env": [{
+				"name": "QQ",
+				"label": "模板QQ标签 *",
+				"description": "不同QQ标签，应用不同的模板.",
+				"default": "0001071852436"
+				},
+				{
+      				"name": "GOST_PORT",
+      				"label": "GOST UDP 隧道端口",
+				"description": "用于GOST端口,默认为8421,不需要调整,除非8421被其他程序占用",
+      				"default": "8421"
+    				},
+				{
+      				"name": "GOSTSERVERIP",
+      				"label": "GOSTSERVERIP 隧道服务端IP",
+				"description": "GOSTSERVERIP 隧道服务端IP,默认192.168.121.1,不需要调整,除非本机有这个内部网段",
+      				"default": "192.168.121.1"
+    				},
+		     		{
+      				"name": "FEC_MODE",
+      				"label": "SPEEDERV2 MODE",
+				"description": "SPEEDERV2 模式,默认1,不需要调整",
+      				"default": "1"
+    				},
+		     		{
+      				"name": "FEC_OPTIONS",
+      				"label": "SPEEDERV2 FEC_OPTIONS 参数",
+				"description": "SPEEDERV2 FEC_OPTIONS 参数,根据网络质量进行调整,两边可以不一样,调整发包率,服务器带宽足,可以调整为2:2(2倍)发包",
+      				"default": "1:2,2:4,8:6,20:10"
+    				},
+		     		{
+      				"name": "PASSWORD",
+      				"label": "SPEEDERV2 PASSWORD *",
+				"description": "SPEEDERV2 密码,服务器和客户端一致,需要调整",
+      				"default": "pasSw0rd"
+    				},
+		     		{
+      				"name": "TIMEOUT",
+      				"label": "SPEEDERV2 TIMEOUT",
+				"description": "SPEEDERV2 TIMEOUT,游戏用户保持默认为1就好,一般不需要调整",
+      				"default": "4"
+    				},
+		     		{
+      				"name": "INTERVAL",
+      				"label": "SPEEDERV2 INTERVAL",
+				"description": "SPEEDERV2 INTERVAL,将每个 fec 组分散到 <INTERVAL> ms 的间隔内，以防止突发丢包,默认值：0 保持默认,不需要调整",
+      				"default": "1:4"
+    				},
+		     		{
+      				"name": "OPTION",
+      				"label": "SPEEDERV2 OPTION",
+				"description": "SPEEDERV2 OPTION,这里添加额外的SPEEDERV2 参数",
+      				"default": "--disable-obscure"
+    				}]
+  		}
+,
