@@ -1,0 +1,15 @@
+{
+    			"type": 1,
+    			"title": "chromium",
+			"name": "chromium",
+    			"description": "chromium browser",
+    			"categories": ["browser"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/chromium.png",
+    			"image": "lihaixin/chromium:latest",
+    			"volumes": ["/root/Downloads"],
+    			"ports": [
+      				"8787/tcp"
+    				]
+  			}
+,
