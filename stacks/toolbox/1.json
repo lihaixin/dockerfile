@@ -1,0 +1,21 @@
+{
+    			"type": 1,
+    			"title": "toolbox",
+			"name": "toolbox",
+    			"description": "常用linux工具集合、包括dig iperf3 htop mtr等,可以使用lh <ssh端口>快速访问宿主机",
+    			"categories": ["tools"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/ttyd.png",
+			"note": "常用linux工具集合、包括dig iperf3 htop 等 <a href=\"https://hub.docker.com/r/lihaixin/toolbox\" target=\"_blank\">更多查看</a>",
+    			"image": "lihaixin/toolbox",
+    			"administrator_only": true,
+			"network": "host",
+			"privileged": true,
+			"interactive": true,
+			"volumes": [
+				{
+      				"container": "/root/.ssh/id_rsa",
+				"bind": "/root/.ssh/id_rsa"
+    				}]
+  			}
+,
