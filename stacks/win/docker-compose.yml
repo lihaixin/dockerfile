@@ -2,7 +2,6 @@ version: "2"
 services:
   windows:
     image: dockurr/windows
-    container_name: windows
     devices:
       - /dev/kvm
       - /dev/vhost-net
