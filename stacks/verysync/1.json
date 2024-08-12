@@ -1,0 +1,24 @@
+{
+    			"type": 1,
+    			"title": "verysync",
+			"name": "verysync",
+    			"description": "file sync uses verysync",
+    			"categories": ["file"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/verysync.png",
+    			"image": "lihaixin/verysync",
+    			"ports": [
+      				"8886/tcp",
+      				"22330/tcp",
+      				"22027/udp",
+      				"22037/udp"
+    				],
+    			"restart_policy": "always",
+			"volumes": [{
+				"container": "/mnt"
+				},
+				{
+				"container": "/verysync"
+				}]
+  			}
+,
