@@ -1,7 +1,6 @@
 {
     			"type": 1,
-    			"title": "ghproxy",
-			"name": "ghproxy-84",
+    			"title": "ghproxy-84",
     			"description": "github proxy",
 			"note": "Deploys an github proxy, please refer to <a href=\"https://github.com/hunshcn/gh-proxy\" target=\"_blank\">gost doc</a> for production deployments.",
     			"hostname": "ghproxy",
