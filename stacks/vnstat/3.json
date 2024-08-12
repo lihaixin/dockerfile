@@ -16,4 +16,5 @@
 				"url": "https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/vnstat/docker-compose.yml"
 				}
-		        },
+		        }
+,
