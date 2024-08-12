@@ -1,4 +1,4 @@
-version: '3.7'
+version: '2'
 services:
  openvpn1:                                     # 服务名称
     image: "lihaixin/openvpn"
