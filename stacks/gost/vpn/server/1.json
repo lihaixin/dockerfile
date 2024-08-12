@@ -1,10 +1,8 @@
 {
     			"type": 1,
     			"title": "gost_vpn_server_8421",
-			"name": "gost_vpn_server_8421",
     			"description": "gost vpn游戏加速隧道服务器端",
 			"note": "部署gostvpn游戏加速隧道, 有<*>选项需要调整 更多点击<a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> 了接更多信息",
-    			"hostname": "gostvpnserver",
 			"categories": ["gost"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",
