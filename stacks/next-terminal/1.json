@@ -1,0 +1,42 @@
+{
+    			"type": 1,
+    			"title": "next-terminal",
+			"name": "next-terminal-sqlite-8088",
+			"image": "lihaixin/next-terminal",
+    			"description": "Next Terminal是使用Golang和React开发的一款HTML5的远程桌面网关，具有小巧、易安装、易使用、资源占用小的特点，支持RDP、SSH、VNC和Telnet协议的连接和管理 ",
+			"note": "可以通过这个搭建中转机用 <a href=\"https://hub.docker.com/r/lihaixin/next-terminal\" target=\"_blank\">更多查看</a>",
+    			"categories": ["ssh"],
+    			"platform": "linux",
+			"restart_policy": "always",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/Next-Terminal.png",
+			"env": [{
+				"name": "QQ",
+				"label": "QQ联系方式",
+				"description": "终端显示你的QQ联系方式."
+				},
+				{
+      				"name": "DOMAIN",
+      				"label": "Next Terminal管理域名",
+				"description": "Next Terminal使用的域名",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "HOSTNAME",
+      				"label": "Next Terminal主机名",
+				"description": "Next Terminal使用的主机",
+      				"default": "next"
+    				}],
+			"volumes": [
+				{
+      				"container": "/etc/cert",
+				"bind": "/etc/cert"
+    				},
+			        {
+      				"container": "/usr/local/next-terminal/data",
+				"bind": "/usr/local/next-terminal/data"
+    				}],
+    			"ports": [
+      				"8088/tcp"
+    				]
+			}
+,
