@@ -1,0 +1,140 @@
+{
+    			"type": 1,
+    			"title": "wireguard-client-82",
+			"name": "wireguard-client-82",
+    			"description": "wireguard vpn游戏加速隧道客户端",
+			"note": "部署wireguard vpn游戏加速隧道, 更多点击<a href=\"https://hub.docker.com/r/lihaixin/wireguard\" target=\"_blank\">wireguard doc</a> 了接更多信息",
+    			"hostname": "wgvpnclient",
+			"categories": ["vpn"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/wireguard.png",
+    			"image": "lihaixin/wireguard:client",
+			"privileged": true,
+  			"network": "host",
+			"env": [{
+				"name": "QQ",
+				"label": "QQ联系方式 *",
+				"description": "终端显示你的QQ联系方式."
+				},
+				{
+      				"name": "SERVER_IP",
+      				"label": "服务器宿主机IP *",
+				"description": "服务器端IP",
+      				"default": " "
+    				},
+				{
+      				"name": "SERVER_PORT",
+      				"label": "服务器WG监听端口 *",
+				"description": "WG监听端口,使用UDP协议",
+      				"default": "82"
+    				},
+				{
+      				"name": "UDPTOOL",
+      				"label": "是否启用udptool *",
+				"description": "启用udptool工具，开启加速和TCP伪装",
+      				"default": "0"
+    				},
+				{
+      				"name": "FORWARD",
+      				"label": "是否开启端口转发",
+				"description": "开启连续端口转发,设置为0关闭转发",
+      				"default": "0" 
+    				},
+				{
+      				"name": "fPorts",
+      				"label": "fPorts 转发起始端口",
+				"description": "fPorts 转发起始端口，用于把连接本机起始端口通过隧道转发到服务器端",
+      				"default": "30001"
+    				},
+				{
+      				"name": "ePorts",
+      				"label": "ePorts 转发结束端口",
+				"description": "ePorts 转发结束端口，用于把连接本机起始端口通过隧道转发到服务器端",
+      				"default": "40000" 
+    				},
+				{
+      				"name": "VPNPORT",
+      				"label": "是否开启VPN转发",
+				"description": "开启L2TP,PPTP,OPENVPN 端口转发,设置为0关闭转发",
+      				"default": "0" 
+    				},
+				{
+      				"name": "WGNAME",
+      				"label": "Wireguard 本地接口名称",
+				"description": "Wireguard 本地接口名称 ",
+      				"default": "wg2"
+    				},
+		     		{
+      				"name": "WGSERVERIP",
+      				"label": "Wireguard SERVERIP",
+				"description": "Wireguard SERVERIP 服务器端隧道IP ",
+      				"default": "10.1.2.1"
+    				},
+		     		{
+      				"name": "WGCLIENTIP",
+      				"label": "Wireguard 客户端IP *",
+				"description": "WGCLIENTIP 客户端端隧道IP,需要修改,支持10.1.2.11-20 十个客户端,每个客户端公钥和密钥不一样,请到服务器端查看",
+      				"default": "10.1.2.11"
+    				},
+				{
+      				"name": "WGRANGE",
+      				"label": "Wireguard RANGE",
+				"description": "WGRANGE  隧道网段",
+      				"default": "10.1.2.0/24"
+    				},
+				{
+      				"name": "Cprivatekey",
+      				"label": "客户端密钥 *",
+				"description": "服务器端生成的客户端密钥",
+      				"default": "your_client_privatekey"
+    				},
+		     		{
+      				"name": "Spublickey",
+      				"label": "服务端公钥 *",
+				"description": "服务器端生成的服务器端公钥",
+      				"default": "your_server_publickey"
+    				},
+				{
+      				"name": "WGMTU",
+      				"label": "Wireguard MTU",
+				"description": "Wireguard MTU 最大传输单元",
+      				"default": "1320"
+    				},
+		     		{
+      				"name": "FEC_MODE",
+      				"label": "SPEEDERV2 MODE",
+				"description": "speederv2 模式",
+      				"default": "1"
+    				},
+		     		{
+      				"name": "FEC_OPTIONS",
+      				"label": "SPEEDERV2 FEC_OPTIONS",
+				"description": "FEC_OPTIONS 参数",
+      				"default": "4:1"
+    				},
+		     		{
+      				"name": "TIMEOUT",
+      				"label": "SPEEDERV2 TIMEOUT",
+				"description": "SPEEDERV2 TIMEOUT 超时时间,游戏调整为0秒",
+      				"default": "4"
+    				},
+		     		{
+      				"name": "UDPMTU",
+      				"label": "SPEEDERV2 UDPMTU",
+				"description": "SPEEDERV2 MTU 最大传输单元",
+      				"default": "1360"
+    				},
+		     		{
+      				"name": "OPTION",
+      				"label": "SPEEDERV2 OPTION",
+				"description": "SPEEDERV2 OPTION 可以额外添加参数",
+      				"default": "--disable-obscure"
+    				},
+				{
+      				"name": "PASSWORD",
+      				"label": "UDP2RAW PASSWORD *",
+				"description": "UDP2RAW 密码,服务器和客户端要一致",
+      				"default": "password"
+    				}]
+  		}
+,
