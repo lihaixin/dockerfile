@@ -1,0 +1,31 @@
+{
+    			"type": 1,
+    			"title": "baidupcs",
+			"name": "baidupcs",
+    			"description": "不限速百度云客户端",
+    			"categories": ["file"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/baidupcs.png",
+    			"image": "lihaixin/baidupcs",
+    			"ports": [
+      				"1999/tcp"
+    				],
+    			"volumes": [{
+				"container": "/defaults"
+				},
+				{
+				"container": "/root/Downloads"
+				}],
+    			"env": [{
+      					"name": "PGID",
+      					"label": "PGID",
+      					"set": "0"
+    				},
+    				{
+      					"name": "PUID",
+      					"label": "PUID",
+      					"set": "0"
+    				}],
+    			"restart_policy": "always"
+  			}
+,
