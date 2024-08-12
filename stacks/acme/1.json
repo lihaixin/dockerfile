@@ -7,7 +7,7 @@
     			"hostname": "acme",
 			"categories": ["cert"],
     			"platform": "linux",
-    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/acme.png",
+    			"logo": "https://dockerfile.15099.net/logo/acme.png",
     			"image": "lihaixin/acme",
 			"volumes": [
 				{
