@@ -16,13 +16,13 @@ services:                                    # 爱快虚拟机下配置多clash�
 
     networks:
       wan1:
-        ipv4_address: 172.19.0.1             # 修改不同的IP *
+        ipv4_address: 172.19.0.1                   # 修改不同的IP *
 networks:
   wan1:
     name: 1macvlan
     driver: macvlan
     driver_opts:
-      parent: eth0                                   # 对接虚拟机网卡名称，爱快内置的debian12虚拟机第一个网卡默认 ens3
+      parent: eth0                                 # 对接虚拟机网卡名称，爱快内置的debian12虚拟机第一个网卡默认 ens3
     ipam:
       config:
         - subnet: 172.19.0.0/16                     # 局域网网段范围
