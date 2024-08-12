@@ -1,0 +1,56 @@
+{
+    			"type": 1,
+    			"title": "ttyd",
+			"name": "ttyd-7681",
+    			"description": "ttyd is a simple command line tool for sharing terminal over the web ",
+    			"categories": ["ssh"],
+    			"platform": "linux",
+			"restart_policy": "always",
+			"hostname": "ttyd",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/ttyd.png",
+    			"image": "lihaixin/ttyd",
+    			"ports": [
+      				"7681/tcp"
+    				],
+			"env": [{
+				"name": "QQ",
+				"label": "QQ联系方式",
+				"description": "终端显示你的QQ联系方式."
+				},
+				{
+      				"name": "DOMAIN",
+      				"label": "TTYD证书域名",
+				"description": "TYYD使用的域名",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "HOSTNAME",
+      				"label": "TTYD主机名",
+				"description": "TTYD使用的主机",
+      				"default": "hostname"
+    				},
+				{
+      				"name": "USERNAME",
+      				"label": "用户名",
+				"description": "TYYD登陆用户名,输入noauth为不用登陆就能访问",
+      				"default": "noauth"
+    				},
+				{
+      				"name": "PASSWORD",
+      				"label": "密码",
+				"description": "TTYD登陆密码,输入noauth为不用登陆就能访问",
+      				"default": "noauth"
+    				},
+				{
+      				"name": "TTYD_OPT",
+      				"label": "执行程序",
+				"description": "输入需要执行的程序，默认bash 可选择输入iftop tmux",
+      				"default": "bash"
+    				}],
+			"volumes": [
+				{
+      				"container": "/etc/cert",
+				"bind": "/etc/cert"
+    				}]
+  			}
+,
