@@ -1,0 +1,42 @@
+{
+    			"type": 1,
+    			"title": "frps-80-443-7500",
+			"name": "frps-80-443-7500",
+    			"description": "FRP内网穿透服务器",
+			"note": "部署FRP内网穿透服务器, 更多点击<a href=\"https://hub.docker.com/r/lihaixin/frp\" target=\"_blank\">frp doc</a> 了接更多信息",
+    			"categories": ["Reverse Proxy"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/frp.png",
+    			"image": "lihaixin/frp:latest",
+    			"network": "host",
+			"volumes": [{
+      				"container": "/etc/cert",
+				"bind": "/etc/cert"
+    				}],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "你的frp域名",
+				"description": "客户端http使用的域名",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "HOSTNAME",
+      				"label": "你的frp主机名",
+				"description": "客户端http使用的主机",
+      				"default": "frp"
+    				},
+				{
+      				"name": "DASHBOARD_PWD",
+      				"label": "管理面板密码",
+				"description": "登陆https://admin.frp.youdomain.com管理页面的密码",
+      				"default": "password"
+    				},
+				{
+      				"name": "TOKEN",
+      				"label": "客户端登陆的TOKEN",
+				"description": "客户端验证登陆的TOKEN",
+      				"default": "12345678"
+    				}],
+    			"restart_policy": "always"
+  			}
+,
