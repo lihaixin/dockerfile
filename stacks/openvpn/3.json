@@ -1,7 +1,6 @@
 {
 			"type": 3,
 			"title": "openvpn-s5",
-			"name": "openvpn-s5",
 			"description": "构建OPENVPN S5服务器,记得改名,使用项目名称,这样方便排序",
 			"note": "部署OPENVPN S5服务器,然后通过宿主机vpn桥接,更多信息 <a href=\"https://github.com/lihaixin/openvpn\" target=\"_blank\">点击这里</a> ",
 			"categories": ["vpn"],
