@@ -1,7 +1,6 @@
 {
     			"type": 1,
    			"title": "music-player-docker-264",
-			"name": "music-player-docker-264",
     			"description": "在线音乐播放器，支持下载，基于Meting——支持群晖，威联通等一切X86系统docker部署 ",
 			"note": "在线音乐播放器 <a href=\"https://hub.docker.com/r/oldiy/music-player-docker\" target=\"_blank\">食用指南</a>",
     			"categories": ["music"],
