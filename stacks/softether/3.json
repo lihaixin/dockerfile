@@ -1,0 +1,123 @@
+{
+			"type": 3,
+			"title": "softethervpn",
+			"name": "softether-500-4500-1194-1701",
+			"description": "构建多合一（L2TP SSTP OPENVPN）VPN服务器",
+			"note": "部署softether,用到450、4500、443、1701、1194端口, 可定义管理密码,可定义是否开启 L2TP,OPENVPN,SSTP 更多信息 <a href=\"https://hub.docker.com/r/lihaixin/softether\" target=\"_blank\">点击这里</a> ",
+			"categories": ["vpn"],
+			"platform": "linux",
+			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/softether.png",			
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/softether/docker-compose.yml"
+			},
+			"env": [{
+				"name": "QQ",
+				"label": "QQ *",
+				"description": "用于终端展示QQ",
+				"default": ""
+			},
+			{
+				"name": "DOMAIN",
+				"label": "域名",
+				"description": "用于OPENVPN和SSTP传输过程中,导入数据证书,提前使用lihaixin/acme容器创建好证书",
+				"default": "youdomain.com"
+			},
+			{
+				"name": "HOSTNAME",
+				"label": "主机名",
+				"description": "主机名,主机名+域名构成完整URL",
+				"default": "kr2"
+			},
+			{
+				"name": "MTU",
+				"label": "DEFAULT MTU",
+				"description": "中转机使用1300、落地机使用1200.",
+				"default": "1300"
+			},
+			{
+				"name": "MainINF",
+				"label": "服务器数据出口",
+				"description": "默认为空,让程序自动检查,如果是走其他接口,手工设置,例如openvpn接口出去,设置为tun+ ",
+				"default": ""
+			},
+			{
+				"name": "OPENVPN_PORT",
+				"label": "OPENVPN监听端口",
+				"description": "默认1194被干扰,这里可以调整端口",
+				"default": "11194"
+			},
+			{
+				"name": "USERNAME",
+				"label": "默认创建VPN的用户名",
+				"description": "系统自动创建",
+				"default": "test"
+			},
+			{
+				"name": "PASSWORD",
+				"label": "默认创建VPN的用户名的密码",
+				"description": "系统自动创建",
+				"default": "test"
+			},
+			{
+				"name": "PSK",
+				"label": "L2TP预共享密钥",
+				"description": "自定义L2TP预共享密钥,默认为vpnvpn88",
+				"default": "vpnvpn88"
+			},
+			{
+				"name": "SPW",
+				"label": "VPN服务器管理密码",
+				"description": "自定义VPN服务器管理密码,默认为softether",
+				"default": "softether"
+			},
+			{
+				"name": "MaxUpload",
+				"label": "默认帐号最大上传带宽",
+				"description": "默认帐号最大上传带宽,上传和下载是相对于HUB进出数据",
+				"default": "5000000"
+			},
+			{
+				"name": "MaxDownload",
+				"label": "默认帐号最大下载带宽",
+				"description": "默认帐号最大下载带宽,上传和下载是相对于HUB进出数据",
+				"default": "5000000"
+			},
+			{
+				"name": "MultiLogins",
+				"label": "默认帐号同时可连接数",
+				"description": "默认帐号同时可连接数,可以限制帐号多拨",
+				"default": "3"
+			},
+			{
+				"name": "SSTP",
+				"label": "是否开启SSTP",
+				"description": "默认为关闭,1为开启,0为关闭",
+				"default": "0"
+			},
+			{
+				"name": "OPENVPN",
+				"label": "是否开启OPENVPN",
+				"description": "默认为关闭,1为开启,0为关闭",
+				"default": "0"
+			},
+			{
+				"name": "L2TP",
+				"label": "是否开启L2TP",
+				"description": "默认为关闭,1为开启,0为关闭",
+				"default": "1"
+			},
+			{
+				"name": "DNS",
+				"label": "自定义VPN客户端DNS",
+				"description": "默认为国外 8.8.8.8,1.1.1.1,国内就设置 233.5.5.5,114.114.114.114",
+				"default": "8.8.8.8"
+			},
+			{
+				"name": "DNS2",
+				"label": "自定义VPN客户端DNS2",
+				"description": "默认为国外 8.8.8.8,1.1.1.1,国内就设置 233.5.5.5,114.114.114.114",
+				"default": "1.1.1.1"
+			}]
+		}
+,
