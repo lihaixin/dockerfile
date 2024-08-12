@@ -26,7 +26,7 @@ containrrr/watchtower --cleanup dockerfile
 2. stacks使用自定义桥接或者macvlan网络
 
 ## 所有的Docker 模板 
-[模板格式](https://docs.portainer.io/advanced/app-templates/format#administrator-only)
+[模板格式](https://docs.portainer.io/advanced/app-templates/format#administrator-only)  [compose 格式](https://docs.docker.com/compose/compose-file/)
 
 ### docker
 |序号|容器名称|默认端口|地址|备注|
