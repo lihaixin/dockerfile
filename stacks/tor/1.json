@@ -1,0 +1,39 @@
+{
+    			"type": 1,
+    			"title": "tor-9051",
+			"name": "tor-9051",
+    			"description": "tor socks5 http proxy",
+			"note": "一键部署tor动态ip代理 <a href=\"https://github.com/lihaixin/tor/blob/main/README.md\" target=\"_blank\">tor doc</a> 端口9051 为tor带密码的socks5/http代理",
+    			"categories": ["browser"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/tor.png",
+    			"image": "lihaixin/tor:latest",
+    			"ports": [
+				"9051/tcp"
+    				],
+			"env": [{
+      				"name": "EXITNODES",
+      				"label": "落地国家",
+				"description": "配置tor落地国家代码",
+      				"default": "{us},{ca}"
+    				},
+			        {
+      				"name": "USER",
+      				"label": "用户名",
+				"description": "配置ss http socks5 https用户名",
+      				"default": "a1"
+    				},
+				{
+      				"name": "PASSWD",
+      				"label": "用户密码",
+				"description": "配置ss http socks5 https密码",
+      				"default": "a1"
+    				},
+			       {
+      				"name": "KILLTIME",
+      				"label": "切换时间",
+				"description": "tor切换时间",
+      				"default": "60"
+    				}]
+  			}
+,
