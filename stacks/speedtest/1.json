@@ -1,0 +1,14 @@
+{
+    			"type": 1,
+   			"title": "SpeedTest",
+			"name": "SpeedTest",
+    			"description": "html5 web speedtest",
+    			"categories": ["tools"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/speedtest.png",
+    			"image": "lihaixin/speedtest",
+    			"ports": [
+      				"80/tcp"
+    				]
+  			}
+,
