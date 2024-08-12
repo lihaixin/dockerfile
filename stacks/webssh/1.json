@@ -1,0 +1,22 @@
+      {
+   		 	"type": 1,
+    			"title": "webssh-8888",
+			"name": "webssh-8888",
+			"hostname": "webssh",
+    			"description": "新版SSH网页客户端",
+			"note": "新版SSH网页客户端,请点击 <a href=\"https://hub.docker.com/r/lihaixin/webssh\" target=\"_blank\">webssh</a> 更多消息",
+    			"categories": ["ssh"],
+   			"platform": "linux",
+			"restart_policy": "always",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/webssh2.png",
+    			"image": "lihaixin/webssh",
+			"env": [{
+				"name": "QQ",
+				"label": "QQ联系方式",
+				"description": "终端显示你的QQ联系方式."
+			}],
+    			"ports": [
+      				"8888/tcp"
+    				]
+  			}
+      ,
