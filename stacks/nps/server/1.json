@@ -1,0 +1,57 @@
+{
+    			"type": 1,
+    			"title": "nps-80-443-8024",
+			"name": "nps-80-443-8024",
+    			"description": "NPS内网穿透服务器",
+			"note": "部署NPS内网穿透服务器, 更多点击<a href=\"https://hub.docker.com/r/lihaixin/nps\" target=\"_blank\">nps doc</a> 了接更多信息",
+    			"categories": ["Reverse Proxy"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/nps.png",
+    			"image": "lihaixin/nps:latest",
+    			"network": "host",
+			"volumes": [{
+      				"container": "/etc/cert",
+				"bind": "/etc/cert"
+    				},
+				{
+      				"container": "/conf"
+    				}],
+			"env": [{
+      				"name": "DOMAIN",
+      				"label": "你的域名",
+				"description": "使用的域名",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "HOSTNAME",
+      				"label": "你的主机名",
+				"description": "你的主机名",
+      				"default": "nps"
+    				},
+				{
+      				"name": "HTTP_PROXY_PORT",
+      				"label": "HTTP域名代理端口",
+				"description": "域名代理http代理监听端口，可以设置为8024，共享一个端口",
+      				"default": "80"
+    				},
+				{
+      				"name": "HTTPS_PROXY_PORT",
+      				"label": "HTTPS域名代理端口",
+				"description": "域名代理https代理监听端口，可以设置为8024，共享一个端口",
+      				"default": "443"
+    				},
+				{
+      				"name": "WEB_PASSWORD",
+      				"label": "管理面板密码",
+				"description": "登陆管理页面的密码",
+      				"default": "password"
+    				},
+				{
+      				"name": "PUBLIC_VKEY",
+      				"label": "PUBLIC_VKEY",
+				"description": "客户端登陆的公共VKEY",
+      				"default": "12345678"
+    				}],
+    			"restart_policy": "always"
+  			}
+,
