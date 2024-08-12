@@ -1,7 +1,6 @@
 {
     			"type": 1,
     			"title": "frps-80-443-7500",
-			"name": "frps-80-443-7500",
     			"description": "FRP内网穿透服务器",
 			"note": "部署FRP内网穿透服务器, 更多点击<a href=\"https://hub.docker.com/r/lihaixin/frp\" target=\"_blank\">frp doc</a> 了接更多信息",
     			"categories": ["Reverse Proxy"],
