@@ -1,10 +1,8 @@
 {
     			"type": 1,
-    			"title": "dnsmasq自定义域名解析",
-			"name": "dnsmasq-53-5380",
+    			"title": "dnsmasq-53-5380",
     			"description": "带网页管理面板的DNS管理系统",
 			"note": "dnsmasq自定义域名解析, 请参考 <a href=\"https://hub.docker.com/r/jpillora/dnsmasq\" target=\"_blank\">dnsmasq doc</a> 了接更多",
-    			"hostname": "dnsmasq",
 			"categories": ["dns"],
     			"platform": "linux",
 			"restart_policy": "always",
