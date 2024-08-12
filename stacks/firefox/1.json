@@ -1,7 +1,6 @@
 {
     			"type": 1,
-    			"title": "firefox proxy",
-			"name": "firefox proxy",
+    			"title": "firefox-8787",
     			"description": "firefox browser use gost proxy",
     			"categories": ["browser"],
     			"platform": "linux",
