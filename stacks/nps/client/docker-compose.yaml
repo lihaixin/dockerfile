@@ -1,4 +1,4 @@
-version: "3.7"
+version: '2'
 services:
   nps:
     image: lihaixin/nps:c
