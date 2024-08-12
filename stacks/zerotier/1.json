@@ -1,0 +1,24 @@
+{
+			"type": 1,
+			"title": "zerotier-9993",
+			"name": "zerotier-9993",
+			"description": "点对点VPN服务器",
+			"note": "部署点对点VPN服务器 更多信息 <a href=\"https://hub.docker.com/r/lihaixin/zerotier\" target=\"_blank\">点击这里</a> ",
+			"categories": ["vpn"],
+			"platform": "linux",
+			"network": "host",
+			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/zerotier.png",
+			"image": "lihaixin/zerotier:debian",
+			"privileged": true,
+			"volumes": [{
+      				"container": "/var/lib/zerotier-one",
+				"bind": "/var/lib/zerotier-one"
+    				}],
+			"env": [{
+      				"name": "ID",
+      				"label": "你要加入的网络ID",
+				"description": "可以是全球公开的，也可以是私有的",
+      				"default": "8056c2e21c000001"
+    				}]
+		}
+,
