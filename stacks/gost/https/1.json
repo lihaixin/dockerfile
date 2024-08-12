@@ -1,10 +1,8 @@
 {
     			"type": 1,
     			"title": "gost_https_58338",
-			"name": "gost_https_58338",
     			"description": "利用gost打造https代理，实现外贸简单科学上网",
 			"note": "部署https代理服务器, 更多参考点击 <a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost doc</a> 了接",
-    			"hostname": "gosthttps",
 			"categories": ["gost"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",
