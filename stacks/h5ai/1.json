@@ -1,7 +1,6 @@
 {
     			"type": 1,
-    			"title": "h5ai",
-			"name": "h5ai",
+    			"title": "h5ai-88",
     			"description": "h5ai file indexer for HTTP web servers",
    			"categories": ["file"],
     			"platform": "linux",
