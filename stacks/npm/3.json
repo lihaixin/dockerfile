@@ -1,7 +1,6 @@
 {
 			"type": 3,
 			"title": "npm-80-81-443",
-			"name": "npm-80-81-443",
 			"description": "轻松公开你的服务器",
 			"note": "部署反向代理管理器,使用host网络, 更多信息 <a href=\"https://nginxproxymanager.com\" target=\"_blank\">点击这里</a> ",
 			"categories": ["Reverse Proxy"],
