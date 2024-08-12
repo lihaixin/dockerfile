@@ -2,6 +2,17 @@
 
 收集整理个人常用的容器镜像，添加到portainer模板里,方便快速部署
 
+## 运行
+
+```
+docker run -d --name dockerfile --hostname dockerfile --restart=always -p 87:80 lihaixin/dockerfile
+
+docker run -d --name watchtower \
+--restart always \
+-v /var/run/docker.sock:/var/run/docker.sock \
+containrrr/watchtower --cleanup dockerfile
+```
+
 ## 联系我
 
 +V: Gsanjin01 记得注明来源
