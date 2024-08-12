@@ -1,0 +1,49 @@
+{
+    			"type": 1,
+    			"title": "udptoolsclient",
+			"name": "udptoolsclient",
+    			"description": "udptools client UDP数据加速客户端，常用加速openvpn 和 wireguard 等UDP传输的VPN ",
+    			"categories": ["tools"],
+    			"platform": "linux",
+			"restart_policy": "always",
+			"hostname": "udptoolsclient",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/udptools.png",
+    			"image": "lihaixin/udptools:client",
+    			"network": "host",
+			"env": [{
+				"name": "QQ",
+				"label": "你QQ联系方式，也是会员账号",
+				"description": "终端显示你的QQ联系方式."
+				},
+				{
+      				"name": "UDPSPEEDER",
+      				"label": "是否启用UDP加速",
+				"description": "启用UDP加速，1为启用，0为禁用",
+      				"default": "1"
+    				},
+				{
+      				"name": "UDP2RAW",
+      				"label": "是否启用UDP数据tcp伪装",
+				"description": "启用UDP数据tcp伪装，1为启用，0为禁用",
+      				"default": "0"
+    				},
+				{
+      				"name": "PORT",
+      				"label": "监听端口",
+				"description": "UDPTOOLS监听端口",
+      				"default": "12001"
+    				},
+				{
+      				"name": "RURL",
+      				"label": "远端UDPTOOLS服务器IP",
+				"description": "远端UDPTOOLS服务器端IP,",
+      				"default": "8.8.4.4"
+    				},
+				{
+      				"name": "RPORT",
+      				"label": "远端UDPTOOLS服务器端口",
+				"description": "远端UDPTOOLS服务器端口",
+      				"default": "12001"
+    				}]
+  			}
+,
