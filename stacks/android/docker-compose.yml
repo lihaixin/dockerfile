@@ -2,7 +2,6 @@ version: '2'
 services:
   android:
     image: budtmo/docker-android:emulator_11.0
-    container_name: android
     devices:
       - /dev/kvm
     cap_add:
