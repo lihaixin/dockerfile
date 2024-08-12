@@ -1,7 +1,6 @@
 {
     			"type": 1,
-    			"title": "h5ai auth",
-			"name": "h5ai auth",
+    			"title": "h5ai auth-88",
     			"description": "h5ai file indexer for HTTP web servers",
     			"categories": ["file"],
     			"platform": "linux",
