@@ -1,0 +1,53 @@
+{
+    			"type": 1,
+    			"title": "x-ui-54321",
+			"name": "x-ui-54321",
+    			"description": "Support multi-protocol multi-user Xray panel",
+			"note": "Deploys an x-ui server, please refer to <a href=\"https://hub.docker.com/r/lihaixin/x-ui\" target=\"_blank\">x-ui doc</a> for production deployments.",
+    			"hostname": "x-ui",
+			"categories": ["xray"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/v2ui.png",
+    			"image": "lihaixin/x-ui",
+  			"network": "host",
+			"volumes": [
+				{
+      				"container": "/etc/x-ui",
+				"bind": "/etc/x-ui"
+    				},
+				{
+      				"container": "/etc/cert",
+				"bind": "/etc/cert"
+    				}],
+			"env": [{
+				"name": "QQ",
+				"label": "模板QQ标签 *",
+				"description": "不同QQ标签，应用不同的模板.",
+				"default": "0001071852436"
+				},
+				{
+      				"name": "DOMAIN",
+      				"label": "Your Domain",
+				"description": "利用lihaixin/acme容器申请域名通用证书",
+      				"default": "youdomain.com"
+    				},
+				{
+      				"name": "HOSTNAME",
+      				"label": "Your HOSTNAME",
+				"description": "同一域名下不同主机名",
+      				"default": "hostname"
+    				},
+				{
+      				"name": "WEBPORT",
+      				"label": "X-UI WEB PORT",
+				"description": "The X-UI Server WEB PORT.",
+      				"default": "54321"
+    				},
+			        {
+      				"name": "PASSWD",
+      				"label": "X-UI WEB 密码",
+				"description": "修改The X-UI Server 管理密码,默认帐号为:admin",
+      				"default": "admin"
+    				}]
+  		}
+,
