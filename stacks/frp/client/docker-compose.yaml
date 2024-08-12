@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  frp:
+    image: lihaixin/frp:c
+    container_name: frpc
+    hostname: frpc
+    restart: unless-stopped
+    network_mode: "host"
+    environment: 
+      - QQ=15050999                               # 终端界面显示的联系方式
+      - FRP_SERVERURL=kr2.15099.net               # 你FRP主机地址
+      - FRP_PORT=7000                             # FRP服务端连接监听端口
+      - FRP_MODE=tcp                              # 使用TCP方式连接
+      - FRP_TOKEN=12345678                        # 公共KEY
+      - FRPC_PASSWD=admin                         # 客户端网页配置密码
