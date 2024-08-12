@@ -1,0 +1,98 @@
+{
+    			"type": 1,
+    			"title": "wireguard-server-82",
+			"name": "wireguard-server-82",
+    			"description": "wireguard vpn游戏加速隧道服务器端",
+			"note": "部署wireguard vpn游戏加速隧道, 有<*>选项需要调整  更多点击<a href=\"https://hub.docker.com/r/lihaixin/wireguard\" target=\"_blank\">wireguard doc</a> 了接更多信息",
+    			"hostname": "wgvpnserver",
+			"categories": ["vpn"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/wireguard.png",
+    			"image": "lihaixin/wireguard:server",
+			"privileged": true,
+  			"network": "host",
+			"env": [{
+				"name": "QQ",
+				"label": "QQ联系方式 *",
+				"description": "终端显示你的QQ联系方式."
+				},
+				{
+      				"name": "SERVER_PORT",
+      				"label": "服务器Wireguard监听端口",
+				"description": "Wireguard监听端口,使用UDP 端口",
+      				"default": "82"
+    				},
+				{
+      				"name": "LANRANGE",
+      				"label": "本地局域网网段",
+				"description": "用于直接路由本地局域网网段",
+      				"default": "192.168.2.0/24"
+    				},
+				{
+      				"name": "WGNAME",
+      				"label": "服务器Wireguard接口名称",
+				"description": "服务器Wireguard接口名称,也就是隧道名称",
+      				"default": "wg2"
+    				},
+		     		{
+      				"name": "WGSERVERIP",
+      				"label": "Wireguard SERVERIP",
+				"description": "Wireguard SERVERIP 服务器端隧道IP",
+      				"default": "10.1.2.1"
+    				},
+		     		{
+      				"name": "WGCLIENTIP",
+      				"label": "Wireguard CLIENTIP",
+				"description": "保持默认就可以Wireguard CLIENTIP 客户端隧道IP,这个是带预共享密钥的客户端,同时会生成IP第四位为10.1.2.11-20 十个没有预共享密钥的客户端配置文件",
+      				"default": "10.1.2.2"
+    				},
+				{
+      				"name": "WGRANGE",
+      				"label": "WGRANGE",
+				"description": "Wireguard WGRANGE 隧道网段",
+      				"default": "10.1.2.0/24"
+    				},
+				{
+      				"name": "WGMTU",
+      				"label": "WGMTU",
+				"description": "Wireguard MTU",
+      				"default": "1320"
+    				},
+		     		{
+      				"name": "FEC_MODE",
+      				"label": "SPEEDERV2 MODE",
+				"description": "speederv2 模式",
+      				"default": "1"
+    				},
+		     		{
+      				"name": "FEC_OPTIONS",
+      				"label": "SPEEDERV2 FEC_OPTIONS",
+				"description": "FEC_OPTIONS 参数",
+      				"default": "4:1"
+    				},
+		     		{
+      				"name": "TIMEOUT",
+      				"label": "SPEEDERV2 TIMEOUT",
+				"description": "SPEEDERV2 TIMEOUT 超时时间,游戏调整为0秒",
+      				"default": "4"
+    				},
+		     		{
+      				"name": "UDPMTU",
+      				"label": "SPEEDERV2 UDPMTU",
+				"description": "speederv2 MTU",
+      				"default": "1360"
+    				},
+		     		{
+      				"name": "OPTION",
+      				"label": "SPEEDERV2 OPTION",
+				"description": "SPEEDERV2 OPTION 可以额外添加参数",
+      				"default": "--disable-obscure"
+    				},
+				{
+      				"name": "PASSWORD",
+      				"label": "UDP2RAW PASSWORD *",
+				"description": "UDP2RAW 密码,服务器和客户端要一致",
+      				"default": "password"
+    				}]
+  		}
+,
