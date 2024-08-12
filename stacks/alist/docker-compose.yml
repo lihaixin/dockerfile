@@ -2,7 +2,6 @@ version: '2'
 services:
   alist:
     image: lihaixin/alist:latest
-    container_name: alist
     hostname: alist
     restart: unless-stopped
     network_mode: "host"
