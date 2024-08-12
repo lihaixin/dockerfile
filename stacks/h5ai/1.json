@@ -1,0 +1,18 @@
+{
+    			"type": 1,
+    			"title": "h5ai",
+			"name": "h5ai",
+    			"description": "h5ai file indexer for HTTP web servers",
+   			"categories": ["file"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/h5ai.png",
+    			"image": "lihaixin/h5ai",
+    			"ports": [
+      				"80/tcp"
+    				],
+    			"restart_policy": "always",
+     			"volumes": [{
+				"container": "/share"
+				}]
+  			}
+,
