@@ -16,8 +16,8 @@
 			"env": [{
 				"name": "QQ",
 				"label": "QQ *",
-				"description": "用于终端展示QQ",
-				"default": ""
+				"description": "授权QQ",
+				"default": "1071852436"
 				},
 				{
       				"name": "TYPE",
