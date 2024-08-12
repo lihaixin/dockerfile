@@ -1,0 +1,24 @@
+version: '2'
+services:
+  app:
+    image: 'lihaixin/npm:latest'
+    restart: always
+    network_mode: host
+    environment:
+      #DB_MYSQL_HOST: "127.0.0.1"
+      #DB_MYSQL_PORT: 3306
+      #DB_MYSQL_USER: ${MYSQL_DATABASE_PASSWORD}
+      #DB_MYSQL_PASSWORD: ${MYSQL_DATABASE_PASSWORD}
+      #DB_MYSQL_NAME: ${MYSQL_DATABASE_PASSWORD}
+      # If you would rather use Sqlite uncomment this
+      # and remove all DB_MYSQL_* lines above
+      DB_SQLITE_FILE: "/data/database.sqlite"
+      # Uncomment this if IPv6 is not enabled on your host
+      # DISABLE_IPV6: 'true'
+    volumes:
+      - data:/data
+      - letsencrypt:/etc/letsencrypt
+
+volumes:
+  data:
+  letsencrypt:
