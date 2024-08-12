@@ -1,0 +1,34 @@
+{
+    			"type": 1,
+    			"title": "pihole",
+			"name": "pihole",
+    			"description": "DNS缓存和互联网广告黑洞",
+    			"categories": ["dns"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/pihole.png",
+    			"image": "pihole/pihole:latest",
+    			"env": [{
+      				"name": "TZ",
+      				"label": "TZ",
+      				"set": "Asia/Chongqing"
+    				},
+    				{
+      				"name": "WEBPASSWORD",
+      				"label": "WEBPASSWORD",
+      				"set": "pihole"
+    				}],
+    			"ports": [
+      				"53/tcp",
+      				"53/udp",
+      				"80/tcp",
+      				"443/tcp"
+    				],
+    			"restart_policy": "always",
+			"volumes": [{
+				"container": "/etc/pihole/"
+				},
+				{
+				"container": "/watch"
+				}]
+  			}
+,
