@@ -1,0 +1,25 @@
+version: '2'
+services:
+ socks5:
+    image: "lihaixin/gost:s5"
+    restart: unless-stopped                            # unless-stopped  always          
+    environment:
+      QQ: "00015050999"
+    volumes:
+      - gostfile:/home
+    networks:
+      wan1:
+        ipv4_address: 172.19.0.101                     # 修改不同的IP *
+volumes:
+  gostfile:
+
+networks:
+  wan1:
+    name: 1macvlan
+    driver: macvlan
+    driver_opts:
+      parent: eth0                                      # 对接虚拟机网卡名称，爱快内置的debian12虚拟机第一个网卡默认 ens3
+    ipam:
+      config:
+        - subnet: 172.19.0.0/16                         # 局域网网段范围
+          gateway: 172.19.0.254                         # 局域网网关
