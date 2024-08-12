@@ -1,7 +1,6 @@
 {
     			"type": 1,
     			"title": "pihole",
-			"name": "pihole",
     			"description": "DNS缓存和互联网广告黑洞",
     			"categories": ["dns"],
     			"platform": "linux",
