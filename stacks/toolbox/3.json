@@ -9,8 +9,8 @@
 			"administrator_only": true,
 			"logo": "https://dockerfile.15099.net/logo/nginx-proxy-manager.png",
 			"repository": {
-				"url": "https://dockerfile.15099.net",
+				"url": "https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/toolbox/docker-compose.yml"
-			}
+				}
 		}
 ,
