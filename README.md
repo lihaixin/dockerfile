@@ -5,7 +5,8 @@
 ## 运行
 
 ```
-docker run -d --name dockerfile --hostname dockerfile --restart=always -p 87:80 lihaixin/dockerfile
+docker pull lihaixin/dockerfile
+docker run -d --name dockerfile --hostname dockerfile --restart=always -p 89:80 lihaixin/dockerfile
 
 docker run -d --name watchtower \
 --restart always \
