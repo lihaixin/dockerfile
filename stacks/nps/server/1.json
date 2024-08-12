@@ -1,7 +1,6 @@
 {
     			"type": 1,
     			"title": "nps-80-443-8024",
-			"name": "nps-80-443-8024",
     			"description": "NPS内网穿透服务器",
 			"note": "部署NPS内网穿透服务器, 更多点击<a href=\"https://hub.docker.com/r/lihaixin/nps\" target=\"_blank\">nps doc</a> 了接更多信息",
     			"categories": ["Reverse Proxy"],
