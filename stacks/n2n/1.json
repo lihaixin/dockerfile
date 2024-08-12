@@ -1,7 +1,6 @@
 {
 			"type": 1,
 			"title": "n2n-7654",
-			"name": "n2n-7654",
 			"description": "点对点VPN服务器",
 			"note": "部署点对点VPN服务器 更多信息 <a href=\"https://hub.docker.com/r/supermock/supernode\" target=\"_blank\">点击这里</a> ",
 			"categories": ["vpn"],
