@@ -1,4 +1,4 @@
-version: "3.7"
+version: '2'
 services:
   gosts5:
     image: lihaixin/gost:s5
