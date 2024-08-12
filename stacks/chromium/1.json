@@ -1,7 +1,6 @@
 {
     			"type": 1,
-    			"title": "chromium",
-			"name": "chromium",
+    			"title": "chromium-8787",
     			"description": "chromium browser",
     			"categories": ["browser"],
     			"platform": "linux",
