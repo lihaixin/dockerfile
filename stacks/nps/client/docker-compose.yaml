@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  nps:
+    image: lihaixin/nps:c
+    container_name: npc
+    hostname: npc
+    restart: unless-stopped
+    network_mode: "host"
+    privileged: true
+    environment: 
+      - QQ=                                       # 终端界面显示的联系方式
+      - NPC_SERVER=your-npsserver-url.com         # NPS 服务器地址
+      - NPC_BRIDGE_PORT=8024                      # NPS 连接端口
+      - NPC_MODE=tcp                              # 支持 tcp | kcp
+      - NPC_PUBLIC_VKEY=12345678                  # 公共KEY
