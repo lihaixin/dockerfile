@@ -1,7 +1,6 @@
 {
     			"type": 1,
     			"title": "transmission",
-			"name": "transmission",
     			"description": "bt transmissio web ui",
     			"categories": ["file"],
     			"platform": "linux",
