@@ -1,0 +1,15 @@
+ {
+			"type": 3,
+			"title": "route_M1_HMD",
+	 		"name": "route_M1_HMD-1",
+			"description": "一键安装黑名单网关",
+			"note": "通过docker容器，配合macvlan,快速使用clash打造黑名单网关.",
+			"categories": ["route"],
+			"platform": "linux",
+			"logo": "https://dockerfile.15099.net/logo/gateway.png",
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/clash/M2_HMD/docker-compose.yml"
+			}
+		}
+,
