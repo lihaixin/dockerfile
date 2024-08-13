@@ -1,7 +1,7 @@
  {
 			"type": 3,
-			"title": "route_M1_HMD",
-	 		"name": "route_M1_HMD-1",
+			"title": "route_M2_HMD",
+	 		"name": "route_M2_HMD-1",
 			"description": "一键安装黑名单网关",
 			"note": "通过docker容器，配合macvlan,快速使用clash打造黑名单网关.",
 			"categories": ["route"],
