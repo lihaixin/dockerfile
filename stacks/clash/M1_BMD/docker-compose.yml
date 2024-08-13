@@ -5,7 +5,7 @@ services:                                    # 爱快路由器下配置多clash�
     restart: unless-stopped                  # unless-stopped  always 
     privileged: true
     environment:
-      QQ: "00015060888"                      # 授权QQ 模板细节调整号码
+      QQ: "00015060888"                      # 授权QQ,内部使用，未经授权，第三台设备用，授权码会自动禁止，不在启用！！！
       CLASH_MODE: rule                       # rule / global / direct / (default is rule)
       CLASH_TYPE: M1_BMD                     # M1_BMD 为白名单模式  M2_HMD为黑名单模式  M3_GFL 按国家分流负载均衡模式
       CLASH_SUBURL: https://test.15099.net/sub/9001592fb618ea.yaml           # 订阅地址，联系你的购买厂家获取 【*】
