@@ -1,7 +1,7 @@
 version: '2'
 services:
   macos:
-    image: dockurr/macos
+    image: dockurr/macos                                   # https://github.com/dockur/macos
     container_name: macos
     devices:
       - /dev/kvm
@@ -10,21 +10,21 @@ services:
     stop_grace_period: 2m
     restart: on-failure
     environment:
-      VERSION: "ventura" # 系统标识  支持 sonoma ventura monterey big-sur
+      VERSION: "ventura"                                   # 系统标识  支持 sonoma ventura monterey big-sur
       
     volumes:
       - /var/macos:/storage
     networks:
       wan1:
-        ipv4_address: 192.168.2.11             # 修改不同的IP *
+        ipv4_address: 172.19.0.1                         # 修改不同的IP *
       
 networks:
   wan1:
     name: 1macvlan
     driver: macvlan
     driver_opts:
-      parent: vmbr0                                  # 对接虚拟机网卡名称，爱快内置的debian12虚拟机第一个网卡默认 ens3
+      parent: eth0                                  # 对接宿主机网卡名称 
     ipam:
       config:
-        - subnet: 192.168.2.0/24                    # 局域网网段范围
-          gateway: 192.168.2.254                     # 局域网网关
+        - subnet: 172.19.0.0/16                    # 局域网网段范围
+          gateway: 172.19.0..254                     # 局域网网关
