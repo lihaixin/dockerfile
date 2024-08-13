@@ -1,0 +1,29 @@
+version: '3.7'
+services:                                    # 爱快虚拟机下配置多clash透明代理，然后给无线热点分流
+ vwan:                                       # 修改服务名称 *  
+    image: "ikuaiapp/clash"
+    restart: unless-stopped                  # unless-stopped  always 
+    privileged: true
+    environment:
+      QQ: "00015060888"                          # 模板细节调整号码
+      CLASH_MODE: rule                           # rule / global / direct / (default is rule)
+      CLASH_TYPE: M8_HTTPS_DIA                      # M6_S5_GAME 为游戏中转代理S5
+      CLASH_SUBURL: https://ui-2.15099.net/900221121001f9.yaml  # clash订阅地址
+      RSERVER: 8.8.6.6                           # 落地IP （链式中转模式下生效）
+      RPORT: 10800                               # 落地代理端口 （链式中转模式下生效）
+      RUSER: 000S5                               # 落地代理账号 （链式中转模式下生效）
+      RPASS: 000S5                               # 落地代理密码 （链式中转模式下生效）
+
+    networks:
+      wan1:
+        ipv4_address: 172.19.0.1                 # 修改不同的IP *
+networks:
+  wan1:
+    name: 1macvlan
+    driver: macvlan
+    driver_opts:
+      parent: eth0                                   # 对接虚拟机网卡名称，爱快内置的debian12虚拟机第一个网卡默认 ens3
+    ipam:
+      config:
+        - subnet: 172.19.0.0/16                     # 局域网网段范围
+          gateway: 172.19.0.254                     # 局域网网关
