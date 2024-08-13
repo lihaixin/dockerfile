@@ -1,0 +1,15 @@
+ {
+			"type": 3,
+			"title": "route_M7_HTTP",
+      "name": "route_M7_HTTP-1",
+			"description": "一键安装HTTP网关",
+			"note": "通过docker容器，配合macvlan,快速使用clash打造S5网关.",
+			"categories": ["route"],
+			"platform": "linux",
+			"logo": "https://dockerfile.15099.net/logo/gateway.png",
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/clash/M7_HTTP/docker-compose.yml"
+			}
+		}
+,
