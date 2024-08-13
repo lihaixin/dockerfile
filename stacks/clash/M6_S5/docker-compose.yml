@@ -6,9 +6,11 @@ services:                                    # 爱快虚拟机下配置多clash�
     privileged: true
     environment:
       QQ: "00015050999"
-      CLASH_TYPE: M6_S5                            # M1_BMD 为白名单模式  M2_HMD为黑名单模式 M3_GFL 按国家分流负载均衡模式
+      UPDATE: "0"                                  # 是否在线升级
+      CLASH_TYPE: M6_S5                            # M6_S5 为纯S5模式  M6_S5_DIA 为带clash_suburl 订阅地址
       CLASH_MODE: global                           # rule / global / direct / (default is rule)
       RTYPE: socks5                                # 落地类型 支持socks5 和 http （链式中转模式下生效）
+      CLASH_SUBURL: https://test.15099.net/900221121001f9.yaml  # clash订阅地址
       RSERVER: 8.8.6.6                             # 落地IP （链式中转模式下生效）
       RPORT: 10800                                 # 落地代理端口 （链式中转模式下生效）
       RUSER: 000S5                                 # 落地代理账号 （链式中转模式下生效）
