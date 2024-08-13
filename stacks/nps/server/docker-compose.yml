@@ -1,0 +1,26 @@
+version: "2"
+services:
+  nps:
+    image: lihaixin/nps:s
+    container_name: nps
+    restart: unless-stopped
+    network_mode: "host"
+    privileged: true
+    volumes:
+      - npsconf:/conf
+      - /etc/cert:/etc/cert
+    environment:
+      - QQ=00015060666
+      - MODE=tcp
+      - NPC=1
+      - HTTP_PROXY_PORT=83
+      - HTTPS_PROXY_PORT=446
+      - BRIDGE_PORT=8024
+      - WEB_PORT=8086
+      - ALLOW_POSTS=8081,21001-22000,11001-12000
+      - DOMAIN=nps.15099.net
+      - HOSTNAME=cn
+      - PUBLIC_VKEY=12345678
+      - WEB_PASSWORD=password
+volumes:
+  npsconf:
