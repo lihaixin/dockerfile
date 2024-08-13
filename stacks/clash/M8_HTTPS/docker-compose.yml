@@ -5,7 +5,7 @@ services:                                    # 爱快虚拟机下配置多clash�
     restart: unless-stopped                  # unless-stopped  always 
     privileged: true
     environment:
-      QQ: "00015060888"                          # 模板细节调整号码
+      QQ: "00015060888"                          # 授权QQ,内部使用，未经授权，第三台设备用，授权码会自动禁止，不在启用！！！
       CLASH_MODE: rule                           # rule / global / direct / (default is rule)
       CLASH_TYPE: M8_HTTPS_DIA                      # M6_S5_GAME 为游戏中转代理S5
       CLASH_SUBURL: https://test.15099.net/900221121001f9.yaml  # clash订阅地址
