@@ -5,7 +5,7 @@ services:                                    # 爱快虚拟机下配置多clash�
     restart: unless-stopped                  # unless-stopped  always 
     privileged: true
     environment:
-      QQ: "00015050999"
+      QQ: "00015060888"
       CLASH_MODE: rule                       # rule / global / direct / (default is rule)
       CLASH_TYPE: M1_BMD                     # M1_BMD 为白名单模式  M2_HMD为黑名单模式 M3_GFL 按国家分流负载均衡模式
       CLASH_SUBURL: https://hk1.15099.net/sub/9001592fb618ea.yaml
