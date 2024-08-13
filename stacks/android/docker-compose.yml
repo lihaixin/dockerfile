@@ -1,7 +1,7 @@
 version: '2'
 services:
   android:
-    image: budtmo/docker-android:emulator_11.0
+    image: budtmo/docker-android:emulator_11.0      # https://github.com/budtmo/docker-android
     devices:
       - /dev/kvm
     cap_add:
@@ -9,14 +9,14 @@ services:
     stop_grace_period: 2m
     restart: on-failure
     environment:
-      MULATOR_DEVICE: "Samsung Galaxy S10" # 系统标识
+      MULATOR_DEVICE: "Samsung Galaxy S10"           # 系统标识
       WEB_VNC: true
       
     volumes:
       - /var/android:/storage
     networks:
       wan1:
-        ipv4_address: 172.19.0.1            # 修改不同的IP *
+        ipv4_address: 172.19.0.1                    # 修改不同的IP *
       
 networks:
   wan1:
@@ -26,5 +26,5 @@ networks:
       parent: vmbr0                                  # 对接虚拟机网卡名称， ens3 | eth0  | vmbr0 
     ipam:
       config:
-        - subnet: 172.19.0.0/16                    # 局域网网段范围
-          gateway: 172.19.0.254                     # 局域网网关
+        - subnet: 172.19.0.0/16                      # 局域网网段范围
+          gateway: 172.19.0.254                      # 局域网网关
