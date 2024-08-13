@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  portainer-backup:
+    container_name: portainer-backup
+    image: savagesoftware/portainer-backup:latest
+    hostname: portainer-backup
+    restart: unless-stopped
+    command: schedule
+    environment:
+      TZ: Asia/Shanghai
+      PORTAINER_BACKUP_URL: "https://***:443"
+      PORTAINER_BACKUP_TOKEN: "ptr_***"
+      PORTAINER_BACKUP_PASSWORD: "***"
+      PORTAINER_BACKUP_OVERWRITE: 1
+      PORTAINER_BACKUP_SCHEDULE: "0 0 */5 * * *"
+      PORTAINER_BACKUP_STACKS: 0
+      PORTAINER_BACKUP_DRYRUN: 0
+      PORTAINER_BACKUP_CONCISE: 1
+      PORTAINER_BACKUP_DIRECTORY: "/backup"
+      PORTAINER_BACKUP_FILENAME: "portainer-backup-{{DATE}}.tar.gz"
+    volumes:
+      - /var/backup:/backup
