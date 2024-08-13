@@ -2,7 +2,7 @@
 {
 			"type": 3,
 			"title": "macos",
-			"description": "一键部署macos测试机",
+			"description": "一键部署macos项目机",
 			"note": "一键部署macos,支持多种最新版本 等 <a href=\"https://hub.docker.com/r/dockurr/macos\" target=\"_blank\">更多查看</a>",
 			"categories": ["OS"],
 			"platform": "linux",
