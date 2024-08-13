@@ -1,7 +1,7 @@
 version: '2'
 services:
   armbian:
-    image: qemux/qemu-docker
+    image: qemux/qemu-docker              # https://github.com/qemus/qemu-docker
     container_name: armbian
     devices:
       - /dev/kvm
