@@ -1,0 +1,38 @@
+version: '2'
+services:
+  armbian:
+    image: qemux/qemu-docker
+    container_name: armbian
+    devices:
+      - /dev/kvm
+      - /dev/vhost-net
+    device_cgroup_rules:
+      - 'c *:* rwm'
+    cap_add:
+      - NET_ADMIN
+    stop_grace_period: 2m
+    restart: on-failure
+    environment:
+      ARGUMENTS: "-netdev user,id=hostnet1 -device virtio-net-pci,romfile=,netdev=hostnet1,id=net1"
+      BOOT: "https://pan-1.15099.net/d/L/Armbian_24.5.1_Uefi-x86_noble_current_6.6.31.img.xz"
+      DISK_SIZE: "4G"
+      RAM_SIZE: "4G"
+      WEB_VNC: true
+      DHCP: "Y"
+      
+    volumes:
+      - /var/armbian:/storage
+    networks:
+      wan1:
+
+      
+networks:
+  wan1:
+    name: 1macvlan
+    driver: macvlan
+    driver_opts:
+      parent: eth0                                  # 对接虚拟机网卡名称，爱快内置的debian12虚拟机第一个网卡默认 ens3
+    ipam:
+      config:
+        - subnet: 172.19.0.0/16                    # 局域网网段范围
+          gateway: 172.19.0.254                     # 局域网网关
