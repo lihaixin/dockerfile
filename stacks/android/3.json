@@ -1,0 +1,15 @@
+
+{
+			"type": 3,
+			"title": "android",
+			"description": "一键部署android测试机",
+			"note": "一键部署android,支持多种版本，多个类型的安卓手机 等 <a href=\"https://hub.docker.com/r/budtmo/docker-android\" target=\"_blank\">更多查看</a>",
+			"categories": ["OS"],
+			"platform": "linux",
+			"logo": "https://dockerfile.15099.net/logo/android.png",
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/android/docker-compose.yml"
+				}
+		}
+,
