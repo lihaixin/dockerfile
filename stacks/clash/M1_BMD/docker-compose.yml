@@ -1,14 +1,14 @@
 version: '2'
-services:                                    # 爱快虚拟机下配置多clash透明代理，然后给无线热点分流
- vwan:                                       # 修改服务名称 *  
-    image: "ikuaiapp/clash"
+services:                                    # 爱快路由器下配置多clash透明代理，然后给无线热点分流
+ vwan:                                       # 服务名称，这里取vwan,代表虚拟网关 
+    image: "ikuaiapp/clash"                  # 镜像名称 https://hub.docker.com/r/ikuaiapp/clash
     restart: unless-stopped                  # unless-stopped  always 
     privileged: true
     environment:
-      QQ: "00015060888"
+      QQ: "00015060888"                      # 授权QQ 模板细节调整号码
       CLASH_MODE: rule                       # rule / global / direct / (default is rule)
       CLASH_TYPE: M1_BMD                     # M1_BMD 为白名单模式  M2_HMD为黑名单模式 M3_GFL 按国家分流负载均衡模式
-      CLASH_SUBURL: https://hk1.15099.net/sub/9001592fb618ea.yaml
+      CLASH_SUBURL: https://test.15099.net/sub/9001592fb618ea.yaml           # 订阅地址，联系你的购买厂家获取
     networks:
       wan1:
         ipv4_address: 172.19.0.1             # 修改不同的IP *
