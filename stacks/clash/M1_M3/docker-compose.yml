@@ -1,4 +1,4 @@
-version: '3.7'
+version: '2'
 services:                                    # 爱快虚拟机下配置多clash透明代理，然后给无线热点分流
  vwan:                                       # 修改服务名称 *  
     image: "ikuaiapp/clash"
