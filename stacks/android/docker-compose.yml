@@ -16,15 +16,15 @@ services:
       - /var/android:/storage
     networks:
       wan1:
-        ipv4_address: 192.168.2.12            # 修改不同的IP *
+        ipv4_address: 172.19.0.1            # 修改不同的IP *
       
 networks:
   wan1:
     name: 1macvlan
     driver: macvlan
     driver_opts:
-      parent: vmbr0                                  # 对接虚拟机网卡名称，爱快内置的debian12虚拟机第一个网卡默认 ens3
+      parent: vmbr0                                  # 对接虚拟机网卡名称， ens3 | eth0  | vmbr0 
     ipam:
       config:
-        - subnet: 192.168.2.0/24                    # 局域网网段范围
-          gateway: 192.168.2.254                     # 局域网网关
+        - subnet: 172.19.0.0/16                    # 局域网网段范围
+          gateway: 172.19.0.254                     # 局域网网关
