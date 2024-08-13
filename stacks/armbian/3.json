@@ -1,7 +1,7 @@
 {
 			"type": 3,
 			"title": "armbian",
-			"description": "一键部署armbian测试机",
+			"description": "一键部署armbian Linux机",
 			"note": "一键部署armbian,最简单的linux 分发系统  <a href=\"https://docs.armbian.com/\" target=\"_blank\">更多查看</a>",
 			"categories": ["OS"],
 			"platform": "linux",
