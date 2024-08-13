@@ -9,7 +9,6 @@ services:                                    # 爱快虚拟机下配置多clash�
       UPDATE: "0"                                  # 是否在线升级
       CLASH_TYPE: M6_S5                            # M6_S5 为纯S5模式，国内环境用  M6_S5_DIA 为带CLASH_SUBURL订阅地址 国外环境用
       CLASH_MODE: global                           # rule / global / direct / (default is rule)
-      RTYPE: socks5                                # 落地类型 支持socks5 和 http （链式中转模式下生效）
       CLASH_SUBURL: https://test.15099.net/900221121001f9.yaml  # clash订阅地址
       RSERVER: 8.8.6.6                             # 落地IP （链式中转模式下生效）
       RPORT: 10800                                 # 落地代理端口 （链式中转模式下生效）
