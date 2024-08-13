@@ -5,14 +5,14 @@ services:                                    # 爱快虚拟机下配置多clash�
     restart: unless-stopped                  # unless-stopped  always 
     privileged: true
     environment:
-      QQ: "00015060888"                          # 授权QQ,内部使用，未经授权，第三台设备用，授权码会自动禁止，不在启用！！！
-      CLASH_MODE: rule                           # rule / global / direct / (default is rule)
-      CLASH_TYPE: M8_HTTPS_DIA                      # M6_S5_GAME 为游戏中转代理S5
-      CLASH_SUBURL: https://test.15099.net/900221121001f9.yaml  # clash订阅地址
-      RSERVER: 8.8.6.6                           # 落地IP （链式中转模式下生效）
-      RPORT: 10800                               # 落地代理端口 （链式中转模式下生效）
-      RUSER: 000S5                               # 落地代理账号 （链式中转模式下生效）
-      RPASS: 000S5                               # 落地代理密码 （链式中转模式下生效）
+      QQ: "00015060888"                                          # 授权QQ,内部使用，未经授权，第三台设备用，授权码会自动禁止，不在启用！！！
+      CLASH_MODE: rule                                           # rule / global / direct / (default is rule)
+      CLASH_TYPE: M8_HTTPS_DIA                                   # M8_HTTPS_DIA 为游戏中转代理HTTPS
+      CLASH_SUBURL: https://test.15099.net/900221121001f9.yaml   # clash订阅地址
+      RSERVER: 8.8.6.6                                           # 落地IP,这里填写你的HTTPS代理地址
+      RPORT: 10800                                               # 落地代理端口
+      RUSER: 000S5                                               # 落地代理账号
+      RPASS: 000S5                                               # 落地代理密码
 
     networks:
       wan1:
