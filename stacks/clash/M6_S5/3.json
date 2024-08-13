@@ -1,0 +1,14 @@
+ {
+			"type": 3,
+			"title": "route_M6_S5",
+			"description": "一键安装S5网关",
+			"note": "通过docker容器，配合macvlan,快速使用clash打造S5网关.",
+			"categories": ["route"],
+			"platform": "linux",
+			"logo": "https://dockerfile.15099.net/logo/gateway.png",
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/clash/M6_S5/docker-compose.yml"
+			}
+		}
+,
