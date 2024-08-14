@@ -1,0 +1,14 @@
+ {
+			"type": 3,
+			"title": "luminati-proxy",
+			"description": "一键部署luminati-proxy管理器",
+			"note": "通过docker容器，配合自定义桥接网络,快速内网部署代理管理，然后通过gost:s5进行授权管理.",
+			"categories": ["proxy"],
+			"platform": "linux",
+			"logo": "https://dockerfile.15099.net/logo/luminati-proxy.png",
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/luminati-proxy/docker-compose.yml"
+			}
+		}
+,
