@@ -6,6 +6,7 @@ services:
     environment:
       PORT: 24000
       WEBPORT: 22999
+    command: proxy-manager
     volumes:
       - lpm-root:/root
     networks:
