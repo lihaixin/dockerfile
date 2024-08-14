@@ -1,7 +1,7 @@
 version: '2'
 services:
  lumi:
-    image: "luminati/luminati-proxy"
+    image: "luminati/luminati-proxy"         # https://github.com/luminati-io/luminati-proxy
     restart: unless-stopped                  # unless-stopped  always          
     environment:
       PORT: 24000
