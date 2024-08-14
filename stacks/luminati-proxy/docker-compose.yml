@@ -13,13 +13,13 @@ services:
       - lpm-root:/root
     networks:
       my-network:
-        ipv4_address: 10.22.2.11
+        ipv4_address: 10.22.1.11
  networks:
   my-network:
-    name: lumi-proxy-network-1
+    name: lumi-proxy-network
     ipam:
       config:
-        - subnet: 10.22.2.0/24
-          gateway: 10.22.2.254
+        - subnet: 10.22.1.0/24
+          gateway: 10.22.1.254
 volumes:
   lpm-root:
