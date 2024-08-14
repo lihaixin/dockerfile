@@ -1,0 +1,22 @@
+version: '2'
+services:
+ lumi:
+    image: "luminati/luminati-proxy"
+    restart: unless-stopped                  # unless-stopped  always          
+    environment:
+      PORT: 24000
+      WEBPORT: 22999
+    volumes:
+      - lpm-root:/root
+    networks:
+      my-network:
+        ipv4_address: 10.22.2.11
+ networks:
+  my-network:
+    name: lumi-proxy-network-1
+    ipam:
+      config:
+        - subnet: 10.22.2.0/24
+          gateway: 10.22.2.254
+volumes:
+  lpm-root:
