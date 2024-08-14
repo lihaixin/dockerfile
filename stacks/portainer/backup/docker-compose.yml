@@ -2,7 +2,7 @@ version: '3.7'
 services:
   portainer-backup:
     container_name: portainer-backup
-    image: savagesoftware/portainer-backup:latest
+    image: savagesoftware/portainer-backup:latest                           # https://github.com/SavageSoftware/portainer-backup
     hostname: portainer-backup
     restart: unless-stopped
     command: schedule
