@@ -6,6 +6,8 @@ services:
     environment:
       PORT: 24000
       WEBPORT: 22999
+    ports:
+      - "22999:22999"                        # 新增这一行，将容器的22999端口映射到宿主机的22999端口
     command: proxy-manager
     volumes:
       - lpm-root:/root
