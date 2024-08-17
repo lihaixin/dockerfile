@@ -2,7 +2,7 @@
     			"type": 1,
     			"title": "through-cache-docker-hub",
     			"description": "through-cache-docker-hub",
-			"note": "Deploys an docker hub through-cache, please refer to <a href=\"https://github.com/hunshcn/gh-proxy\" target=\"_blank\">gost doc</a> for production deployments.",
+			"note": "Deploys an docker hub through-cache, please refer to <a href=\"https://docs.docker.com/docker-hub/mirror/\" target=\"_blank\">gost doc</a> for production deployments.",
 			"categories": ["docker"],
     			"platform": "linux",
 			"restart_policy": "always",
