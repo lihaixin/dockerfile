@@ -7,7 +7,7 @@
     			"platform": "linux",
 			"restart_policy": "always",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/registry.png",
-    			"image": "registry",
+    			"image": "lihaixin/registry",
   			"ports": ["5000/tcp"],
   		}
 ,
