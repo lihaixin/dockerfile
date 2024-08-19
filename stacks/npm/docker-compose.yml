@@ -1,7 +1,7 @@
 version: '2'
 services:
   app:
-    image: 'lihaixin/npm:latest'
+    image: 'lihaixin/npm:latest'  # https://nginxproxymanager.com/setup/
     restart: always
     network_mode: host   # 修改网络共享服务名称 "bridge" "host"  "none" "service:[service name]"  "container:[container name/id] *"
     #ports:
