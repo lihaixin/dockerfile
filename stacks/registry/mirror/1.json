@@ -1,25 +1,13 @@
 {
     			"type": 1,
-    			"title": "through-cache-docker-hub",
-    			"description": "through-cache-docker-hub",
-			"note": "Deploys an docker hub through-cache, please refer to <a href=\"https://docs.docker.com/docker-hub/mirror/\" target=\"_blank\">gost doc</a> for production deployments.",
+    			"title": "through-cache-docker-hub_5000",
+    			"description": "through-cache-docker-hub_5000",
+			"note": "部署直通缓存hub.docker.com, 请参考 <a href=\"https://docs.docker.com/docker-hub/mirror/\" target=\"_blank\">gost doc</a> for production deployments.",
 			"categories": ["docker"],
     			"platform": "linux",
 			"restart_policy": "always",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/registry.png",
     			"image": "registry",
   			"ports": ["5000/tcp"],
-			"env": [{
-      				"name": "DOCKER_HUB_USERNAME",
-      				"label": "DOCKER_HUB_USERNAME",
-				"description": "DOCKER_HUB_USERNAME",
-      				"default": "your hub name"
-    				},
-		     		{
-      				"name": "DOCKER_HUB_ACCESS_TOKEN",
-      				"label": "DOCKER_HUB_ACCESS_TOKEN",
-				"description": "DOCKER_HUB_ACCESS_TOKEN",
-      				"default": "you hub token"
-    				}]
   		}
 ,
