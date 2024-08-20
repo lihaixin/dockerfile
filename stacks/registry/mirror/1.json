@@ -8,6 +8,6 @@
 			"restart_policy": "always",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/registry.png",
     			"image": "lihaixin/registry",
-  			"ports": ["5000/tcp"],
+  			"ports": ["5000/tcp"]
   		}
 ,
