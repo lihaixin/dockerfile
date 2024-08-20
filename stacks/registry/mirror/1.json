@@ -8,6 +8,46 @@
 			"restart_policy": "always",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/registry.png",
     			"image": "lihaixin/registry",
-  			"ports": ["5000/tcp"]
+  			"ports": ["5000/tcp"],
+			"env": [{
+				"name": "PROXY_REMOTE_URL",
+				"label": "反向代理地址",
+				"select": [
+        			   		{
+          					"text": "https://registry-1.docker.io",
+          					"value": "https://registry-1.docker.io",
+          					"default": "true"
+        			   		},
+        			   		{
+          					"text": "https://ghcr.io",
+          					"value": "https://ghcr.io"
+        			   		},
+        			   		{
+          					"text": "https://gcr.io",
+          					"value": "https://gcr.io"
+        			   		},
+        			   		{
+          					"text": "https://k8s.gcr.io",
+          					"value": "https://k8s.gcr.io"
+        			   		}
+      				          ],
+      				"description": "选择相应的PROXY_REMOTE_URL"
+				},
+				{
+      				"name": "DELETE_ENABLED",
+      				"label": "启用图像结构",
+				"select": [
+        			   		{
+          					"text": "true",
+          					"value": "true",
+          					"default": "true"
+        			   		},
+        			   		{
+          					"text": "false",
+          					"value": "false"
+        			   		}
+      				          ],
+      				"description": "选择是否启用DELETE_ENABLED"
+    				}]
   		}
 ,
