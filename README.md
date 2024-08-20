@@ -22,8 +22,8 @@ containrrr/watchtower --cleanup dockerfile
 
 提供两种模板方式，一种使用docker容器，一种使用docker stacks部署
 
-1. 容器 使用docker 桥接部署网络
-2. stacks使用自定义桥接或者macvlan网络
+1. 容器 使用docker 桥接部署网络,不支持自动创建volume，不方便永久存储数据
+2. stacks使用自定义桥接或者macvlan网络，自动创建volume，方便永久存储数据
 
 ## 所有的Docker 模板 
 [官方模板格式](https://docs.portainer.io/advanced/app-templates/format#administrator-only)  [compose 格式](https://docs.docker.com/compose/compose-file/)
