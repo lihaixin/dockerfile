@@ -1,6 +1,7 @@
 		{
 			"type": 1,
 			"title": "portainer-9443",
+			"name": "ui",
 			"description": "自定义portainer管理面包,包含常用模板,管理地址:https://<ip>:9443",
 			"categories": ["docker"],
 			"platform": "linux",
