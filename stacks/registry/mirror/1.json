@@ -2,7 +2,7 @@
     			"type": 1,
     			"title": "through-cache-docker-hub_5000",
     			"description": "through-cache-docker-hub_5000",
-			"note": "部署直通缓存hub.docker.com, 请参考 <a href=\"https://docs.docker.com/docker-hub/mirror/\" target=\"_blank\">gost doc</a> for production deployments.",
+			"note": "部署直通缓存hub.docker.com, 请参考 <a href=\"https://distribution.github.io/distribution/about/configuration/\" target=\"_blank\">configuration</a> 调整配置文件",
 			"categories": ["docker"],
     			"platform": "linux",
 			"restart_policy": "always",
