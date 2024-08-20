@@ -1,0 +1,13 @@
+version: "2"
+services:
+  ghcr:
+    image: lihaixin/registry
+    volumes:
+      - ./data:/var/lib/registry
+      - /etc/localtime:/etc/localtime
+    ports:
+      - 5000:5000
+    environment:
+      - PROXY_REMOTE_URL=https://registry-1.docker.io
+      - DELETE_ENABLED=true
+    restart: always
