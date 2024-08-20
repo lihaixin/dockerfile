@@ -23,7 +23,7 @@ networks:
     name: 1macvlan
     driver: macvlan
     driver_opts:
-      parent: vmbr0                                  # 对接虚拟机网卡名称， ens3 | eth0  | vmbr0 
+      parent: eth0                                  # 对接虚拟机网卡名称， ens3 | eth0  | vmbr0 
     ipam:
       config:
         - subnet: 172.19.0.0/16                      # 局域网网段范围
