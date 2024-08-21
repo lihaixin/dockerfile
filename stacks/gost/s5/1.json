@@ -16,6 +16,21 @@
 				"default": "0001071852436"
 				},
 				{
+      				"name": "LTYPE",
+      				"label": "本地类型",
+				"description": "提供socks5 http 本地运行代理",
+				"select": [
+				        {
+				          "text": "socks5",
+				          "value": "socks5"
+				        },
+				        {
+				          "text": "http",
+				          "value": "http"
+				        }
+				      ]
+    				},
+				{
       				"name": "PORT",
       				"label": "HTTP & SOCKS5 端口",
 				"description": "The HTTP AND SOCKS5 Server Port",
@@ -34,7 +49,7 @@
       				"default": "test"
     				},
 				{
-      				"name": "TYPE",
+      				"name": "RTYPE",
       				"label": "本地还是中转",
 				"description": "提供local socks5 http https,local为本地运行代理,其他为转发上游代理",
 				"select": [
