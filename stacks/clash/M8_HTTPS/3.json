@@ -1,7 +1,7 @@
  {
 			"type": 3,
 			"title": "route_M8_HTTPS",
-      "name": "route_M8_HTTPS-1",
+			"name": "route_M8_HTTPS-1",
 			"description": "一键安装HTTPS网关",
 			"note": "通过docker容器，配合macvlan,快速使用clash打造https网关.",
 			"categories": ["route"],
