@@ -40,7 +40,7 @@
         				{
 				          "text": "local",
 				          "value": "local",
-				          "default": local
+				          "default": "local"
 				        },
 				        {
 				          "text": "socks5",
