@@ -1,0 +1,15 @@
+ {
+			"type": 3,
+			"title": "s5-101",
+			"name": "s5-101",   
+			"description": "一键安装gost S5代理",
+			"note": "通过docker容器，配合macvlan,快速配置S5.",
+			"categories": ["gost"],
+			"platform": "linux",
+			"logo": "https://dockerfile.15099.net/logo/gost.png",
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/gost/s5/docker-compose.yml"
+			}
+		}
+,
