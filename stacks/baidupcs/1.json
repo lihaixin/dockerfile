@@ -18,12 +18,12 @@
     			"env": [{
       					"name": "PGID",
       					"label": "PGID",
-      					"set": "0"
+      					"default": "0"
     				},
     				{
       					"name": "PUID",
       					"label": "PUID",
-      					"set": "0"
+      					"default": "0"
     				}],
     			"restart_policy": "always"
   			}
