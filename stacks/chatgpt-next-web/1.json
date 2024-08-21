@@ -1,0 +1,24 @@
+{
+    			"type": 1,
+    			"title": "chatgpt-next-web-3000",
+    			"description": "A cross-platform ChatGPT/Gemini UI (Web / PWA / Linux / Win / MacOS). 一键拥有你自己的跨平台 ChatGPT/Gemini 应用",
+    			"categories": ["AI"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/ChatGPTNextWeb/ChatGPT-Next-Web/main/docs/images/icon.svg",
+    			"image": "yidadaa/chatgpt-next-web",
+    			"ports": [
+      				"3000/tcp"
+    				],
+    			"env": [{
+      					"name": "OPENAI_API_KEY",
+      					"label": "OPENAI_API_KEY",
+      					"set": "sk-xxxx"
+    				},
+    				{
+      					"name": "CODE",
+      					"label": "CODE",
+      					"set": "your-password"
+    				}],
+    			"restart_policy": "always"
+  			}
+,
