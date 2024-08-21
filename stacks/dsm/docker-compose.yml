@@ -2,7 +2,7 @@ version: '2'
 services:
   dsm:
     container_name: dsm
-    image: vdsm/virtual-dsm
+    image: vdsm/virtual-dsm                        # https://github.com/vdsm/virtual-dsm
     environment:
       DISK_SIZE: "32G"
       DISK_FMT: "qcow2"
