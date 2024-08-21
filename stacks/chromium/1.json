@@ -1,19 +1,19 @@
 {
-    			"type": 1,
-    			"title": "chromium-8787",
-    			"description": "chromium browser",
-    			"categories": ["browser"],
-    			"platform": "linux",
-    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/chromium.png",
-    			"image": "lihaixin/chromium:latest",
-    			"volumes": [
-                    {
-                    "container": "/root/Downloads",
-                    "bind": "/root/chromium"
-                    }
-                ],
-    			"ports": [
-      				"8787/tcp"
-    				]
-  			}
+    "type": 1,
+    "title": "chromium-8787",
+    "description": "chromium browser",
+    "categories": ["browser"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/chromium.png",
+    "image": "lihaixin/chromium:latest",
+    "volumes": [
+        {
+        "container": "/root/Downloads",
+        "bind": "/root/chromium"
+        }
+    ],
+    "ports": [
+        "8787/tcp"
+    ]
+}
 ,
