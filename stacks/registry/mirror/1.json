@@ -35,7 +35,7 @@
 				},
 				{
       				"name": "DELETE_ENABLED",
-      				"label": "启用图像结构",
+      				"label": "本地存储删除功能",
 				"select": [
         			   		{
           					"text": "true",
