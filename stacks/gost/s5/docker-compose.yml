@@ -5,6 +5,7 @@ services:
     restart: unless-stopped                            # unless-stopped  always          
     environment:
       QQ: "00015050999"
+      NONTP: "0"
     volumes:
       - gostfile:/home
     networks:
