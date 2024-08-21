@@ -7,17 +7,17 @@
     			"logo": "https://raw.githubusercontent.com/ChatGPTNextWeb/ChatGPT-Next-Web/main/docs/images/icon.svg",
     			"image": "yidadaa/chatgpt-next-web",
     			"ports": [
-      				"3000/tcp"
+      				"3000:3000/tcp"
     				],
     			"env": [{
       					"name": "OPENAI_API_KEY",
       					"label": "OPENAI_API_KEY",
-      					"set": "sk-xxxx"
+      					"default": "sk-xxxx"
     				},
     				{
       					"name": "CODE",
       					"label": "CODE",
-      					"set": "your-password"
+      					"default": "your-password"
     				}],
     			"restart_policy": "always"
   			}
