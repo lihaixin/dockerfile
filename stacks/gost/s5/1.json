@@ -15,12 +15,6 @@
 				"default": "0001071852436"
 				},
 				{
-      				"name": "TYPE",
-      				"label": "本地还是中转",
-				"description": "提供local socks5 http https,local为本地运行代理,其他为转发上游代理",
-      				"default": "local"
-    				},
-				{
       				"name": "PORT",
       				"label": "HTTP & SOCKS5 端口",
 				"description": "The HTTP AND SOCKS5 Server Port",
@@ -37,6 +31,30 @@
       				"label": "HTTP & SOCKS5 密码",
 				"description": "Password is used for Http & SOCKS5 verification",
       				"default": "test"
+    				},
+				{
+      				"name": "TYPE",
+      				"label": "本地还是中转",
+				"description": "提供local socks5 http https,local为本地运行代理,其他为转发上游代理",
+				"select": [
+        				{
+				          "text": "local",
+				          "value": "local",
+				          "default": local
+				        },
+				        {
+				          "text": "socks5",
+				          "value": "socks5"
+				        },
+				        {
+				          "text": "http",
+				          "value": "http"
+				        },
+				        {
+				          "text": "https",
+				          "value": "https"
+				        }
+				      ]
     				},
 			        {
       				"name": "RURL",
@@ -61,12 +79,6 @@
       				"label": "中转上游密码",
 				"description": "中转上游代理验证密码",
       				"default": "rpass"
-    				},
-		     		{
-      				"name": "OPTIONS",
-      				"label": "中间代理链",
-				"description": "中间代理链,可以用来做速度提升.默认为空,格式: socks5://a13:a13@150.158.7.77:33114",
-      				"default": ""
     				}]
   		}
 ,
