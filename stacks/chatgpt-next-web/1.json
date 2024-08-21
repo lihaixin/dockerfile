@@ -1,7 +1,7 @@
 {
     			"type": 1,
     			"title": "chatgpt-next-web-3000",
-                "name": "chatgpt-next-web",
+    			"name": "chatgpt-next-web-3000",
     			"description": "A cross-platform ChatGPT/Gemini UI (Web / PWA / Linux / Win / MacOS). 一键拥有你自己的跨平台 ChatGPT/Gemini 应用",
     			"categories": ["AI"],
     			"platform": "linux",
