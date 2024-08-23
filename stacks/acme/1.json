@@ -64,10 +64,6 @@
         			   		{
           					"text": "dns_ali",
           					"value": "dns_ali"
-        			   		},
-        			   		{
-          					"text": "dns_other",
-          					"value": ""
         			   		}
       				          ],
 				"description": "选择域名管理提供商"
