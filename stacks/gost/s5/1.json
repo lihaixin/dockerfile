@@ -10,10 +10,10 @@
     			"image": "lihaixin/gost:s5",
   			"network": "host",
 			"env": [{
-				"name": "QQ",
-				"label": "模板QQ标签 *",
-				"description": "不同QQ标签，应用不同的模板.",
-				"default": "0001071852436",
+				"name": "NO",
+				"label": "模板NO标签 *",
+				"description": "不同NO标签，应用不同的模板.",
+				"default": "0000210012301280013",
 				"preset": true
 				},
 				{
