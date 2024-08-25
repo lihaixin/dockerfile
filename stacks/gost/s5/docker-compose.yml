@@ -4,8 +4,7 @@ services:
     image: "lihaixin/gost:s5"
     restart: unless-stopped                            # unless-stopped  always          
     environment:
-      QQ: "00015050999"
-      NONTP: "0"
+      NO: "0000210012301280013"
     volumes:
       - gostfile:/home
     networks:
