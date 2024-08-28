@@ -12,7 +12,7 @@
 			"env": [{
 				"name": "PASSWORD",
 				"label": "管理密码 *",
-				"description": "预定义portainer管理密码.",
+				"description": "预定义portainer管理密码,密码不能低于12位，留空为后续再自己创建",
 				"default": ""
 				}],
 			"volumes": [{
