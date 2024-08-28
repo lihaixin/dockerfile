@@ -9,6 +9,12 @@
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/portainer.png",
 			"image": "lihaixin/portainer:ce-2.19.5",
 			"ports": ["9443:9443/tcp", "8000:8000/tcp"],
+			"env": [{
+				"name": "PASSWORD",
+				"label": "管理密码 *",
+				"description": "预定义portainer管理密码.",
+				"default": ""
+				}],
 			"volumes": [{
 				"container": "/var/run/docker.sock",
 				"bind": "/var/run/docker.sock"
