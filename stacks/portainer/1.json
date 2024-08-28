@@ -14,7 +14,8 @@
 				"bind": "/var/run/docker.sock"
 				},
 				{
-				"container": "/data" 
+				"container": "/data",
+				"bind": "/var/portainer_data"
 				}]
 			}
       ,
