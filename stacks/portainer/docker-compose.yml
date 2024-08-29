@@ -1,0 +1,15 @@
+version: "2"
+services:
+  portainer:
+    image: lihaixin/portainer:2.19.5
+    container_name: ui
+    hostname: ui
+    restart: unless-stopped
+    network_mode: "host"
+    environment:
+      PASSWORD: ""                                   # 密码不能低于12位，留空为启动后再自己创建
+    volumes:
+      - portainer_data:/data                         # 永久存放portainer数据位置
+      - /var/run/docker.sock:/var/run/docker.sock    # docker.sock
+volumes:
+  portainer_data:
