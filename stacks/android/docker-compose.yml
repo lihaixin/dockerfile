@@ -26,5 +26,5 @@ networks:
       parent: eth0                                  # 对接虚拟机网卡名称， ens3 | eth0  | vmbr0 
     ipam:
       config:
-        - subnet: 172.19.0.0/16                      # 局域网网段范围
+        - subnet: 172.19.0.0/24                      # 局域网网段范围
           gateway: 172.19.0.254                      # 局域网网关
