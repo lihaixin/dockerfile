@@ -1,0 +1,14 @@
+{
+			"type": 3,
+			"title": "ui",
+			"description": "一键部署portainer管理工具",
+			"note": "一键部署portainer管理工具,支持中英文解决，自定义tunnel端口,更多信息 <a href=\"https://hub.docker.com/r/lihaixin/portainer\" target=\"_blank\">点击这里</a> ",
+			"categories": ["docker"],
+			"platform": "linux",
+			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/portainer.png",			
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/portainer/docker-compose.yml"
+			}
+		}
+,
