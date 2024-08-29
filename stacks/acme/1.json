@@ -3,7 +3,7 @@
     			"title": "acme ",
 			"name": "acme ",
     			"description": "域名数字证书申请",
-			"note": "单独域名数字证书申请, 需要用到80端口，同时域名指向云主机 更多<a href=\"https://hub.docker.com/r/lihaixin/acme\" target=\"_blank\">点击这里</a> 了接更多",
+			"note": "单独域名数字证书申请, 需要用到80端口，同时域名指向云主机 更多<a href=\"https://hub.docker.com/r/lihaixin/acme\" target=\"_blank\">点击这里</a>  <a href=\"https://github.com/acmesh-official\" target=\"_blank\">ACME官方地址</a> 了接更多",
     			"hostname": "acme",
 			"categories": ["cert"],
     			"platform": "linux",
