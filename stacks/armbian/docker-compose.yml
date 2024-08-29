@@ -34,5 +34,5 @@ networks:
       parent: eth0                                  # 对接虚拟机网卡名称，爱快内置的debian12虚拟机第一个网卡默认 ens3
     ipam:
       config:
-        - subnet: 172.19.0.0/16                    # 局域网网段范围
+        - subnet: 172.19.0.0/24                     # 局域网网段范围
           gateway: 172.19.0.254                     # 局域网网关
