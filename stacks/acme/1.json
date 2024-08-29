@@ -14,12 +14,7 @@
       				"container": "/etc/cert",
 				"bind": "/etc/cert"
     				}],
-			"env": [{
-				"name": "QQ",
-				"label": "QQ *",
-				"description": "授权QQ",
-				"default": "1071852436"
-				},
+			"env": [
 				{
       				"name": "TYPE",
       				"label": "证书提供商 *",
