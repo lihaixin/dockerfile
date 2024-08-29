@@ -5,7 +5,7 @@ services:
     container_name: ui
     hostname: ui
     restart: unless-stopped
-    network_mode: "host"
+    network_mode: "host"                             # bridge
     environment:
       PASSWORD: ""                                   # 密码不能低于12位，留空为启动后再自己创建
     volumes:
