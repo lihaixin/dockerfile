@@ -1,0 +1,13 @@
+{
+    			"type": 1,
+    			"title": "bash",
+    			"description": "快速部署自有脚本系统（私有）",
+    			"categories": ["tools"],
+    			"platform": "linux",
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/ttyd.png",
+			    "note": "个人收集整理的脚本，通过主菜单调用，方便快速部署 等 <a href=\"https://hub.docker.com/r/lihaixin/bash\" target=\"_blank\">更多查看</a>",
+    			"image": "lihaixin/bash",
+          "ports": [
+      				"80/tcp"
+    				]
+,
