@@ -9,7 +9,7 @@
 			"logo": "https://dockerfile.15099.net/logo/gateway.png",
 			"repository": {
 				"url": "https://github.com/lihaixin/dockerfile",
-				"stackfile": "stacks/clash/M1_BMD/docker-compose.yml"
+				"stackfile": "stacks/clash/docker-compose.yml"
 			}
 		}
 ,
