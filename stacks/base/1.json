@@ -4,7 +4,7 @@
 			"name": "base ",
     			"description": "基于alpine 3.16定制的基础模板,所有模板的基础",
     			"hostname": "base",
-			"categories": ["toolbox"],
+			"categories": ["tools"],
     			"platform": "linux",
     			"logo": "https://dockerfile.15099.net/logo/base.png",
     			"image": "lihaixin/base:3.16.03"
