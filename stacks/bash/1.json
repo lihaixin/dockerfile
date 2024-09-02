@@ -1,7 +1,7 @@
 {
     			"type": 1,
     			"title": "bash",
-    			"description": "快速部署自有脚本系统（私有）",
+    			"description": "快速部署自有脚本系统【自用】",
     			"categories": ["tools"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/bash.png",
