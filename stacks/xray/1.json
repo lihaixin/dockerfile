@@ -13,6 +13,9 @@
 			"volumes": [{
       				"container": "/etc/cert",
 				"bind": "/etc/cert"
+    				},
+				"container": "/etc/nginx",
+				"bind": "/var/xray"
     				}],
 			"env": [{
       				"name": "DOMAIN",
