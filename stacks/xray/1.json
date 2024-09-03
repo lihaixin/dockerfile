@@ -8,18 +8,13 @@
 			"categories": ["xray"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
-    			"image": "lihaixin/xray:one",
+    			"image": "lihaixin/xray:one-1.7.5",
   			"network": "host",
 			"volumes": [{
       				"container": "/etc/cert",
 				"bind": "/etc/cert"
     				}],
 			"env": [{
-				"name": "QQ",
-				"label": "QQ联系方式 *",
-				"description": "终端显示你的QQ联系方式."
-				},
-				{
       				"name": "DOMAIN",
       				"label": "你的域名",
 				"description": "子域名已做好A指向到云主机,同时主机80端口未被占用",
