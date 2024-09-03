@@ -1,15 +1,22 @@
 version: '2'
 services:
   xray:
-    image: "lihaixin/xray:1.4.0"
+    image: "lihaixin/xray:one-1.7.5"
     restart: always
     ports:
       - "443:443"
       - "80:80"
     environment:
-      DOMAIN: "xray.youdomain.com"
+      DOMAIN: "youdomain.com"
+      HOSTNAME: "hk8"
       PASSWORD: "888888"
-      ID: "a677a91f-f458-4627-ae9d-e3f28807af51"
-      BACKURL: "127.0.0.1:80"
+      PORT: "443"
+      USERNAME: "000S5"
+      PASSWORD: "000S5"
+      S5PORT: 9001
+      BACKURL: "127.0.0.1:88"
     volumes:
-      - xray_cert:/etc/xray/cert
+      - xrayfile:/etc/nginx
+      - /etc/cert:/etc/cert
+volumes:
+  xrayfile:
