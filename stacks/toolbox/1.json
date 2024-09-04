@@ -15,6 +15,10 @@
 				{
       				"container": "/root/.ssh/id_rsa",
 				"bind": "/root/.ssh/id_rsa"
+    				},
+				{
+      				"container": "/var/run/docker.sock",
+				"bind": "/var/run/docker.sock"
     				}]
   			}
 ,
