@@ -10,3 +10,4 @@ services:
     pid: "host"
     volumes:
       - /root/.ssh/id_rsa:/root/.ssh/id_rsa
+      - /var/run/docker.sock /var/run/docker.sock
