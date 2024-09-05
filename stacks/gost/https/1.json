@@ -13,12 +13,6 @@
 				"bind": "/etc/cert"
     				}],
 			"env": [{
-				"name": "QQ",
-				"label": "模板QQ标签 *",
-				"description": "不同QQ标签，应用不同的模板.",
-				"default": "0001071852436"
-				},
-				{
       				"name": "DOMAIN",
       				"label": "顶级域名",
 				"description": "你的顶级域名,申请泛证书用",
@@ -31,7 +25,7 @@
       				"default": "h8"
     				},
 				{
-      				"name": "TYPE",
+      				"name": "RTYPE",
       				"label": "本地还是中转",
 				"description": "提供local socks5 http https,local为本地运行https代理,其他为转发上游代理",
       				"default": "local"
