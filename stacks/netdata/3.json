@@ -1,6 +1,7 @@
 {
     			"type": 3,
     			"title": "netdata-19999",
+    			"name": "netdata-19999",
     			"description": "是一款Linux系统性能实时监控工具，是一个高度优化的Linux守护进程，可以对Linux系统、应用程序(包括但不限于Web服务器，数据库等)、SNMP服务等提供实时的性能监控 ",
 			"note": "Linux系统性能实时监控工具 <a href=\"https://learn.netdata.cloud/docs\" target=\"_blank\">更多查看</a>",
     			"categories": ["tools"],
