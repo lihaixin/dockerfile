@@ -7,11 +7,6 @@
 			"categories": ["tools"],
 			"platform": "linux",
 			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/vnstat.png",
-			"env": [{
-				"name": "QQ",
-				"label": "QQ联系方式",
-				"description": "终端显示你的QQ联系方式."
-			}],
 			"repository": {
 				"url": "https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/vnstat/docker-compose.yml"
