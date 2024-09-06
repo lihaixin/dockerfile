@@ -3,7 +3,7 @@
 			"title": "vnstat-8685",
 			"name": "vnstat-8685",
 			"description": "vnStat 是一个网络流量监视器,使用内核提供的网络接口统计信息,确保少量使用系统资源",
-			"note": "部署网络流量监视器,使用host网络, 更多信息 <a href=\"https://github.com/lihaixin/vnstat\" target=\"_blank\">点击这里</a> ",
+			"note": "部署网络流量监视器,使用host网络, 默认配置每月1000G流量，超过就限速到1m 更多信息 <a href=\"https://github.com/lihaixin/vnstat\" target=\"_blank\">点击这里</a> ",
 			"categories": ["tools"],
 			"platform": "linux",
 			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/vnstat.png",
