@@ -20,12 +20,6 @@
 				"bind": "/etc/cert"
     				}],
 			"env": [{
-				"name": "QQ",
-				"label": "模板QQ标签 *",
-				"description": "不同QQ标签，应用不同的模板.",
-				"default": "0001071852436"
-				},
-				{
       				"name": "DOMAIN",
       				"label": "Your Domain",
 				"description": "利用lihaixin/acme容器申请域名通用证书",
