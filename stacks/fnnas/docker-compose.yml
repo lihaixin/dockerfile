@@ -1,6 +1,6 @@
 version: '2'
 services:
-  armbian:
+  fnnas:
     image: qemux/qemu-docker              # https://github.com/qemus/qemu-docker
     container_name: armbian
     devices:
@@ -21,7 +21,7 @@ services:
       DHCP: "Y"
       
     volumes:
-      - /var/armbian:/storage
+      - /var/fnnas:/storage
     networks:
       wan1:
 
