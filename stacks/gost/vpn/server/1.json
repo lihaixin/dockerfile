@@ -10,12 +10,6 @@
 			"privileged": true,
   			"network": "host",
 			"env": [{
-				"name": "QQ",
-				"label": "模板QQ标签 *",
-				"description": "不同QQ标签，应用不同的模板.",
-				"default": "0001071852436"
-				},
-				{
       				"name": "GOST_PORT",
       				"label": "GOST UDP 隧道端口",
 				"description": "用于GOST端口,默认为8421,不需要调整,除非8421被其他程序占用",
