@@ -1,0 +1,14 @@
+ {
+			"type": 3,
+			"title": "ikuai",
+			"description": "一键安装istoreos路由器",
+			"note": "通过docker容器，配合macvlan,快速部署istoreos软路由.",
+			"categories": ["route"],
+			"platform": "linux",
+			"logo": "https://www.istoreos.com/_nuxt/img/logo.04dbfec.png",
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/istoreos/docker-compose.yml"
+			}
+		}
+,
