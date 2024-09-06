@@ -3,7 +3,7 @@
 			"title": "DSM",
 			"description": "一键安装群晖DSM",
 			"note": "通过docker容器，配合macvlan,快速尝试群晖这款火热的NAS系统，长期用，请购买官方产品.",
-			"categories": ["OS"],
+			"categories": ["NAS"],
 			"platform": "linux",
 			"logo": "https://dockerfile.15099.net/logo/dsm.png",
 			"repository": {
