@@ -5,7 +5,7 @@
 			"note": "通过docker容器，配合macvlan,快速尝试群晖这款国产新秀的FLNAS系统<a href=\"https://www.fnnas.com/\" target=\"_blank\">更多查看</a>",
 			"categories": ["NAS"],
 			"platform": "linux",
-			"logo": "https://dockerfile.15099.net/logo/fnnas.png",
+			"logo": "https://static2.fnnas.com/official/fnos-logo.png",
 			"repository": {
 				"url": "https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/fnnas/docker-compose.yml"
