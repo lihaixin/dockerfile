@@ -17,7 +17,6 @@ services:
       BOOT: "https://download.liveupdate.fnnas.com/x86_64/trim/TRIM.iso"
       DISK_SIZE: "10G"
       RAM_SIZE: "4G"
-      MACHINE: "i440fx"
       BOOT_MODE: "legacy"
       WEB_VNC: true
       DHCP: "Y"
