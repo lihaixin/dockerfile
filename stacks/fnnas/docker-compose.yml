@@ -2,7 +2,7 @@ version: '2'
 services:
   fnnas:
     image: qemux/qemu-docker              # https://github.com/qemus/qemu-docker
-    container_name: armbian
+    container_name: flnas
     devices:
       - /dev/kvm
       - /dev/vhost-net
