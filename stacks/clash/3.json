@@ -1,7 +1,7 @@
  {
 			"type": 3,
-			"title": "route_M1_BMD",
-	 		"name": "route_M1_BMD-1",
+			"title": "Clash云网关",
+	 		"name": "clahs_M1_BMD-1",
 			"description": "一键安装各类网关",
 			"note": "通过docker容器，配合macvlan,快速使用clash打造白名单、黑名单、S5、HTTP网关.",
 			"categories": ["route"],
