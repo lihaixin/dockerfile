@@ -1,0 +1,35 @@
+version: '2'
+services:                                    # 爱快虚拟机下配置多clash透明代理，然后给无线热点分流
+ vwan:                                       # 修改服务名称 *  
+    image: "lihaixin/vpnikuai:clash"
+    restart: unless-stopped                  # unless-stopped  always 
+    privileged: true
+
+    environment:
+      S5PORT: 1080
+      HTTPPORT: 8080
+      CLASH_MIXED_PORT: 7890
+      CLASH_TYPE: M1_BMD                     # M1_BMD 为白名单模式  M2_HMD为黑名单模式 M3_GFL 按国家分流负载均衡模式 M4_REL 链式中转  M5_RED iptables+redirect 模式
+      CLASH_SUBNAME: feiji
+      CLASH_SUBTYPE: http
+      CLASH_SUBURL: https://s.feijiyunduijie999999.com/link/icKlKABM0vF0z0fJ?clash=1   # https://feijicloud.com/user
+      MODULELDIR: /root/module
+      RTYPE: socks5                         # 落地类型 支持socks5 和 http （链式中转模式下生效）
+      RSERVER: 8.8.8.8                      # 落地IP （链式中转模式下生效）
+      RPORT: 10020                          # 落地代理端口 （链式中转模式下生效）
+      RUSER: user                           # 落地代理账号 （链式中转模式下生效）
+      RPASS: password                       # 落地代理密码 （链式中转模式下生效）
+      
+    networks:
+      wan1:
+        ipv4_address: 192.168.2.1             # 修改不同的IP *
+networks:
+  wan1:
+    name: 1macvlan
+    driver: macvlan
+    driver_opts:
+      parent: ens3                                   # 对接虚拟机网卡名称，爱快内置的debian12虚拟机第一个网卡默认 ens3
+    ipam:
+      config:
+        - subnet: 192.168.2.0/24                     # 局域网网段范围
+          gateway: 192.168.2.254                     # 局域网网关
