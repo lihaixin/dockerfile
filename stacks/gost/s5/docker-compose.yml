@@ -2,17 +2,14 @@ version: '2'
 services:
  socks5:
     image: "lihaixin/gost:s5"
-    restart: unless-stopped                            # unless-stopped  always          
+    restart: unless-stopped                             # unless-stopped  always          
     environment:
-      NO: "0000210012301280013"
+      NO: ""
     volumes:
       - gostfile:/home
     networks:
       wan1:
-        ipv4_address: 172.19.0.101                     # 修改不同的IP *
-volumes:
-  gostfile:
-
+        ipv4_address: 172.19.0.101                      # 修改不同的IP *
 networks:
   wan1:
     name: 1macvlan
@@ -23,3 +20,6 @@ networks:
       config:
         - subnet: 172.19.0.0/16                         # 局域网网段范围
           gateway: 172.19.0.254                         # 局域网网关
+
+volumes:
+  gostfile:
