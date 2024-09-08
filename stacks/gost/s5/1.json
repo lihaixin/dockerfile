@@ -7,7 +7,7 @@
 			"categories": ["gost"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/gost.png",
-    			"image": "lihaixin/gost:s5",
+    			"image": "lihaixin/gost:s5-2.11.5",
   			"network": "host",
 			"env": [{
 				"name": "NO",
