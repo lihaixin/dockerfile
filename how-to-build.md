@@ -7,4 +7,20 @@ docker buildx  create --use --name mybuilder --driver docker-container --driver-
 # 添加--driver-opt network=host 解决使用 buildx 构建时无法提取图像“无法执行请求”、“I/O 超时” 参考：https://github.com/docker/buildx/issues/191  
 docker buildx build --platform linux/arm64,linux/amd64 -t lihaixin/gost:vpn.s . --push
 docker buildx build -f Dockerfile.3.14 --platform linux/arm64,linux/amd64 -t lihaixin/gost:vpn.s --push
+
 ```
+
+## 运行
+
+```
+docker pull lihaixin/dockerfile
+docker run -d --name dockerfile --hostname dockerfile --restart=always -p 89:80 lihaixin/dockerfile
+
+docker run -d --name watchtower \
+--restart always \
+-v /var/run/docker.sock:/var/run/docker.sock \
+containrrr/watchtower --cleanup dockerfile
+```
+
+
+
