@@ -2,21 +2,6 @@
 
 收集整理个人常用的容器镜像，添加到portainer模板里,方便快速部署
 
-## 运行
-
-```
-docker pull lihaixin/dockerfile
-docker run -d --name dockerfile --hostname dockerfile --restart=always -p 89:80 lihaixin/dockerfile
-
-docker run -d --name watchtower \
---restart always \
--v /var/run/docker.sock:/var/run/docker.sock \
-containrrr/watchtower --cleanup dockerfile
-```
-
-## 联系我
-
-+V: Gsanjin01 记得注明来源
 
 ## 模板说明
 
@@ -91,3 +76,7 @@ containrrr/watchtower --cleanup dockerfile
 | RProxy-5|ghproxy|80 |[ghproxy](https://hub.docker.com/r/lihaixin/ghproxy)|一键部署反向代理github|
 | RProxy-6|npm|80 81 443 |[npm](https://hub.docker.com/r/lihaixin/npm)|一键部署反向代理各类网站|
 | RProxy-7| cache-docker|5000 |[cache-docker](https://hub.docker.com/_/registry)|一键部署反向代理hub.docker.com|
+
+## 联系我
+
++V: Gsanjin01 记得注明来源
