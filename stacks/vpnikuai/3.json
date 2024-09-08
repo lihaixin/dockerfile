@@ -1,1 +1,14 @@
-
+ {
+			"type": 3,
+			"title": "vpnikuai",
+			"description": "爱快docker插件clash容器",
+			"note": "通过X64爱快docker插件，使用clash容器，配合VPN,给爱快添加S5支持",
+			"categories": ["route"],
+			"platform": "linux",
+			"logo": "https://dockerfile.15099.net/logo/ikuai.png",
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/vpnikuai/docker-compose.yml"
+			}
+		}
+,
