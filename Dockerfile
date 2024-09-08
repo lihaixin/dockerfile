@@ -7,6 +7,7 @@ COPY --chmod=755 ./logo /usr/share/nginx/html/logo/
 COPY --chmod=755 ./stacks /usr/share/nginx/html/
 COPY --chmod=755 ./README.md /usr/share/nginx/html/
 COPY --chmod=755 ./merge_json_files.sh /usr/bin/merge_json_files.sh
+COPY --chmod=755 ./convert_md_to_html.sh /usr/bin/convert_md_to_html.sh
 COPY --chmod=755 ./entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
