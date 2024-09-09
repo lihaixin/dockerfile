@@ -1,0 +1,15 @@
+ {
+			"type": 3,
+			"title": "alist-5244",
+	 		"name": "alist-5244",
+			"description": "alist多云盘管理工具",
+			"note": "alist是一个强大的多云盘管理工具，为用户提供包含云盘本地挂载的一站式的多云盘解决方案<a href=\"https://alist.nn.ci/zh\" target=\"_blank\">ACME官方地址</a>",
+			"categories": ["file","NAS"],
+			"platform": "linux",
+			"logo": "https://alist.nn.ci/logo.svg",
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/alist/docker-compose.yml"
+			}
+		}
+,
