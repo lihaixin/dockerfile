@@ -1,7 +1,7 @@
 version: '2'
 services:
   alist:
-    image: lihaixin/alist:latest
+    image: lihaixin/alist:latest                 # https://alist.nn.ci/zh/guide/                        
     hostname: alist
     restart: unless-stopped
     network_mode: "host"
