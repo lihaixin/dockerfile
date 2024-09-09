@@ -1,0 +1,22 @@
+version: "2"
+services:
+  cloudnas:
+    image: cloudnas/clouddrive2-unstable
+    container_name: clouddrive2
+    environment:
+       - TZ=Asia/Shanghai
+       - CLOUDDRIVE_HOME=/Config
+    volumes:
+      - /var/CloudNAS:/CloudNAS:shared
+      - /var/CloudNAS_config:/Config
+      - /var/CloudNAS_media:/media:shared                                  #optional media path of host
+    devices:
+      - /dev/fuse:/dev/fuse
+    restart: unless-stopped
+    pid: "host"
+    privileged: true #or you can try capp_add -SYS_ADMIN
+    #cap_add: #SYS_ADMIN cap may fail on some OSes, use privileged: true instead
+    # - SYS_ADMIN
+    network_mode: "host" #if network_mode doesn't work, use port mapping
+    #ports:
+    #   - 19798:19798
