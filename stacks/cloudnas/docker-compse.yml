@@ -17,16 +17,17 @@ services:
     privileged: true #or you can try capp_add -SYS_ADMIN
     #cap_add: #SYS_ADMIN cap may fail on some OSes, use privileged: true instead
     # - SYS_ADMIN
-    # network_mode: "host" #if network_mode doesn't work, use port mapping
+    #network_mode: "host" #if network_mode doesn't work, use port mapping
     ports:
        - 19798:19798
-       - 19799:80
- h5ai:                                           # 修改服务名称 *
+  h5ai:                                           # 修改服务名称 *
     image: "lihaixin/h5ai"
     restart: unless-stopped                      # unless-stopped  always
-    # network_mode: "service:cloudnas"             # 修改网络共享服务名称 "bridge" "host"  "none" "service:[service name]"  "container:[container name/id] *"
+    # network_mode: "bridge"             # 修改网络共享服务名称 "bridge" "host"  "none" "service:[service name]"  "container:[container name/id] *"
     privileged: true
     depends_on:
       - cloudnas
     volumes:
-      - /var/CloudNAS:/share
+      - /var/CloudNAS:/usr/share/nginx/html:shared
+    ports:
+       - 19799:80
