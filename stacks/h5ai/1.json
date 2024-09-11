@@ -11,7 +11,7 @@
     				],
     			"restart_policy": "always",
      			"volumes": [{
-				"container": "/share"
+				"container": "/usr/share/nginx/html"
 				}]
   			}
 ,
