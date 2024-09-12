@@ -2,38 +2,40 @@ version: '2'
 services:
   fnnas:
     image: qemux/qemu-docker              # https://github.com/qemus/qemu-docker
-    container_name: flnas
+    container_name: fnnas
     devices:
       - /dev/kvm
-    #  - /dev/vhost-net
-    # device_cgroup_rules:
-    #   - 'c *:* rwm'
-    cap_add:
-      - NET_ADMIN
+    privileged: true
     stop_grace_period: 2m
     restart: on-failure
     environment:
       # ARGUMENTS: "-netdev user,id=hostnet1 -device virtio-net-pci,romfile=,netdev=hostnet1,id=net1"
-      BOOT: "https://download.liveupdate.fnnas.com/x86_64/trim/TRIM.iso"
-      DISK_SIZE: "10G"
-      RAM_SIZE: "4G"
-      BOOT_MODE: "legacy"
-      WEB_VNC: true
-      # DHCP: "Y"
+      # BOOT: "https://download.liveupdate.fnnas.com/x86_64/trim/TRIM.iso"
+      # BOOT_MODE: "legacy"
+      DISK_SIZE: "32G"
+      DISK2_SIZE: "32G"
+      DISK3_SIZE: "32G"
+      DISK4_SIZE: "32G"
+      RAM_SIZE: "2G"
+      TZ: "asia/shanghai"
+
       
     volumes:
       - /var/fnnas:/storage
+      - /var/fnnas:/storage2
+      - /var/fnnas:/storage3
+      - /var/fnnas:/storage4
+      - /var/TRIM.iso:/boot.iso
     networks:
       wan1:
-
-      
+        ipv4_address: 192.168.2.17                     #  *修改不同的IP
 networks:
   wan1:
     name: 1macvlan
     driver: macvlan
     driver_opts:
-      parent: eth0                                  # 对接虚拟机网卡名称，爱快内置的debian12虚拟机第一个网卡默认 ens3
+      parent: enp1s0                                  # 对接网卡名称
     ipam:
       config:
-        - subnet: 172.19.0.0/24                     # 局域网网段范围
-          gateway: 172.19.0.254                     # 局域网网关
+        - subnet: 192.168.2.0/24                     # 局域网网段范围
+          gateway: 192.168.2.254                     # 局域网网关
