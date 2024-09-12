@@ -5,9 +5,9 @@ services:
     container_name: flnas
     devices:
       - /dev/kvm
-      - /dev/vhost-net
-    device_cgroup_rules:
-      - 'c *:* rwm'
+    #  - /dev/vhost-net
+    # device_cgroup_rules:
+    #   - 'c *:* rwm'
     cap_add:
       - NET_ADMIN
     stop_grace_period: 2m
@@ -19,7 +19,7 @@ services:
       RAM_SIZE: "4G"
       BOOT_MODE: "legacy"
       WEB_VNC: true
-      DHCP: "Y"
+      # DHCP: "Y"
       
     volumes:
       - /var/fnnas:/storage
