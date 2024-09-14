@@ -1,8 +1,8 @@
 version: '2'
 services:
   jellyfin:
-    image: jellyfin/jellyfin:latest              # https://jellyfin.org/
-    container_name: jellyfin
+    image: jellyfin/jellyfin:latest              # https://jellyfin.org/  
+    container_name: jellyfin                     # 
     devices:
       - /dev/dri
     stop_grace_period: 2m
@@ -13,7 +13,7 @@ services:
       - /media:/media
     networks:
       wan1:
-        ipv4_address: 192.168.2.17                         # 修改不同的IP *
+        ipv4_address: 192.168.2.17                         # 修改不同的IP *  管理地址为：http://SERVER_IP:8096
 
       
 networks:
