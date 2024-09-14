@@ -1,0 +1,27 @@
+version: '2'
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest              # https://jellyfin.org/
+    container_name: jellyfin
+    devices:
+      - /dev/dri
+    stop_grace_period: 2m
+    restart: on-failure      
+    volumes:
+      - /var/jellyfin/config:/config
+      - /var/jellyfin/cache:/cache
+      - /media:/media
+    networks:
+      wan1:
+        ipv4_address: 192.168.2.17                         # 修改不同的IP *
+
+      
+networks:
+  wan1:
+    name: 1macvlan
+    driver: macvlan
+    driver_opts:
+      parent: enp1s0                                  # 对接虚拟机网卡名称，爱快内置的debian12虚拟机第一个网卡默认 ens3
+    ipam:
+      config:
+        - subnet: 192.168.2.0/24                     # 局域网网段范围
