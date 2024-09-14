@@ -6,7 +6,7 @@ services:
     devices:
       - /dev/dri
     stop_grace_period: 2m
-    restart: on-failure      
+    restart: unless-stopped                          # unless-stopped on-failure
     volumes:
       - /var/jellyfin/config:/config
       - /var/jellyfin/cache:/cache
