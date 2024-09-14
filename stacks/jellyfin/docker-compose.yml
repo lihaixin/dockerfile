@@ -21,7 +21,7 @@ networks:
     name: 1macvlan
     driver: macvlan
     driver_opts:
-      parent: enp1s0                                  # 对接虚拟机网卡名称，爱快内置的debian12虚拟机第一个网卡默认 ens3
+      parent: enp1s0                                  # 对接虚拟机网卡名称，爱快内置的debian12虚拟机第一个网卡默认 ens3  enp1s0 eth0 这些
     ipam:
       config:
         - subnet: 192.168.2.0/24                     # 局域网网段范围
