@@ -5,6 +5,9 @@ services:
     container_name: fnnas
     devices:
       - /dev/kvm
+      - /dev/vhost-net
+    device_cgroup_rules:
+      - 'c *:* rwm'
     privileged: true
     stop_grace_period: 2m
     restart: on-failure
@@ -18,6 +21,7 @@ services:
       DISK4_SIZE: "32G"
       RAM_SIZE: "2G"
       TZ: "asia/shanghai"
+      DHCP: "Y"
 
       
     volumes:
@@ -28,13 +32,13 @@ services:
       - /var/TRIM.iso:/boot.iso
     networks:
       wan1:
-        ipv4_address: 192.168.2.17                     #  *修改不同的IP
+        ipv4_address: 192.168.2.18                     #  *修改不同的IP
 networks:
   wan1:
     name: 1macvlan
     driver: macvlan
     driver_opts:
-      parent: enp1s0                                  # 对接网卡名称
+      parent: enp1s0                                  # 对接虚拟机网卡名称
     ipam:
       config:
         - subnet: 192.168.2.0/24                     # 局域网网段范围
