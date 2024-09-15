@@ -10,7 +10,7 @@ services:
     restart: on-failure
     environment:
       # ARGUMENTS: "-netdev user,id=hostnet1 -device virtio-net-pci,romfile=,netdev=hostnet1,id=net1"
-      # BOOT: "https://download.liveupdate.fnnas.com/x86_64/trim/TRIM.iso"
+      # BOOT: "https://download.liveupdate.fnnas.com/x86_64/trim/fnos.0.8.19-360.iso"
       # BOOT_MODE: "legacy"
       DISK_SIZE: "32G"
       DISK2_SIZE: "32G"
