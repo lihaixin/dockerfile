@@ -1,0 +1,21 @@
+version: '2'
+services:
+  alist:
+    image: ghcr.io/monlor/xiaoya-alist:latest  # https://github.com/monlor/docker-xiaoya
+    volumes:
+      - xiaoya:/data
+    ports:
+      - "5678:5678"
+      - "2345:2345"
+      - "2346:2346"
+    env_file:
+      - stacls.env                             # 通过portainer图像界面上传env文件，地址：https://raw.githubusercontent.com/monlor/docker-xiaoya/main/env
+    restart: unless-stopped
+    networks:
+      - default
+
+networks:
+  default:
+
+volumes:
+  xiaoya:
