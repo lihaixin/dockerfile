@@ -1,6 +1,6 @@
 version: "2"
 services:
-  cloudnas:
+  cloudnas:                                                              # https://www.clouddrive2.com/docker.html
     image: cloudnas/clouddrive2-unstable
     container_name: clouddrive2
     environment:
