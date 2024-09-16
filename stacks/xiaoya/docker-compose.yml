@@ -10,6 +10,9 @@ services:
       - "2346:2346"
     env_file:
       - stacls.env                             # 通过portainer图像界面上传env文件，地址：https://raw.githubusercontent.com/monlor/docker-xiaoya/main/env
+                                               # 阿里云盘token获取方式教程：https://alist.nn.ci/zh/guide/drivers/aliyundrive.html
+                                               # 阿里云盘Open token获取方式教程：https://alist.nn.ci/zh/guide/drivers/aliyundrive_open.html
+                                               # 阿里云盘临时中转文件夹ID获取方式教程：进入阿里云盘网页版，资源盘里面创建一个文件夹，点击文件夹，复制浏览器阿里云盘地址末尾的文件夹ID（最后一个斜杠/后面的一串字符串）
     restart: unless-stopped
     networks:
       - default
