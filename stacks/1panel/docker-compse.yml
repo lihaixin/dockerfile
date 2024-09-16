@@ -1,5 +1,5 @@
 version: '2'
-services:                              # https://github.com/okxlin/docker-1panel
+services:                              # https://github.com/okxlin/docker-1panel 默认端口：10086 默认账户：1panel 默认密码：1panel_password 后台路径：entrance
   1panel:
     container_name: 1panel             # 容器名
     restart: always
