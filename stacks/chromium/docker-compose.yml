@@ -1,0 +1,27 @@
+
+services:
+  chromium:
+    image: registry.cn-guangzhou.aliyuncs.com/fnapp/trim-chromium:latest
+    container_name: chromium
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      - PUID=${TRIM_UID}
+      - PGID=${TRIM_GID}
+      - TZ=Etc/UTC
+      - SUBFOLDER=/chromium/
+      - LC_ALL=zh_CN.UTF-8
+      - CUSTOM_USER=${wizard_username}
+      - PASSWORD=${wizard_password}
+    volumes:
+      - /var/apps/docker-chromium/shares/chromium/config:/config
+    ports:
+      - 3000:3000
+      - 3001:3001
+    shm_size: "1gb"
+    restart: unless-stopped
+    networks:
+      - trim-default
+networks:
+  trim-default:
+    external: true
