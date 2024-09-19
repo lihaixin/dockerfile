@@ -1,6 +1,7 @@
 {
 			"type": 3,
-			"title": "ui",
+			"title": "portainer-9443",
+			"name": "portainer-9443",
 			"description": "一键部署portainer管理工具",
 			"note": "一键部署portainer管理工具,支持中英文解决，自定义tunnel端口,更多信息 <a href=\"https://hub.docker.com/r/lihaixin/portainer\" target=\"_blank\">点击这里</a> ",
 			"categories": ["docker"],
