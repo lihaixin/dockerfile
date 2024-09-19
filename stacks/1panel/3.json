@@ -3,7 +3,7 @@
 			"title": "1panel-10086",
 	 		"name": "1panel-10086",
 			"description": "一个现代化、开源的 Linux 服务器运维管理面板",
-			"note": "一个现代化、开源的 Linux 服务器运维管理面板 <a href=\"https://1panel.cn/\" target=\"_blank\">官方地址</a></br><a href=\"https://1panel.cn/docs/\" target=\"_blank\">官方文档地址</a>",
+			"note": "一个现代化、开源的 Linux 服务器运维管理面板 <a href=\"https://1panel.cn/\" target=\"_blank\">官方地址</a></br><a href=\"https://1panel.cn/docs/\" target=\"_blank\">官方文档地址</a></br>默认端口：10086 默认账户：1panel 默认密码：1panel_password 后台路径：entrance",
 			"categories": ["docker"],
 			"platform": "linux",
 			"logo": "https://1panel.cn/img/logo-blue.png",
