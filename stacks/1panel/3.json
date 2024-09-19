@@ -3,7 +3,8 @@
 			"title": "1panel-10086",
 	 		"name": "1panel-10086",
 			"description": "一个现代化、开源的 Linux 服务器运维管理面板",
-			"note": **官方地址:** [访问官网](https://1panel.cn/)
+			"note": "一个现代化、开源的 Linux 服务器运维管理面板
+	 			**官方地址:** [访问官网](https://1panel.cn/)
 				**官方文档:** [查阅文档](https://1panel.cn/docs/)
 				**Docker源码:** [GitHub仓库](https://github.com/okxlin/docker-1panel/)
   
