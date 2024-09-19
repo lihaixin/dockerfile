@@ -1,0 +1,15 @@
+ {
+			"type": 3,
+			"title": "1panel-10086",
+	 		"name": "1panel-10086",
+			"description": "一个现代化、开源的 Linux 服务器运维管理面板",
+			"note": "一个现代化、开源的 Linux 服务器运维管理面板 <a href=\"https://1panel.cn/\" target=\"_blank\">官方地址</a></br><a href=\"https://1panel.cn/docs/\" target=\"_blank\">官方文档地址</a>",
+			"categories": ["docker"],
+			"platform": "linux",
+			"logo": "https://1panel.cn/img/logo-blue.png",
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/1panel/docker-compose.yml"
+			}
+		}
+,
