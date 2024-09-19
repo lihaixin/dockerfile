@@ -3,11 +3,16 @@
 			"title": "1panel-10086",
 	 		"name": "1panel-10086",
 			"description": "一个现代化、开源的 Linux 服务器运维管理面板",
-			"note": "一个现代化、开源的 Linux 服务器运维管理面板
-	                        </br><a href=\"https://1panel.cn/\" target=\"_blank\">官方地址</a>
-	                        </br><a href=\"https://1panel.cn/docs/\" target=\"_blank\">官方文档地址</a>
-	 			</br><a href=\"https://github.com/okxlin/docker-1panel/\" target=\"_blank\">Docker源码地址</a>
-	                        </br>默认地址：<b>http://<ip>:10086</b> 默认账户：1panel 默认密码：1panel_password 后台路径：entrance",
+			"note": **官方地址:** [访问官网](https://1panel.cn/)
+				**官方文档:** [查阅文档](https://1panel.cn/docs/)
+				**Docker源码:** [GitHub仓库](https://github.com/okxlin/docker-1panel/)
+  
+				默认访问地址：`http://<您的服务器IP>:10086`  
+				默认账户：`1panel`  
+				默认密码：`1panel_password`  
+				后台登录路径：`/entrance`  
+
+				**安全提示：** 登录后立即更改默认密码以确保安全。",
 			"categories": ["docker"],
 			"platform": "linux",
 			"logo": "https://1panel.cn/img/logo-blue.png",
