@@ -1,0 +1,24 @@
+services:
+  windows:
+    image: dockurr/windows
+    container_name: windows
+    environment:
+      VERSION: "ltsc10" # 系统标识
+      RAM_SIZE: "2G" # 分配的内存
+      CPU_CORES: "2" # 分配的核心
+      DISK_SIZE: "20G" # 分配储存空间
+      LANGUAGE: "Chinese"
+    devices:
+      - /dev/kvm
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 8006:8006
+      - 3389:3389/tcp
+      - 3389:3389/udp
+    stop_grace_period: 2m
+    volumes:
+      - win10:/storage
+      - /vol2/1000/os/windows_10_ltsc_2021_x64.iso:/custom.iso
+volumes:
+  win10:
