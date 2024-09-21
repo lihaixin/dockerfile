@@ -1,4 +1,3 @@
-version: '2'                                                                   # yml版本号，下面带 【*】 需要根据实际情况调整
 services:                                                                      # 爱快路由器下配置多clash透明代理，然后通过强大的爱快分流，分流方式支持无线热点分流 源地址分流
  vwan:                                                                         # 服务名称，这里取vwan,代表虚拟网关 
     image: "ikuaiapp/clash:1.85.5"                                             # 镜像名称 https://hub.docker.com/r/ikuaiapp/clash
