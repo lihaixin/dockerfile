@@ -1,9 +1,9 @@
 version: "2"
 services:
   portainer:
-    image: lihaixin/portainer:2.19.5
-    container_name: ui
-    hostname: ui
+    image: lihaixin/portainer:ce-2.19.5
+    container_name: portainer
+    hostname: portainer
     restart: unless-stopped
     network_mode: "host"                             # bridge
     environment:
