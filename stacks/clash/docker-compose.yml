@@ -27,4 +27,4 @@ networks:
     ipam:
       config:
         - subnet: 172.19.0.0/24                                                # 局域网网段范围
-          gateway: 172.19.0.254                                                # 局域网网关
+        - gateway: 172.19.0.254                                                # 局域网网关
