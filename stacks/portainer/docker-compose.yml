@@ -5,9 +5,11 @@ services:
     container_name: portainer
     hostname: portainer
     restart: unless-stopped
-    network_mode: "host"                             # bridge
+    network_mode: "bridge"                             # bridge
     environment:
       PASSWORD: "${PASSWORD}"                                   # 密码不能低于12位，留空为启动后再自己创建
+    ports:
+      - "9443:9443"
     volumes:
       - portainer_data:/data                         # 永久存放portainer数据位置
       - /var/run/docker.sock:/var/run/docker.sock    # docker.sock
