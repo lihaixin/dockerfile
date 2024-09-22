@@ -2,13 +2,35 @@
 
 收集整理个人常用的容器镜像，添加到portainer模板里,方便快速部署
 
+## Docker环境部署
+参考[https://bash.15099.net](bash.15099.net)
+
 
 ## 模板说明
 
-提供两种模板方式，一种使用docker容器，一种使用docker stacks部署
+提供两种模板方式，一种使用docker容器，一种使用docker stacks(compose)部署
 
-1. 容器 使用docker 桥接部署网络,不支持自动创建volume，不方便永久存储数据
-2. stacks使用自定义桥接或者macvlan网络，自动创建volume，方便永久存储数据
+1. 容器 使用docker 桥接部署网络,不支持自动创建volume，不方便卷存储数据
+2. stacks使用自定义桥接或者macvlan网络，自动创建volume，方便卷存储数据
+   
+   2.1 自定义桥接
+
+   ```
+   docker network create -d bridge \
+    --subnet=10.21.1.0/24 \
+    --gateway=10.21.1.254 \
+   cbridge
+   ```
+   2.2 macvlan网络
+  
+    ```
+    docker network create -d macvlan \
+    --subnet=192.168.2.0/24 \
+    --gateway=192.168.2.254 \
+    --ip-range=192.168.2.1/28 \
+    -o macvlan_mode=bridge \
+    -o parent=enp1s0 vlan
+    ```
 
 ## 所有的Docker 模板 
 [官方模板格式](https://docs.portainer.io/advanced/app-templates/format#administrator-only)  [compose 格式](https://docs.docker.com/compose/compose-file/)
