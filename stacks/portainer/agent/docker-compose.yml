@@ -5,6 +5,7 @@ services:
     container_name: ui2
     hostname: ui2
     restart: unless-stopped
+    privileged: true
     environment:
       EDGE: "1"
       EDGE_ID: 733c7ebf-6804-4604-ae41-a1444b6cec34
