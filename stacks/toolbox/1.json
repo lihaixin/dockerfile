@@ -1,6 +1,7 @@
 {
     			"type": 1,
     			"title": "toolbox",
+			"name": "toolbox",
     			"description": "常用linux工具集合、包括dig iperf3 htop mtr等,可以使用lh <ssh端口>快速访问宿主机",
     			"categories": ["tools"],
     			"platform": "linux",
