@@ -9,7 +9,9 @@ services:
       EDGE: "1"
       EDGE_ID: 733c7ebf-6804-4604-ae41-a1444b6cec34
       EDGE_KEY: aHR0cHM6Ly91aS0yLjE1MDk5Lm5ldHx1aS0yLjE1MDk5Lm5ldDo4MDA4fDROaFAzd2lsOENIbkFLYzl6Mi9DUndGQkhJWGF1LzRlZnhpbVdzWlhBNXc9fDQ5NA
-      EDGE_INSECURE_POLL: 1
+      EDGE_INSECURE_POLL: "1"
+    ports:
+      - "9001:9001"
     volumes:
       - portainer_agent_data:/data                                               # 永久存放portainer数据位置
       - /var/run/docker.sock:/var/run/docker.sock                                # docker.sock
