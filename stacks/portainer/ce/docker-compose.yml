@@ -7,12 +7,12 @@ services:
     restart: unless-stopped
     network_mode: "bridge"                             # bridge
     environment:
-      PASSWORD: "${PASSWORD}"                                   # 密码不能低于12位，留空为启动后再自己创建
+      PASSWORD: "${PASSWORD}"                          # 密码不能低于12位，留空为启动后再自己创建
       COUNTRY: "cn"
     ports:
       - "9443:9443"
     volumes:
-      - portainer_data:/data                         # 永久存放portainer数据位置
-      - /var/run/docker.sock:/var/run/docker.sock    # docker.sock
+      - portainer_data:/data                           # 永久存放portainer数据位置
+      - /var/run/docker.sock:/var/run/docker.sock      # docker.sock
 volumes:
   portainer_data:
