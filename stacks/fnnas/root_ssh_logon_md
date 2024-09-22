@@ -10,3 +10,26 @@ ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa
 cd .ssh
 cp id_rsa.pub authorized_keys
 chmod 600 authorized_keys
+
+# 添加ipvlan网络或者macvlan网络
+
+我是无线网卡，添加ipvlan网络
+```
+docker network create -d ipvlan \
+    --subnet=192.168.2.0/24 \
+    --gateway=192.168.2.254 \
+    --ip-range=192.168.2.1/28 \
+    -o ipvlan_mode=l2 \
+    -o ipvlan_flag=bridge \
+    -o parent=wlp9s0 vlan
+```
+物理以太网卡，添加macvlan网络
+
+```
+docker network create -d macvlan \
+  --subnet=192.168.2.0/24 \
+  --gateway=192.168.2.254 \
+  --ip-range=192.168.2.1/28 \
+  -o macvlan_mode=bridge \
+  -o parent=wlp9s0 vlan
+```
