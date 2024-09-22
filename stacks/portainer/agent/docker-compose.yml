@@ -1,15 +1,15 @@
 version: "2"
 services:
   portainer_agent:
-    image: portainer:agent-2.19.5 
+    image: lihaixin/portainer:agent-2.19.5 
     container_name: ui2
     hostname: ui2
     restart: unless-stopped
     privileged: true
     environment:
       EDGE: "1"
-      EDGE_ID: 733c7ebf-6804-4604-ae41-a1444b6cec34
-      EDGE_KEY: aHR0cHM6Ly91aS0yLjE1MDk5Lm5ldHx1aS0yLjE1MDk5Lm5ldDo4MDA4fDROaFAzd2lsOENIbkFLYzl6Mi9DUndGQkhJWGF1LzRlZnhpbVdzWlhBNXc9fDQ5NA
+      EDGE_ID: f63326d6-1844-45c1-9f55-1a0dc63b6590
+      EDGE_KEY: aHR0cHM6Ly91aS0yLjE1MDk5Lm5ldHx1aS0yLjE1MDk5Lm5ldDoyMXw0TmhQM3dpbDhDSG5BS2M5ejIvQ1J3RkJISVhhdS80ZWZ4aW1Xc1pYQTV3PXw1MDU
       EDGE_INSECURE_POLL: "1"
     ports:
       - "9001:9001"
