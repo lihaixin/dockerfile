@@ -1,16 +1,17 @@
 # 开启root ssh登录
 
+```
 sudo -i
 sed -i s'/^PermitRootLogin no/PermitRootLogin yes/' /etc/ssh/sshd_config 
-
+```
 # 一键生成root证书登录
-ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa
-
+```
 # 本地复制 和修改权限，方便lihaixin/toolbox登录
+ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa
 cd .ssh
 cp id_rsa.pub authorized_keys
 chmod 600 authorized_keys
-
+```
 # 添加ipvlan网络或者macvlan网络
 
 我是无线网卡，添加ipvlan网络
