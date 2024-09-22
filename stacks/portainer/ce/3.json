@@ -15,7 +15,7 @@
 				}],
 			"repository": {
 				"url": "https://github.com/lihaixin/dockerfile",
-				"stackfile": "stacks/portainer/docker-compose.yml"
+				"stackfile": "stacks/portainer/ce/docker-compose.yml"
 			}
 		}
 ,
