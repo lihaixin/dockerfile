@@ -10,7 +10,7 @@ services:                                                                      #
                                                                                # M6_S5 为纯S5模式，国内环境用  M6_S5_DIA 为带CLASH_SUBURL订阅地址 国外环境用
                                                                                # M7_HTTP_DIA 为游戏中转代理HTTP代理 M8_HTTPS_DIA 为游戏中转代理HTTPS
                                                                                # M9_SS 为游戏中转代理SS
-                                                                               # M10_H2 为游戏中转代理SS
+                                                                               # M10_H2 为游戏中转代理hysteria2
       CLASH_SUBURL: https://sub.com/sub/9001592fb618ea.yaml                    # 订阅地址，联系你的购买厂家获取 【*】
       RSERVER: 8.8.6.6                                                         # 落地socks5/http/https/SS/ IP （链式中转模式下生效）
       RPORT: 10800                                                             # 落地socks5/http/https/SS/ 代理端口 （链式中转模式下生效）如类型M9_SS,相当于sni,www.bing.com
