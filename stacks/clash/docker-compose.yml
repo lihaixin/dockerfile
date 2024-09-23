@@ -16,16 +16,10 @@ services:                                                                      #
       RPORT: 10800                                                             # 落地socks5/http/https/SS/ 代理端口 （链式中转模式下生效）如类型M9_SS,相当于sni,www.bing.com
       RUSER: 000S5                                                             # 落地socks5/http/https/SS/ 代理账号 （链式中转模式下生效）如类型M9_SS，相当于加密方式，支持 aes-128-gcm
       RPASS: 000S5                                                             # 落地socks5/http/https/SS/ 代理密码 （链式中转模式下生效）
+      
     networks:
-      wan1:
-        ipv4_address: 172.19.0.1                                               # 修改不同的IP【*】
+      vlan:
+        ipv4_address: 192.168.2.2                                               # 修改不同的IP【*】
 networks:
-  wan1:
-    name: 1macvlan
-    driver: macvlan
-    driver_opts:
-      parent: eth0                                                             # 对接宿主机网卡名称，一般为 eth0 ens3 vmbr0 【*】
-    ipam:
-      config:
-        - subnet: 172.19.0.0/24                                                # 局域网网段范围
-        - gateway: 172.19.0.254                                                # 局域网网关
+  vlan:
+    external: true
