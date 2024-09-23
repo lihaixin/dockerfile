@@ -2,6 +2,8 @@
 ```
 nmcli device wifi list
 nmcli device wifi connect "Wi-Fi名称" password "密码"
+
+nmcli device set wlp9s0 autoconnect yes
 ```
 成功连接后按下面修改
 
