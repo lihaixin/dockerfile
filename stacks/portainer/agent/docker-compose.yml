@@ -3,7 +3,7 @@ services:
   portainer_agent:
     image: lihaixin/portainer:agent-2.19.5 
     container_name: ui2
-    hostname: ui2
+    hostname: portainer_agent
     restart: unless-stopped
     privileged: true
     environment:
