@@ -94,19 +94,19 @@
 				"name": "RPORT",
 				"label": "落地socks5/http/https/SS/H2 代理端口",
 				"description": "输入落地IP端口",
-				"default": "user"
+				"default": "1080"
 				},
 				{
 				"name": "RUSER",
 				"label": "落地socks5/http/https/SS/H2 代理账号",
 				"description": "落地socks5/http/https/SS/H2 代理账号",
-				"default": "password"
+				"default": "user"
 				},
 				{
 				"name": "RPASS",
 				"label": "落地socks5/http/https/SS/H2 代理密码",
 				"description": "Host port to expose HTTPS port of Dokku (443 if empty)",
-				"default": "1080"
+				"default": "password"
 				},
 				{
 				"name": "IP",
