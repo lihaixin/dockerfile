@@ -12,12 +12,12 @@
      			"env": [{
       				"name": "USER",
       				"label": "USER",
-      				"set": "test"
+      				"preset": "test"
     				},
      				{
       				"name": "PASSWD",
       				"label": "PASSWD",
-      				"set": "test"
+      				"preset": "test"
     				}],
     			"restart_policy": "always",
      			"volumes": [{
