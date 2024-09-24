@@ -40,20 +40,20 @@
 				"description": "支持白名单、黑名单、S5、HTTP、hysteria2、wireguard网关",
 				"select": [
 				        {
-				          "text": "M1_BMD白名单模式",
+				          "text": "M1_BMD 白名单模式",
 				          "value": "M1_BMD",
 				          "default": "M1_BMD"
 				        },
 				        {
-				          "text": "M2_HMD黑名单模式",
+				          "text": "M2_HMD 黑名单模式",
 				          "value": "M2_HMD"
 				        },
 					{
-				          "text": "M3_GFL国家分流负载均衡模式",
+				          "text": "M3_GFL 国家分流负载均衡模式",
 				          "value": "M3_GFL"
 				        },
 				        {
-				          "text": "M6_S5纯S5游戏代理，国内环境用",
+				          "text": "M6_S5 纯S5游戏代理，国内环境用",
 				          "value": "M6_S5"
 				        },
 					{
