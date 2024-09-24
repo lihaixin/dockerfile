@@ -4,7 +4,7 @@ services:                                                                      #
     restart: unless-stopped                                                    # unless-stopped  always 
     privileged: true
     environment:
-      NO: "${NO}"                                                              # 授权NO,内部使用，未经授权，第三台设备用，授权码会自动禁止，不在启用！！！
+      NO: "${NO}"                                                              # 授权NO,内部使用，未经授权，第二台设备用，授权码会自动禁止，不在启用！！！
       CLASH_MODE: ${CLASH_MODE:-rule}                                          # rule / global / direct / (default is rule) rule为国内外分流，global是全局代理
       CLASH_TYPE: ${CLASH_TYPE:-M1_BMD}                                        # M1_BMD 为白名单模式  M2_HMD为黑名单模式  M3_GFL 按国家分流负载均衡模式，带_DIA相当于支持订阅中转
                                                                                # M6_S5 为纯S5模式，国内环境用  M6_S5_DIA 为带CLASH_SUBURL订阅地址 国外环境用
