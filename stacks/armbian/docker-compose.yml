@@ -12,11 +12,11 @@ services:
     environment:
       # ARGUMENTS: "-netdev user,id=hostnet1 -device virtio-net-pci,romfile=,netdev=hostnet1,id=net1"
       BOOT: "https://dl.armbian.com/uefi-x86/archive/Armbian_24.8.1_Uefi-x86_jammy_current_6.6.47.img.qcow2.xz"
-      # DISK_SIZE: "10G"
+      DISK_SIZE: "10G"
       RAM_SIZE: "2G"
       
     volumes:
-      - /var/armbian:/storage
+      - armbian:/storage
       # - /var/armbian/armbian.img:/boot.img
 networks:
   vlan:
