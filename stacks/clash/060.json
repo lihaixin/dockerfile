@@ -1,0 +1,118 @@
+{
+			"type": 3,
+			"title": "Clash云网关",
+	 		"name": "clash_1",
+			"description": "一键安装各类网关",
+			"note": "通过docker容器，配合macvlan,快速使用clash打造白名单、黑名单、S5、HTTP、hysteria2、wireguard多个网关.然后通过爱快下一跳网关进行分流 更多<a href=\"https://hub.docker.com/r/ikuaiapp/clash\" target=\"_blank\">点击这里</a>",
+			"categories": ["route"],
+			"platform": "linux",
+			"logo": "https://dockerfile.15099.net/logo/gateway.png",
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/clash/docker-compose.yml"
+			},
+	 		"env": [
+				{
+				"name": "USERNO",
+				"default": "0060202412302541106",
+				"preset": ""
+				},
+				{
+				"name": "CLASH_MODE",
+				"label": "分流规则CLASH_MODE",
+				"description": "分流规则CLASH_MODE rule为国内外分流，global是全局代理，默认为rule",
+				"select": [
+				        {
+				          "text": "rule",
+				          "value": "rule",
+				          "default": "rule"
+				        },
+				        {
+				          "text": "global",
+				          "value": "global"
+				        }
+				      ]
+				},
+				{
+				"name": "CLASH_TYPE",
+				"label": "Clash模板CLASH_TYPE",
+				"description": "支持白名单、黑名单、S5、HTTP、hysteria2、wireguard网关",
+				"select": [
+				        {
+				          "text": "M1_BMD 白名单模式",
+				          "value": "M1_BMD",
+				          "default": "M1_BMD"
+				        },
+				        {
+				          "text": "M2_HMD 黑名单模式",
+				          "value": "M2_HMD"
+				        },
+					{
+				          "text": "M3_GFL 国家分流负载均衡模式",
+				          "value": "M3_GFL"
+				        },
+				        {
+				          "text": "M6_S5 纯S5游戏代理，国内环境用",
+				          "value": "M6_S5_060"
+				        },
+					{
+				          "text": "M6_S5_DIA 中转代理S5游戏代理，调用CLASH_SUBURL中转 国外环境用",
+				          "value": "M6_S5_DIA"
+				        },
+				        {
+				          "text": "M7_HTTP_DIA 中转代理HTTP游戏代理 ，调用CLASH_SUBURL中转 国外环境用",
+				          "value": "M7_HTTP_DIA"
+				        },
+				        {
+				          "text": "M8_HTTPS_DIA 中转代理HTTPS游戏代理，调用CLASH_SUBURL中转 国外环境用",
+				          "value": "M8_HTTPS_DIA"
+				        },
+					{
+				          "text": "M9_SS 纯Shadowsocks游戏代理",
+				          "value": "M9_SS"
+				        },
+				        {
+				          "text": "M10_H2 纯hysteria2游戏代理",
+				          "value": "M10_H2_060"
+				        }
+				      ]
+				},
+				{
+				"name": "CLASH_SUBUR",
+				"label": "订阅地址",
+				"description": "CLASH订阅地址，在IP提供商后台查看，一般都有提供",
+				"default": "https://sub.com/sub/9001592fb618ea.yaml"
+				},
+				{
+				"name": "RSERVER",
+				"label": "落地socks5/http/https/SS/H2 IP",
+				"description": "输入落地IP",
+				"default": "6.6.6.6"
+				},
+				{
+				"name": "RPORT",
+				"label": "落地socks5/http/https/SS/H2 代理端口",
+				"description": "输入落地IP端口",
+				"default": "1080"
+				},
+				{
+				"name": "RUSER",
+				"label": "落地socks5/http/https/SS/H2 代理账号",
+				"description": "落地socks5/http/https/SS/H2 代理账号",
+				"default": "user"
+				},
+				{
+				"name": "RPASS",
+				"label": "落地socks5/http/https/SS/H2 代理密码",
+				"description": "Host port to expose HTTPS port of Dokku (443 if empty)",
+				"default": "password"
+				},
+				{
+				"name": "IP",
+				"label": "容器macvlan IP",
+				"description": "修改不同的IP",
+				"default": "172.19.0.1"
+				}
+				]
+}
+,
