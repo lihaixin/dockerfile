@@ -9,7 +9,7 @@ services:
     volumes:
       - /var/CloudNAS:/CloudNAS:shared
       - /var/CloudNAS_config:/Config
-      - /var/CloudNAS_media:/media:shared                                  #optional media path of host
+      - /var/CloudNAS_media:/media:shared                                #optional media path of host
     devices:
       - /dev/fuse:/dev/fuse
     restart: unless-stopped
