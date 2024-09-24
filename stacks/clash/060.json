@@ -81,7 +81,7 @@
 				"name": "CLASH_SUBUR",
 				"label": "订阅地址",
 				"description": "CLASH订阅地址，在IP提供商后台查看，一般都有提供",
-				"default": "https://sub.com/sub/9001592fb618ea.yaml"
+				"default": "https://sub.com/9001592fb61***.yaml"
 				},
 				{
 				"name": "RSERVER",
