@@ -16,7 +16,7 @@
 				"name": "NO",
 				"label": "用户授权NO",
 				"description": "用户授权NO，也是自定义模板标识号，未授权NO只能使用免费模板",
-				"default": "0999202412301280007"
+				"default": ""
 				},
 				{
 				"name": "CLASH_MODE",
