@@ -1,4 +1,4 @@
-			{
+{
 			"type": 3,
 			"title": "Clash云网关",
 	 		"name": "clash_1",
@@ -9,7 +9,7 @@
 			"logo": "https://dockerfile.15099.net/logo/gateway.png",
 			"repository": {
 				"url": "https://github.com/lihaixin/dockerfile",
-				"stackfile": "stacks/clash/docker-compose.yml"
+				"stackfile": "stacks/gost/s5/docker-compose.yml"
 			},
 	 		"env": [
 				{
@@ -108,6 +108,6 @@
 				"description": "修改不同的IP",
 				"default": "172.19.0.1"
 				}
-			]
-			}
+				]
+}
 ,
