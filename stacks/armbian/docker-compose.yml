@@ -17,6 +17,7 @@ services:
       
     volumes:
       - armbian:/storage
+      - ${BOOT_PATH:-/var/armbian/armbian.img}:/boot
       # - /var/armbian/armbian.img:/boot.img
 networks:
   vlan:
