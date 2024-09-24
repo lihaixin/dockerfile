@@ -46,5 +46,6 @@ TEMPEOF
 
 # 合并特定文件到指定输出文件
 merge_json_files "index.json" "1.json"
+merge_json_files "index0.json" "0.json"
 merge_json_files "index123.json" "1.json" "2.json" "3.json"
 merge_json_files "index3.json" "3.json"
