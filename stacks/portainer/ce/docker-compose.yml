@@ -9,10 +9,11 @@ services:
     environment:
       PASSWORD: "${PASSWORD:-@china1234567}"           # 密码不能低于12位，留空为启动后再自己创建
       COUNTRY: "cn"                                    # cn显示中文，en显示英文
+      TPORT: "8000"                                    # client端连接的隧道端口
     ports:
-      - "9443:9443"
+      - "9443:9443"                                    # 网页管理界面端口
+      - "8000:8000"                                    # 隧道端口
     volumes:
-      - portainer_data:/data                           # 永久存放portainer数据位置
+      - /var/portainer_data:/data                      # 永久存放portainer数据位置
       - /var/run/docker.sock:/var/run/docker.sock      # docker.sock
-volumes:
-  portainer_data:
+
