@@ -21,7 +21,7 @@
 				{
 				"name": "CLASH_MODE",
 				"label": "分流规则CLASH_MODE",
-				"description": "分流规则CLASH_MODE rule为国内外分流，global是全局代理，默认为rule"
+				"description": "分流规则CLASH_MODE rule为国内外分流，global是全局代理，默认为rule",
 				"select": [
 				        {
 				          "text": "rule",
