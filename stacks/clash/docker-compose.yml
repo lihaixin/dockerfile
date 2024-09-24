@@ -4,18 +4,18 @@ services:                                                                      #
     restart: unless-stopped                                                    # unless-stopped  always 
     privileged: true
     environment:
-      NO: ""                                                                   # 授权NO,内部使用，未经授权，第三台设备用，授权码会自动禁止，不在启用！！！
-      CLASH_MODE: rule                                                         # rule / global / direct / (default is rule) rule为国内外分流，global是全局代理
-      CLASH_TYPE: M1_BMD                                                       # M1_BMD 为白名单模式  M2_HMD为黑名单模式  M3_GFL 按国家分流负载均衡模式，带_DIA相当于支持订阅中转
+      NO: "${NO}"                                                              # 授权NO,内部使用，未经授权，第三台设备用，授权码会自动禁止，不在启用！！！
+      CLASH_MODE: ${CLASH_MODE:-rule}                                          # rule / global / direct / (default is rule) rule为国内外分流，global是全局代理
+      CLASH_TYPE: ${CLASH_TYPE:-M1_BMD}                                        # M1_BMD 为白名单模式  M2_HMD为黑名单模式  M3_GFL 按国家分流负载均衡模式，带_DIA相当于支持订阅中转
                                                                                # M6_S5 为纯S5模式，国内环境用  M6_S5_DIA 为带CLASH_SUBURL订阅地址 国外环境用
                                                                                # M7_HTTP_DIA 为游戏中转代理HTTP代理 M8_HTTPS_DIA 为游戏中转代理HTTPS
                                                                                # M9_SS 为游戏中转代理SS
                                                                                # M10_H2 为游戏中转代理hysteria2
-      CLASH_SUBURL: https://sub.com/sub/9001592fb618ea.yaml                    # 订阅地址，联系你的购买厂家获取 【*】
-      RSERVER: 8.8.6.6                                                         # 落地socks5/http/https/SS/H2 IP （链式中转模式下生效）
-      RPORT: 10800                                                             # 落地socks5/http/https/SS/H2 代理端口 （链式中转模式下生效）
-      RUSER: 000S5                                                             # 落地socks5/http/https/SS/H2 代理账号 （链式中转模式下生效）如类型M9_SS，相当于加密方式，支持 aes-128-gcm 如类型M10_H2,相当于sni,www.bing.com
-      RPASS: 000S5                                                             # 落地socks5/http/https/SS/H2 代理密码 （链式中转模式下生效）
+      CLASH_SUBURL: ${CLASH_SUBURL:-https://sub.com/sub/9001592fb618ea.yaml}   # 订阅地址，联系你的购买厂家获取 【*】
+      RSERVER: ${RSERVER:-6.6.6.6}                                             # 落地socks5/http/https/SS/H2 IP （链式中转模式下生效）
+      RPORT: ${RPORT:-10800}                                                   # 落地socks5/http/https/SS/H2 代理端口 （链式中转模式下生效）
+      RUSER: ${RUSER:-user}                                                    # 落地socks5/http/https/SS/H2 代理账号 （链式中转模式下生效）如类型M9_SS，相当于加密方式，支持 aes-128-gcm 如类型M10_H2,相当于sni,www.bing.com
+      RPASS: ${RPASS:-password}                                                # 落地socks5/http/https/SS/H2 代理密码 （链式中转模式下生效）
       
     networks:
       vlan:
