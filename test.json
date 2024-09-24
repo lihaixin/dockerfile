@@ -1,7 +1,7 @@
 {
   "version": "2",
   "templates": [
-                			{
+                	{
 			"type": 3,
 			"title": "Clash云网关",
 	 		"name": "clash_1",
@@ -51,7 +51,7 @@
 				          "text": "M2_HMD黑名单模式",
 				          "value": "M2_HMD"
 				        },
-					      {
+					{
 				          "text": "M3_GFL国家分流负载均衡模式",
 				          "value": "M3_GFL"
 				        },
@@ -59,7 +59,7 @@
 				          "text": "M6_S5纯S5游戏代理，国内环境用",
 				          "value": "M6_S5"
 				        },
-					      {
+					{
 				          "text": "M6_S5_DIA 中转代理S5游戏代理，调用CLASH_SUBURL中转 国外环境用",
 				          "value": "M6_S5_DIA"
 				        },
@@ -71,7 +71,7 @@
 				          "text": "M8_HTTPS_DIA 中转代理HTTPS游戏代理，调用CLASH_SUBURL中转 国外环境用",
 				          "value": "M8_HTTPS_DIA"
 				        },
-					      {
+					{
 				          "text": "M9_SS 纯Shadowsocks游戏代理",
 				          "value": "M9_SS"
 				        },
