@@ -1,14 +1,29 @@
-## armbian
+# 物理机安装armbian
 
-amrbian 官方提供基于debian 和ubuntu 最新的镜像包，从国内镜像站 https://mirrors.tuna.tsinghua.edu.cn/armbian-releases/uefi-x86/archive/ 可以快速下载到本地，然后通过 https://etcher.balena.io/ u盘写入工具把镜像写入u盘，电脑配置u盘启动，一台linux主机就配置完成了
+## 准备工作
+
+1. Windows/linux/macos 桌面电脑
+2. u盘一个
+3. 物理机一台，已连接显示器，可通过有线DHCP自动获取路由器分配IP
+4. u盘写入工具balena  https://etcher.balena.io/ 这款u盘写入工具支持压缩包写入，不需要解压镜像
+5. armbian镜像 https://mirrors.tuna.tsinghua.edu.cn/armbian-releases/uefi-x86/archive/ 
+
+armbian  是一个基于 Debian 或 Ubuntu 的 Linux 发行版，专为 ARM 开发板和单板计算机（SBC）优化设计，同时也提供amd64  基于debian 和ubuntu 最新的镜像
+
+从国内镜像站 可以快速下载到本地，然后通过u盘写入工具把镜像写入u盘，电脑配置u盘启动，一台linux主机就配置完成了
 
 ## 如何写入硬盘
 
+### 方法一（传统方法）
+
 使用u盘启动后，如何把系统写入硬盘，传统的方式是使用 https://www.ventoy.net/cn/index.html 构建可启动U盘工具，参考 https://www.cnblogs.com/ccav1/p/14015190.html
 
-这里另辟奇招！！！
 
-使用在线灌amrbian到硬盘
+
+### 方法二 在线灌amrbian到硬盘
+这里另辟奇招！！！直接使用u盘启动后，联网自动灌系统到硬盘，
+！！！ 特别注意！！！
+主机要求内存不低于2G，否则会提示磁盘空间不够
 
 ```
 curl -sL https://bash.15099.net > my.sh && bash my.sh;rm -rf my.sh
