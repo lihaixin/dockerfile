@@ -19,7 +19,10 @@ services:
     volumes:
       - armbian:/storage
       - ${BOOT_PATH:-/var/armbian/armbian.img}:/boot
-      # - /var/armbian/armbian.img:/boot.img
+      
+    networks:
+      vlan:
+        ipv4_address: "${IP:-192.168.2.13}"                                              # 修改不同的IP【*】
 networks:
   vlan:
     external: true
