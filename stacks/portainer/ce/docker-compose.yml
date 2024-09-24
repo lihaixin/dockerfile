@@ -1,18 +1,20 @@
 version: "2"
 services:
   portainer:
-    image: lihaixin/portainer:ce-2.19.5                # 
+    image: lihaixin/portainer:ce-2.19.5                # https://hub.docker.com/r/lihaixin/portainer
     container_name: portainer
     hostname: portainer
     restart: unless-stopped
-    network_mode: "bridge"                             # bridge
+    network_mode: "bridge"                             # bridge 网络
     environment:
       PASSWORD: "${PASSWORD:-@china1234567}"           # 密码不能低于12位，留空为启动后再自己创建
-      COUNTRY: "cn"
+      COUNTRY: "cn"                                    # cn显示中文，en显示英文
     ports:
       - "9443:9443"
     volumes:
       - portainer_data:/data                           # 永久存放portainer数据位置
       - /var/run/docker.sock:/var/run/docker.sock      # docker.sock
+      - /var/lib/docker/volumes:/var/lib/docker/volumes                          # 卷管理
+      - /:/host                                                                  # 文件管理
 volumes:
   portainer_data:
