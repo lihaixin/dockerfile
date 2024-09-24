@@ -21,7 +21,8 @@
     				}],
     			"restart_policy": "always",
      			"volumes": [{
-				"container": "/share"
+				"container": "/share",
+				"bind": "/share"
 				}]
   			}
 ,
