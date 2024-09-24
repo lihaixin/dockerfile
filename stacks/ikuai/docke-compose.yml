@@ -25,7 +25,7 @@ services:
       
     networks:
       vlan:
-        ipv4_address: 192.168.2.12                                             # 修改不同的IP【*】
+        ipv4_address: "${IP:-192.168.2.12}"                                             # 修改不同的IP【*】
 
 networks:
   vlan:
