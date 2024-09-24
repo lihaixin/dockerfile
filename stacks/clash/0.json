@@ -1,4 +1,4 @@
- {
+			{
 			"type": 3,
 			"title": "Clash云网关",
 	 		"name": "clash_1",
@@ -16,7 +16,7 @@
 				"name": "NO",
 				"label": "用户授权NO",
 				"description": "用户授权NO，也是自定义模板标识号，未授权NO只能使用免费模板",
-				"default": ""
+				"default": "0999202412301280007"
 				},
 				{
 				"name": "CLASH_MODE",
@@ -82,25 +82,25 @@
 				"name": "RSERVER",
 				"label": "落地socks5/http/https/SS/H2 IP",
 				"description": "输入落地IP",
-				"default": ""
+				"default": "6.6.6.6"
 				},
 				{
 				"name": "RPORT",
 				"label": "落地socks5/http/https/SS/H2 代理端口",
 				"description": "输入落地IP端口",
-				"default": ""
+				"default": "user"
 				},
 				{
 				"name": "RUSER",
 				"label": "落地socks5/http/https/SS/H2 代理账号",
 				"description": "落地socks5/http/https/SS/H2 代理账号",
-				"default": ""
+				"default": "password"
 				},
 				{
 				"name": "RPASS",
 				"label": "落地socks5/http/https/SS/H2 代理密码",
 				"description": "Host port to expose HTTPS port of Dokku (443 if empty)",
-				"default": ""
+				"default": "1080"
 				},
 				{
 				"name": "IP",
@@ -109,5 +109,5 @@
 				"default": "172.19.0.1"
 				}
 			]
-}
+			}
 ,
