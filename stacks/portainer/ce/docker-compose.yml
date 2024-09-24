@@ -2,7 +2,7 @@ version: "2"
 services:
   portainer:
     image: lihaixin/portainer:ce-2.19.5                # https://hub.docker.com/r/lihaixin/portainer
-    container_name: portainer
+    container_name: ui
     hostname: portainer
     restart: unless-stopped
     network_mode: "bridge"                             # bridge 网络
