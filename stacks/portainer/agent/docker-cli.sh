@@ -2,7 +2,7 @@ docker run -d \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -v /var/lib/docker/volumes:/var/lib/docker/volumes \
   -v /:/host \
-  -v portainer_agent_data:/data \
+  -v /var/portainer_agent_data:/data \
   --restart always \
   -e EDGE=1 \
   -e EDGE_ID=733c7ebf-6804-4604-ae41-a1444b6cec34 \
