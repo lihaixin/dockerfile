@@ -13,9 +13,9 @@
 			},
 	 		"env": [
 				{
-				"name": "NO",
-				"label": "用户授权NO",
-				"description": "用户授权NO，也是自定义模板标识号，未授权NO只能使用免费模板",
+				"name": "USERNO",
+				"label": "用户授权USERNO",
+				"description": "用户授权USERNO，也是自定义模板标识号，未授权USERNO只能使用免费模板",
 				"default": ""
 				},
 				{
