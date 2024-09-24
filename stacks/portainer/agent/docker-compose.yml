@@ -7,7 +7,7 @@ services:
     restart: unless-stopped
     privileged: true
     environment:
-      EDGE: "${EDGE}"
+      EDGE: "${EDGE:-1}"
       EDGE_ID: "${EDGEID:-f63326d6-1844-45c1-9f55-1a0dc63b6590}"
       EDGE_KEY: "${EDGEKEY:-aHR0cHM6Ly91aS0yLjE1MDk5Lm5ldHx1aS0yLjE1MDk5Lm5ldDoyMXw0TmhQM3dpbDhDSG5BS2M5ejIvQ1J3RkJISVhhdS80ZWZ4aW1Xc1pYQTV3PXw1MDU}"
       EDGE_INSECURE_POLL: "1"
