@@ -19,7 +19,7 @@ services:                                                                      #
       
     networks:
       vlan:
-        ipv4_address: 192.168.2.2                                               # 修改不同的IP【*】
+        ipv4_address: ${IP:-172.19.0.1}                                        # 修改不同的IP【*】
 networks:
   vlan:
     external: true
