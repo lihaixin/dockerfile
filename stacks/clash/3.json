@@ -79,6 +79,12 @@
 				      ]
 				},
 				{
+				"name": "CLASH_SUBUR",
+				"label": "订阅地址",
+				"description": "CLASH订阅地址，在IP提供商后台查看，一般都有提供",
+				"default": "https://sub.com/sub/9001592fb618ea.yaml"
+				},
+				{
 				"name": "RSERVER",
 				"label": "落地socks5/http/https/SS/H2 IP",
 				"description": "输入落地IP",
