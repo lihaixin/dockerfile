@@ -1,3 +1,2 @@
 payload:
-  - '*.tiktokcdn.com'
-  - '*.tiktokv.com'
+  - DOMAIN-SUFFIX,tiktokv.com
