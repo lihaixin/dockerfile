@@ -1,0 +1,3 @@
+payload:
+- DOMAIN-SUFFIX,google.com
+- DOMAIN-KEYWORD,gecko
