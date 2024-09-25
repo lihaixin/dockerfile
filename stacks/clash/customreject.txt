@@ -1,2 +1,3 @@
 payload:
   - '+.tiktokcdn.com'
+  - '+.tiktokv.com'
