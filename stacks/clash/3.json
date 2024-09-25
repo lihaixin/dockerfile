@@ -79,8 +79,8 @@
 				      ]
 				},
 				{
-				"name": "CLASH_SUBUR",
-				"label": "订阅地址",
+				"name": "CLASH_SUBURL",
+				"label": "订阅地址CLASH_SUBURL",
 				"description": "CLASH订阅地址，在IP提供商后台查看，一般都有提供",
 				"default": "https://sub.com/sub/9001592fb618ea.yaml"
 				},
