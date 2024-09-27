@@ -14,7 +14,7 @@
 				{
 				"name": "OS_V",
 				"label": "系统版本",
-				"description": "输入你需要安装的windows版本,支持win7 win10 win10 然后自动从互联网下载对应的iso在线安装",
+				"description": "输入你需要安装的windows版本,支持win7 win10 win10 然后自动从互联网下载对应的iso在线安装,也支持.iso在线地址，例如：https://drive.massgrave.dev/cn_windows_7_enterprise_with_sp1_x64_dvd_u_677685.iso",
 				"default": "win7"
 				},
 				{
