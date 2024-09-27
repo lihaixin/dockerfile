@@ -1,8 +1,9 @@
 
-# windows xp
-
-1. https://archive.org/download/WinXPProSP3SimplifiedChinese/zh-hans_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-74070.iso
-2. https://msdn.itellyou.cn/
-3. https://massgrave.dev/genuine-installation-media
+# windows 
+1. https://msdn.itellyou.cn/
+2. https://massgrave.dev/genuine-installation-media
 4. https://dl.bobpony.com/windows/
+5. https://drive.massgrave.dev/cn_windows_7_enterprise_with_sp1_x64_dvd_u_677685.iso
+6. https://drive.massgrave.dev/zh-cn_windows_10_enterprise_ltsc_2021_x64_dvd_033b7312.iso
+
 
