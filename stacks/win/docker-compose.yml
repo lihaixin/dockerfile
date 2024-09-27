@@ -7,8 +7,8 @@ services:
       DISK_SIZE: "${DISK_S:-30G}"                                         # 分配储存空间
       DISK_FMT: "${DISK_F:-qcow2}"                                        # 虚拟磁盘存储方式  ram | qcow2
       RAM_SIZE: "${MEM_S:-2G}"                                            # 分配的内存
-      CPU_CORES: "${CPU_C:-2}"                                             # 分配的核心
-      LANGUAGE: "${LANG:-Chinese}"                                         # 系统语言 English | Chinese
+      CPU_CORES: "${CPU_C:-2}"                                            # 分配的核心
+      LANGUAGE: "${LANG:-Chinese}"                                        # 系统语言 English | Chinese
       # DHCP: "Y"                                                         # 注销这行开启路由器网段分配IP
       # ARGUMENTS: "-device usb-host,vendorid=0x232b,productid=0x0f13"    # 调用usb到容器 调整和上面lsusb输出一致，加0x表示为十六进制
     devices:
