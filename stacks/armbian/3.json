@@ -9,6 +9,44 @@
 			"repository": {
 				"url": "https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/armbian/docker-compose.yml"
+				},
+			"env": [
+				{
+				"name": "BOOT_FILE",
+				"label": "Linux启动在线镜像URL,留空使用自动下载armbian镜像",
+				"description": "输入你需要安装的armbian在线镜像URL,国内镜像站更快 https://mirrors.bfsu.edu.cn/armbian-releases/qemu-uefi-x86/archive/",
+				"default": ""
+				},
+				{
+				"name": "DISK_S",
+				"label": "虚拟磁盘大小,默认为10G",
+				"description": "格式按10G",
+				"default": "10G"
+				},
+				{
+				"name": "MEN_S",
+				"label": "虚拟内存大小,默认为1G",
+				"description": "格式按1G，要低于你物理内存1G才好启动",
+				"default": "1G"
+				},
+				{
+				"name": "CPU_C",
+				"label": "分配CPU几个,默认为1",
+				"description": "格式按1，要低于你物理CPU内核数",
+				"default": "1"
+				},
+				{
+				"name": "BOOT_PATH_ARGS",
+				"label": "本地启动盘路径，设置就优先使用本地镜像启动",
+				"description": "格式按/vat/armbian.img:/boot 输入，替换为你真实的路径",
+				"default": ""
+				},
+				{
+				"name": "IP",
+				"label": "虚拟机分配的IP *",
+				"description": "你本地macvlan分配的IP，默认为172.19.0.*这个网段的IP",
+				"default": "172.19.0.13"
 				}
+				]
 }
 ,
