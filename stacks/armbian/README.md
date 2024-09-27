@@ -6,7 +6,10 @@
 2. u盘一个
 3. 物理机一台，已连接显示器，可通过有线DHCP自动获取路由器分配IP
 4. u盘写入工具balena  https://etcher.balena.io/ 这款u盘写入工具支持压缩包写入，不需要解压镜像
-5. armbian镜像 https://mirrors.tuna.tsinghua.edu.cn/armbian-releases/uefi-x86/archive/ 
+5. armbian镜像
+   
+   https://mirrors.tuna.tsinghua.edu.cn/armbian-releases/uefi-x86/archive/
+   https://mirrors.bfsu.edu.cn/armbian-releases/qemu-uefi-x86/archive/
 
 armbian  是一个基于 Debian 或 Ubuntu 的 Linux 发行版，专为 ARM 开发板和单板计算机（SBC）优化设计，同时也提供amd64  基于debian 和ubuntu 最新的镜像
 
