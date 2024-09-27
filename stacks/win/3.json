@@ -9,6 +9,50 @@
 			"repository": {
 				"url": "https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/win/docker-compose.yml"
+				},
+	               "env": [
+				{
+				"name": "OS_V",
+				"label": "系统版本",
+				"description": "输入你需要安装的windows版本,支持win7 win10 win10 然后自动从互联网下载对应的iso在线安装",
+				"default": "win7"
+				},
+				{
+				"name": "DISK_S",
+				"label": "虚拟磁盘大小,默认为30G",
+				"description": "格式按30G,确保不用大于剩余空间",
+				"default": "30G"
+				},
+				{
+				"name": "DISK_F",
+				"label": "虚拟磁盘存放格式,默认为qcow2",
+				"description": "支持ram和qcow2,ram立马分配空间，速度快一点，qcow2用多少占多少空间，稍微慢一点，",
+				"default": "qcow2"
+				},
+				{
+				"name": "MEN_S",
+				"label": "虚拟内存大小,默认为2G",
+				"description": "格式按2G，要低于你物理内存1G才能启动",
+				"default": "2G"
+				},
+				{
+				"name": "CPU_C",
+				"label": "分配CPU内核几个,默认为2",
+				"description": "格式按2，要低于你物理CPU内核数",
+				"default": "2"
+				},
+				{
+				"name": "BOOT_PATH_ARGS",
+				"label": "本地启动盘路径",
+				"description": "非空就优先使用此处本地光盘镜像启动，格式按/var/win11.iso:/custom.iso 输入，替换为你真实的路径",
+				"default": ""
+				},
+				{
+				"name": "IP",
+				"label": "虚拟机分配的IP *",
+				"description": "你本地macvlan分配的IP，默认为172.19.0.*这个网段的IP",
+				"default": "172.19.0.13"
 				}
-		}
+				]
+}
 ,
