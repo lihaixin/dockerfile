@@ -14,20 +14,26 @@
 			"env": [
 				{
 				"name": "BOOT_FILE",
-				"label": "Linux启动在线镜像URL,留空使用自动下载armbian镜像",
-				"description": "输入你需要安装的armbian在线镜像URL,国内镜像站更快 https://mirrors.bfsu.edu.cn/armbian-releases/qemu-uefi-x86/archive/",
+				"label": "Linux启动在线镜像URL",
+				"description": "输入你需要安装的armbian在线镜像URL,留空使用自动下载armbian镜像 国内镜像站更快 https://mirrors.bfsu.edu.cn/armbian-releases/qemu-uefi-x86/archive/",
 				"default": ""
 				},
 				{
 				"name": "DISK_S",
 				"label": "虚拟磁盘大小,默认为10G",
-				"description": "格式按10G",
+				"description": "格式按10G,确保不用大于剩余空间",
 				"default": "10G"
+				},
+				{
+				"name": "DISK_F",
+				"label": "虚拟磁盘存放格式,默认为ram",
+				"description": "支持ram和qcow2,ram立马分配空间，速度快一点，qcow2用多少占多少空间，稍微慢一点，",
+				"default": "qcow2"
 				},
 				{
 				"name": "MEN_S",
 				"label": "虚拟内存大小,默认为1G",
-				"description": "格式按1G，要低于你物理内存1G才好启动",
+				"description": "格式按1G，要低于你物理内存1G才能启动",
 				"default": "1G"
 				},
 				{
@@ -38,8 +44,8 @@
 				},
 				{
 				"name": "BOOT_PATH_ARGS",
-				"label": "本地启动盘路径，设置就优先使用本地镜像启动",
-				"description": "格式按/vat/armbian.img:/boot 输入，替换为你真实的路径",
+				"label": "本地启动盘路径",
+				"description": "非空就优先使用此处本地镜像启动，格式按/var/armbian.img:/boot 输入，替换为你真实的路径",
 				"default": ""
 				},
 				{
