@@ -41,6 +41,18 @@
 				"description": "格式按2，要低于你物理CPU内核数",
 				"default": "2"
 				},
+			       {
+				"name": "WEBVNC_PORT",
+				"label": "WEBVNC端口",
+				"description": "直接映射宿主机网络端口到虚拟机webvnc服务上,方便网页安装",
+				"default": "18006"
+				},
+			       {
+				"name": "RDP_PORT",
+				"label": "RDP端口",
+				"description": "直接映射宿主机网络端口到虚拟机远程桌面服务上，方便rdp连接显示",
+				"default": "13389"
+				},
 				{
 				"name": "BOOT_PATH_ARGS",
 				"label": "本地启动盘路径",
