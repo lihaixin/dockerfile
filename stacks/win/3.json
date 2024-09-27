@@ -41,17 +41,17 @@
 				"description": "格式按2，要低于你物理CPU内核数",
 				"default": "2"
 				},
-			       {
-				"name": "WEBVNC_PORT",
-				"label": "WEBVNC端口",
-				"description": "直接映射宿主机网络端口到虚拟机webvnc服务上,方便网页安装",
-				"default": "18006"
+			        {
+				"name": "USER",
+				"label": "windows登录账号",
+				"description": "修改为后续你登录的windows账号",
+				"default": "docker"
 				},
-			       {
-				"name": "RDP_PORT",
-				"label": "RDP端口",
-				"description": "直接映射宿主机网络端口到虚拟机远程桌面服务上，方便rdp连接显示",
-				"default": "13389"
+			        {
+				"name": "PASSWD",
+				"label": "windows登录密码",
+				"description": "修改为后续你登录的windows密码",
+				"default": "docker"
 				},
 				{
 				"name": "BOOT_PATH_ARGS",
