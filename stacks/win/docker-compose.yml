@@ -3,7 +3,7 @@ services:
     image: dockurr/windows                                                # https://github.com/dockur/windows
     container_name: win
     environment:
-      VERSION: "${OS_V:-win7}"                                            # 系统标识  win7  win10
+      VERSION: "${OS_V:-win7}"                                            # 系统标识  win7  win10 或者 https://drive.massgrave.dev/zh-cn_windows_10_enterprise_ltsc_2021_x64_dvd_033b7312.iso
       DISK_SIZE: "${DISK_S:-30G}"                                         # 分配储存空间
       DISK_FMT: "${DISK_F:-qcow2}"                                        # 虚拟磁盘存储方式  ram | qcow2
       RAM_SIZE: "${MEM_S:-2G}"                                            # 分配的内存
@@ -11,19 +11,19 @@ services:
       LANGUAGE: "${LANG:-Chinese}"                                        # 系统语言 English | Chinese
       USERNAME: "${USER:-docker}"                                         # windows登录账号
       PASSWORD: "${PASSWD:-docker}"                                       # windows登录密码
-      # DHCP: "Y"                                                         # 注销这行开启路由器网段分配IP
-      # ARGUMENTS: "-device usb-host,vendorid=0x232b,productid=0x0f13"    # 调用usb到容器 调整和上面lsusb输出一致，加0x表示为十六进制
+      # DHCP: "Y"                                                         # 💡注销这行开启路由器网段分配IP
+      # ARGUMENTS: "-device usb-host,vendorid=0x232b,productid=0x0f13"    # 🚩调用usb到容器 调整和上面lsusb输出一致，加0x表示为十六进制
     devices:
       - /dev/kvm
-      # - /dev/bus/usb                                                    # 调用usb到容器
-    # device_cgroup_rules:                                                # 注销这行开启路由器网段分配IP
-    #   - 'c *:* rwm'                                                     # 注销这行开启路由器网段分配IP
+      # - /dev/bus/usb                                                    # 🚩调用usb到容器
+    # device_cgroup_rules:                                                # 💡注销这行开启路由器网段分配IP
+    #   - 'c *:* rwm'                                                     # 💡注销这行开启路由器网段分配IP
     cap_add:
       - NET_ADMIN
-    # ports:
-    #   - 8006:8006                                                       # 和飞牛相册端口冲突
-    #   - 3389:3389/tcp                                                   # 远程终端端口
-    #   - 3389:3389/udp                                                   # 远程终端端口
+    # ports:                                                              # 🏷️开启端口映射
+    #   - 8006:8006                                                       # 🏷️和飞牛相册8006端口冲突
+    #   - 3389:3389/tcp                                                   # 🏷️远程终端端口
+    #   - 3389:3389/udp                                                   # 🏷️远程终端端口
     stop_grace_period: 2m
     volumes:
       - win:/storage
