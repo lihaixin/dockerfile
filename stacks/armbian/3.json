@@ -31,7 +31,7 @@
 				},
 				{
 				"name": "CPU_C",
-				"label": "分配CPU几个,默认为1",
+				"label": "分配CPU内核几个,默认为1",
 				"description": "格式按1，要低于你物理CPU内核数",
 				"default": "1"
 				},
