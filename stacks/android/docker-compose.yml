@@ -1,7 +1,7 @@
 version: '2'
 services:
   android:
-    image: budtmo/docker-android:emulator_11.0      # https://github.com/budtmo/docker-android
+    image: budtmo/docker-android:emulator_11.0                                          # https://github.com/budtmo/docker-android
     devices:
       - /dev/kvm
     cap_add:
@@ -9,7 +9,7 @@ services:
     stop_grace_period: 2m
     restart: on-failure
     environment:
-      MULATOR_DEVICE: "Samsung Galaxy S10"           # 系统标识
+      MULATOR_DEVICE: "Samsung Galaxy S10"                                               # 系统标识
       WEB_VNC: true
       
     volumes:
@@ -21,3 +21,6 @@ services:
 networks:
   vlan:
     external: true
+    
+volumes:
+  android:
