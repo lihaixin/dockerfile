@@ -5,29 +5,30 @@ services:
     container_name: fnnas
     devices:
       - /dev/kvm
-      - /dev/vhost-net
-    device_cgroup_rules:
-      - 'c *:* rwm'
+      - /dev/vhost-net                                                                                                          # 💡这行开启路由器网段分配IP
+      # - /dev/bus/usb                                                                                                          # 🚩调用usb到容器
+    device_cgroup_rules:                                                                                                        # 💡这行开启路由器网段分配IP
+      - 'c *:* rwm'                                                                                                             # 💡这行开启路由器网段分配IP
     privileged: true
     stop_grace_period: 2m
     restart: on-failure
     environment:
-      # ARGUMENTS: "-netdev user,id=hostnet1 -device virtio-net-pci,romfile=,netdev=hostnet1,id=net1"
+      # ARGUMENTS: "-netdev user,id=hostnet1 -device virtio-net-pci,romfile=,netdev=hostnet1,id=net1"                           # 🚩调用usb到容器
       BOOT: "${BOOT_FILE:-https://download.liveupdate.fnnas.com/x86_64/trim/fnos.0.8.19-360.iso}"
       DISK_SIZE: "${DISK_S:-128G}"                                                                                              # 分配储存空间
       DISK_FMT: "${DISK_F:-qcow2}"                                                                                              # 虚拟磁盘存储方式  raw 和qcow2
       RAM_SIZE: "${MEM_S:-2G}"                                                                                                  # 分配的内存
       CPU_CORES: "${CPU_C:-1}"                                                                                                  # 分配的核心
       TZ: "asia/shanghai"
-      DHCP: "Y"
-      # DISK2_SIZE: "32G"
-      # DISK3_SIZE: "32G"
+      DHCP: "Y"                                                                                                                 # 💡这行开启路由器网段分配IP
+      # DISK2_SIZE: "32G"                                                                                                  
+      # DISK3_SIZE: "32G"                                                                                                       # 🏷️开启第二磁盘
       # DISK4_SIZE: "32G"
       
     volumes:
       - /var/fnnas:/storage                                                                                                     # 这里存储nas系统文件，不使用卷存储，防止手贱误输出
       - ${BOOT_PATH_ARGS:-/var/fnnnas.iso:/boot.iso_n}                                                                          # 使用本地文件启动  /var/fnnas.iso:/boot.iso
-      # - /var/fnnas:/storage2
+      # - /var/fnnas:/storage2                                                                                                  # 🏷️开启第二磁盘
       # - /var/fnnas:/storage3
       # - /var/fnnas:/storage4
     networks:
