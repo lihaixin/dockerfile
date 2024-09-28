@@ -5,7 +5,7 @@ services:
     environment:
       VERSION: "${OS_V:-win7}"                                            # 系统标识  win7  win10 或者 https://drive.massgrave.dev/zh-cn_windows_10_enterprise_ltsc_2021_x64_dvd_033b7312.iso
       DISK_SIZE: "${DISK_S:-30G}"                                         # 分配储存空间
-      DISK_FMT: "${DISK_F:-qcow2}"                                        # 虚拟磁盘存储方式  ram | qcow2
+      DISK_FMT: "${DISK_F:-qcow2}"                                        # 虚拟磁盘存储方式  raw | qcow2
       RAM_SIZE: "${MEM_S:-2G}"                                            # 分配的内存
       CPU_CORES: "${CPU_C:-2}"                                            # 分配的核心
       LANGUAGE: "${LANG:-Chinese}"                                        # 系统语言 English | Chinese
