@@ -42,6 +42,12 @@
 				"default": "2"
 				},
 			        {
+				"name": "LANG",
+				"label": "系统语言，默认Chinese",
+				"description": "支持 English | Chinese",
+				"default": "Chinese"
+				},
+			        {
 				"name": "USER",
 				"label": "windows登录账号",
 				"description": "修改为后续你登录的windows账号",
