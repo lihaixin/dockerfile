@@ -27,8 +27,8 @@
 				{
 				"name": "DISK_F",
 				"label": "虚拟磁盘存放格式,默认为ram",
-				"description": "支持ram和qcow2,ram立马分配空间，速度快一点，qcow2用多少占多少空间，稍微慢一点，",
-				"default": "ram"
+				"description": "支持raw和qcow2,raw立马分配空间，速度快一点，qcow2用多少占多少空间，稍微慢一点，",
+				"default": "raw"
 				},
 				{
 				"name": "MEN_S",
