@@ -45,8 +45,8 @@
 				{
 				"name": "BOOT_PATH_ARGS",
 				"label": "本地启动盘路径",
-				"description": "优先使用此处本地镜像启动，格式按/var/armbian.img:/boot 输入修改，/var/armbian.img替换为你真实的路径",
-				"default": "/var/armbian.img:/boot_n"
+				"description": "优先使用此处本地镜像启动，格式按/var/armbian.img:/boot.img 输入修改，/var/armbian.img替换为你真实的路径",
+				"default": "/var/armbian.img:/boot.img_n"
 				},
 				{
 				"name": "IP",
