@@ -15,7 +15,7 @@ services:
       DISK_SIZE: "${DISK_S:-10G}"                                                                                               # 分配储存空间
       DISK_FMT: "${DISK_F:-qcow2}"                                                                                              # 虚拟磁盘存储方式  ram 和qcow2
       RAM_SIZE: "${MEM_S:-2G}"                                                                                                  # 分配的内存
-      CPU_CORES: "{CPU_C:-1}"                                                                                                   # 分配的核心
+      CPU_CORES: "${CPU_C:-1}"                                                                                                   # 分配的核心
       
     volumes:
       - armbian:/storage
