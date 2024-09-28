@@ -31,7 +31,7 @@ services:
                                                       
     networks:
       vlan:
-        ipv4_address: "${IP:-172.19.0.13}"                                 # 修改不同的IP【*】  WEBVNC地址： http://<ip>:8006  RDP地址：<ip>:3389
+        ipv4_address: "${IP:-172.19.0.1}"                                 # 修改不同的IP【*】  WEBVNC地址： http://<ip>:8006  RDP地址：<ip>:3389
 networks:
   vlan:
     external: true
