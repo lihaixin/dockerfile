@@ -1,6 +1,7 @@
  {
 			"type": 3,
 			"title": "FLNAS",
+	 		"name": "FLNAS",
 			"description": "一键安装飞牛NAS",
 			"note": "通过docker容器，配合macvlan,快速尝试群晖这款国产新秀的FLNAS系统<a href=\"https://www.fnnas.com/\" target=\"_blank\">更多查看</a>",
 			"categories": ["NAS"],
@@ -9,6 +10,50 @@
 			"repository": {
 				"url": "https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/fnnas/docker-compose.yml"
-			}
+				},
+	 		"env": [
+				{
+				"name": "BOOT_FILE",
+				"label": "fnnas启动在线镜像URL",
+				"description": "输入你需要安装的FNNAS在线镜像URL,留空使用自动下载镜像 国内镜像站更快 https://fnnas.com/download",
+				"default": ""
+				},
+				{
+				"name": "DISK_S",
+				"label": "虚拟磁盘大小,默认为128G",
+				"description": "格式按128G,确保不用大于主机剩余空间",
+				"default": "128G"
+				},
+				{
+				"name": "DISK_F",
+				"label": "虚拟磁盘存放格式,默认为qcow2",
+				"description": "支持raw和qcow2,raw立马分配空间，速度快一点，qcow2用多少占多少空间，稍微慢一点，",
+				"default": "qcow2"
+				},
+				{
+				"name": "MEN_S",
+				"label": "虚拟内存大小,默认为2G",
+				"description": "格式按2G，要低于你物理内存1G才能启动",
+				"default": "2G"
+				},
+				{
+				"name": "CPU_C",
+				"label": "分配CPU内核几个,默认为1",
+				"description": "格式按1，要低于你物理CPU内核数",
+				"default": "1"
+				},
+				{
+				"name": "BOOT_PATH_ARGS",
+				"label": "本地启动盘路径",
+				"description": "优先使用此处本地镜像启动，格式按/var/fnnas.iso:/boot.iso 输入修改，/var/fnnas.iso替换为你真实的路径,支持boot.iso, boot.img 或 boot.qcow2 文件",
+				"default": "/var/fnnas.iso:/boot.iso_n"
+				},
+				{
+				"name": "IP",
+				"label": "虚拟机分配的IP *",
+				"description": "你本地macvlan分配的IP，默认为172.19.0.*这个网段的IP",
+				"default": "172.19.0.1"
+				}
+				]
 		}
 ,
