@@ -26,10 +26,10 @@ services:
     #   - 3389:3389/udp                                                   # 🏷️远程终端端口
     stop_grace_period: 2m
     volumes:
-      - win:/storage
+      - win_data:/storage
         ${BOOT_PATH_ARGS:-}
     # - /var/win11.iso:/custom.iso                                         # 自定义启动光盘文件
-      -  /var:/shared                                                      # windows和宿主机文件共享目录
+      - /mnt:/shared                                                       # windows和宿主机文件共享目录
     networks:
       vlan:
         ipv4_address: "${IP:-172.19.0.13}"                                 # 修改不同的IP【*】  WEBVNC地址： http://<ip>:8006  RDP地址：<ip>:3389
@@ -37,4 +37,4 @@ networks:
   vlan:
     external: true
 volumes:
-  win:
+  win_data:
