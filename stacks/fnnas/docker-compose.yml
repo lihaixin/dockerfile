@@ -15,7 +15,7 @@ services:
     environment:
       # ARGUMENTS: "-netdev user,id=hostnet1 -device virtio-net-pci,romfile=,netdev=hostnet1,id=net1"                           # 🚩调用usb到容器
       BOOT: "${BOOT_FILE:-https://download.liveupdate.fnnas.com/x86_64/trim/fnos.0.8.19-360.iso}"
-      DISK_SIZE: "${DISK_S:-128G}"                                                                                              # 分配储存空间
+      DISK_SIZE: "${DISK_S:-128G}"                                                                                              # 分配系统储存空间
       DISK_FMT: "${DISK_F:-qcow2}"                                                                                              # 虚拟磁盘存储方式  raw 和qcow2
       RAM_SIZE: "${MEM_S:-2G}"                                                                                                  # 分配的内存
       CPU_CORES: "${CPU_C:-1}"                                                                                                  # 分配的核心
