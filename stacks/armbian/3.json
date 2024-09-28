@@ -32,9 +32,9 @@
 				},
 				{
 				"name": "MEN_S",
-				"label": "虚拟内存大小,默认为1G",
-				"description": "格式按1G，要低于你物理内存1G才能启动",
-				"default": "1G"
+				"label": "虚拟内存大小,默认为2G",
+				"description": "格式按2G，要低于你物理内存1G才能启动",
+				"default": "2G"
 				},
 				{
 				"name": "CPU_C",
