@@ -62,7 +62,7 @@
 				{
 				"name": "BOOT_PATH_ARGS",
 				"label": "本地启动盘路径",
-				"description": "优先使用此处本地光盘镜像启动，按格式按/var/win11.iso:/custom.iso 输入，/var/win11.iso:替换为你真实的路径，默认为共享宿主机/mnt目录到\\host.lan\Data",
+				"description": "优先使用此处本地光盘镜像启动，按格式按/var/win11.iso:/custom.iso 输入，/var/win11.iso:替换为你真实的路径，默认为共享宿主机/mnt目录到Windows",
 				"default": "/mnt:/shared"
 				},
 				{
