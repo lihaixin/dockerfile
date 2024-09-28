@@ -27,9 +27,8 @@ services:
     stop_grace_period: 2m
     volumes:
       - win_data:/storage
-        ${BOOT_PATH_ARGS:-}
-    # - /var/win11.iso:/custom.iso                                         # 自定义启动光盘文件
-      - /mnt:/shared                                                       # windows和宿主机文件共享目录
+      - ${BOOT_PATH_ARGS:-/mnt:/shared}                                   # windows和宿主机文件共享目录 或者自定义启动光盘文件 /var/win11.iso:/custom.iso
+                                                      
     networks:
       vlan:
         ipv4_address: "${IP:-172.19.0.13}"                                 # 修改不同的IP【*】  WEBVNC地址： http://<ip>:8006  RDP地址：<ip>:3389
