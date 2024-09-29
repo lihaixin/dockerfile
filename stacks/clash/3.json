@@ -46,20 +46,20 @@
 				"description": "支持白名单、黑名单、S5、HTTP、hysteria2、wireguard网关",
 				"select": [
 				        {
-				          "text": "M1_BMD 白名单模式,调用下面CLASH_SUBURL订阅地址，未匹配走代理出去",
+				          "text": "M1_BMD 白名单模式，调用下面订阅地址CLASH_SUBURL，未匹配规则走代理出去",
 				          "value": "M1_BMD",
 				          "default": "M1_BMD"
 				        },
 				        {
-				          "text": "M2_HMD 黑名单模式，调用下面CLASH_SUBURL订阅地址，未匹配走本地网络出去",
+				          "text": "M2_HMD 黑名单模式，调用下面订阅地址CLASH_SUBURL，未匹配走规则本地网络出去",
 				          "value": "M2_HMD"
 				        },
 					{
-				          "text": "M3_GFL 国家分流负载均衡模式，调用下面CLASH_SUBURL订阅地址，订阅按国家分配",
+				          "text": "M3_GFL 国家分流负载均衡模式，调用下面订阅地址CLASH_SUBURL，订阅按国家分配",
 				          "value": "M3_GFL"
 				        },
 				        {
-				          "text": "M6_S5 纯S5游戏代理，不调用订阅地址，国内环境用",
+				          "text": "M6_S5 纯S5游戏代理，不调用下面订阅地址CLASH_SUBURL，国内环境用",
 				          "value": "M6_S5"
 				        },
 					{
@@ -79,36 +79,36 @@
 				{
 				"name": "CLASH_SUBURL",
 				"label": "订阅地址CLASH_SUBURL",
-				"description": "CLASH V2RAY订阅地址，同时支持ss:// vmess:// vless:// hysteria2:// 这些格式在IP提供商后台查看，一般都有提供",
+				"description": "CLASH | V2RAY订阅地址，同时也支持ss:// vmess:// vless:// hysteria2:// 这些格式在IP提供商后台查看，一般都有提供",
 				"default": "https://sub.com/sub/9001592fb618ea.yaml"
 				},
 				{
 				"name": "RSERVER",
-				"label": "落地socks5/http/https/SS/H2 IP",
+				"label": "落地socks5/http/https IP",
 				"description": "输入落地IP",
 				"default": "6.6.6.6"
 				},
 				{
 				"name": "RPORT",
-				"label": "落地socks5/http/https/SS/H2 代理端口",
+				"label": "落地socks5/http/https 代理端口",
 				"description": "输入落地IP端口",
 				"default": "1080"
 				},
 				{
 				"name": "RUSER",
 				"label": "落地socks5/http/https 代理账号",
-				"description": "落地socks5/http/https/SS/H2 代理账号",
+				"description": "落地socks5/http/https 代理账号",
 				"default": "user"
 				},
 				{
 				"name": "RPASS",
 				"label": "落地socks5/http/https代理密码",
-				"description": "Host port to expose HTTPS port of Dokku (443 if empty)",
+				"description": "落地socks5/http/https代理密码",
 				"default": "password"
 				},
 				{
 				"name": "IP",
-				"label": "容器macvlan IP",
+				"label": "容器macvlan IP *",
 				"description": "修改不同的IP",
 				"default": "172.19.0.1"
 				}
