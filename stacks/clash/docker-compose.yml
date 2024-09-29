@@ -11,7 +11,7 @@ services:                                                                      #
                                                                                # M6_S5 为纯S5模式，国内环境用  M6_S5_DIA 为带CLASH_SUBURL订阅地址 国外环境用
                                                                                # M7_HTTP_DIA 为游戏中转代理HTTP代理 M8_HTTPS_DIA 为游戏中转代理HTTPS
       CLASH_SUBURL: ${CLASH_SUBURL:-https://sub.com/test.yaml}                 # 订阅地址: CLASH V2RAY订阅地址，同时支持ss:// vmess:// vless:// hysteria2:// 这些格式联系你的购买厂家获取 【*】
-      RSERVER: ${RSERVER:-6.6.6.6}                                             # 落地socks5/http/https IP （链式中转模式下生效）
+      RSERVER: ${RSERVER:-6.6.6.6}                                             # 落地socks5/http/https 代理IP （链式中转模式下生效）
       RPORT: ${RPORT:-10800}                                                   # 落地socks5/http/https 代理端口 （链式中转模式下生效）
       RUSER: ${RUSER:-user}                                                    # 落地socks5/http/https 代理账号 （链式中转模式下生效）
       RPASS: ${RPASS:-password}                                                # 落地socks5/http/https 代理密码 （链式中转模式下生效）
