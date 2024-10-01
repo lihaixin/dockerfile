@@ -1,0 +1,20 @@
+services:
+  android:
+    image: redroid/redroid:12.0.0_64only-latest                                          # redroid/redroid:12.0.0_64only-latest
+    privileged: true
+    stop_grace_period: 2m
+    restart: on-failure
+    volumes:
+      - /dev/binder1:/dev/binder
+      - /dev/binder2:/dev/hwbinder
+      - /dev/binder3:/dev/vndbinder
+      - android:/data      
+    networks:
+      vlan:
+        ipv4_address: "${IP:-172.19.0.1}"                                               # 修改不同的IP【*】
+networks:
+  vlan:
+    external: true
+    
+volumes:
+  android:
