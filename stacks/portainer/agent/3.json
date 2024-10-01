@@ -1,0 +1,34 @@
+{
+			"type": 3,
+			"title": "portainer_agent-9001",
+			"name": "portainer_agent",
+			"description": "一键部署portainer_agent工具",
+			"note": "一键部署portainer_agent管理工具,更多信息 <a href=\"https://hub.docker.com/r/lihaixin/portainer\" target=\"_blank\">点击这里</a> ",
+			"categories": ["docker"],
+			"platform": "linux",
+			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/portainer.png",
+			"env": [{
+				"name": "EDGE",
+				"label": "是否开启边缘代理 *",
+				"description": "默认不开启，启动直连，设置为1，开启边缘",
+				"default": "0"
+				},
+        {
+				"name": "EDGEID",
+				"label": "边缘代理ID",
+				"description": "输入服务器生成的边缘代理ID",
+				"default": ""
+				},
+        {
+				"name": "EDGEKEY",
+				"label": "边缘代理KEY",
+				"description": "输入服务器生成的边缘代理KEY",
+				"default": ""
+				}],
+      "ports": ["9001:9001/tcp", "9090:9090/tcp"],
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/portainer/agent/docker-compose.yml"
+			}
+		}
+,
