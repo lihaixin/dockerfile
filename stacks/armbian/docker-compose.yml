@@ -12,7 +12,7 @@ services:
       # ARGUMENTS: "-netdev user,id=hostnet1 -device virtio-net-pci,romfile=,netdev=hostnet1,id=net1"
       BOOT: "${BOOT_FILE:-https://dl.armbian.com/uefi-x86/archive/Armbian_24.8.1_Uefi-x86_jammy_current_6.6.47.img.qcow2.xz}"   # 使用在线文件启动，支持iso | qcow2 | img  vhad 等虚拟文件
       DISK_SIZE: "${DISK_S:-10G}"                                                                                               # 分配储存空间
-      DISK_FMT: "${DISK_F:-raw}"                                                                                                # 虚拟磁盘存储方式  raw 和qcow2
+      DISK_FMT: "${DISK_F:-qcow2}"                                                                                                # 虚拟磁盘存储方式  raw 和qcow2
       RAM_SIZE: "${MEM_S:-2G}"                                                                                                  # 分配的内存
       CPU_CORES: "${CPU_C:-1}"                                                                                                  # 分配的核心
       
