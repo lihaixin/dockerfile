@@ -10,8 +10,8 @@
 			"env": [{
 				"name": "EDGE",
 				"label": "是否开启边缘代理 *",
-				"description": "默认不开启，启动直连，设置为1，开启边缘",
-				"default": "0"
+				"description": "默认开启，启动边缘代理，设置为1，开启直连",
+				"default": "1"
 				},
         			{
 				"name": "EDGEID",
