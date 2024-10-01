@@ -13,19 +13,19 @@
 				"description": "默认不开启，启动直连，设置为1，开启边缘",
 				"default": "0"
 				},
-        {
+        			{
 				"name": "EDGEID",
 				"label": "边缘代理ID",
 				"description": "输入服务器生成的边缘代理ID",
 				"default": ""
 				},
-        {
+        			{
 				"name": "EDGEKEY",
 				"label": "边缘代理KEY",
 				"description": "输入服务器生成的边缘代理KEY",
 				"default": ""
 				}],
-      "ports": ["9001:9001/tcp", "9090:9090/tcp"],
+      			"ports": ["9001:9001/tcp", "9090:9090/tcp"],
 			"repository": {
 				"url": "https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/portainer/agent/docker-compose.yml"
