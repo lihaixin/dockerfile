@@ -13,7 +13,7 @@ services:
       WEB_VNC: true
       
     volumes:
-      - /var/android:/storage
+      - android:/storage
       
     networks:
       vlan:
