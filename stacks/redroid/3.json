@@ -10,7 +10,7 @@
 				"url": "https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/redroid/docker-compose.yml"
 				},
-      "env": [
+      			"env": [
 				{
 				"name": "VERSION",
 				"label": "安卓版本",
