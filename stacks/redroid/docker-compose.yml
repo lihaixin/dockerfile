@@ -1,6 +1,6 @@
 services:
   android:
-    image: redroid/redroid:${VESION:-12.0.0-latest}                                        # redroid/redroid:12.0.0_64only-latest
+    image: redroid/redroid:${VERSION:-12.0.0-latest}                                        # redroid/redroid:12.0.0_64only-latest
     privileged: true
     stop_grace_period: 2m
     restart: on-failure
