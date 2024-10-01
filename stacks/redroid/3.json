@@ -1,0 +1,52 @@
+{
+			"type": 3,
+			"title": "redroid",
+			"description": "一键部署android远程测试机",
+			"note": "一键部署android,支持多种版本，多个类型的安卓手机 等 <a href=\"https://github.com/remote-android/redroid-doc/tree/master" target=\"_blank\">更多查看</a>",
+			"categories": ["OS"],
+			"platform": "linux",
+			"logo": "https://dockerfile.15099.net/logo/android.png",
+			"repository": {
+				"url": "https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/redroid/docker-compose.yml"
+				},
+      "env": [
+				{
+				"name": "VERSION",
+				"label": "安卓版本",
+				"description": "目前支持安卓9-15",
+				"select": [
+				        {
+				          "text": "redroid:15.0.0-latest",
+				          "value": "redroid:15.0.0-latest",
+				          "default": "rule"
+				        },
+				        {
+				          "text": "redroid:14.0.0-latest",
+				          "value": "redroid:14.0.0-latest"
+				        },
+				        {
+				          "text": "redroid:13.0.0-latest",
+				          "value": "redroid:13.0.0-latest"
+				        },
+				        {
+				          "text": "redroid:12.0.0-latest",
+				          "value": "redroid:12.0.0-latest"
+				        },
+				        {
+				          "text": "redroid:11.0.0-latest",
+				          "value": "redroid:11.0.0-latest"
+				        },
+				        {
+				          "text": "redroid:10.0.0-latest",
+				          "value": "redroid:10.0.0-latest"
+				        },
+				        {
+				          "text": "redroid:9.0.0-latest",
+				          "value": "redroid:9.0.0-latest"
+				        }
+				      ]
+				}
+      ]
+}
+,
