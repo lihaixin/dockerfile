@@ -6,6 +6,50 @@
 			"categories": ["OS"],
 			"platform": "linux",
 			"logo": "https://dockerfile.15099.net/logo/android.png",
+			"env": [
+				{
+				"name": "MULATOR_DEVICE",
+				"label": "模拟机型",
+				"description": "选择你需要模拟的机型",
+				"select": [
+				        {
+				          "text": "Samsung Galaxy S10",
+				          "value": "Samsung Galaxy S10",
+				          "default": "Samsung Galaxy S10"
+				        },
+				        {
+				          "text": "Samsung Galaxy S9",
+				          "value": "Samsung Galaxy S9"
+				        },
+				        {
+				          "text": "Samsung Galaxy S8",
+				          "value": "Samsung Galaxy S8"
+				        },
+				        {
+				          "text": "Samsung Galaxy S7",
+				          "value": "Samsung Galaxy S7"
+				        },
+				        {
+				          "text": "Samsung Galaxy S6",
+				          "value": "Samsung Galaxy S6"
+				        },
+				        {
+				          "text": "Nexus S",
+				          "value": "Nexus S"
+				        },
+				        {
+				          "text": "Nexus 7",
+				          "value": "Nexus 7"
+				        }
+				      ]
+				},
+				{
+				"name": "IP",
+				"label": "容器macvlan IP *",
+				"description": "修改不同的IP",
+				"default": "172.19.0.1"
+				}
+      			],
 			"repository": {
 				"url": "https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/android/docker-compose.yml"
