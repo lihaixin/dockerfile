@@ -9,7 +9,7 @@ services:
     stop_grace_period: 2m
     restart: on-failure
     environment:
-      MULATOR_DEVICE: "Samsung Galaxy S10"                                               # 系统标识
+      MULATOR_DEVICE: "${MULATOR_DEVICE:-Samsung Galaxy S10}"                           # 系统标识
       WEB_VNC: true
       
     volumes:
@@ -17,7 +17,7 @@ services:
       
     networks:
       vlan:
-        ipv4_address: "${IP:-192.168.2.13}"                                              # 修改不同的IP【*】
+        ipv4_address: "${IP:-172.19.0.1}"                                              # 修改不同的IP【*】
 networks:
   vlan:
     external: true
