@@ -1,2 +1,4 @@
 payload:
 - DOMAIN-KEYWORD,gecko
+- DOMAIN-KEYWORD,microsoft
+- DOMAIN-KEYWORD,live
