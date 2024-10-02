@@ -14,7 +14,7 @@ chmod 600 authorized_keys
 ```
 # 添加ipvlan网络或者macvlan网络
 
-我是无线网卡，添加ipvlan网络
+我是无线网卡，网卡名称为：wlp9s0 所以添加ipvlan网络
 ```
 docker network create -d ipvlan \
     --subnet=192.168.2.0/24 \
