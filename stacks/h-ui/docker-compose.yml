@@ -10,3 +10,6 @@ services:
       - h-ui:/h-ui
     environment:
       TZ: Asia/Shanghai
+      
+volumes:
+  h-ui:
