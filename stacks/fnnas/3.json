@@ -16,7 +16,7 @@
 				"name": "BOOT_FILE",
 				"label": "fnnas启动在线镜像URL",
 				"description": "输入你需要安装的FNNAS在线镜像URL,留空使用自动下载镜像 国内镜像站更快 https://fnnas.com/download",
-				"default": ""
+				"default": "https://download.liveupdate.fnnas.com/x86_64/trim/fnos.0.8.19-360.iso"
 				},
 				{
 				"name": "DISK_S",
