@@ -8,9 +8,10 @@ services:
     network_mode: host
     volumes:
       - h-ui:/h-ui
+      - /etc/cert:/etc/cert
     environment:
       TZ: Asia/Shanghai
-      WEBPORT: ${WEBPORT:-8083}
+      WEBPORT: ${WEBPORT:-8081}
       PORT: ${PORT:-446}
       MPORT: ${MPORT:-25000:26000}
       
