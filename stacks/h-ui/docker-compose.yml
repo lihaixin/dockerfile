@@ -3,6 +3,7 @@ services:
     image: lihaixin/h-ui
     privileged: true
     container_name: h-ui
+    hostname: h-ui
     restart: always
     network_mode: host
     volumes:
