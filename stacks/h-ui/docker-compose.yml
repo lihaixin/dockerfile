@@ -1,8 +1,7 @@
 services:
   h-ui:
     image: jonssonyan/h-ui
-    cap_add:
-      - NET_ADMIN
+    privileged: true
     container_name: h-ui
     restart: always
     network_mode: host
