@@ -9,6 +9,7 @@ services:
       - h-ui:/h-ui
     environment:
       TZ: Asia/Shanghai
+    command: ["./h-ui", "-p", "${PORT:-8082}"]
       
 volumes:
   h-ui:
