@@ -1,6 +1,6 @@
 services:
   h-ui:
-    image: jonssonyan/h-ui
+    image: lihaixin/h-ui
     privileged: true
     container_name: h-ui
     restart: always
@@ -9,7 +9,9 @@ services:
       - h-ui:/h-ui
     environment:
       TZ: Asia/Shanghai
-    command: ["./h-ui", "-p", "${PORT:-8082}"]
+      WEBPORT: ${WEBPORT:-8083}
+      PORT: ${PORT:-446}
+      MPORT: ${MPORT:-25000:26000}
       
 volumes:
   h-ui:
