@@ -12,8 +12,6 @@ services:
     environment:
       TZ: Asia/Shanghai
       WEBPORT: ${WEBPORT:-8081}
-      PORT: ${PORT:-446}
-      MPORT: ${MPORT:-25000:26000}
       
 volumes:
   h-ui:
