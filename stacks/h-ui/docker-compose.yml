@@ -1,6 +1,6 @@
 services:
   h-ui:
-    image: lihaixin/h-ui
+    image: lihaixin/h-ui                                      # https://github.com/jonssonyan/h-ui
     privileged: true
     container_name: h-ui
     hostname: h-ui
