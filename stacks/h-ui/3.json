@@ -3,7 +3,7 @@
 			"title": "h-ui-8081",
 			"name": "h-ui",
 			"description": "一键部署 Hysteria2 面板",
-			"note": "一键部署 Hysteria2 面板,支持中英文解决,更多信息 <a href=\"https://github.com/jonssonyan/h-ui\" target=\"_blank\">点击这里</a> ",
+			"note": "一键部署 Hysteria2 面板,支持中英文界面,更多信息 <a href=\"https://github.com/jonssonyan/h-ui\" target=\"_blank\">点击这里</a> ",
 			"categories": ["proxy"],
 			"platform": "linux",
 			"logo": "https://v2.hysteria.network/assets/banner_light.svg#logo-light",
