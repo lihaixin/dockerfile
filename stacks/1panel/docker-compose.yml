@@ -10,7 +10,6 @@ services:                                                           # https://gi
       - /var/lib/docker/volumes:/var/lib/docker/volumes
       - /opt:/opt                                                   # 文件存储映射
       - /root:/root                                                 # 可选的文件存储映射
-      - /root/.ssh/id_rsa:/root/.ssh/id_rsa
     environment:
       - TZ=Asia/Shanghai                                            # 时区设置
 
