@@ -12,6 +12,7 @@ services:
     environment:
       TZ: Asia/Shanghai
       WEBPORT: ${WEBPORT:-8081}
+      SNI: ${SNI:-bing.com}
       
 volumes:
   h-ui:
