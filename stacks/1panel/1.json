@@ -7,24 +7,24 @@
 			"categories": ["docker"],
 			"platform": "linux",
 			"logo": "https://1panel.cn/img/logo-blue.png",
-      "image": "moelin/1panel:latest",
-  	  "network": "host",
-      "volumes": [
+      			"image": "moelin/1panel:latest",
+  	  		"network": "host",
+      			"volumes": [
 				{
       				"container": "/var/lib/docker/volumes",
-				      "bind": "/var/lib/docker/volumes"
-    		},
+				"bind": "/var/lib/docker/volumes"
+    				},
 				{
       				"container": "/var/run/docker.sock",
-				      "bind": "/var/run/docker.sock"
-    		},
+				"bind": "/var/run/docker.sock"
+    				},
 				{
       				"container": "/opt",
-				      "bind": "/opt"
-    		},
+				"bind": "/opt"
+    				},
 				{
       				"container": "/root",
-				      "bind": "/root"
-    		}]
+				"bind": "/root"
+    				}]
 }
 ,
