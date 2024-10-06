@@ -1,5 +1,5 @@
 {
-    			"type": 1,
+    			    "type": 1,
 			    "title": "Clash云网关【机房专用】",
 	 		    "name": "clash",
 			    "description": "一键安装各类网关",
@@ -7,8 +7,8 @@
 			    "categories": ["route"],
 			    "platform": "linux",
 			    "logo": "https://dockerfile.15099.net/logo/gateway.png",
-    			"image": "ikuaiapp/clash:1.85.5",
-  			  "network": "host",
+    			    "image": "ikuaiapp/clash:1.85.5",
+  			    "network": "host",
 			    "env": [{
           				"name": "USERNO",
           				"label": "用户授权USERNO",
@@ -73,7 +73,7 @@
           				        {
           				          "text": "M11_TUNNEL 本地RPORT端口转发到RSERVER:RPORT，调用CLASH_SUBURL中转 国外环境用",
           				          "value": "M11_TUNNEL",
-                            "default": "M11_TUNNEL"
+                            			  "default": "M11_TUNNEL"
           				        }
           				      ]
           				},
