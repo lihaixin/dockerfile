@@ -73,6 +73,10 @@
 				        {
 				          "text": "M8_HTTPS_DIA 中转代理HTTPS游戏代理，调用CLASH_SUBURL中转 国外环境用",
 				          "value": "M8_HTTPS_DIA"
+				        },
+				        {
+				          "text": "M11_TUNNEL 本地RPORT端口转发到RSERVER:RPORT，调用CLASH_SUBURL中转 国外环境用",
+				          "value": "M11_TUNNEL"
 				        }
 				      ]
 				},
