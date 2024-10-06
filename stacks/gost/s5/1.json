@@ -1,6 +1,6 @@
 {
     			"type": 1,
-    			"title": "gost.s5.http_10021",
+    			"title": "gost.s5.http_10021【机房专用】",
     			"name": "gost.s5.http_10021",
     			"description": "利用gost打造s5 http 代理和转发",
 			"note": "一键部署socks5 http 代理和转发, 更多参考 <a href=\"https://hub.docker.com/r/lihaixin/gost\" target=\"_blank\">gost文档</a> ",
