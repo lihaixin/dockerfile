@@ -8,7 +8,7 @@
 			"platform": "linux",
 			"logo": "https://1panel.cn/img/logo-blue.png",
 			"repository": {
-				"url": "https://github.com/lihaixin/dockerfile",
+				"url": "https://gh.15099.net/https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/1panel/docker-compose.yml"
 			},
 	 		"env": [
