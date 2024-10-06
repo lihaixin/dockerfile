@@ -16,7 +16,7 @@
 				"name": "IP",
 				"label": "虚拟机分配的IP *",
 				"description": "你本地macvlan分配的IP，默认为172.19.0.*这个网段的IP",
-				"default": "172.19.0.101"
+				"default": "172.19.0.1"
 				}
 				]
 }
