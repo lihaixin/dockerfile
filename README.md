@@ -10,8 +10,8 @@
 
 提供两种模板方式，一种使用docker容器，一种使用docker stacks(compose)部署
 
-1. 容器 使用docker 桥接部署网络,不支持自动创建volume，不方便卷存储数据
-2. stacks使用自定义桥接或者macvlan网络，自动创建volume，方便卷存储数据
+1. 容器 使用docker 桥接和host部署网络【机房专用】,不支持自动创建volume，不方便卷存储数据
+2. stacks 使用自定义桥接或者macvlan网络【内网专用】，自动创建volume，方便卷存储数据
    
    2.1 自定义桥接
 
