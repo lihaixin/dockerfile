@@ -23,16 +23,8 @@ services:
     volumes:
       - /var/istoreos:/storage
     networks:
-      wan1:
-
-      
+      vlan:
+        ipv4_address: "${IP:-172.19.0.1}"                                                                                        # 修改不同的IP【*】
 networks:
-  wan1:
-    name: 1macvlan
-    driver: macvlan
-    driver_opts:
-      parent: eth0                                  # 对接虚拟机网卡名称，爱快内置的debian12虚拟机第一个网卡默认 ens3
-    ipam:
-      config:
-        - subnet: 172.19.0.0/16                    # 局域网网段范围
-          gateway: 172.19.0.254                     # 局域网网关
+  vlan:
+    external: true
