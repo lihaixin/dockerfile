@@ -6,7 +6,7 @@
 # 给qcow2磁盘添加5G空间
 qemu-img resize debian.qcow2 +5G
 ```
-## debian虚拟机里
+## Debian虚拟机操作
 
 ```
 # 注销swap分区,便于后续启动不加载swap分区，虚拟机里使用虚拟分区性能也不好，直接删除不用
