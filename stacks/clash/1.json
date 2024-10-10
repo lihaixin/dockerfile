@@ -3,7 +3,7 @@
 			    "title": "Clash云网关【机房专用】",
 	 		    "name": "clash",
 			    "description": "一键安装各类网关",
-			    "note": "通过docker容器，配合host,快速使用clash打造端口转发 更多<a href=\"https://dockerfile.15099.net/clash/index.html\" target=\"_blank\">点击这里</a>",
+			    "note": "通过docker容器，配合host,快速使用clash打造端口转发 更多<a href=\"https://github.com/lihaixin/dockerfile/blob/master/stacks/clash/README.md\" target=\"_blank\">点击这里</a>",
 			    "categories": ["route"],
 			    "platform": "linux",
 			    "logo": "https://dockerfile.15099.net/logo/gateway.png",
