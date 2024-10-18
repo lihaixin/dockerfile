@@ -27,9 +27,8 @@
     docker network create -d macvlan \
     --subnet=172.19.0.0/24 \
     --gateway=172.19.0.254 \
-    --ip-range=172.19.0.0/25 \
     -o macvlan_mode=bridge \
-    -o parent=enp1s0 vlan
+    -o parent=eth0 vlan
     ```
 
 ## 所有的Docker 模板 
