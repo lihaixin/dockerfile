@@ -17,6 +17,12 @@
 				"label": "虚拟机分配的IP *",
 				"description": "你本地macvlan分配的IP，默认为172.19.0.*这个网段的IP",
 				"default": "172.19.0.1"
+				},
+				{
+				"name": "NO",
+				"label": "授权码 *",
+				"description": "容器授权码",
+				"default": "0000210012301280002"
 				}
 				]
 }
