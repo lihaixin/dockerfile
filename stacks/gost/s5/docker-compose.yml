@@ -4,7 +4,7 @@ services:
     image: "lihaixin/gost:s5-2.11.5"
     restart: unless-stopped                             # unless-stopped  always          
     environment:
-      NO: "0000210012301280002"
+      NO: "${NO:-0000210012301280002}"
     volumes:
       - gostfile:/home
     networks:
