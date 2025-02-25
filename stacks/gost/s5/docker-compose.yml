@@ -1,7 +1,7 @@
 version: '2'
 services:
  socks5:
-    image: "lihaixin/gost:s5-2.11.5"
+    image: "lihaixin/gost:s5"
     restart: unless-stopped                             # unless-stopped  always          
     environment:
       NO: "${NO:-0000210012301280002}"
