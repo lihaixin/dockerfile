@@ -2,13 +2,13 @@ version: "2"
 services:
   toolbox:
     image: lihaixin/toolbox
-    container_name: toolbox
     restart: unless-stopped
-    network_mode: "host"
     privileged: true
     stdin_open: true                      # -i interactive
     tty: true                             # -t tty
-    pid: "host"
-    volumes:
-      - /root/.ssh/id_rsa:/root/.ssh/id_rsa
-      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      vlan:
+        ipv4_address: "${IP:-172.19.0.201}"                                                                                        # 修改不同的IP【*】
+networks:
+  vlan:
+    external: true
