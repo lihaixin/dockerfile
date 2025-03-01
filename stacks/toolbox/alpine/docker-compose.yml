@@ -8,7 +8,7 @@ services:
     tty: true                             # -t tty
     networks:
       vlan:
-        ipv4_address: "${IP:-172.19.0.201}"                                                                                        # 修改不同的IP【*】
+        ipv4_address: "${IP:-172.19.0.1}"                                                                                        # 修改不同的IP【*】
 networks:
   vlan:
     external: true
