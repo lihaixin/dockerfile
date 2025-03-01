@@ -7,7 +7,7 @@
 			"categories": ["tools"],
 			"platform": "linux",
 			"administrator_only": true,
-			"logo": "https://dockerfile.15099.net/logo/nginx-proxy-manager.png",
+			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/ttyd.png",
 			"repository": {
 				"url": "https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/toolbox/docker-compose.yml"
