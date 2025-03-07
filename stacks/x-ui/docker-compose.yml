@@ -11,7 +11,6 @@ services:
       - /etc/x-ui:/etc/x-ui
       - /etc/cert:/etc/cert
     environment:
-      - QQ=00015060888                                              # 在终端显示你的QQ号码
       - DOMAIN=15099.net                                            # 你的域名
       - HOSTNAME=hk10                                               # 你的主机名
       - WEBPORT=54321                                               # 管理地址端口
