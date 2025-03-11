@@ -4,7 +4,7 @@ services:
     image: "lihaixin/gost:s5"
     restart: unless-stopped                             # unless-stopped  always          
     environment:
-      NO: "${USERNO:-0999202410241280008}"
+      NO: "${USERNO:-0999210010241280003}"
     volumes:
       - gostfile:/home
     networks:
