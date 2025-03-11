@@ -1,5 +1,13 @@
-name: Manual Docker Build
+name: Auto Docker Build
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - stacks/*/*.json
+      - stacks/*/*/*.json
+      - .github/workflows/Auto-docker-build.yml
+      
   workflow_dispatch:
     inputs:
       tag:
