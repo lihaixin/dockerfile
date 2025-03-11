@@ -4,8 +4,7 @@ on:
     branches:
       - main
     paths:
-      - stacks/*/*.json
-      - stacks/*/*/*.json
+      - '**/*.json'
       - .github/workflows/Auto-docker-build.yml
       
   workflow_dispatch:
