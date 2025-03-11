@@ -2,7 +2,7 @@ name: Auto Docker Build
 on:
   push:
     branches:
-      - main
+      - master
     paths:
       - '**/*.json'
       - .github/workflows/Auto-docker-build.yml
