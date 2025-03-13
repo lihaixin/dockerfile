@@ -7,7 +7,7 @@
 			    "categories": ["route"],
 			    "platform": "linux",
 			    "logo": "https://dockerfile.15099.net/logo/gateway.png",
-    			    "image": "ikuaiapp/clash:1.85.5",
+    			    "image": "ikuaiapp/clash:1.18.5",
   			    "network": "host",
 			    "env": [{
           				"name": "USERNO",
