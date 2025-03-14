@@ -1,14 +1,14 @@
-services:                                                                      # 爱快路由器下配置多clash透明代理，然后通过强大的爱快分流，分流方式支持无线热点分流 源地址分流
+services:                                                                      # s5代理转化成L2TP VPN 连接
  vwan:                                                                         # 服务名称，这里取vwan,代表虚拟网关 
     image: "ikuaiapp/vpns5"                                                    # 镜像名称 https://hub.docker.com/r/ikuaiapp/vpns5
     restart: unless-stopped                                                    # unless-stopped  always 
     privileged: true
     environment:
       NO: "${USERNO:-0999202410241280008}"                                     # 授权NO,内部使用，未经授权，第二台设备用，授权码会自动禁止，不能再启用！！！
-      S5IP: ${S5IP:-6.6.6.6}                                                   # 落地socks5/http/https 代理IP （链式中转模式下生效）
-      S5PORT: ${S5PORT:-10800}                                                 # 落地socks5/http/https 代理端口 （链式中转模式下生效）
-      S5USER: ${S5USER:-user}                                                  # 落地socks5/http/https 代理账号 （链式中转模式下生效）
-      S5PASSWD: ${S5PASSWD:-password}                                          # 落地socks5/http/https 代理密码 （链式中转模式下生效）
+      S5IP: ${S5IP:-6.6.6.6}                                                   # 落地socks5代理IP 【*】
+      S5PORT: ${S5PORT:-10800}                                                 # 落地socks5代理端口【*】
+      S5USER: ${S5USER:-user}                                                  # 落地socks5代理账号【*】
+      S5PASSWD: ${S5PASSWD:-password}                                          # 落地socks5代理密码【*】
       
     networks:
       vlan:
