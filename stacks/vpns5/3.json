@@ -1,0 +1,14 @@
+ {
+			"type": 3,
+			"title": "vpns5",
+			"description": "S5转L2TP  VPN插件",
+			"note": "把Socks5代理IP 转化成L2TP VPN连接",
+			"categories": ["route"],
+			"platform": "linux",
+			"logo": "https://dockerfile.15099.net/logo/ikuai.png",
+			"repository": {
+				"url": "https://gh.15099.net/https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/vpns5/docker-compose.yml"
+			}
+		}
+,
