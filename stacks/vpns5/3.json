@@ -1,6 +1,7 @@
  {
 			"type": 3,
 			"title": "vpns5",
+	 		"name": "01_vpns5",
 			"description": "在本地主机|NAS系统上一键安装socks5转L2TP",
 			"note": "把Socks5代理IP 转化成L2TP VPN连接",
 			"categories": ["route"],
