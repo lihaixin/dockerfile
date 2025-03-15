@@ -1,6 +1,6 @@
 {
     			"type": 1,
-    			"title": "11701_vpns5",
+    			"title": "vpns5",
 			"name": "11701_vpns5",
     			"description": "在云主机一键安装socks5转L2TP ",
 			"note": "把Socks5代理IP 转化成L2TP VPN连接",
