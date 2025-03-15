@@ -1,0 +1,48 @@
+{
+    			"type": 1,
+    			"title": "11701_vpns5",
+			    "name": "11701_vpns5",
+    			"description": "在云主机一键安装socks5转L2TP ",
+    			"categories": ["vpn"],
+    			"platform": "linux",
+			    "restart_policy": "always",
+          "privileged": true,
+    			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/ikuai.png",
+    			"image": "ikuaiapp/vpns5",
+    			"ports": [
+      				"11701:1701/tcp"
+    				],
+			    "env": [
+    				{
+    				"name": "USERNO",
+    				"label": "用户授权USERNO",
+    				"description": "用户授权USERNO，也是自定义模板标识号，未授权USERNO只能使用免费模板",
+    				"default": "0999210012302540002"
+    				},
+    				{
+    				"name": "S5IP",
+    				"label": "落地socks5 IP",
+    				"description": "输入落地IP",
+    				"default": "6.6.6.6"
+    				},
+    				{
+    				"name": "S5PORT",
+    				"label": "落地socks5代理端口",
+    				"description": "输入落地IP端口",
+    				"default": "1080"
+    				},
+    				{
+    				"name": "S5USER",
+    				"label": "落地socks5代理账号",
+    				"description": "落地socks5代理账号",
+    				"default": "user"
+    				},
+    				{
+    				"name": "S5PASSWD",
+    				"label": "落地socks5代理密码",
+    				"description": "落地socks5代理密码",
+    				"default": "password"
+    				}
+    				]
+}
+,
