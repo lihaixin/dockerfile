@@ -11,8 +11,8 @@ services:                                                                      #
       S5PASSWD: ${S5PASSWD:-password}                                          # 落地socks5代理密码【*】
       
     networks:
-      vlan:
+      ${LANNAME:-vlan}:
         ipv4_address: ${IP:-172.19.0.1}                                        # 修改不同的IP【*】
 networks:
-  vlan:
+  ${LANNAME:-vlan}:
     external: true
