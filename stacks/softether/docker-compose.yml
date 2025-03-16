@@ -10,7 +10,7 @@ services:
     network_mode: host
     privileged: true
     environment:
-      QQ: {QQ}
+      QQ: ${QQ}
       DOMAIN: ${DOMAIN}
       HOSTNAME: ${HOSTNAME}
       MTU: ${MTU}
