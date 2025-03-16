@@ -1,7 +1,7 @@
 {
     			"type": 1,
    			    "title": "SpeedTest",
-                "name": "SpeedTest",
+    "name": "SpeedTest",
     			"description": "html5 web speedtest",
     			"categories": ["tools"],
     			"platform": "linux",
