@@ -8,7 +8,7 @@
 			"categories": ["xray"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/xray.png",
-    			"image": "lihaixin/xray:one",
+    			"image": "lihaixin/xray:one-1.7.5",
   			"network": "host",
 			"volumes": [{
       				"container": "/etc/cert",
