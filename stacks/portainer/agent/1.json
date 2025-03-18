@@ -1,0 +1,21 @@
+		{
+			"type": 1,
+			"title": "portainer_agent-9001",
+			"name": "portainer_agent",
+			"description": "一键部署portainer_agent工具",
+			"categories": ["docker"],
+			"platform": "linux",
+			"restart_policy": "always",
+			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/portainer.png",
+			"image": "portainer/agent:2.19.5",
+			"ports": ["9001:9001/tcp"],
+			"volumes": [{
+				"container": "/var/run/docker.sock",
+				"bind": "/var/run/docker.sock"
+				},
+				{
+				"container": "/var/lib/docker/volumes",
+				"bind": "/var/lib/docker/volumes"
+				}]
+			}
+      ,
