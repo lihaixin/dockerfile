@@ -11,7 +11,7 @@
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/ikuai.png",
     			"image": "ikuaiapp/vpns5",
     			"ports": [
-      				"11701:1701/tcp"
+      				"11701:1701/udp"
     				],
 			    "env": [
     				{
