@@ -37,7 +37,6 @@
               "label": "CLASH用户名",
               "description": "CLASH用户名",
               "default": "password"
-            }
             }]
 }
 ,
