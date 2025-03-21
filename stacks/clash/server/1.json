@@ -1,0 +1,43 @@
+{
+            "type": 1,
+            "title": "clash server",
+            "description": "部署clash代理服务器",
+            "note": "部署clash代理服务器, 包含ss、vless、vmess、trojan 更多参考点击 <a href=\"https://hub.docker.com/r/ikuaiapp/clash\" target=\"_blank\">gost doc</a> 了接",
+            "categories": ["proxy"],
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/clash.png",
+            "image": "ikuaiapp/clash:server-1.19.3",
+            "network": "host",
+            "env": [{
+              "name": "DOMAIN",
+              "label": "顶级域名",
+              "description": "你的顶级域名,申请证书用",
+              "default": "youdomain.com"
+            },
+            {
+              "name": "HOSTNAME",
+              "label": "主机名",
+              "description": "主机名称,顶级域名下面的一个主机名、请确保域名A已指向服务器IP",
+              "default": "www"
+            },
+            {
+              "name": "REAL_DOMAIN",
+              "label": "REAL_DOMAIN 回落域名",
+              "description": "回落域名需要符合以下几点要求：国外网站、支持 TLSv1.3 、H2 使用https://bgp.tools/ 和https://www.ssllabs.com/ssltest 查找更多目标域名",
+              "default": "d1.awsstatic.com"
+            },
+            {
+              "name": "USERNAME",
+              "label": "CLASH用户名",
+              "description": "CLASH用户名",
+              "default": "username"
+            },
+            {
+              "name": "PASSWORD",
+              "label": "CLASH用户名",
+              "description": "CLASH用户名",
+              "default": "password"
+            }
+            }]
+}
+,
