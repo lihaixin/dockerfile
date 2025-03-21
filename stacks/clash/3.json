@@ -41,6 +41,26 @@
 				      ]
 				},
 				{
+				"name": "VERSION",
+				"label": "Clash 镜像版本号",
+				"description": "请选择合适的版本",
+				"select": [
+				        {
+				          "text": "1.18.5",
+				          "value": "1.18.5",
+				          "default": "1.18.5"
+				        },
+				        {
+				          "text": "1.18.6",
+				          "value": "1.18.6"
+				        },
+					{
+				          "text": "1.19.3",
+				          "value": "1.19.3"
+				        }
+				      ]
+				},
+				{
 				"name": "CLASH_TYPE",
 				"label": "Clash模板CLASH_TYPE",
 				"description": "支持白名单、黑名单、S5、HTTP、hysteria2、wireguard网关",
