@@ -1,6 +1,7 @@
 {
             "type": 1,
             "title": "clash server",
+            "name": "clash server",
             "description": "部署clash代理服务器",
             "note": "部署clash代理服务器, 包含ss、vless、vmess、trojan 更多参考点击 <a href=\"https://hub.docker.com/r/ikuaiapp/clash\" target=\"_blank\">gost doc</a> 了接",
             "categories": ["proxy"],
