@@ -4,3 +4,4 @@ payload:
 - DOMAIN-KEYWORD,live
 - DOMAIN-KEYWORD,windows
 - DOMAIN-KEYWORD,bing.com
+- DOMAIN-KEYWORD,googleadservices
