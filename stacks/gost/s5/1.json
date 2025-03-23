@@ -22,31 +22,39 @@
 				"description": "提供socks5 http 本地运行代理",
 				"select": [
 				        {
-				          "text": "socks5",
+				          "text": "socks5代理",
 				          "value": "socks5",
 				          "default": "socks5"
 				        },
 				        {
-				          "text": "http",
+				          "text": "http代理",
 				          "value": "http"
+				        },
+				        {
+				          "text": "tcp转发",
+				          "value": "tcp"
+				        },
+				        {
+				          "text": "udp转发",
+				          "value": "udp"
 				        }
 				      ]
     				},
 				{
       				"name": "PORT",
-      				"label": "HTTP & SOCKS5 端口",
+      				"label": "HTTP/SOCKS5/TCP/UDP 端口",
 				"description": "The HTTP AND SOCKS5 Server Port",
       				"default": "10021"
     				},
 				{
       				"name": "USER",
-      				"label": "HTTP & SOCKS5用户名",
+      				"label": "HTTP/SOCKS5用户名 & 转发IP",
 				"description": "The HTTP AND SOCKS5 Server USER",
       				"default": "test"
     				},
 		     		{
       				"name": "PASSWD",
-      				"label": "HTTP & SOCKS5 密码",
+      				"label": "HTTP/SOCKS5密码 & 转发端口",
 				"description": "Password is used for Http & SOCKS5 verification",
       				"default": "test"
     				},
