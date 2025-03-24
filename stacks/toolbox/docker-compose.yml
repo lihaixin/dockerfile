@@ -1,7 +1,7 @@
 version: "2"
 services:
   toolbox:
-    image: lihaixin/toolbox:debian
+    image: lihaixin/toolbox:${VERSION:-latest}
     restart: unless-stopped
     privileged: true
     stdin_open: true                      # -i interactive
