@@ -9,8 +9,8 @@
 			"administrator_only": true,
 			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/ttyd.png",
 			"repository": {
-				"url": "https://github.com/lihaixin/dockerfile",
-				"stackfile": "stacks/toolbox/debian/docker-compose.yml"
+				"url": "https://gh.15099.net/https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/toolbox/docker-compose.yml"
 				},
 	 		"env": [
 				{
@@ -18,6 +18,22 @@
 				"label": "虚拟机分配的IP *",
 				"description": "你本地macvlan分配的IP，默认为172.19.0.*这个网段的IP",
 				"default": "172.19.0.1"
+				},
+				{
+				"name": "VERSION",
+				"label": "Clash 镜像版本号",
+				"description": "请选择合适的版本",
+				"select": [
+				        {
+				          "text": "alphine",
+				          "value": "latest",
+				          "default": "latest"
+				        },
+				        {
+				          "text": "debian",
+				          "value": "debian"
+				        }
+				      ]
 				}
 				]
 }
