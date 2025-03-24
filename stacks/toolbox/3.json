@@ -21,7 +21,7 @@
 				},
 				{
 				"name": "VERSION",
-				"label": "Clash 镜像版本号",
+				"label": "镜像版本号",
 				"description": "请选择合适的版本",
 				"select": [
 				        {
