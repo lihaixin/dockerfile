@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  girhub:
+    image: hunsh/gh-proxy-py:latest
+    container_name: gh
+    hostname: gh
+    restart: unless-stopped
+    network_mode: "bridge"
+    logging:
+      driver: json-file
+      options:
+        max-size: 1m
+    ports:
+      - "83:80"
