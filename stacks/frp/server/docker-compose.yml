@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  frps:
+    image: lihaixin/frp:s
+    container_name: frps
+    hostname: frps
+    restart: unless-stopped
+    network_mode: "host"
+    privileged: true
+    volumes:
+      - /etc/cert:/etc/cert                       # 调用和自签证书存放位置
+    environment: 
+      - QQ=15050999                               # 终端界面显示的联系方式
+      - DOMAIN=testsanjin.gq                      # 你主机域名
+      - HOSTNAME=kr                               # 你主机对应的主机名（标记用）
+      - WEB_PORT=7500                             # 网页管理端口
+      - WEB_PASSWORD=password                     # 网页管理密码
+      - TOKEN=87654321                            # 公共KEY
+      - FRP_PORT=7000                             # FRP连接端口
+      - FRPC=0                                    # 是否开启本机客户端连接
+      - V_HTTP_PORT=87                            # http代理端口
+      - V_HTTPS_PORT=447                          # https代理端口
+      - ALLOW_POSTS=31001-32000                   # 程序可容许访问的端口
+      - MAX_POOL_COUNT=100                        # 最大连接数
+      
