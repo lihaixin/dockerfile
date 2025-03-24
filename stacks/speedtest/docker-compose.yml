@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  speedtest:
+    image: lihaixin/speedtest
+    container_name: speedtest
+    hostname: speedtest
+    restart: unless-stopped
+    network_mode: "bridge"
+    logging:
+      driver: json-file
+      options:
+        max-size: 1m
+    ports:
+      - "82:80"
