@@ -7,7 +7,6 @@
     			"categories": ["route"],
     			"platform": "linux",
 			"restart_policy": "always",
-          		"privileged": true,
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/ikuai.png",
     			"image": "ikuaiapp/vpns5",
     			"ports": [
