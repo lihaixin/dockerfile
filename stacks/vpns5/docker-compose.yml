@@ -3,7 +3,6 @@ services:                                                                      #
  vwan:                                                                         # 服务名称，这里取vwan,代表虚拟网关 
     image: "ikuaiapp/vpns5"                                                    # 镜像名称 https://hub.docker.com/r/ikuaiapp/vpns5
     restart: unless-stopped                                                    # unless-stopped  always 
-    privileged: true
     environment:
       NO: "${USERNO:-0999210012302540002}"                                     # 授权NO,内部使用，未经授权，第二台设备用，授权码会自动禁止，不能再启用！！！
       S5IP: ${S5IP:-6.6.6.6}                                                   # 落地socks5代理IP 【*】
