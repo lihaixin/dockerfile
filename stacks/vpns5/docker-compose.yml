@@ -10,10 +10,9 @@ services:                                                                      #
       S5PORT: ${S5PORT:-10800}                                                 # 落地socks5代理端口【*】
       S5USER: ${S5USER:-user}                                                  # 落地socks5代理账号【*】
       S5PASSWD: ${S5PASSWD:-password}                                          # 落地socks5代理密码【*】
-      
     networks:
-      vlan
-        ipv4_address: ${IP:-172.19.0.1}                                        # 修改不同的IP【*】
+      vlan:
+        ipv4_address: "${IP:-172.19.0.1}"                                      # 修改不同的IP【*】
 networks:
-  vlan
+  vlan:
     external: true
