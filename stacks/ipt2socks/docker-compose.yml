@@ -1,0 +1,19 @@
+version: '2'
+services:                                                                      # s5代理转化成网关
+ vwan:                                                                         # 服务名称，这里取vwan,代表虚拟网关 
+    image: "lihaixin/ipt2socks"                                                # 镜像名称 https://hub.docker.com/r/lihaixin/ipt2socks
+    restart: unless-stopped                                                    # unless-stopped  always
+    privileged: true
+    environment:
+      NO: "${USERNO:-0999210012302540002}"                                     # 授权NO,内部使用，未经授权，第二台设备用，授权码会自动禁止，不能再启用！！！
+      S5IP: ${S5IP:-6.6.6.6}                                                   # 落地socks5代理IP 【*】
+      S5PORT: ${S5PORT:-10800}                                                 # 落地socks5代理端口【*】
+      S5USER: ${S5USER:-user}                                                  # 落地socks5代理账号【*】
+      S5PASSWD: ${S5PASSWD:-password}                                          # 落地socks5代理密码【*】
+      DNS: ${DNS:-8.8.8.8}                                                     # 代理DNS地址，国内代理填写223.5.5.5 海外代理填写8.8.8.8
+    networks:
+      vlan:
+        ipv4_address: "${IP:-172.19.0.1}"                                      # 修改不同的IP【*】
+networks:
+  vlan:
+    external: true
