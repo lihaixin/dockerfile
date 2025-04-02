@@ -1,0 +1,59 @@
+ {
+			"type": 3,
+			"title": "ipt2socks",
+	 		"name": "01_ipt2socks",
+			"description": "在本地主机|NAS系统上一键安装socks5转网关",
+			"note": "把Socks5代理IP转化成网关",
+			"categories": ["route"],
+			"platform": "linux",
+			"logo": "https://dockerfile.15099.net/logo/ikuai.png",
+			"repository": {
+				"url": "https://gh.15099.net/https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/ipt2socks/docker-compose.yml"
+			},
+	 		"env": [
+				{
+				"name": "USERNO",
+				"label": "用户授权USERNO",
+				"description": "用户授权USERNO",
+				"default": ""
+				},
+				{
+				"name": "S5IP",
+				"label": "落地socks5 IP",
+				"description": "输入落地IP",
+				"default": "6.6.6.6"
+				},
+				{
+				"name": "S5PORT",
+				"label": "落地socks5代理端口",
+				"description": "输入落地IP端口",
+				"default": "1080"
+				},
+				{
+				"name": "S5USER",
+				"label": "落地socks5代理账号",
+				"description": "落地socks5代理账号",
+				"default": "user"
+				},
+				{
+				"name": "S5PASSWD",
+				"label": "落地socks5代理密码",
+				"description": "落地socks5代理密码",
+				"default": "password"
+				},
+        {
+				"name": "DNS",
+				"label": "域名解析地址",
+				"description": "国内代理填写223.5.5.5 国外代理填写8.8.8.8 更多dns访问：https://public-dns.info ",
+				"default": "8.8.8.8"
+				},
+				{
+				"name": "IP",
+				"label": "容器macvlan IP *",
+				"description": "修改不同的IP",
+				"default": "172.19.0.1"
+				}
+				]
+		}
+,
