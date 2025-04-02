@@ -42,7 +42,7 @@
 				"description": "落地socks5代理密码",
 				"default": "password"
 				},
-        {
+			        {
 				"name": "DNS",
 				"label": "域名解析地址",
 				"description": "国内代理填写223.5.5.5 国外代理填写8.8.8.8 更多dns访问：https://public-dns.info ",
