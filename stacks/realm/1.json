@@ -1,0 +1,51 @@
+{
+    			"type": 1,
+			    "title": "realm",
+	 		    "name": "1_realm",
+			    "description": "轻量化端口转发服务realm",
+			    "note": "通过docker容器，配合host,快速使用realm打造端口转发 更多<a href=\"https://hub.docker.com/r/lihaixin/realm\" target=\"_blank\">点击这里</a>",
+			    "categories": ["route"],
+			    "platform": "linux",
+			    "logo": "https://dockerfile.15099.net/logo/realm.png",
+    			"image": "lihaixin/realm",
+  			  "network": "host",
+			    "env": [{
+          				"name": "USERNO",
+          				"label": "用户授权USERNO",
+          				"description": "用户授权USERNO，也是自定义模板标识号，未授权USERNO只能使用免费模板",
+          				"default": "9999202412301280007"
+          				},
+          				{
+          				"name": "TYPE",
+          				"label": "转发TYPE",
+          				"description": "支持realm、realm-server、realm-client",
+          				"select": [
+          				        {
+          				          "text": "(纯端口转发)",
+          				          "value": "realm",
+          				          "default": "realm"
+          				        },
+          				        {
+          				          "text": "realm-server(海外端)",
+          				          "value": "realm-server"
+          				        },
+          				        {
+          				          "text": "realm-client(国内端)",
+          				          "value": "realm-client"
+          				        }
+          				      ]
+          				},
+          				{
+          				"name": "LISTEN",
+          				"label": "本地监听地址和端口",
+          				"description": "一般按默认，不需要修改",
+          				"default": "0.0.0.0:10001"
+          				},
+          				{
+          				"name": "REMOTE",
+          				"label": "转发监听地址和端口",
+          				"description": "需要修改成你转发的地址和端口",
+          				"default": "www.google.com:10001"
+          				}]
+}
+,
