@@ -13,7 +13,7 @@
           				"name": "USERNO",
           				"label": "用户授权USERNO",
           				"description": "用户授权USERNO，也是自定义模板标识号，未授权USERNO只能使用免费模板",
-          				"default": "9999202412301280007"
+          				"default": "9999210012301280001"
           				},
           				{
           				"name": "TYPE",
@@ -21,16 +21,16 @@
           				"description": "支持realm、realm-server、realm-client",
           				"select": [
           				        {
-          				          "text": "(纯端口转发)",
+          				          "text": "realm(纯端口转发)",
           				          "value": "realm",
           				          "default": "realm"
           				        },
           				        {
-          				          "text": "realm-server(海外端)",
+          				          "text": "realm-server(海外端转发)",
           				          "value": "realm-server"
           				        },
           				        {
-          				          "text": "realm-client(国内端)",
+          				          "text": "realm-client(国内端转发)",
           				          "value": "realm-client"
           				        }
           				      ]
