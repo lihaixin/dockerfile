@@ -21,32 +21,32 @@
           				"description": "支持realm、realm-server、realm-client,其中后缀有wss ws tls是加密传输协议",
           				"select": [
           				        {
-          				          "text": "realm(纯端口转发)",
+          				          "text": "1.0realm(纯端口转发)",
           				          "value": "realm",
           				          "default": "realm"
           				        },
           				        {
-          				          "text": "realm-server-wss(海外端转发)",
+          				          "text": "2.1realm-server-wss(海外端转发)",
           				          "value": "realm-server-wss"
           				        },
           				        {
-          				          "text": "realm-client-wss(国内端转发)",
+          				          "text": "2.2realm-client-wss(国内端转发)",
           				          "value": "realm-client-wss"
           				        },
           				        {
-          				          "text": "realm-server-ws(海外端转发)",
+          				          "text": "3.1realm-server-ws(海外端转发)",
           				          "value": "realm-server-ws"
           				        },
           				        {
-          				          "text": "realm-client-ws(国内端转发)",
+          				          "text": "3.2realm-client-ws(国内端转发)",
           				          "value": "realm-client-ws"
           				        },
           				        {
-          				          "text": "realm-server-tls(海外端转发)",
+          				          "text": "4.1realm-server-tls(海外端转发)",
           				          "value": "realm-server-tls"
           				        },
           				        {
-          				          "text": "realm-client-tls(国内端转发)",
+          				          "text": "4.2realm-client-tls(国内端转发)",
           				          "value": "realm-client-tls"
           				        }
           				      ]
