@@ -1,0 +1,18 @@
+version: "2"
+services:
+  iVentoy:
+    image: garybowers/iventoy:latest
+    container_name: iventoy
+    restart: unless-stopped
+    privileged: true
+    hostname: iventoy
+    volumes:
+      - data:/iventoy/data
+      - /iso:/iventoy/iso
+    ports:
+      - 26000:26000
+      - 16000:16000
+      - 10809:10809
+      - 69:69/udp
+    environment:
+      - IVENTOY_AUTO_RUN=1
