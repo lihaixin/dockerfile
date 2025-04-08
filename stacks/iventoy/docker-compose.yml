@@ -16,3 +16,6 @@ services:
       - 69:69/udp
     environment:
       - IVENTOY_AUTO_RUN=1
+
+volumes:
+  data:
