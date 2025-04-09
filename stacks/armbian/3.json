@@ -15,7 +15,7 @@
 				{
 				"name": "BOOT_FILE",
 				"label": "Linux启动在线镜像URL",
-				"description": "输入你需要安装的armbian在线镜像URL,留空使用自动下载alpine最新镜像 国内镜像站更快 https://mirrors.bfsu.edu.cn/armbian-releases/qemu-uefi-x86/archive/",
+				"description": "输入你需要安装的armbian在线镜像URL,留空使用自动下载 国内镜像站更快 https://mirrors.bfsu.edu.cn/armbian-releases/qemu-uefi-x86/archive/",
 				"default": ""
 				},
 				{
