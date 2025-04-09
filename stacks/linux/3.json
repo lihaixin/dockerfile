@@ -1,7 +1,7 @@
 {
 			"type": 3,
-			"title": "armbian",
-			"name": "armbian",
+			"title": "linux",
+			"name": "linux",
 			"description": "一键部署linux 项目机",
 			"note": "一键部署linux,默认使用armbian  <a href=\"https://hub.docker.com/r/lihaixin/linux/\" target=\"_blank\">更多查看</a>",
 			"categories": ["OS"],
