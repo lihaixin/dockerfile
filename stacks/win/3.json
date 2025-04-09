@@ -8,7 +8,7 @@
 			"platform": "linux",
 			"logo": "https://dockerfile.15099.net/logo/win.png",
 			"repository": {
-				"url": "https://github.com/lihaixin/dockerfile",
+				"url": "https://gh.15099.net/https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/win/docker-compose.yml"
 				},
 	               "env": [
