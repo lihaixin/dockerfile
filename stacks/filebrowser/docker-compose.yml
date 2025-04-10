@@ -7,8 +7,8 @@ services:
     restart: unless-stopped
     volumes:
       - /:/host
-      - filebrowser/filebrowser.db:/database.db
-      - filebrowser/.filebrowser.json:/.filebrowser.json
+      - filebrowser_db:/database.db
+      - filebrowser_json:/.filebrowser.json
     networks:
       vlan:
         ipv4_address: "${IP:-172.19.0.1}"                         # 修改不同的IP【*】
@@ -17,4 +17,5 @@ networks:
     external: true
 
 volumes:
-  filebrowser:
+  filebrowser_db:
+  filebrowser_json:
