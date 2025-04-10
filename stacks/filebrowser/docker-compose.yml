@@ -6,7 +6,7 @@ services:
     hostname: filebrowser
     restart: unless-stopped
     volumes:
-      - /:/host
+      - /:/srv
     networks:
       vlan:
         ipv4_address: "${IP:-172.19.0.1}"                         # 修改不同的IP【*】
