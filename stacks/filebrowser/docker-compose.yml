@@ -7,8 +7,6 @@ services:
     restart: unless-stopped
     volumes:
       - /:/host
-      - ./filebrowser.db:/database.db
-      - ./filebrowser.json:/.filebrowser.json
     networks:
       vlan:
         ipv4_address: "${IP:-172.19.0.1}"                         # 修改不同的IP【*】
