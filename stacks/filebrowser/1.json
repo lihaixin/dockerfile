@@ -11,9 +11,9 @@
                 "80/tcp"
             ],
             "volumes": [
-        				{
-              	"container": "/host",
-        				"bind": "/"
-    				}]
+        		{
+              	"container": "/srv",
+        		"bind": "/"
+    		}]
 }
 ,
