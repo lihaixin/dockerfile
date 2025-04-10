@@ -1,0 +1,19 @@
+{
+            "type": 1,
+            "title": "filebrowser",
+            "name": "filebrowser",
+            "description": "filebrowser",
+            "categories": ["tools"],
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/filebrowser.png",
+            "image": "filebrowser/filebrowser",
+            "ports": [
+                "80/tcp"
+            ],
+            "volumes": [
+        				{
+              	"container": "/host",
+        				"bind": "/"
+    				}]
+}
+,
