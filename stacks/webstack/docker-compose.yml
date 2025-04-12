@@ -1,0 +1,14 @@
+version: '2'
+services:
+  webstack-go:
+    stdin_open: true
+    tty: true
+    restart: always
+    ports:
+      - 8001:8000
+    container_name: webstack-go
+    image: ch3nnn/webstack-go:v2.4.0
+    volumes:
+      - webstack:/data/app/storage
+volumes:
+  webstack:
