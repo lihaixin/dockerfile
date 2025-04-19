@@ -3,7 +3,7 @@
 			"title": "ipt2socks",
 	 		"name": "01_ipt2socks",
 			"description": "在本地主机|NAS系统上一键安装socks5转网关",
-			"note": "把Socks5代理IP转化成网关",
+			"note": "把Socks5代理IP转化成网关 <a href=\"https://hub.docker.com/r/lihaixin/ipt2socks\" target=\"_blank\">更多查看</a>",
 			"categories": ["route"],
 			"platform": "linux",
 			"logo": "https://dockerfile.15099.net/logo/ikuai.png",
