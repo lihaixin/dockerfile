@@ -3,7 +3,7 @@
     			"title": "vpns5",
 			"name": "11701_vpns5",
     			"description": "在云主机一键安装socks5转L2TP ",
-			"note": "把Socks5代理IP 转化成L2TP VPN连接",
+			"note": "把Socks5代理IP 转化成L2TP VPN连接 更多<a href=\"https://hub.docker.com/r/ikuaiapp/vpns5\" target=\"_blank\">点击这里</a>",
     			"categories": ["route"],
     			"platform": "linux",
 			"restart_policy": "always",
