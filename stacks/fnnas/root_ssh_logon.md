@@ -3,7 +3,7 @@
 ```
 sudo -i
 sed -i s'/^PermitRootLogin no/PermitRootLogin yes/' /etc/ssh/sshd_config
-server ssh restart
+
 ```
 # 一键生成root证书登录
 ```
@@ -12,6 +12,8 @@ ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa
 cd .ssh
 cp id_rsa.pub authorized_keys
 chmod 600 authorized_keys
+
+server ssh restart
 ```
 # 添加ipvlan网络或者macvlan网络
 
