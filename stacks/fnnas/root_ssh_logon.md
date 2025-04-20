@@ -2,7 +2,8 @@
 
 ```
 sudo -i
-sed -i s'/^PermitRootLogin no/PermitRootLogin yes/' /etc/ssh/sshd_config 
+sed -i s'/^PermitRootLogin no/PermitRootLogin yes/' /etc/ssh/sshd_config
+server ssh restart
 ```
 # 一键生成root证书登录
 ```
