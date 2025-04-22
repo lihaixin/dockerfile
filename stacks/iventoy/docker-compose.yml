@@ -19,3 +19,26 @@ services:
 
 volumes:
   data:
+
+
+version: '3.9'
+services:
+  iventoy:
+    image: vimagick/iventoy
+    container_name: iventoy
+    restart: always
+    network_mode: host
+    privileged: true #must be true
+    ports:
+      - 26000:26000
+      - 16000:16000
+      - 10809:10809
+      - 67:67/udp
+      - 69:69/udp
+    volumes:
+      - isos:/opt/iventoy/iso
+      - config:/opt/iventoy/data
+
+volumes:
+  isos:
+  config:
