@@ -13,7 +13,7 @@ cd .ssh
 cp id_rsa.pub authorized_keys
 chmod 600 authorized_keys
 
-server ssh restart
+service ssh restart
 ```
 # 添加ipvlan网络或者macvlan网络
 
@@ -22,7 +22,7 @@ server ssh restart
 docker network create -d ipvlan \
     --subnet=192.168.2.0/24 \
     --gateway=192.168.2.254 \
-    --ip-range=192.168.2.1/28 \
+    --ip-range=192.168.2.192/28 \
     -o ipvlan_mode=l2 \
     -o ipvlan_flag=bridge \
     -o parent=wlp9s0 vlan
@@ -33,7 +33,7 @@ docker network create -d ipvlan \
 docker network create -d macvlan \
   --subnet=192.168.2.0/24 \
   --gateway=192.168.2.254 \
-  --ip-range=192.168.2.1/28 \
+  --ip-range=192.168.2.192/28 \
   -o macvlan_mode=bridge \
-  -o parent=wlp9s0 vlan
+  -o parent=enp3s0-ovs vlan
 ```
