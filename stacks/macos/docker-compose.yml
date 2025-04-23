@@ -16,15 +16,8 @@ services:
       - /var/macos:/storage
     networks:
       wan1:
-        ipv4_address: 172.19.0.1                         # 修改不同的IP *
+        ipv4_address: "${IP:-172.19.0.1}"               # 修改不同的IP【*】  WEBVNC地址： http://<ip>:8006  RDP地址：<ip>:3389
       
 networks:
-  wan1:
-    name: 1macvlan
-    driver: macvlan
-    driver_opts:
-      parent: eth0                                  # 对接宿主机网卡名称 
-    ipam:
-      config:
-        - subnet: 172.19.0.0/16                    # 局域网网段范围
-          gateway: 172.19.0..254                     # 局域网网关
+  vlan:
+    external: true
