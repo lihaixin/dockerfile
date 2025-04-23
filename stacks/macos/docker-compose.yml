@@ -5,6 +5,7 @@ services:
     container_name: macos15
     devices:
       - /dev/kvm
+      - /dev/net/tun
     cap_add:
       - NET_ADMIN
     stop_grace_period: 2m
@@ -14,8 +15,8 @@ services:
     volumes:
       - macos15:/storage
     networks:
-      wan1:
-        ipv4_address: "${IP:-172.19.0.1}"               # 修改不同的IP【*】  WEBVNC地址： http://<ip>:8006  RDP地址：<ip>:3389
+      vlan:
+        ipv4_address: "${IP:-192.168.2.196}"               # 修改不同的IP【*】  WEBVNC地址： http://<ip>:8006  RDP地址：<ip>:3389
       
 networks:
   vlan:
