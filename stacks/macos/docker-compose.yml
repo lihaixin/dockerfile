@@ -12,6 +12,8 @@ services:
     restart: on-failure
     environment:
       VERSION: "15"                                       # 系统标识  支持 sonoma ventura monterey big-sur
+      RAM_SIZE: "8G"
+      CPU_CORES: "4"
     volumes:
       - macos15:/storage
     networks:
