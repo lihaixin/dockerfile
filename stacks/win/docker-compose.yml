@@ -14,9 +14,11 @@ services:
       # ARGUMENTS: "-device usb-host,vendorid=0x232b,productid=0x0f13"    # 🚩调用usb到容器 调整和上面lsusb输出一致，加0x表示为十六进制
     devices:
       - /dev/kvm
+      - /dev/net/tun
+      - /dev/vhost-net
       # - /dev/bus/usb                                                    # 🚩调用usb到容器
-    # device_cgroup_rules:                                                # 💡注销这行开启路由器网段分配IP
-    #   - 'c *:* rwm'                                                     # 💡注销这行开启路由器网段分配IP
+    device_cgroup_rules:                                                  # 💡注销这行开启路由器网段分配IP
+      - 'c *:* rwm'                                                       # 💡注销这行开启路由器网段分配IP
     cap_add:
       - NET_ADMIN
     # ports:                                                              # 🏷️开启端口映射
