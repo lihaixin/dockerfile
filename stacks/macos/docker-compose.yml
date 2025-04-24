@@ -2,7 +2,7 @@ version: '2'
 services:
   macos:
     image: dockurr/macos                                   # https://github.com/dockur/macos
-    container_name: macos15
+    # container_name: macos
     devices:
       - /dev/kvm
       - /dev/net/tun
@@ -15,7 +15,7 @@ services:
       RAM_SIZE: "8G"
       CPU_CORES: "4"
     volumes:
-      - macos15:/storage
+      - macos:/storage
     networks:
       vlan:
         ipv4_address: "${IP:-192.168.2.196}"               # 修改不同的IP【*】  WEBVNC地址： http://<ip>:8006  RDP地址：<ip>:3389
@@ -24,4 +24,4 @@ networks:
   vlan:
     external: true
 volumes:
-  macos15:
+  macos:
