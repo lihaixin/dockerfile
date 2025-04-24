@@ -11,7 +11,7 @@ services:
     stop_grace_period: 2m
     restart: on-failure
     environment:
-      VERSION: "15"                                       # 系统标识  支持 sonoma ventura monterey big-sur
+      VERSION: "11"                                       # 系统标识  支持 sonoma ventura monterey big-sur
       RAM_SIZE: "8G"
       CPU_CORES: "4"
     volumes:
