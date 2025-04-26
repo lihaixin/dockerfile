@@ -1,7 +1,7 @@
 version: '2'
 services:
   ikuai:
-    image: qemux/qemu-docker                      # https://github.com/qemus/qemu-docker
+    image: qemux/qemu                                  # https://github.com/qemus/qemu
     container_name: ikuai
     devices:
       - /dev/kvm
