@@ -6,6 +6,7 @@ services:
     devices:
       - /dev/kvm
       - /dev/vhost-net
+      - /dev/net/tun
     device_cgroup_rules:
       - 'c *:* rwm'
     cap_add:
