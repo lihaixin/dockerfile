@@ -6,6 +6,7 @@ services:
     devices:
       - /dev/kvm
       - /dev/net/tun
+      - /dev/vhost-net
     cap_add:
       - NET_ADMIN
     stop_grace_period: 2m
@@ -14,8 +15,10 @@ services:
       VERSION: "15"                                       # 系统标识  支持 sonoma ventura monterey big-sur
       RAM_SIZE: "8G"
       CPU_CORES: "4"
+      DHCP: "Y"
     volumes:
       - macos:/storage
+      - /root:/shared
     networks:
       vlan:
         ipv4_address: "${IP:-192.168.2.196}"               # 修改不同的IP【*】  WEBVNC地址： http://<ip>:8006  RDP地址：<ip>:3389
