@@ -10,7 +10,7 @@ services:
       LANGUAGE: "${LANG:-Chinese}"                                        # 系统语言 English | Chinese
       USERNAME: "${USER:-docker}"                                         # windows登录账号
       PASSWORD: "${PASSWD:-docker}"                                       # windows登录密码
-      # DHCP: "Y"                                                         # 💡注销这行开启路由器网段分配IP
+      DHCP: "Y"                                                           # 💡注销这行开启路由器网段分配IP
       # ARGUMENTS: "-device usb-host,vendorid=0x232b,productid=0x0f13"    # 🚩调用usb到容器 调整和上面lsusb输出一致，加0x表示为十六进制
     devices:
       - /dev/kvm
