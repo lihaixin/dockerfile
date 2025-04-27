@@ -1,0 +1,13 @@
+services:
+  toolbox:
+    image: lihaixin/toolbox
+    container_name: toolbox
+    restart: unless-stopped
+    network_mode: "host"
+    privileged: true
+    stdin_open: true                      # -i interactive
+    tty: true                             # -t tty
+    pid: "host"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /root/.ssh/id_rsa:/root/.ssh/id_rsa
