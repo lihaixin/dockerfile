@@ -1,6 +1,7 @@
 services:
   windows:
     image: dockurr/windows                                                # https://github.com/dockur/windows
+    restart: unless-stopped                                               # always unless-stopped on-failure
     environment:
       VERSION: "${OS_V:-win7}"                                            # 系统标识  win7  win10 或者 https://drive.massgrave.dev/zh-cn_windows_10_enterprise_ltsc_2021_x64_dvd_033b7312.iso
       DISK_SIZE: "${DISK_S:-30G}"                                         # 分配储存空间
