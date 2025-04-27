@@ -37,3 +37,9 @@ docker network create -d macvlan \
   -o macvlan_mode=bridge \
   -o parent=enp3s0-ovs vlan
 ```
+
+# 降低docker版本到5:24.0.9-1~debian.12~bookworm 
+```
+apt remove docker-ce docker-ce-cli -y --allow-change-held-packages
+apt install docker-ce=5:24.0.9-1~debian.12~bookworm docker-ce-cli=5:24.0.9-1~debian.12~bookworm -y
+```
