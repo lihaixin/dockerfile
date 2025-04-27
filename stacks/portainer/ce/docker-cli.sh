@@ -8,4 +8,4 @@ docker run -d \
 -e PASSWORD="@china1234567" \
 --name ui \
 --restart=always \
-lihaixin/portainer:ce-2.19.5
+lihaixin/portainer:ce-2.24.1
