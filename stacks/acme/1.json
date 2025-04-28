@@ -22,7 +22,7 @@
         			   		{
           					"text": "zerossl",
           					"value": "zerossl",
-          					"default": "zerossl"
+          					"default": true
         			   		},
         			   		{
           					"text": "letsencrypt",
@@ -38,7 +38,7 @@
         			   		{
           					"text": "dns_cf",
           					"value": "dns_cf",
-          					"default": "dns_cf"
+          					"default": true
         			   		},
         			   		{
           					"text": "dns_namecom",
