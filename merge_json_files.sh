@@ -45,10 +45,8 @@ TEMPEOF
 # merge_json_files 
 
 # 合并特定文件到指定输出文件
-merge_json_files "index0.json" "0.json"
 merge_json_files "index1.json" "1.json"
 merge_json_files "index2.json" "2.json"
 merge_json_files "index3.json" "3.json"
-merge_json_files "index4.json" "4.json"
-merge_json_files "index0060.json" "0060.json"
 merge_json_files "index.json" "1.json" "2.json" "3.json"
+
