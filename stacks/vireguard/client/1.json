@@ -14,7 +14,8 @@
 			"env": [{
 				"name": "QQ",
 				"label": "QQ联系方式 *",
-				"description": "终端显示你的QQ联系方式."
+				"description": "终端显示你的QQ联系方式.",
+				"default": "15050999"
 				},
 				{
       				"name": "SERVER_IP",
