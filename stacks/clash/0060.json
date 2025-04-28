@@ -43,7 +43,7 @@
 				        {
 				          "text": "M1_BMD 白名单模式",
 				          "value": "M1_BMD",
-				          "default": "M1_BMD"
+				          "default": true
 				        },
 				        {
 				          "text": "M2_HMD 黑名单模式",
