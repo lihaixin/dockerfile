@@ -29,7 +29,7 @@
           				        {
           				          "text": "rule",
           				          "value": "rule",
-          				          "default": "rule"
+          				          "default": true
           				        },
           				        {
           				          "text": "global",
