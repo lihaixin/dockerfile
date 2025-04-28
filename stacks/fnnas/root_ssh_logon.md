@@ -27,7 +27,7 @@ docker network create -d ipvlan \
     -o ipvlan_flag=bridge \
     -o parent=wlp9s0 vlan
 ```
-物理以太网卡，添加macvlan网络
+本地物理以太网卡，添加macvlan网络
 
 ```
 docker network create -d macvlan \
@@ -37,7 +37,14 @@ docker network create -d macvlan \
   -o macvlan_mode=bridge \
   -o parent=enp3s0-ovs vlan
 ```
+机房云主机，添加自定义网络
 
+```
+docker network create -d bridge \
+ --subnet=10.21.1.0/24 \
+ --gateway=10.21.1.254 \
+vlan
+```
 # 降低docker版本到5:24.0.9-1~debian.12~bookworm 
 ```
 apt-mark showhold
