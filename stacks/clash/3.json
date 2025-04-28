@@ -48,7 +48,7 @@
 				        {
 				          "text": "1.18.5",
 				          "value": "1.18.5",
-				          "default": "1.18.5"
+				          "default": true
 				        },
 				        {
 				          "text": "1.18.6",
