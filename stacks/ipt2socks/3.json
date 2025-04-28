@@ -16,7 +16,7 @@
 				"name": "USERNO",
 				"label": "用户授权USERNO",
 				"description": "用户授权USERNO",
-				"default": ""
+				"default": "0000210012301280002"
 				},
 				{
 				"name": "S5IP",
