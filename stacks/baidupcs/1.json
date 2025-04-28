@@ -10,9 +10,11 @@
       				"1999/tcp"
     				],
     			"volumes": [{
+				"bind": "/defaults",
 				"container": "/defaults"
 				},
 				{
+				"bind": "/root/Downloads",
 				"container": "/root/Downloads"
 				}],
     			"env": [{
