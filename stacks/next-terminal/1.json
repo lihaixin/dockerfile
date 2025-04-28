@@ -11,6 +11,7 @@
 			"env": [{
 				"name": "QQ",
 				"label": "QQ联系方式",
+				"default": "15050",
 				"description": "终端显示你的QQ联系方式."
 				},
 				{
