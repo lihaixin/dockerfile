@@ -32,7 +32,7 @@
 				"name": "MainINF",
 				"label": "服务器数据出口",
 				"description": "默认为空,让程序自动检查,如果是走其他接口,手工设置,例如openvpn接口出去,设置为tun+ ",
-				"default": ""
+				"default": "eth0"
 			},
 			{
 				"name": "OPENVPN_PORT",
