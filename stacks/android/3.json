@@ -16,7 +16,7 @@
 				        {
 				          "text": "Samsung Galaxy S10",
 				          "value": "Samsung Galaxy S10",
-				          "default": "true"
+				          "default": true
 				        },
 				        {
 				          "text": "Samsung Galaxy S9",
