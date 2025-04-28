@@ -20,7 +20,7 @@
       				"name": "SERVER_IP",
       				"label": "服务器宿主机IP *",
 				"description": "服务器端IP",
-      				"default": " "
+      				"default": "8.8.8.8"
     				},
 				{
       				"name": "SERVER_PORT",
