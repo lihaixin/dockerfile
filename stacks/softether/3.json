@@ -11,12 +11,6 @@
 				"stackfile": "stacks/softether/docker-compose.yml"
 			},
 			"env": [{
-				"name": "QQ",
-				"label": "QQ *",
-				"description": "用于终端展示QQ",
-				"default": ""
-			},
-			{
 				"name": "DOMAIN",
 				"label": "域名",
 				"description": "用于OPENVPN和SSTP传输过程中,导入数据证书,提前使用lihaixin/acme容器创建好证书",
