@@ -69,12 +69,6 @@
 				"description": "申请证书的域名",
       				"default": "youdomain.com"
     				},
-				{
-      				"name": "aliasDOMAIN",
-      				"label": "利用别名验证的域名",
-				"description": "这个域名托管在cloudflare,不能直接使用api申请证书，只能通过别名，使用别名下面的ID和KEY来申请证书的信息",
-      				"default": ""
-    				},
 			        {
       				"name": "ID",
       				"label": "ID",
