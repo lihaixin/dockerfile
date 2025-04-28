@@ -21,9 +21,9 @@
           				"description": "支持realm、realm-server、realm-client,其中后缀有wss ws tls是加密传输协议,其他tls转发openvpn udp失效",
           				"select": [
           				        {
-          				          "text": "1.0realm(纯端口转发)",
+          				          "text": "1.0realm(纯端口转发|IPLC环境使用)",
           				          "value": "realm",
-          				          "default": "realm"
+          				          "default": true
           				        },
           				        {
           				          "text": "2.1realm-server-wss(海外端转发)",
