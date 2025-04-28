@@ -40,6 +40,7 @@ docker network create -d macvlan \
 
 # 降低docker版本到5:24.0.9-1~debian.12~bookworm 
 ```
+apt-mark showhold
 apt-mark unhold docker-ce docker-ce-cli
 apt remove docker-ce docker-ce-cli -y
 apt install docker-ce=5:24.0.9-1~debian.12~bookworm docker-ce-cli=5:24.0.9-1~debian.12~bookworm -y
