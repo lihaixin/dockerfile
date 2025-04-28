@@ -44,7 +44,8 @@
           				"select": [
           				        {
           				          "text": "M1_BMD 白名单模式，调用下面订阅地址CLASH_SUBURL，未匹配规则走代理出去",
-          				          "value": "M1_BMD"
+          				          "value": "M1_BMD",
+                            			  "default": true
           				        },
           				        {
           				          "text": "M2_HMD 黑名单模式，调用下面订阅地址CLASH_SUBURL，未匹配走规则本地网络出去",
@@ -72,8 +73,7 @@
           				        },
           				        {
           				          "text": "M11_TUNNEL 本地RPORT端口转发到RSERVER:RPORT，调用CLASH_SUBURL中转 国外环境用",
-          				          "value": "M11_TUNNEL",
-                            			  "default": "M11_TUNNEL"
+          				          "value": "M11_TUNNEL"
           				        }
           				      ]
           				},
