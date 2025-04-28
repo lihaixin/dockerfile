@@ -17,13 +17,13 @@
 				"name": "EDGEID",
 				"label": "边缘代理ID",
 				"description": "输入服务器生成的边缘代理ID",
-				"default": ""
+				"default": "id"
 				},
         			{
 				"name": "EDGEKEY",
 				"label": "边缘代理KEY",
 				"description": "输入服务器生成的边缘代理KEY",
-				"default": ""
+				"default": "key"
 				}],
       			"ports": ["9001:9001/tcp", "9090:9090/tcp"],
 			"repository": {
