@@ -20,7 +20,7 @@
 				        {
 				          "text": "redroid:15.0.0-latest",
 				          "value": "redroid:15.0.0-latest",
-				          "default": "rule"
+				          "default": "redroid:15.0.0-latest"
 				        },
 				        {
 				          "text": "redroid:14.0.0-latest",
