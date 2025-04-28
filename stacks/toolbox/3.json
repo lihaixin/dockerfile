@@ -27,7 +27,7 @@
 				        {
 				          "text": "alphine",
 				          "value": "latest",
-				          "default": "latest"
+				          "default": true
 				        },
 				        {
 				          "text": "debian",
