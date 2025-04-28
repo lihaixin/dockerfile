@@ -24,7 +24,7 @@
 				        {
 				          "text": "socks5代理",
 				          "value": "socks5",
-				          "default": "socks5"
+				          "default": true
 				        },
 				        {
 				          "text": "http代理",
@@ -66,7 +66,7 @@
         				{
 				          "text": "local",
 				          "value": "local",
-				          "default": "local"
+				          "default": true
 				        },
 				        {
 				          "text": "socks5",
