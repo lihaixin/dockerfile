@@ -16,7 +16,7 @@
         			   		{
           					"text": "https://registry-1.docker.io",
           					"value": "https://registry-1.docker.io",
-          					"default": "true"
+          					"default": true
         			   		},
         			   		{
           					"text": "https://ghcr.io",
@@ -40,7 +40,7 @@
         			   		{
           					"text": "true",
           					"value": "true",
-          					"default": "true"
+          					"default": true
         			   		},
         			   		{
           					"text": "false",
