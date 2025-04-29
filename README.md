@@ -17,9 +17,9 @@
 
    ```
    docker network create -d bridge \
-    --subnet=10.21.1.0/24 \
-    --gateway=10.21.1.254 \
-   cbridge
+    --subnet=172.19.0.0/24 \
+    --gateway=172.19.0.254 \
+   vlan
    ```
    2.2 macvlan网络
   
