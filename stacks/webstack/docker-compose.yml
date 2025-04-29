@@ -1,14 +1,16 @@
 version: '2'
 services:
-  webstack-go:
+  webstack-go:                                    
     stdin_open: true
     tty: true
     restart: always
     ports:
       - 8001:8000
-    container_name: webstack-go
+    container_name: webstack-go                            # https://github.com/ch3nnn/webstack-go/tree/master
     image: ch3nnn/webstack-go:v2.4.0
     volumes:
       - webstack:/data/app/storage
+      - webstacklogs:/data/app/storage/logs
 volumes:
   webstack:
+  webstacklogs:
