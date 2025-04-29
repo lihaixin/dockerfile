@@ -30,7 +30,15 @@
     -o macvlan_mode=bridge \
     -o parent=eth0 vlan
     ```
-
+   2.3 ipvlan网络(无线网卡)
+  
+    ```
+    docker network create -d ipvlan \
+    --subnet=172.19.0.0/24 \
+    --gateway=172.19.0.254 \
+    -o macvlan_mode=bridge \
+    -o parent=eth0 vlan
+    ```
 ## 所有的Docker 模板 
 [官方模板格式](https://docs.portainer.io/advanced/app-templates/format#administrator-only)  [compose 格式](https://docs.docker.com/compose/compose-file/)  [官方模板案例](https://raw.githubusercontent.com/portainer/templates/master/templates-2.0.json)
 
