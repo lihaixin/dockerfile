@@ -17,6 +17,8 @@ services:
       # If you would rather use Sqlite uncomment this
       # and remove all DB_MYSQL_* lines above
       DB_SQLITE_FILE: "/data/database.sqlite"
+      INITIAL_ADMIN_EMAIL: admin@example.com
+      INITIAL_ADMIN_PASSWORD: changeme
       # Uncomment this if IPv6 is not enabled on your host
       # DISABLE_IPV6: 'true'
     volumes:
