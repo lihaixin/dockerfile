@@ -1,3 +1,4 @@
+```
 server {
     server_name <YOUR_DOMAIN>;
     location / {
@@ -44,3 +45,4 @@ server {
     listen 80;
     return 404; # managed by Certbot
 }
+```
