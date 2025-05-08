@@ -1,0 +1,36 @@
+networks:
+  rustdesk-net:
+    external: false
+services:
+  rustdesk-server:
+    container_name: rustdesk-server
+    ports:
+      - 21115:21115
+      - 21116:21116
+      - 21116:21116/udp
+      - 21117:21117
+      - 21118:21118
+      - 21119:21119
+    image: rustdesk/rustdesk-server-s6:latest
+    environment:
+      - RELAY=api.example.com
+      - ENCRYPTED_ONLY=1
+    volumes:
+      - /data/rustdesk/server:/data
+    restart: unless-stopped
+  rustdesk-api:
+    container_name: rustdesk-api
+    ports:
+      - 21114:21114
+    image: lejianwen/rustdesk-api
+    environment:
+      - TZ=Asia/Shanghai
+      - RUSTDESK_API_RUSTDESK_ID_SERVER=api.example.com
+      - RUSTDESK_API_RUSTDESK_RELAY_SERVER=api.example.com
+      - RUSTDESK_API_RUSTDESK_API_SERVER=https://api.example.com
+      - RUSTDESK_API_RUSTDESK_KEY=<key>
+    volumes:
+      - /data/rustdesk/api:/app/data 
+    networks:
+      - rustdesk-net
+    restart: unless-stopped
