@@ -1,39 +1,22 @@
-networks:
-  rustdesk-net:
-    external: false
+version: '3'
 services:
-  rustdesk-server:
-    container_name: rustdesk-server
-    ports:
-      - 21115:21115
-      - 21116:21116
-      - 21116:21116/udp
-      - 21117:21117
-      - 21118:21118
-      - 21119:21119
-    image: rustdesk/rustdesk-server-s6:latest
+  rustdesk:
+    container_name: rustdesk2
+    network_mode: host
+    image: lejianwen/rustdesk-server-s6:latest
     environment:
       - RELAY=api.15099.net
-      - ENCRYPTED_ONLY=1
-    volumes:
-      - data:/data
-    restart: unless-stopped
-  rustdesk-api:
-    container_name: rustdesk-api
-    ports:
-      - 21114:21114
-    image: lejianwen/rustdesk-api
-    environment:
       - TZ=Asia/Shanghai
+      - MUST_LOGIN=Y                                                # 是否必须登录，可以配合RUSTDESK_API_JWT_KEY，设置后会通过JWT校验token的合法性
+      - ENCRYPTED_ONLY="1"                                          # 不接受未加密的连接
       - RUSTDESK_API_RUSTDESK_ID_SERVER=api.15099.net
       - RUSTDESK_API_RUSTDESK_RELAY_SERVER=api.15099.net
       - RUSTDESK_API_RUSTDESK_API_SERVER=https://api.15099.net
-      - RUSTDESK_API_RUSTDESK_KEY=<key>
+      - RUSTDESK_API_KEY_FILE=/data/id_ed25519.pub                  # 自动生成key，可以在Docker容器日志查找，然后填写到客户端
+      - RUSTDESK_API_APP_TOKEN_EXPIRE=8787h                         # 客户端账号登陆过期时间，默认是七天未使用就登出账号，默认只支持h,m,s
     volumes:
       - appdata:/app/data
-      - data:/app/conf/data
-    networks:
-      - rustdesk-net
+      - data:/data
     restart: unless-stopped
 volumes:
  data:
