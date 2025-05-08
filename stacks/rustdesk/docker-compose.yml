@@ -13,10 +13,10 @@ services:
       - 21119:21119
     image: rustdesk/rustdesk-server-s6:latest
     environment:
-      - RELAY=api.example.com
+      - RELAY=api.15099.net
       - ENCRYPTED_ONLY=1
     volumes:
-      - /data/rustdesk/server:/data
+      - data:/data
     restart: unless-stopped
   rustdesk-api:
     container_name: rustdesk-api
@@ -25,12 +25,16 @@ services:
     image: lejianwen/rustdesk-api
     environment:
       - TZ=Asia/Shanghai
-      - RUSTDESK_API_RUSTDESK_ID_SERVER=api.example.com
-      - RUSTDESK_API_RUSTDESK_RELAY_SERVER=api.example.com
-      - RUSTDESK_API_RUSTDESK_API_SERVER=https://api.example.com
+      - RUSTDESK_API_RUSTDESK_ID_SERVER=api.15099.net
+      - RUSTDESK_API_RUSTDESK_RELAY_SERVER=api.15099.net
+      - RUSTDESK_API_RUSTDESK_API_SERVER=https://api.15099.net
       - RUSTDESK_API_RUSTDESK_KEY=<key>
     volumes:
-      - /data/rustdesk/api:/app/data 
+      - appdata:/app/data
+      - data:/app/conf/data
     networks:
       - rustdesk-net
     restart: unless-stopped
+volumes:
+ data:
+ appdata:
