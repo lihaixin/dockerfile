@@ -5,7 +5,7 @@
     			"categories": ["tools"],
     			"platform": "linux",
     			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/bash.png",
-			"note": "个人收集整理的脚本，通过主菜单调用，方便快速部署 等 <a href=\"https://bash.15099.net\" target=\"_blank\">更多查看</a>",
+				"note": "个人收集整理的脚本，通过主菜单调用，方便快速部署 等 <a href=\"https://bash.15099.net\" target=\"_blank\">更多查看</a>",
     			"image": "lihaixin/bash",
           		"ports": [
       				"80/tcp"

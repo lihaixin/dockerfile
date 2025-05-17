@@ -12,7 +12,6 @@ services:                                                           # https://gi
       - /root:/root                                                 # 可选的文件存储映射
     environment:
       - TZ=Asia/Shanghai                                            # 时区设置
-
     networks:
       vlan:
         ipv4_address: "${IP:-172.19.0.1}"                           # 修改不同的IP【*】
