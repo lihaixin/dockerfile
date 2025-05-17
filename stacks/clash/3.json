@@ -1,7 +1,7 @@
 {
 			"type": 3,
 			"title": "Clash gateway",
-	 		"name": "clash",
+	 		"name": "01_clash",
 			"description": "一键安装各类网关",
 			"note": "通过docker容器,配合macvlan,快速使用clash打造白名单、黑名单、S5、HTTP、hysteria2、wireguard多个网关.然后通过爱快下一跳网关进行分流 更多<a href=\"https://github.com/lihaixin/dockerfile/blob/master/stacks/clash/README.md\" target=\"_blank\">点击这里</a>",
 			"categories": ["route"],
@@ -54,7 +54,7 @@
 				          "text": "1.18.6",
 				          "value": "1.18.6"
 				        },
-					{
+						{
 				          "text": "1.19.3",
 				          "value": "1.19.3"
 				        }
@@ -66,36 +66,36 @@
 				"description": "支持白名单、黑名单、S5、HTTP、hysteria2、wireguard网关",
 				"select": [
 				        {
-				          "text": "M1_BMD 白名单模式，调用下面订阅地址CLASH_SUBURL，未匹配规则走代理出去",
+				          "text": "M1_BMD 白名单模式,调用下面订阅地址CLASH_SUBURL,未匹配规则走代理出去",
 				          "value": "M1_BMD",
 				          "default": true
 				        },
 				        {
-				          "text": "M2_HMD 黑名单模式，调用下面订阅地址CLASH_SUBURL，未匹配走规则本地网络出去",
+				          "text": "M2_HMD 黑名单模式,调用下面订阅地址CLASH_SUBURL,未匹配走规则本地网络出去",
 				          "value": "M2_HMD"
 				        },
-					{
-				          "text": "M3_GFL 国家分流负载均衡模式，调用下面订阅地址CLASH_SUBURL，订阅按国家分配",
+						{
+				          "text": "M3_GFL 国家分流负载均衡模式,调用下面订阅地址CLASH_SUBURL,订阅按国家分配",
 				          "value": "M3_GFL"
 				        },
 				        {
-				          "text": "M6_S5 纯S5游戏代理，不调用下面订阅地址CLASH_SUBURL，国内环境用",
+				          "text": "M6_S5 纯S5游戏代理,不调用下面订阅地址CLASH_SUBURL,国内环境用",
 				          "value": "M6_S5"
 				        },
-					{
-				          "text": "M6_S5_DIA 中转代理S5游戏代理，调用CLASH_SUBURL中转 国外环境用",
+						{
+				          "text": "M6_S5_DIA 中转代理S5游戏代理,调用CLASH_SUBURL中转 国外环境用",
 				          "value": "M6_S5_DIA"
 				        },
 				        {
-				          "text": "M7_HTTP_DIA 中转代理HTTP游戏代理 ，调用CLASH_SUBURL中转 国外环境用",
+				          "text": "M7_HTTP_DIA 中转代理HTTP游戏代理 ,调用CLASH_SUBURL中转 国外环境用",
 				          "value": "M7_HTTP_DIA"
 				        },
 				        {
-				          "text": "M8_HTTPS_DIA 中转代理HTTPS游戏代理，调用CLASH_SUBURL中转 国外环境用",
+				          "text": "M8_HTTPS_DIA 中转代理HTTPS游戏代理,调用CLASH_SUBURL中转 国外环境用",
 				          "value": "M8_HTTPS_DIA"
 				        },
 				        {
-				          "text": "M11_TUNNEL 本地RPORT端口转发到RSERVER:RPORT，调用CLASH_SUBURL中转 国外环境用",
+				          "text": "M11_TUNNEL 本地RPORT端口转发到RSERVER:RPORT,调用CLASH_SUBURL中转 国外环境用",
 				          "value": "M11_TUNNEL"
 				        }
 				      ]
@@ -103,7 +103,7 @@
 				{
 				"name": "CLASH_SUBURL",
 				"label": "订阅地址CLASH_SUBURL",
-				"description": "CLASH | V2RAY订阅地址，同时也支持ss:// vmess:// vless:// hysteria2:// 这些格式在IP提供商后台查看，一般都有提供",
+				"description": "CLASH | V2RAY订阅地址,同时也支持ss:// vmess:// vless:// hysteria2:// 这些格式在IP提供商后台查看,一般都有提供",
 				"default": "https://sub.com/sub/9001592fb618ea.yaml"
 				},
 				{
