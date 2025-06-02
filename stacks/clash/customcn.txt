@@ -1,0 +1,4 @@
+payload:
+  - DOMAIN-SUFFIX,xhscdn.com
+  - DOMAIN-SUFFIX,cdninstagram.com
+  - DOMAIN-SUFFIX,fbcdn.net
