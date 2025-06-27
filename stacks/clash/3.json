@@ -82,6 +82,10 @@
 				          "text": "M6_S5 纯S5游戏代理,不调用下面订阅地址CLASH_SUBURL,国内环境用",
 				          "value": "M6_S5"
 				        },
+					{
+				          "text": "M6_S5_IKUAI 爱快纯S5游戏代理,不调用下面订阅地址CLASH_SUBURL,国内外环境用",
+				          "value": "M6_S5_IKUAI"
+				        },
 						{
 				          "text": "M6_S5_DIA 中转代理S5游戏代理,调用CLASH_SUBURL中转 国外环境用",
 				          "value": "M6_S5_DIA"
