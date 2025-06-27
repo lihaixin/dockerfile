@@ -2,7 +2,7 @@
 			"type": 3,
 			"title": "ipt2socks",
 	 		"name": "01_ipt2socks",
-			"description": "在本地主机|NAS系统上一键安装socks5转网关",
+			"description": "在本地主机|NAS系统上一键安装socks5转网关,由于爱快版本docker版本低，不能创建iptable,所以不能在爱快上运行",
 			"note": "把Socks5代理IP转化成网关 <a href=\"https://hub.docker.com/r/lihaixin/ipt2socks\" target=\"_blank\">更多查看</a>",
 			"categories": ["route"],
 			"platform": "linux",
