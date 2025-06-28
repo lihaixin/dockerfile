@@ -1,0 +1,69 @@
+{
+			"type": 3,
+			"title": "sing-box gateway",
+	 		"name": "01_sing-box",
+			"description": "一键安装S5网关",
+			"note": "通过docker容器,配合macvlan,快速使用BOX打造S5多个网关.然后通过爱快下一跳网关进行分流 更多<a href=\"https://github.com/lihaixin/dockerfile/blob/master/stacks/sing-box/README.md\" target=\"_blank\">点击这里</a>",
+			"categories": ["route"],
+			"platform": "linux",
+			"logo": "https://dockerfile.15099.net/logo/gateway.png",
+			"repository": {
+				"url": "https://gh.15099.net/https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/sing-box/docker-compose.yml"
+			},
+	 		"env": [
+				{
+				"name": "USERNO",
+				"label": "用户授权USERNO",
+				"description": "用户授权USERNO,也是自定义模板标识号,未授权USERNO只能使用免费模板",
+				"default": "9999202412301280007"
+				},
+        {
+				"name": "DNS_ADDR",
+				"label": "落地DNS解析信息",
+				"description": "请选择合适的版本，国内IP选择国内、国外IP选择国外",
+				"select": [
+				        {
+				          "text": "国外",
+				          "value": "tcp://8.8.8.8",
+				          "default": true
+				        },
+				        {
+				          "text": "国内",
+				          "value": "tcp://223.5.5.5"
+				        }
+				      ]
+				},
+				{
+				"name": "SOCKS5_SERVER",
+				"label": "落地socks5 IP",
+				"description": "输入落地IP",
+				"default": "6.6.6.6"
+				},
+				{
+				"name": "SOCKS5_PORT",
+				"label": "落地socks5代理端口",
+				"description": "输入落地IP端口",
+				"default": "1080"
+				},
+				{
+				"name": "SOCKS5_USERNAME",
+				"label": "落地socks5代理账号",
+				"description": "落地socks5代理账号",
+				"default": "user"
+				},
+				{
+				"name": "SOCKS5_PASSWORD",
+				"label": "落地socks5代理密码",
+				"description": "落地socks5代理密码",
+				"default": "password"
+				},
+				{
+				"name": "IP",
+				"label": "容器macvlan IP *",
+				"description": "修改不同的IP",
+				"default": "172.19.0.1"
+				}
+				]
+}
+,
