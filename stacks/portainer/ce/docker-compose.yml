@@ -1,7 +1,7 @@
 version: "2"
 services:
   portainer:
-    image: lihaixin/ui:ce-2.24.1                       # https://hub.docker.com/r/lihaixin/ui
+    image: lihaixin/ui:ce-${VERSION:-2.24.1}           # https://hub.docker.com/r/lihaixin/ui
     container_name: ui
     hostname: portainer
     restart: unless-stopped
