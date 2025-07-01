@@ -1,7 +1,7 @@
  {
 			"type": 3,
-			"title": "s5-101",
-			"name": "s5-101",   
+			"title": "01-gosts5",
+			"name": "01-gosts5",   
 			"description": "一键安装gost S5代理",
 			"note": "通过docker容器，配合macvlan,快速配置S5.",
 			"categories": ["gost"],
