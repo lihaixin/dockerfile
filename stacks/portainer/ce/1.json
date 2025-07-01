@@ -2,33 +2,14 @@
 			"type": 1,
 			"title": "portainer-9443",
 			"name": "ui",
-			"description": "自定义portainer管理面包,包含常用模板,管理地址:https://<ip>:9443",
+			"description": "自定义portainer 2.19.5管理面包,适用于docker版本低于26.00，包含常用模板,管理地址:https://<ip>:9443",
 			"categories": ["docker"],
 			"platform": "linux",
 			"restart_policy": "always",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/portainer.png",
 			"image": "lihaixin/ui:ce-2.19.5",
 			"ports": ["9443:9443/tcp", "8000:8000/tcp"],
-			"env": [{
-				"name": "VERSION",
-				"label": "UI 镜像版本号",
-				"description": "请选择合适的版本,docker版本低于26.00，使用2.19.5版本，docker版本高于26.00，使用2.21.5版本",
-				"select": [
-				        {
-				          "text": "2.21.5",
-				          "value": "2.21.5",
-				          "default": true
-				        },
-				        {
-				          "text": "2.21.5",
-				          "value": "2.21.5"
-				        },
-						{
-				          "text": "2.19.5",
-				          "value": "2.19.2"
-				        }
-				      ]
-				},
+			"env": [
 				{
 				"name": "PASSWORD",
 				"label": "管理密码 *",
