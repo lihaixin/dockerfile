@@ -10,6 +10,26 @@
 			"image": "lihaixin/ui:ce-2.19.5",
 			"ports": ["9443:9443/tcp", "8000:8000/tcp"],
 			"env": [{
+				"name": "VERSION",
+				"label": "UI 镜像版本号",
+				"description": "请选择合适的版本,docker版本低于26.00，使用2.19.5版本，docker版本高于26.00，使用2.21.5版本",
+				"select": [
+				        {
+				          "text": "2.21.5",
+				          "value": "2.21.5",
+				          "default": true
+				        },
+				        {
+				          "text": "2.21.5",
+				          "value": "2.21.5"
+				        },
+						{
+				          "text": "2.19.5",
+				          "value": "2.19.2"
+				        }
+				      ]
+				},
+				{
 				"name": "PASSWORD",
 				"label": "管理密码 *",
 				"description": "预定义portainer管理密码,密码不能低于12位，留空为后续再自己创建",
