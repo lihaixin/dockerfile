@@ -2,7 +2,7 @@ version: '2'
 services:
   ikuai:
     image: qemux/qemu                                  # https://github.com/qemus/qemu
-    container_name: ikuai
+    # container_name: ikuai
     devices:
       - /dev/kvm
       - /dev/vhost-net
@@ -26,7 +26,7 @@ services:
       
     networks:
       vlan:
-        ipv4_address: "${IP:-192.168.2.12}"                                             # 修改不同的IP【*】
+        ipv4_address: "${IP:-172.19.0.1}"                                             # 修改不同的IP【*】
 
 networks:
   vlan:
