@@ -9,6 +9,44 @@
 			"repository": {
 				"url": "https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/ikuai/docker-compose.yml"
-			}
-		}
+			},
+	 		"env": [
+				{
+				"name": "DISK_SIZE",
+				"label": "磁盘大小",
+				"description": "分配给爱快多大的磁盘空间",
+				"default": "10G"
+				},
+				{
+				"name": "MEM_SIZE",
+				"label": "内存大小",
+				"description": "分配给爱快多大的内存大小,
+				"default": "2G"
+				},
+				{
+				"name": "DISK_FMT",
+				"label": "磁盘文件格式",
+				"description": "支持raw和 qcow2",
+				"default": "qcow2"
+				},
+				{
+				"name": "DISK_TYPE,
+				"label": "磁盘接口类型",
+				"description": "支持blk",
+				"default": "blk"
+				},
+				{
+				"name": "BOOT_MODE",
+				"label": "BIOS类型",
+				"description": "UEFI 和 legacy",
+				"default": "legacy"
+				},
+				{
+				"name": "IP",
+				"label": "容器macvlan IP *",
+				"description": "修改不同的IP",
+				"default": "172.19.0.1"
+				}
+				]
+}
 ,
