@@ -25,7 +25,7 @@
 				"description": "请选择合适的版本",
 				"select": [
 				        {
-				          "text": "alphine",
+				          "text": "alpine",
 				          "value": "latest",
 				          "default": true
 				        },
