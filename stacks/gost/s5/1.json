@@ -13,7 +13,7 @@
 				"name": "NO",
 				"label": "模板NO标签 *",
 				"description": "不同NO标签，应用不同的模板.",
-				"default": "0000210012301280013",
+				"default": "9999210012301280002",
 				"preset": true
 				},
 				{
