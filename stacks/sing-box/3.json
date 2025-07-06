@@ -16,9 +16,10 @@
 				"name": "USERNO",
 				"label": "用户授权USERNO",
 				"description": "用户授权USERNO,也是自定义模板标识号,未授权USERNO只能使用免费模板",
-				"default": "9999202412301280007"
+				"default": "9999210012301280002",
+				"preset": true
 				},
-        {
+        			{
 				"name": "DNS_ADDR",
 				"label": "落地DNS解析信息",
 				"description": "请选择合适的版本，国内IP选择国内、国外IP选择国外",
