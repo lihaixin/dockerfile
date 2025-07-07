@@ -16,8 +16,11 @@ services:
     environment:
       ARGUMENTS: "-netdev user,id=hostnet1 -device virtio-net-pci,romfile=,netdev=hostnet1,id=net1"
       BOOT: "https://dl.istoreos.com/iStoreOS/x86_64_efi/istoreos-22.03.7-2024080210-x86-64-squashfs-combined-efi.img.gz"
-      DISK_SIZE: "4G"
-      RAM_SIZE: "4G"
+      DISK_SIZE: "${DISK_SIZE:-10G}"                  # 磁盘大小
+      RAM_SIZE: "${MEM_SIZE:-2G}"                     # 内存大小
+      DISK_FMT: "${DISK_FMT:-qcow2}"                  # 支持raw和 qcow2
+      DISK_TYPE: "${DISK_TYPE:-blk}"                  # 支持blk
+      BOOT_MODE: "${BOOT_MODE:-legacy}"               # UEFI 和 legacy
       WEB_VNC: true
       DHCP: "Y"
       
