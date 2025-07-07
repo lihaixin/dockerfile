@@ -1,6 +1,6 @@
 {
 			"type": 3,
-			"title": "sing-box gateway",
+			"title": "sing-box",
 	 		"name": "01_sing-box",
 			"description": "一键安装S5网关",
 			"note": "通过docker容器,配合macvlan,快速使用BOX打造S5多个网关.然后通过爱快下一跳网关进行分流 更多<a href=\"https://hub.docker.com/r/lihaixin/sing-box\" target=\"_blank\">点击这里</a>",
