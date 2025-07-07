@@ -3,10 +3,10 @@
 			"title": "sing-box gateway",
 	 		"name": "01_sing-box",
 			"description": "一键安装S5网关",
-			"note": "通过docker容器,配合macvlan,快速使用BOX打造S5多个网关.然后通过爱快下一跳网关进行分流 更多<a href=\"https://github.com/lihaixin/dockerfile/blob/master/stacks/sing-box/README.md\" target=\"_blank\">点击这里</a>",
+			"note": "通过docker容器,配合macvlan,快速使用BOX打造S5多个网关.然后通过爱快下一跳网关进行分流 更多<a href=\"https://hub.docker.com/r/lihaixin/sing-box\" target=\"_blank\">点击这里</a>",
 			"categories": ["route"],
 			"platform": "linux",
-			"logo": "https://dockerfile.15099.net/logo/gateway.png",
+			"logo": "https://dockerfile.15099.net/logo/sing-box.png",
 			"repository": {
 				"url": "https://gh.15099.net/https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/sing-box/docker-compose.yml"
