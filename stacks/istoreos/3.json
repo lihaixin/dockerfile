@@ -1,17 +1,55 @@
  {
 			"type": 3,
 			"title": "istoreos",
+	 		"name": "01_istoreos",
 			"description": "一键安装istoreos路由器",
 			"note": "通过docker容器，配合macvlan,快速部署istoreos软路由.",
 			"categories": ["route"],
 			"platform": "linux",
-			"logo": "https://www.istoreos.com/_nuxt/img/logo.04dbfec.png",
+			"logo": "https://dockerfile.15099.net/logo/istoreos.png",
 	 		"env": [{
+				"name": "BOOT",
+				"label": "系统版本",
+				"description": "输入你需要安装的sitoreos版本,例如：https://dl.istoreos.com/iStoreOS/x86_64_efi/istoreos-22.03.7-2024080210-x86-64-squashfs-combined-efi.img.gz",
+				"default": "https://dl.istoreos.com/iStoreOS/x86_64_efi/istoreos-22.03.7-2024080210-x86-64-squashfs-combined-efi.img.gz"
+				},
+				{
+				"name": "DISK_SIZE",
+				"label": "磁盘大小",
+				"description": "分配给爱快多大的磁盘空间",
+				"default": "10G"
+				},
+				{
+				"name": "MEM_SIZE",
+				"label": "内存大小",
+				"description": "分配给爱快多大的内存大小",
+				"default": "2G"
+				},
+				{
+				"name": "DISK_FMT",
+				"label": "磁盘文件格式",
+				"description": "支持raw和 qcow2",
+				"default": "qcow2"
+				},
+				{
+				"name": "DISK_TYPE",
+				"label": "磁盘接口类型",
+				"description": "支持blk",
+				"default": "blk"
+				},
+				{
+				"name": "BOOT_MODE",
+				"label": "BIOS类型",
+				"description": "UEFI 和 legacy",
+				"default": "UEFI"
+				},
+				{
 				"name": "IP",
-				"label": "虚拟机分配的IP *",
-				"description": "你本地macvlan分配的IP，默认为172.19.0.*这个网段的IP",
+				"label": "容器macvlan IP *",
+				"description": "修改不同的IP",
 				"default": "172.19.0.1"
-				}],
+				}
+				],
 			"repository": {
 				"url": "https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/istoreos/docker-compose.yml"
