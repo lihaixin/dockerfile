@@ -2,7 +2,7 @@
 			"type": 3,
 			"title": "ikuai",
 	 		"name": "01_ikuai",
-			"description": "一键安装企业级IKUAI路由器",
+			"description": "一键安装IKUAI路由器",
 			"note": "通过docker容器，配合macvlan,快速部署ikuai软路由.",
 			"categories": ["route"],
 			"platform": "linux",
