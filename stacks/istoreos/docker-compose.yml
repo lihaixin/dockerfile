@@ -2,7 +2,7 @@ version: '2'
 services:
   istoreos:
     image: qemux/qemu-docker                      # https://github.com/qemus/qemu-docker
-    container_name: ikuai
+    # container_name: ikuai
     devices:
       - /dev/kvm
       - /dev/vhost-net
