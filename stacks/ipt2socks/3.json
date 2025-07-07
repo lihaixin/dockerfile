@@ -6,7 +6,7 @@
 			"note": "把Socks5代理IP转化成网关 <a href=\"https://hub.docker.com/r/lihaixin/ipt2socks\" target=\"_blank\">更多查看</a>",
 			"categories": ["route"],
 			"platform": "linux",
-			"logo": "https://dockerfile.15099.net/logo/ikuai.png",
+			"logo": "https://dockerfile.15099.net/logo/ipt2socks.png",
 			"repository": {
 				"url": "https://gh.15099.net/https://github.com/lihaixin/dockerfile",
 				"stackfile": "stacks/ipt2socks/docker-compose.yml"
