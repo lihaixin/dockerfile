@@ -1,0 +1,15 @@
+services:
+  https:
+    image: lihaixin/gost:https
+    container_name: https
+    hostname: https
+    network_mode: host
+    volumes:
+      - /etc/mnt/cert:/etc/cert
+    environment:
+      DOMAIN: 15099.net
+      HOSTNAME: hostname
+      LTYPE: https
+      PORT: 9220
+      USER: user
+      PASSWD: passwd
