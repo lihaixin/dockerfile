@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   acme:
     image: lihaixin/acme
@@ -8,10 +6,12 @@ services:
     ports:
       - "80:80"
     volumes:
-      - /etc/cert:/etc/cert
+      - etc_cert:/etc/cert
     environment:
       TYPE: zerossl # 可选值：zerossl 或 letsencrypt
       DNS: dns_cf # 可选值：dns_cf, dns_namecom, dns_gd, dns_namesilo, dns_dp, dns_ali
       DOMAIN: youdomain.com
       ID: info@domain.com
       KEY: 558ef6820cea14627f986548c96fcb6cb××××
+volumes:
+  etc_cert:
