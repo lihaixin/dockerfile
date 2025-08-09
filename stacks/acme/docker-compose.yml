@@ -3,8 +3,7 @@ services:
     image: lihaixin/acme
     container_name: acme
     hostname: acme
-    ports:
-      - "80:80"
+    restart: unless-stopped                             # unless-stopped  always 
     volumes:
       - etc_cert:/etc/cert
     environment:
