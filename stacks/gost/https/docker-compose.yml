@@ -5,7 +5,7 @@ services:
     hostname: https
     network_mode: host
     volumes:
-      - /etc/mnt/cert:/etc/cert
+      - acme_etc_cert:/etc/cert
     environment:
       DOMAIN: 15099.net
       HOSTNAME: hostname
@@ -13,3 +13,6 @@ services:
       PORT: 9220
       USER: user
       PASSWD: passwd
+volumes:
+  acme_etc_cert:
+    external: true
