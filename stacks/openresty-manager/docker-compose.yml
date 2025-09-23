@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  openresty-manager:
+     image: uusec/openresty-manager:1.7.2                          # https://github.com/Safe3/openresty-manager
+
+     restart: always
+     volumes:
+       - /etc/localtime:/etc/localtime:ro
+       - /etc/resolv.conf:/etc/resolv.conf:ro
+       - /var/run/docker.sock:/var/run/docker.sock
+       - om_acme:/opt/om/acme
+       - om_data:/opt/om/data
+       - om_conf:/opt/om/nginx/conf
+
+     networks:
+       vlan:
+         ipv4_address: "${IP:-172.19.0.214}"                         # 修改不同的IP【*】
+networks:
+  vlan:
+    external: true    
+volumes:
+  om_acme:
+  om_data:
+  om_conf:
