@@ -1,7 +1,7 @@
 version: "2"
 services:
   ghcr:
-    image: lihaixin/registry
+    image: registry:latest
     volumes:
       - ./data:/var/lib/registry
       - /etc/localtime:/etc/localtime
