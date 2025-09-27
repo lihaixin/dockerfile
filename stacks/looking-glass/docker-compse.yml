@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+ looking-glass:
+  container_name: looking-glass
+  image: lihaixin/looking-glass
+  ports:
+  - "85:80"
+  environment:
+  - QQ=15050999
+  - LG_ip4=8.8.8.8                           # 留空程序自动检测IP
+  - LG_ip6=                                  # 留空不启用IPV6功能
+  - LG_loc=                                  # 留空自动输入IP所在国家代码
+  - LG_sitename=Looking-Glass                # 网站名称
+  - LG_testfiles=25MB 50MB 100MB             # 下载文件
+  - LG_siteurl=https://lg.my.site            # 网站URL
+
