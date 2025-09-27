@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  openresty-manager:
+     image: lihaixin/bash
+                                                                   # network_mode: "host"
+     restart: always
+     networks:
+       vlan:
+         ipv4_address: "${IP:-172.19.0.3}"                         # 修改不同的IP【*】
+networks:
+  vlan:
+    external: true
