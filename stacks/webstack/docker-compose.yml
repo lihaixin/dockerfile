@@ -1,16 +1,23 @@
-version: '2'
+version: '3.8'
 services:
   webstack-go:                                    
     stdin_open: true
     tty: true
     restart: always
-    ports:
-      - 8001:8000
+    # ports:
+    #   - 8001:8000
     container_name: webstack-go                            # https://github.com/ch3nnn/webstack-go/tree/master
     image: ch3nnn/webstack-go:v2.4.0
     volumes:
       - webstack:/data/app/storage                         # 备份这个数据卷
       - webstacklogs:/data/app/storage/logs
+    networks:
+       vlan:
+         ipv4_address: "${IP:-172.19.0.4}"                         # 修改不同的IP【*】
+networks:
+  vlan:
+    external: true
+
 volumes:
   webstack:
   webstacklogs:
