@@ -5,9 +5,15 @@ services:
     volumes:
       - ./data:/var/lib/registry
       - /etc/localtime:/etc/localtime
-    ports:
-      - 5000:5000
+    # ports:
+    #   - 5000:5000
     environment:
       - PROXY_REMOTE_URL=https://registry-1.docker.io
       - DELETE_ENABLED=true
     restart: always
+    networks:
+       vlan:
+         ipv4_address: "${IP:-172.19.0.2}"                         # 修改不同的IP【*】
+networks:
+  vlan:
+    external: true
