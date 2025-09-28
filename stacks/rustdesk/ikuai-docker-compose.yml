@@ -1,0 +1,34 @@
+services:
+  hbbr:
+    image: rustdesk/rustdesk-server:latest
+    container_name: hbbr
+    command: hbbr
+    networks:
+      vlan:
+        ipv4_address: 172.19.0.100
+    volumes:
+      - data:/root
+    restart: always
+
+  hbbs:
+    image: rustdesk/rustdesk-server:latest
+    container_name: hbbs
+    command: hbbs
+    networks:
+      vlan:
+        ipv4_address: 172.19.0.101   # 可以设成与 hbbr 相同的 IP 吗？❌ 不行，IP 冲突
+    volumes:
+      - data:/root
+    depends_on:
+      - hbbr
+    restart: always
+networks:
+  vlan:
+    external: true
+
+volumes:
+ data:
+
+爱快端口转发记录
+172.19.0.100  21117  tcp+udp  wan1	 11117 rustdesk-Relay
+172.19.0.101  21114-21116  tcp+udp  wan1	 11114-11116 rustdesk-ID
