@@ -1,0 +1,21 @@
+services:
+  excalidraw:
+    image: excalidraw/excalidraw:latest
+    volumes:
+      - notused:/opt/node_app/app/node_modules
+      - /etc/localtime:/etc/localtime
+    # ports:
+    #   - 5000:80
+    restart: always
+    stdin_open: true
+    healthcheck:
+      disable: true
+    networks:
+       vlan:
+         ipv4_address: "${IP:-172.19.0.2}"                         # 修改不同的IP【*】
+networks:
+  vlan:
+    external: true
+    
+volumes:
+  notused:
