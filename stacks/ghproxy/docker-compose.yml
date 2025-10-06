@@ -1,6 +1,6 @@
 version: "3.7"
 services:
-  girhub:
+  github:
     image: hunsh/gh-proxy-py:latest
     container_name: gh
     hostname: gh
@@ -10,5 +10,5 @@ services:
       driver: json-file
       options:
         max-size: 1m
-    ports:
-      - "83:80"
+    # ports:
+    #  - "83:80"
