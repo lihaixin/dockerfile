@@ -1,4 +1,22 @@
+version: 0.1
+log:
+  fields:
+    service: registry
+
+storage:
+  filesystem:
+    rootdirectory: /var/lib/registry
+http:
+  addr: :5000
+  headers:
+    X-Content-Type-Options: [nosniff]
+
+health:
+  storagedriver:
+    enabled: true
+    interval: 10s
+    threshold: 3
 proxy:
   remoteurl: https://registry-1.docker.io
-  username: your_dockerhub_username
-  password: your_dockerhub_password
+  username: *********
+  password: eba222bb-fa8c-4ab3-b6bf-0b337f1d2c77
