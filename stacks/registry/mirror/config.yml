@@ -18,5 +18,5 @@ health:
     threshold: 3
 proxy:
   remoteurl: https://registry-1.docker.io
-  username: *********
-  password: eba222bb-fa8c-4ab3-b6bf-0b337f1d2c77
+  username: your_username
+  password: your_password 
