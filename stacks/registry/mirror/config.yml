@@ -1,0 +1,4 @@
+proxy:
+  remoteurl: https://registry-1.docker.io
+  username: your_dockerhub_username
+  password: your_dockerhub_password
