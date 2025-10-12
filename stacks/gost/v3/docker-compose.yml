@@ -1,0 +1,15 @@
+services:
+  gostv3:
+    image: lihaixin/gost:v3
+    container_name: gostv3
+    restart: unless-stopped
+    network_mode: "host"
+    stdin_open: true                      # -i interactive
+    tty: true                             # -t tty
+    environment:
+      DEBUG: 4
+      INTERFACE: wan1
+    volumes:
+      - gostfile:/home
+volumes:
+  gostfile:
