@@ -1,0 +1,9 @@
+services:
+  realm:                                                # 用于把海外代理转发到小黑盒子里面，加速调用
+    image: lihaixin/realm:latest
+    restart: unless-stopped                             # unless-stopped  always  
+    network_mode: host
+    environment:
+      TYPE: realm
+      LISTEN: 0.0.0.0:10030                             # 把10001 根据堆栈，从10001-10100范围里取值，可配置100条代理 【*】
+      REMOTE: dc.decodo.com:10030                       # 修改最终落地代理IP的地址和端口 【*】
