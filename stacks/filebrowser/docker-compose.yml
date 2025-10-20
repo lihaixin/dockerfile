@@ -7,7 +7,6 @@ services:
     restart: unless-stopped
     environment:
       - FB_USERNAME=myadmin
-      - FB_PASSWORD=password123
     volumes:
       - /:/srv
       - database:/database
