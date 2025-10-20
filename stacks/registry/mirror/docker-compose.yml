@@ -1,15 +1,15 @@
-version: "2"
+version: "3.8"
 services:
   ghcr:
-    image: registry:latest
+    image: registry:2.8.2
     volumes:
-      - ./data:/var/lib/registry
+      - /root/config.yml:/etc/docker/registry/config.yml
       - /etc/localtime:/etc/localtime
+      - /var/lib/registry:/var/lib/registry
     # ports:
     #   - 5000:5000
-    environment:
-      - PROXY_REMOTE_URL=https://registry-1.docker.io
-      - DELETE_ENABLED=true
+
+    #  - REGISTRY_TRACING_ENABLED=false 高于3.0版本采用
     restart: always
     networks:
        vlan:
