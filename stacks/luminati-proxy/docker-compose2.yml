@@ -1,0 +1,17 @@
+services:
+ lumi:
+    image: "luminati/luminati-proxy"
+    restart: unless-stopped                  # unless-stopped  always          
+    volumes:
+      - lpm-root:/root
+    command: proxy-manager
+    #ports:
+    #   - 22999:22999
+    networks:
+      vlan:
+        ipv4_address: "${IP:-172.19.0.8}"                                                                                        # 修改不同的IP【*】
+networks:
+  vlan:
+    external: true
+volumes:
+  lpm-root:
