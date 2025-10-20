@@ -5,11 +5,20 @@ services:
     container_name: filebrowser
     hostname: filebrowser
     restart: unless-stopped
+    environment:
+      - FB_USERNAME=myadmin
+      - FB_PASSWORD=password123
     volumes:
       - /:/srv
+      - database:/database
+      - config:/config
     networks:
       vlan:
         ipv4_address: "${IP:-172.19.0.1}"                         # 修改不同的IP【*】
 networks:
   vlan:
     external: true
+
+volumes:
+  database:
+  config:
