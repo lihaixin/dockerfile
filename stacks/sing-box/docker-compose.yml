@@ -5,7 +5,7 @@ services:                                                                      #
     privileged: true
     environment:
       NO: "${USERNO:-0999202410241280008}"                                     # 授权NO,内部使用，未经授权，第二台设备用，授权码会自动禁止，不能再启用！！！
-      LOG_Level: "${LOG_Level:-info}"                                          # 日志级别，支持trace debug info warn error fatal panic
+      LOG_Level: ${LOG_Level:-info}                                            # 日志级别，支持trace debug info warn error fatal panic
       DNS_ADDR: "${DNS_ADDR:-https://1.1.1.1/dns-query}"                       # 远程调用DNS查询地址
       SOCKS5_SERVER: ${SOCKS5_SERVER:-6.6.6.6}                                 # 落地socks5/http/https 代理IP （链式中转模式下生效）
       SOCKS5_PORT: ${SOCKS5_PORT:-10800}                                       # 落地socks5/http/https 代理端口 （链式中转模式下生效）
