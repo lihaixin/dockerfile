@@ -65,7 +65,7 @@
 				},
 				{
 				"name": "USER",
-				"label": "落地代理账号",
+				"label": "落地代理账号|SS加密方式",
 				"description": "落地代理账号",
 				"default": "user"
 				},
