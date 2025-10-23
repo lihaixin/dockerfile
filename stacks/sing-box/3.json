@@ -2,8 +2,8 @@
 			"type": 3,
 			"title": "sing-box",
 	 		"name": "01_sing-box",
-			"description": "一键安装S5网关",
-			"note": "通过docker容器,配合macvlan,快速使用BOX打造S5多个网关.然后通过爱快下一跳网关进行分流 更多<a href=\"https://hub.docker.com/r/lihaixin/sing-box\" target=\"_blank\">点击这里</a>",
+			"description": "一键安装sing-box网关",
+			"note": "通过docker容器,配合macvlan,快速使用BOX打造S5|SS多个网关.然后通过爱快下一跳网关进行分流 更多<a href=\"https://hub.docker.com/r/lihaixin/sing-box\" target=\"_blank\">点击这里</a>",
 			"categories": ["route"],
 			"platform": "linux",
 			"logo": "https://dockerfile.15099.net/logo/sing-box.png",
@@ -19,44 +19,60 @@
 				"default": "9999210012301280002",
 				"preset": true
 				},
-        			{
+        		{
 				"name": "DNS_ADDR",
 				"label": "落地DNS解析信息",
 				"description": "请选择合适的版本，国内IP选择国内、国外IP选择国外",
 				"select": [
 				        {
 				          "text": "国外",
-				          "value": "tcp://8.8.8.8",
+				          "value": "8.8.8.8",
 				          "default": true
 				        },
 				        {
 				          "text": "国内",
-				          "value": "tcp://223.6.6.6"
+				          "value": "223.6.6.6"
 				        }
 				      ]
 				},
 				{
-				"name": "SOCKS5_SERVER",
-				"label": "落地socks5 IP",
+				"name": "TYPE",
+				"label": "代理类别",
+				"description": "请选择合适的版本，client_socks5 | client_ss",
+				"select": [
+				        {
+				          "text": "socks5",
+				          "value": "client_socks5",
+				          "default": true
+				        },
+				        {
+				          "text": "shadowsocks",
+				          "value": "client_ss"
+				        }
+				      ]
+				},
+				{
+				"name": "SERVER",
+				"label": "落地代理IP",
 				"description": "输入落地IP",
 				"default": "6.6.6.6"
 				},
 				{
-				"name": "SOCKS5_PORT",
-				"label": "落地socks5代理端口",
+				"name": "PORT",
+				"label": "落地代理端口",
 				"description": "输入落地IP端口",
 				"default": "1080"
 				},
 				{
-				"name": "SOCKS5_USERNAME",
-				"label": "落地socks5代理账号",
-				"description": "落地socks5代理账号",
+				"name": "USER",
+				"label": "落地代理账号",
+				"description": "落地代理账号",
 				"default": "user"
 				},
 				{
-				"name": "SOCKS5_PASSWORD",
-				"label": "落地socks5代理密码",
-				"description": "落地socks5代理密码",
+				"name": "PASSWD",
+				"label": "落地代理密码",
+				"description": "落地代理密码",
 				"default": "password"
 				},
 				{
