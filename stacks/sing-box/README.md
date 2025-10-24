@@ -11,11 +11,12 @@ services:
       - /dev/net/tun:/dev/net/tun
     privileged: true
     environment:
-      DNS_ADDR: tcp://8.8.8.8
-      SOCKS5_SERVER: xz12.fgui.xyz
-      SOCKS5_PORT: 12205
-      SOCKS5_USERNAME: CX-US-161CC
-      SOCKS5_PASSWORD: tiktok666888
+      DNS_ADDR: 8.8.8.8
+      TYPE: client_socks5
+      SERVER: xz12.fgui.xyz
+      PORT: 12205
+      USER: CX-US-161CC
+      PASSWORD: tiktok666888
 
     networks:
       vlan:
