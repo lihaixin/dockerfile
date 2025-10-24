@@ -26,7 +26,7 @@
 				"select": [
 				        {
 				          "text": "socks5",
-				          "value": "servert_socks5",
+				          "value": "server_socks5",
 				          "default": true
 				        },
 				        {
