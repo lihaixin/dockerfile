@@ -64,7 +64,7 @@
 				"default": "password"
 				},
 				{
-				"name": "绑定出口接口",
+				"name": "INTERFACE",
 				"label": "通过绑定不同的接口，走不同的IP",
 				"description": "检查网卡信息，确保正确, debian11-12 一般默认为ens5 爱快为wan1 openvpn拨号一般为ovpn** ",
 				"default": "ens5"
