@@ -60,7 +60,7 @@
 				{
 				"name": "PASSWD",
 				"label": "代理密码",
-				"description": "代理密码",
+				"description": "代理密码，2022-blake3-aes-128-gcm长度为：uln4mmQqMiqJXAy9Pi7v2w==",
 				"default": "password"
 				},
 				{
