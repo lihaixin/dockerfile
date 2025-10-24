@@ -1,0 +1,19 @@
+services:                                                                      # 配置多网口代理
+ mproxy:                                                                       # 服务名称，这里取mproxy,代表多网卡多IP 
+    image: "lihaixin/sing-box:${VERSION:-1.12.11}"                             # 镜像名称 https://hub.docker.com/r/lihaixin/sing-box
+    restart: unless-stopped                                                    # unless-stopped  always 
+    network_mode: "host"
+    environment:
+      NO: "${USERNO:-0999202410241280008}"                                     # 授权NO,内部使用，未经授权，第二台设备用，授权码会自动禁止，不能再启用！！！
+      LOG_Level: ${LOG_Level:-info}                                            # 日志级别，支持trace debug info warn error fatal panic
+      DNS_ADDR: "${DNS_ADDR:-8.8.8.8}"                                         # 远程调用DNS查询地址
+      TYPE: ${TYPE:-client_socks5}                                             # client_socks5 | client_ss
+      SERVER: ${SERVER:-0.0.0.0}                                               # 落地socks5/ss 代理IP 
+      PORT: ${PORT:-10800}                                                     # 落地socks5/ss 代理端口 
+      USER: ${USER:-user}                                                      # 落地socks5/ss 代理账号
+      PASSWD: ${PASSWD:-password}                                              # 落地socks5/ss 代理密码
+      INTERFACE: ${INTERFACE:-ens5}                                            # 出口接口，支持ovpn这些虚拟口
+    volumes:
+      - singbox:/etc/sing-box
+volumes:
+  singbox:
