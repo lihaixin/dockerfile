@@ -1,0 +1,74 @@
+{
+			"type": 3,
+			"title": "sing-box_server",
+	 		"name": "01_sing-box_server",
+			"description": "一键安装多网卡多协议代理程序",
+			"note": "通过docker容器,绑定多网卡，使用不同端口落地IP不同 更多<a href=\"https://hub.docker.com/r/lihaixin/sing-box\" target=\"_blank\">点击这里</a>",
+			"categories": ["proxy"],
+			"platform": "linux",
+			"logo": "https://dockerfile.15099.net/logo/sing-box.png",
+			"repository": {
+				"url": "https://gh.15099.net/https://github.com/lihaixin/dockerfile",
+				"stackfile": "stacks/sing-box/server/docker-compose.yml"
+			},
+	 		"env": [
+				{
+				"name": "USERNO",
+				"label": "用户授权USERNO",
+				"description": "用户授权USERNO,也是自定义模板标识号,未授权USERNO只能使用免费模板",
+				"default": "9999210012301280002",
+				"preset": true
+				}
+				{
+				"name": "TYPE",
+				"label": "代理类别",
+				"description": "请选择合适的版本，servert_socks5 | server_ss | server_ss_head ",
+				"select": [
+				        {
+				          "text": "socks5",
+				          "value": "servert_socks5",
+				          "default": true
+				        },
+				        {
+				          "text": "shadowsocks",
+				          "value": "server_ss"
+				        },
+				        {
+				          "text": "shadowsocks_head",
+				          "value": "server_ss_head"
+				        }
+				      ]
+				},
+				{
+				"name": "SERVER",
+				"label": "绑定IP地址",
+				"description": "默认监听所有网口",
+				"default": "0.0.0.0"
+				},
+				{
+				"name": "PORT",
+				"label": "代理端口",
+				"description": "落地IP端口",
+				"default": "1080"
+				},
+				{
+				"name": "USER",
+				"label": "代理账号|SS加密方式",
+				"description": "代理账号|加密方式 xchacha20-ietf-poly1305  2022-blake3-aes-128-gcm",
+				"default": "user"
+				},
+				{
+				"name": "PASSWD",
+				"label": "代理密码",
+				"description": "代理密码",
+				"default": "password"
+				},
+				{
+				"name": "绑定出口接口",
+				"label": "通过绑定不同的接口，走不同的IP",
+				"description": "检查网卡信息，确保正确, debian11-12 一般默认为ens5 爱快为wan1 openvpn拨号一般为ovpn** ",
+				"default": "ens5"
+				}
+				]
+}
+,
