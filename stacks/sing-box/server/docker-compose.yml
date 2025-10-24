@@ -3,6 +3,10 @@ services:                                                                      #
     image: "lihaixin/sing-box:${VERSION:-1.12.11}"                             # 镜像名称 https://hub.docker.com/r/lihaixin/sing-box
     restart: unless-stopped                                                    # unless-stopped  always 
     network_mode: "host"
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
     environment:
       NO: "${USERNO:-0999202410241280008}"                                     # 授权NO,内部使用，未经授权，第二台设备用，授权码会自动禁止，不能再启用！！！
       LOG_Level: ${LOG_Level:-info}                                            # 日志级别，支持trace debug info warn error fatal panic
