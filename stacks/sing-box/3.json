@@ -48,6 +48,10 @@
 				        {
 				          "text": "shadowsocks",
 				          "value": "client_ss"
+				        },
+				        {
+				          "text": "shadowsocks_head",
+				          "value": "client_ss_head"
 				        }
 				      ]
 				},
