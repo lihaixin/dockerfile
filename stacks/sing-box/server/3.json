@@ -43,7 +43,7 @@
 				        },
 				        {
 				          "text": "wireguard_preshare",
-				          "value": "endpoint_wireguard_pre"
+				          "value": "endpoint_wireguard_preshare"
 				        }
 				      ]
 				},
