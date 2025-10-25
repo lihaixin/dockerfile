@@ -61,13 +61,13 @@
 				},
 				{
 				"name": "USER",
-				"label": "代理账号|SS加密方式",
+				"label": "代理账号|SS加密方式|WG服务端公钥",
 				"description": "代理账号|加密方式 xchacha20-ietf-poly1305  2022-blake3-aes-128-gcm",
 				"default": "user"
 				},
 				{
 				"name": "PASSWD",
-				"label": "代理密码",
+				"label": "代理密码|WG本地端密钥",
 				"description": "代理密码，2022-blake3-aes-128-gcm长度为：uln4mmQqMiqJXAy9Pi7v2w==",
 				"default": "password"
 				},
@@ -82,6 +82,13 @@
 				"label": "wireguard服务器端地址",
 				"description": "用于客户端和服务器通信的内网地址",
 				"default": "10.8.1.1/24"
+				}
+				,
+				{
+				"name": "PRE_KEY",
+				"label": "wireguard 预共享密钥",
+				"description": "是一个可选的额外加密层，用于增强安全性",
+				"default": "Hj8kLm9nOp0qRs1tUv2wXy3zAb4cDe5fGh6iJk7lMn8="
 				}
 				]
 }
