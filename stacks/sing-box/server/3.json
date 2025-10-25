@@ -36,6 +36,14 @@
 				        {
 				          "text": "shadowsocks_head",
 				          "value": "server_ss_head"
+				        },
+				        {
+				          "text": "wireguard",
+				          "value": "endpoint_wireguard"
+				        },
+				        {
+				          "text": "wireguard_preshare",
+				          "value": "endpoint_wireguard_pre"
 				        }
 				      ]
 				},
@@ -68,6 +76,12 @@
 				"label": "通过绑定不同的接口，走不同的IP",
 				"description": "检查网卡信息，确保正确, debian11-12 一般默认为ens5 爱快为wan1 openvpn拨号一般为ovpn** ",
 				"default": "ens5"
+				},
+				{
+				"name": "WGADDR",
+				"label": "wireguard服务器端地址",
+				"description": "用于客户端和服务器通信的内网地址",
+				"default": "10.8.1.1/24"
 				}
 				]
 }
