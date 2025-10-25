@@ -52,6 +52,14 @@
 				        {
 				          "text": "shadowsocks_head",
 				          "value": "client_ss_head"
+				        },
+				        {
+				          "text": "wireguard",
+				          "value": "client_wireguard"
+				        },
+				        {
+				          "text": "wireguard_preshare",
+				          "value": "client_wireguard_preshare"
 				        }
 				      ]
 				},
@@ -69,15 +77,27 @@
 				},
 				{
 				"name": "USER",
-				"label": "落地代理账号|SS加密方式",
-				"description": "落地代理账号",
+				"label": "落地代理账号|SS加密方式|WG服务端公钥",
+				"description": "落地代理账号 | SS加密方式：xchacha20-ietf-poly1305  2022-blake3-aes-128-gcm | WG服务端公钥",
 				"default": "user"
 				},
 				{
 				"name": "PASSWD",
-				"label": "落地代理密码",
-				"description": "落地代理密码",
+				"label": "落地代理密码| WGK客户端私钥",
+				"description": "落地代理 ss 密码 | WGK客户端私钥",
 				"default": "password"
+				},
+				{
+				"name": "WGADDR",
+				"label": "wireguard服务器端地址",
+				"description": "用于客户端和服务器通信的内网地址",
+				"default": "10.8.1.1/24"
+				},
+				{
+				"name": "PRE_KEY",
+				"label": "wireguard 预共享密钥",
+				"description": "是一个可选的额外加密层，用于增强安全性",
+				"default": "Hj8kLm9nOp0qRs1tUv2wXy3zAb4cDe5fGh6iJk7lMn8="
 				},
 				{
 				"name": "IP",
