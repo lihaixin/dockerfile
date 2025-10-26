@@ -60,6 +60,10 @@
 				        {
 				          "text": "wireguard_preshare",
 				          "value": "client_wireguard_preshare"
+				        },
+				        {
+				          "text": "vless_reality_tcp",
+				          "value": "client_vless_grpc"
 				        }
 				      ]
 				},
@@ -77,13 +81,13 @@
 				},
 				{
 				"name": "USER",
-				"label": "落地代理账号|SS加密方式|WG服务端公钥",
+				"label": "落地代理账号|SS加密方式|WG服务端公钥|Vless用户名",
 				"description": "落地代理账号 | SS加密方式：xchacha20-ietf-poly1305  2022-blake3-aes-128-gcm | WG服务端公钥",
 				"default": "user"
 				},
 				{
 				"name": "PASSWD",
-				"label": "落地代理密码| WGK客户端私钥",
+				"label": "落地代理密码| WGK客户端私钥| Vless UUID",
 				"description": "落地代理 ss 密码 | WGK客户端私钥",
 				"default": "password"
 				},
