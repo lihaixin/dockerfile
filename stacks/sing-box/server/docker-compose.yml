@@ -10,7 +10,7 @@ services:                                                                      #
         hard: 65536
     environment:
       NO: "${USERNO:-0999202410241280008}"                                     # 授权NO,内部使用，未经授权，第二台设备用，授权码会自动禁止，不能再启用！！！
-      LOG_Level: ${LOG_Level:-info}                                            # 日志级别，支持trace debug info warn error fatal panic
+      LOG_LEVEl: ${LOG_LEVEl:-info}                                            # 日志级别，支持trace debug info warn error fatal panic
       DNS_ADDR: "${DNS_ADDR:-8.8.8.8}"                                         # 远程调用DNS查询地址
       TYPE: ${TYPE:-server_socks5}                                             # server_socks5 | server_ss | endpoint_wireguard
       SERVER: ${SERVER:-0.0.0.0}                                               # 落地socks5/ss/wg 代理IP 
