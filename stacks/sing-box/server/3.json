@@ -44,6 +44,10 @@
 				        {
 				          "text": "wireguard_preshare",
 				          "value": "endpoint_wireguard_preshare"
+				        },
+				        {
+				          "text": "vless_reality_tcp",
+				          "value": "server_vless_grpc"
 				        }
 				      ]
 				},
@@ -61,13 +65,13 @@
 				},
 				{
 				"name": "USER",
-				"label": "代理账号|SS加密方式|WG服务端公钥",
+				"label": "代理账号|SS加密方式|WG服务端公钥|Vless用户名",
 				"description": "代理账号|加密方式 xchacha20-ietf-poly1305  2022-blake3-aes-128-gcm",
 				"default": "user"
 				},
 				{
 				"name": "PASSWD",
-				"label": "代理密码|WG本地端密钥",
+				"label": "代理密码|WG本地端密钥|Vless UUID",
 				"description": "代理密码，2022-blake3-aes-128-gcm长度为：uln4mmQqMiqJXAy9Pi7v2w==",
 				"default": "password"
 				},
