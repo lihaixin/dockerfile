@@ -25,29 +25,33 @@
 				"description": "请选择合适的版本，servert_socks5 | server_ss | server_ss_head ",
 				"select": [
 				        {
-				          "text": "socks5",
+				          "text": "socks5普通代理",
 				          "value": "server_socks5",
 				          "default": true
 				        },
 				        {
-				          "text": "shadowsocks",
+				          "text": "shadowsocks加密代理",
 				          "value": "server_ss"
 				        },
 				        {
-				          "text": "shadowsocks_head",
+				          "text": "shadowsocks_head加密代理",
 				          "value": "server_ss_head"
 				        },
 				        {
-				          "text": "wireguard",
+				          "text": "wireguard VPN",
 				          "value": "endpoint_wireguard"
 				        },
 				        {
-				          "text": "wireguard_preshare",
+				          "text": "wireguard_preshare_VPN",
 				          "value": "endpoint_wireguard_preshare"
 				        },
 				        {
-				          "text": "vless_reality_tcp",
+				          "text": "vless_reality_tcp上网冲浪",
 				          "value": "server_vless_grpc"
+				        },
+				        {
+				          "text": "tuic游戏专项",
+				          "value": "server_tuic"
 				        }
 				      ]
 				},
@@ -65,13 +69,13 @@
 				},
 				{
 				"name": "USER",
-				"label": "代理账号|SS加密方式|WG服务端公钥|Vless用户名",
-				"description": "代理账号|加密方式 xchacha20-ietf-poly1305  2022-blake3-aes-128-gcm",
+				"label": "代理账号|SS加密方式|WG客户端公钥|Vless UUID|tuic UUID",
+				"description": "代理账号|加密方式 xchacha20-ietf-poly1305  2022-blake3-aes-128-gcm | WG客户端公钥 | tuic UUID",
 				"default": "user"
 				},
 				{
 				"name": "PASSWD",
-				"label": "代理密码|WG本地端密钥|Vless UUID",
+				"label": "代理密码|WG本地端密钥|Vless 密码| tuic UUID",
 				"description": "代理密码，2022-blake3-aes-128-gcm长度为：uln4mmQqMiqJXAy9Pi7v2w==",
 				"default": "password"
 				},
