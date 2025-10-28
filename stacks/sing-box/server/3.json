@@ -22,7 +22,7 @@
 				{
 				"name": "TYPE",
 				"label": "代理类别",
-				"description": "请选择合适的版本，servert_socks5 | server_ss | server_ss_head ",
+				"description": "请选择合适的版本，socks5 | ss | ss_head | wireguard | wireguard_preshare | vless_reality_tcp | tuic ",
 				"select": [
 				        {
 				          "text": "socks5普通代理",
@@ -30,7 +30,7 @@
 				          "default": true
 				        },
 				        {
-				          "text": "shadowsocks加密代理",
+				          "text": "ss加密代理",
 				          "value": "server_ss"
 				        },
 				        {
@@ -38,11 +38,11 @@
 				          "value": "server_ss_head"
 				        },
 				        {
-				          "text": "wireguard VPN",
+				          "text": "wireguard 隧道",
 				          "value": "endpoint_wireguard"
 				        },
 				        {
-				          "text": "wireguard_preshare_VPN",
+				          "text": "wireguard_preshare_隧道",
 				          "value": "endpoint_wireguard_preshare"
 				        },
 				        {
