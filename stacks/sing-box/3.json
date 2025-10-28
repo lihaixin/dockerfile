@@ -86,13 +86,13 @@
 				{
 				"name": "USER",
 				"label": "socks5账号|SS加密方式|WG服务端公钥|Vless UUID| tuic UUID",
-				"description": "落地 socks5账号 | SS加密方式：xchacha20-ietf-poly1305  2022-blake3-aes-128-gcm | WG服务端公钥 通过sing-box generate wg-keypair 生成 DqoieDk7radoOFsql4RedJ4USWWL3MiHYV/oPhaleDo= |Vless UUID| tuic UUID 81bb71d4-971f-406b-9bf1-a8bff852d4dc",
+				"description": "落地 socks5账号 | SS加密方式：xchacha20-ietf-poly1305  2022-blake3-aes-128-gcm | WG服务端公钥 DqoieDk7radoOFsql4RedJ4USWWL3MiHYV/oPhaleDo= |Vless UUID| tuic UUID 81bb71d4-971f-406b-9bf1-a8bff852d4dc",
 				"default": "user"
 				},
 				{
 				"name": "PASSWD",
 				"label": "socks5密码|SS密码| WGK客户端私钥| Vless 密码 | tuic 密码",
-				"description": "落地 socks5密码 | ss密码 | WGK客户端私钥 通过sing-box generate wg-keypair 生成 yHdMUKZy7HBw5uYeDb8f9YVaJXn/mY5+yCzcrUv0Pko= | vless 密码 | tuic 密码",
+				"description": "落地 socks5密码 | ss密码 | WGK客户端私钥 yHdMUKZy7HBw5uYeDb8f9YVaJXn/mY5+yCzcrUv0Pko= | vless 密码 | tuic 密码",
 				"default": "password"
 				},
 				{
