@@ -38,32 +38,36 @@
 				{
 				"name": "TYPE",
 				"label": "代理类别",
-				"description": "请选择合适的版本，client_socks5 | client_ss",
+				"description": "请选择合适的版本，socks5 | ss | ss_head | wireguard | wireguard_preshare | vless_reality_tcp | tuic",
 				"select": [
 				        {
-				          "text": "socks5",
+				          "text": "socks5普通代理",
 				          "value": "client_socks5",
 				          "default": true
 				        },
 				        {
-				          "text": "shadowsocks",
+				          "text": "shadowsocks加密代理",
 				          "value": "client_ss"
 				        },
 				        {
-				          "text": "shadowsocks_head",
+				          "text": "shadowsocks_head加密代理",
 				          "value": "client_ss_head"
 				        },
 				        {
-				          "text": "wireguard",
+				          "text": "wireguard_隧道",
 				          "value": "client_wireguard"
 				        },
 				        {
-				          "text": "wireguard_preshare",
+				          "text": "wireguard_preshare_隧道",
 				          "value": "client_wireguard_preshare"
 				        },
 				        {
-				          "text": "vless_reality_tcp",
+				          "text": "vless_reality_tcp上网冲浪",
 				          "value": "client_vless_grpc"
+				        },
+				        {
+				          "text": "tuic游戏专项",
+				          "value": "client_tuic"
 				        }
 				      ]
 				},
@@ -81,21 +85,21 @@
 				},
 				{
 				"name": "USER",
-				"label": "落地代理账号|SS加密方式|WG服务端公钥|Vless用户名",
-				"description": "落地代理账号 | SS加密方式：xchacha20-ietf-poly1305  2022-blake3-aes-128-gcm | WG服务端公钥",
+				"label": "落地代理账号|SS加密方式|WG服务端公钥|Vless UUID| tuic UUID",
+				"description": "落地代理账号 | SS加密方式：xchacha20-ietf-poly1305  2022-blake3-aes-128-gcm | WG服务端公钥 |Vless UUID| tuic UUID",
 				"default": "user"
 				},
 				{
 				"name": "PASSWD",
-				"label": "落地代理密码| WGK客户端私钥| Vless UUID",
-				"description": "落地代理 ss 密码 | WGK客户端私钥",
+				"label": "落地代理密码| WGK客户端私钥| Vless UUID | tuic UUID",
+				"description": "落地socks5密码 | ss密码 | WGK客户端私钥 | vless 密码 | tuic 密码",
 				"default": "password"
 				},
 				{
 				"name": "WGADDR",
 				"label": "wireguard服务器端地址",
 				"description": "用于客户端和服务器通信的内网地址",
-				"default": "10.8.1.1/24"
+				"default": "10.8.1.11/24"
 				},
 				{
 				"name": "PRE_KEY",
