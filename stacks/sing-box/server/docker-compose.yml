@@ -4,6 +4,7 @@ services:                                                                      #
     restart: unless-stopped                                                    # unless-stopped  always 
     network_mode: "host"
     privileged: true                                                           # wg服务需要
+    # entrypoint: ["/bin/sh", "-c", "tail -f /dev/null"]
     ulimits:
       nofile:
         soft: 65536
