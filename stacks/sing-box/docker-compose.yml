@@ -5,7 +5,7 @@ services:                                                                      #
     privileged: true
     environment:
       NO: "${USERNO:-0999202410241280008}"                                     # 授权NO,内部使用，未经授权，第二台设备用，授权码会自动禁止，不能再启用！！！
-      LOG_LEVEl: ${LOG_LEVEl:-info}                                            # 日志级别，支持trace debug info warn error fatal panic
+      LOG_LEVEL: ${LOG_LEVEL:-info}                                            # 日志级别，支持trace debug info warn error fatal panic
       DNS_ADDR: "${DNS_ADDR:-8.8.8.8}"                                         # 远程调用DNS查询地址
       TYPE: ${TYPE:-client_socks5}                                             # client_socks5 | client_ss | client_ss_head | client_wireguad | client_wireguad_preshare | client_vless_reality_tcp | client_tuic
       SERVER: ${SERVER:-6.6.6.6}                                               # 代理IP地址 
