@@ -13,10 +13,10 @@ services:                                                                      #
       LOG_LEVEl: ${LOG_LEVEl:-info}                                            # 日志级别，支持trace debug info warn error fatal panic
       DNS_ADDR: "${DNS_ADDR:-8.8.8.8}"                                         # 远程调用DNS查询地址
       TYPE: ${TYPE:-server_socks5}                                             # server_socks5 | server_ss | endpoint_wireguard
-      SERVER: ${SERVER:-0.0.0.0}                                               # 落地socks5/ss/wg 代理IP 
-      PORT: ${PORT:-10800}                                                     # 落地socks5/ss/wg 代理端口 
-      USER: ${USER:-user}                                                      # 落地socks5/ss/wg 代理账号 或加密方式 2022-blake3-aes-128-gcm  xchacha20-ietf-poly1305 aes-256-gcm 或 客户端公钥
-      PASSWD: ${PASSWD:-password}                                              # 落地socks5/ss 代理密码 或WG端私钥，请通过 sing-box generate wg-keypair 创建
+      SERVER: ${SERVER:-0.0.0.0}                                               # 落地socks5/ss/wg/tuic 代理IP 
+      PORT: ${PORT:-10800}                                                     # 落地socks5/ss/wg/tuic 代理端口 
+      USER: ${USER:-user}                                                      # 落地socks5代理账号 /ss 加密方式 2022-blake3-aes-128-gcm  xchacha20-ietf-poly1305 aes-256-gcm /wg 客户端公钥 /tuic UUID
+      PASSWD: ${PASSWD:-password}                                              # 落地socks5/ss/tuic 代理密码 /WG端私钥，请通过 sing-box generate wg-keypair 创建
       INTERFACE: ${INTERFACE:-ens5}                                            # 出口接口，支持ovpn这些虚拟口
       WGADDR: "${WGADDR:-10.8.1.1/24}"
       PRE_KEY: "${PRE_KEY:-Hj8kLm9nOp0qRs1tUv2wXy3zAb4cDe5fGh6iJk7lMn8=}"      # 使用这个命令生成 Hj8kLm9nOp0qRs1tUv2wXy3zAb4cDe5fGh6iJk7lMn8= 是一个可选的额外加密层
