@@ -70,7 +70,7 @@
 				{
 				"name": "USER",
 				"label": "socks5账号|SS加密方式|WG客户端公钥|Vless UUID|tuic UUID",
-				"description": "socks5账号|SS加密方式 xchacha20-ietf-poly1305  2022-blake3-aes-128-gcm | WG客户端公钥 通过sing-box generate wg-keypair 生成1gtAfHkSLiyfZmVRXlx7ExyzXMfnMnBI8mZ5DYiJRC0= |vless UUID |tuic UUID",
+				"description": "socks5账号|SS加密方式 xchacha20-ietf-poly1305  2022-blake3-aes-128-gcm | WG客户端公钥 通过sing-box generate wg-keypair 生成1gtAfHkSLiyfZmVRXlx7ExyzXMfnMnBI8mZ5DYiJRC0= |vless UUID |tuic UUID 81bb71d4-971f-406b-9bf1-a8bff852d4dc",
 				"default": "user"
 				},
 				{
