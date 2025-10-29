@@ -3,6 +3,10 @@ services:                                                                      #
     image: "lihaixin/sing-box:${VERSION:-1.12.11}"                             # 镜像名称 https://hub.docker.com/r/lihaixin/sing-box
     restart: unless-stopped                                                    # unless-stopped  always 
     privileged: true
+    volumes:
+      - portainer_data:/data                                                   # 挂载整个卷
+    env_file:
+      - /data/global.env
     environment:
       NO: "${USERNO:-0999202410241280008}"                                     # 授权NO,内部使用，未经授权，第二台设备用，授权码会自动禁止，不能再启用！！！
       LOG_LEVEL: ${LOG_LEVEL:-info}                                            # 日志级别，支持trace debug info warn error fatal panic
@@ -20,4 +24,7 @@ services:                                                                      #
         ipv4_address: ${IP:-172.19.0.1}                                        # 修改不同的IP【*】
 networks:
   vlan:
+    external: true
+volumes:
+  portainer_data:
     external: true
