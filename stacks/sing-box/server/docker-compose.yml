@@ -9,6 +9,8 @@ services:                                                                      #
       nofile:
         soft: 65536
         hard: 65536
+    env_file:
+      - /data/global.env
     environment:
       NO: "${USERNO:-0999202410241280008}"                                     # 授权NO,内部使用，未经授权，第二台设备用，授权码会自动禁止，不能再启用！！！
       LOG_LEVEL: ${LOG_LEVEL:-info}                                            # 日志级别，支持trace debug info warn error fatal panic
@@ -23,5 +25,8 @@ services:                                                                      #
       PRE_KEY: "${PRE_KEY:-Hj8kLm9nOp0qRs1tUv2wXy3zAb4cDe5fGh6iJk7lMn8=}"      # 使用这个命令生成 Hj8kLm9nOp0qRs1tUv2wXy3zAb4cDe5fGh6iJk7lMn8= 是一个可选的额外加密层
     volumes:
       - singbox:/etc/sing-box
+      - portainer_data:/data                                                   # 挂载整个卷
 volumes:
   singbox:
+  portainer_data:
+    external: true
