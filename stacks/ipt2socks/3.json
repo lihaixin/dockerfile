@@ -13,13 +13,6 @@
 			},
 	 		"env": [
 				{
-				"name": "USERNO",
-				"label": "用户授权USERNO",
-				"description": "用户授权USERNO",
-				"default": "9999210012301280002",
-				"preset": true
-				},
-				{
 				"name": "S5IP",
 				"label": "落地socks5 IP",
 				"description": "输入落地IP",
