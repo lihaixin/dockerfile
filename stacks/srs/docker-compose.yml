@@ -1,0 +1,15 @@
+services:                                                           # https://ossrs.io/lts/en-us/docs/v6/doc/getting-started 默认端口：8080 1935 1985 
+  1panel:
+    container_name: srs                                             # 容器名
+    image: ossrs/srs:latest
+    restart: always
+    # ports:
+    #  - 8080:8080
+    #  - 1935:1935
+    #  - 1985:1985
+    networks:
+      vlan:
+        ipv4_address: "${IP:-172.19.0.216}"                           # 修改不同的IP【*】
+networks:
+  vlan:
+    external: true
