@@ -9,6 +9,7 @@ services:                                                                      #
       - /data/global.env
     environment:
       UPDATE: "${UPDATE:-0}"                                                   # 在线更新模板
+      MODE_RULE: ${MODE_RULE:-direct}                                          # 设置是否分流，direct为国内外分流，proxy为全局代理
       LOG_LEVEL: ${LOG_LEVEL:-info}                                            # 日志级别，支持trace debug info warn error fatal panic
       DNS_ADDR: "${DNS_ADDR:-8.8.8.8}"                                         # 远程调用DNS查询地址
       TYPE: ${TYPE:-client_socks5}                                             # client_socks5 | client_ss | client_ss_head | client_wireguad | client_wireguad_preshare | client_vless_reality_tcp | client_tuic
