@@ -29,6 +29,22 @@
 				      ]
 				},
 				{
+				"name": "MODE_RULE",
+				"label": "是否分流",
+				"description": "选择国外代理是否选择国内外分流，国内代理请选择全局代理",
+				"select": [
+				        {
+				          "text": "分流",
+				          "value": "direct",
+				          "default": true
+				        },
+				        {
+				          "text": "全局",
+				          "value": "proxy"
+				        }
+				      ]
+				},
+				{
 				"name": "TYPE",
 				"label": "代理类别",
 				"description": "请选择合适的版本，socks5 | ss | ss_head | wireguard | wireguard_preshare | vless_reality_tcp | tuic",
