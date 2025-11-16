@@ -58,7 +58,7 @@
 				{
 				"name": "SERVER",
 				"label": "绑定IP地址",
-				"description": "默认监听所有网口",
+				"description": "默认监听所有网口| tuic游戏专项请输入真实公网IP用于申请IP证书！！！",
 				"default": "0.0.0.0"
 				},
 				{
