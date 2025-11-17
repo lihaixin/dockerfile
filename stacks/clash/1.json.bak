@@ -1,5 +1,5 @@
 {
-    			    "type": 1,
+    			"type": 1,
 			    "title": "clash_client",
 	 		    "name": "clash_client",
 			    "description": "在国内服务器安装clash_client中转端口",
