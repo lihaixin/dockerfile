@@ -2,7 +2,7 @@
 			"type": 3,
 			"title": "Clash",
 	 		"name": "01_clash",
-			"description": "一键安装各类网关",
+			"description": "一键安装clash网关",
 			"note": "通过docker容器,配合macvlan,快速使用clash打造白名单、黑名单、S5、HTTP、hysteria2、wireguard多个网关.然后通过爱快下一跳网关进行分流 更多<a href=\"https://hub.docker.com/r/lihaixin/clash\" target=\"_blank\">点击这里</a>",
 			"categories": ["route"],
 			"platform": "linux",
