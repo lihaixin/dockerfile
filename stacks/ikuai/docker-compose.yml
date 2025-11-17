@@ -14,8 +14,8 @@ services:
     stop_grace_period: 2m
     restart: on-failure
     environment:
-      ARGUMENTS: "-netdev user,id=hostnet1 -device virtio-net-pci,romfile=,netdev=hostnet1,id=net1"        # 第2块网卡，可以用来模拟wan口
-      BOOT: "https://patch.ikuai8.com/3.x/iso/iKuai8_x32_3.6.13_Build202301131532.iso"  # 更多版本 https://lucienshui.github.io/ikuai-firmware/
+      # ARGUMENTS: "-netdev user,id=hostnet1 -device virtio-net-pci,romfile=,netdev=hostnet1,id=net1"        # 第2块网卡，可以用来模拟wan口
+      BOOT: "https://patch.ikuai8.com/3.x/iso/iKuai8_x32_3.6.13_Build202301131532.iso"                       # 更多版本 https://lucienshui.github.io/ikuai-firmware/
       DISK_SIZE: "${DISK_SIZE:-10G}"                  # 磁盘大小
       RAM_SIZE: "${MEM_SIZE:-2G}"                     # 内存大小
       DISK_FMT: "${DISK_FMT:-qcow2}"                  # 支持raw和 qcow2
