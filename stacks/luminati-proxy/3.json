@@ -1,6 +1,7 @@
  {
 			"type": 3,
 			"title": "luminati-proxy",
+	 	 	"name": "luminati-proxy",
 			"description": "一键部署luminati-proxy管理器",
 			"note": "通过docker容器，配合自定义lumi-proxy-network桥接10.22.1.254网络,快速内网部署代理管理，然后通过gost:s5进行授权管理.",
 			"categories": ["proxy"],
