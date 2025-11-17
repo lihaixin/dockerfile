@@ -3,6 +3,10 @@ services:                                                                      #
     image: "ikuaiapp/clash:${VERSION:-1.19.3}"                                 # 镜像名称 https://hub.docker.com/r/ikuaiapp/clash
     restart: unless-stopped                                                    # unless-stopped  always 
     privileged: true
+    volumes:
+      - portainer_data:/data                                                   # 挂载整个卷
+    env_file:
+      - /data/global.env
     environment:
       NO: "${USERNO:-0999202410241280008}"                                     # 授权NO,内部使用，未经授权，第二台设备用，授权码会自动禁止，不能再启用！！！
       UPDATE: "${UPDATE:-0}"                                                   # 在线更新模板
@@ -21,4 +25,7 @@ services:                                                                      #
         ipv4_address: ${IP:-172.19.0.1}                                        # 修改不同的IP【*】
 networks:
   vlan:
+    external: true
+volumes:
+  portainer_data:
     external: true
