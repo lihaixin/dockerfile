@@ -13,23 +13,17 @@
 			},
 	 		"env": [
 				{
-				"name": "UPDATE",
-				"label": "模板升级UPDATE",
-				"description": "自定义用户开启升级模板",
-				"default": "0"
-				},
-				{
 				"name": "CLASH_MODE",
 				"label": "分流规则CLASH_MODE",
-				"description": "分流规则CLASH_MODE rule为国内外分流,global是全局代理,默认为rule",
+				"description": "分流规则，国外代理是否选择国内外分流，国内代理请选择全局代理",
 				"select": [
 				        {
-				          "text": "rule",
+				          "text": "分流",
 				          "value": "rule",
 				          "default": true
 				        },
 				        {
-				          "text": "global",
+				          "text": "全局",
 				          "value": "global"
 				        }
 				      ]
@@ -76,7 +70,7 @@
 				          "text": "M6_S5 纯S5游戏代理,不调用下面订阅地址CLASH_SUBURL,国内环境用",
 				          "value": "M6_S5"
 				        },
-					{
+					    {
 				          "text": "M6_S5_IKUAI 爱快纯S5游戏代理,不调用下面订阅地址CLASH_SUBURL,国内外环境用",
 				          "value": "M6_S5_IKUAI"
 				        },
