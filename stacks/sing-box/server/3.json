@@ -47,7 +47,11 @@
 				        },
 				        {
 				          "text": "vless_reality_tcp上网冲浪",
-				          "value": "server_vless_grpc"
+				          "value": "server_vless_tcp"
+				        },
+						{
+				          "text": "vless_reality_h2上网冲浪",
+				          "value": "server_vless_h2"
 				        },
 				        {
 				          "text": "tuic游戏专项",
