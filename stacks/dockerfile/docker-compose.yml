@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  openresty-manager:
+  dockerfile:
      image: lihaixin/dockerfile:2.0
                                                                    # network_mode: "host"
      restart: always
