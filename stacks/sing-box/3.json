@@ -71,12 +71,12 @@
 				          "value": "client_wireguard_preshare"
 				        },
 				        {
-				          "text": "vless_reality_tcp上网冲浪",
+				          "text": "vless_tcp上网冲浪",
 				          "value": "client_vless_tcp"
 				        },
 				        {
-				          "text": "vless_reality_h2上网冲浪",
-				          "value": "client_vless_h2"
+				          "text": "hysteria2游戏专项",
+				          "value": "client_hysteria2"
 				        },
 				        {
 				          "text": "tuic游戏专项",
