@@ -84,10 +84,50 @@
 				"default": "password"
 				},
 				{
+				"name": "RTYPE",
+				"label": "落地代理类别",
+				"description": "请选择合适的版本，direct | socks5 ",
+				"select": [
+				        {
+				          "text": "直连出口",
+				          "value": "direct",
+				          "default": true
+				        },
+				        {
+				          "text": "socks5代理",
+				          "value": "socks5"
+				        }
+				      ]
+				},
+				{
 				"name": "INTERFACE",
 				"label": "通过绑定不同的接口，走不同的IP",
 				"description": "检查网卡信息，确保正确, debian11-12 一般默认为ens5 爱快为wan1 openvpn拨号一般为ovpn** ",
 				"default": "ens5"
+				},
+				{
+				"name": "RSERVER",
+				"label": "落地IP",
+				"description": "如果是直连，填写本地公网IP,如果是socks5代理，其他落地IP",
+				"default": "127.0.0.1"
+				},
+				{
+				"name": "RPORT",
+				"label": "落地端口",
+				"description": "落地端口",
+				"default": "1080"
+				},
+				{
+				"name": "RUSER",
+				"label": "落地账号",
+				"description": "socks5账号",
+				"default": "ruser"
+				},
+				{
+				"name": "RPASSWD",
+				"label": "落地密码",
+				"description": "socks5密码",
+				"default": "rpass"
 				},
 				{
 				"name": "WGADDR",
