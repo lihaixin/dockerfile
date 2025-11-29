@@ -17,7 +17,7 @@ services:                                                                      #
       PORT: ${PORT:-10800}                                                     # 代理IP端口 
       USER: ${USER:-user}                                                      # 代理 socks5账号 /ss 加密方式 2022-blake3-aes-128-gcm  xchacha20-ietf-poly1305 aes-256-gcm / wg服务端公钥 / vless UUID / TUIC UUID
       PASSWD: ${PASSWD:-password}                                              # 代理 socks5密码 /ss密码 /WG客户端私钥 /vless密码 /tuic密码
-      WGADDR: "${WGADDR:-10.8.1.11/24}"
+      WGADDR: "${WGADDR:-10.8.1.11/24}"                                        # wireguard 客户端分配IP
       PRE_KEY: "${PRE_KEY:-Hj8kLm9nOp0qRs1tUv2wXy3zAb4cDe5fGh6iJk7lMn8=}"      # 使用这个命令生成 Hj8kLm9nOp0qRs1tUv2wXy3zAb4cDe5fGh6iJk7lMn8= 是一个可选的额外加密层
       
     networks:
