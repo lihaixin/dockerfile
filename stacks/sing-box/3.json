@@ -34,13 +34,17 @@
 				"description": "国外代理是否选择国内外分流，国内代理请选择全局代理",
 				"select": [
 				        {
-				          "text": "分流",
-				          "value": "direct",
+				          "text": "国内外分流",
+				          "value": "rule",
 				          "default": true
 				        },
 				        {
-				          "text": "全局",
+				          "text": "全局代理",
 				          "value": "proxy"
+				        },
+				        {
+				          "text": "本地直连",
+				          "value": "direct"
 				        }
 				      ]
 				},
