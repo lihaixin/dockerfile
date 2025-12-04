@@ -1,6 +1,6 @@
 services:                                                                      # 配置多网口代理
  mproxy:                                                                       # 服务名称，这里取mproxy,代表多网卡多IP 
-    image: "lihaixin/sing-box:${VERSION:-1.12.13}"                             # 镜像名称 https://hub.docker.com/r/lihaixin/sing-box
+    image: "lihaixin/sing-box:${VERSION:-1.12.14}"                             # 镜像名称 https://hub.docker.com/r/lihaixin/sing-box
     restart: unless-stopped                                                    # unless-stopped  always 
     network_mode: "host"
     privileged: true                                                           # wg服务需要
