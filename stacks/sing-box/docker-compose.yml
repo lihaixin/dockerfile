@@ -1,6 +1,6 @@
 services:                                                                      # 爱快路由器下配置多sing-box透明代理，然后通过强大的爱快分流，分流方式支持无线热点分流 源地址分流
  vwan:                                                                         # 服务名称，这里取vwan,代表虚拟网关 
-    image: "lihaixin/sing-box:${VERSION:-1.12.16}"                             # 镜像名称 https://hub.docker.com/r/lihaixin/sing-box
+    image: "lihaixin/sing-box:${VERSION:-1.12.14.1}"                             # 镜像名称 https://hub.docker.com/r/lihaixin/sing-box
     restart: unless-stopped                                                    # unless-stopped  always 
     privileged: true
     volumes:
