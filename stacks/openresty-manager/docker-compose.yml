@@ -1,11 +1,12 @@
 version: "3.8"
 services:
   openresty-manager:
-     image: uusec/openresty-manager:1.7.2                          # https://github.com/Safe3/openresty-manager   
+     image: uusec/openresty-manager:2.4.2                          # https://github.com/Safe3/openresty-manager   
                                                                    # the default username is "admin", and the default password is "#Passw0rd".
                                                                    # network_mode: "host"
      restart: always
      volumes:
+       - /:/srv
        - /etc/localtime:/etc/localtime:ro
        - /etc/resolv.conf:/etc/resolv.conf:ro
        - /var/run/docker.sock:/var/run/docker.sock
