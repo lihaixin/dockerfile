@@ -9,8 +9,8 @@
 			"administrator_only": true,
 			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/ttyd.png",
 			"repository": {
-				"url": "https://gh.15099.net/https://github.com/lihaixin/dockerfile",
-				"stackfile": "stacks/toolbox/docker-compose.yml"
+				"url": "https://dockerfile.15099.net",
+				"stackfile": "toolbox/docker-compose.yml"
 				},
 	 		"env": [
 				{
