@@ -1,6 +1,6 @@
 services:                                                                      # 配置多网口代理
  mproxy:                                                                       # 服务名称，这里取mproxy,代表多网卡多IP 
-    image: "lihaixin/sing-box:${VERSION:-1.12.14.1}"                             # 镜像名称 https://hub.docker.com/r/lihaixin/sing-box
+    image: "lihaixin/sing-box:${VERSION:-1.12.20}"                             # 镜像名称 https://hub.docker.com/r/lihaixin/sing-box
     restart: unless-stopped                                                    # unless-stopped  always 
     network_mode: "host"
     privileged: true                                                           # wg服务需要
@@ -19,7 +19,7 @@ services:                                                                      #
       TYPE: ${TYPE:-server_socks5}                                             # server_socks5 | server_ss | endpoint_wireguard |server_vless_tcp | server_tuic |server_hysteria2
       SERVER: ${SERVER:-0.0.0.0}                                               # 落地socks5/ss/wg/tuic 代理IP tuic要填写真实的公网IP地址，用于生成IP证书
       PORT: ${PORT:-10800}                                                     # 落地socks5/ss/wg/tuic 代理端口 
-      USER: ${USER:-user}                                                      # 落地socks5代理账号 /ss 加密方式 2022-blake3-aes-128-gcm  xchacha20-ietf-poly1305 aes-256-gcm /wg 客户端公钥 /tuic UUID
+      USER: ${LUSER:-user}                                                      # 落地socks5代理账号 /ss 加密方式 2022-blake3-aes-128-gcm  xchacha20-ietf-poly1305 aes-256-gcm /wg 客户端公钥 /tuic UUID
       PASSWD: ${PASSWD:-pass}                                                  # 落地socks5/ss/tuic 代理密码 /WG端私钥，请通过 sing-box generate wg-keypair 创建
       RTYPE: ${RTYPE:-direct}                                                  # 最终落地IP, 本地直连direct 或者socks5 转发到socks5 IP上
       INTERFACE: ${INTERFACE:-ens5}                                            # 出口接口，支持ovpn这些虚拟口
