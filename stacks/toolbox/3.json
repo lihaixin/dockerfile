@@ -7,7 +7,7 @@
 			"categories": ["tools"],
 			"platform": "linux",
 			"administrator_only": true,
-			"logo": "https://raw.githubusercontent.com/lihaixin/dockerfile/master/logo/ttyd.png",
+			"logo": "https://dockerfile.15099.net/logo/ttyd.png",
 			"repository": {
 				"url": "https://dockerfile.15099.net",
 				"stackfile": "toolbox/docker-compose.yml"
