@@ -60,6 +60,12 @@
 				      ]
 				},
 				{
+				"name": "DOMAIN",
+				"label": "申请证书的域名",
+				"description": "用于通过acme申请证书,必须80端口未占用！！！",
+				"default": "sg-1.15099.net"
+				},
+				{
 				"name": "SERVER",
 				"label": "绑定IP地址",
 				"description": "默认监听所有网口| tuic游戏专项请输入真实公网IP用于申请IP证书！！！",
