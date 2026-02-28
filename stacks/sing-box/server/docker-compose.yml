@@ -16,6 +16,7 @@ services:                                                                      #
       UPDATE: "${UPDATE:-0}"                                                   # 在线更新模板
       LOG_LEVEL: ${LOG_LEVEL:-info}                                            # 日志级别，支持trace debug info warn error fatal panic
       DNS_ADDR: "${DNS_ADDR:-8.8.8.8}"                                         # 远程调用DNS查询地址
+      DOMAIN: ${DOMAIN:-sg.15099.net}                                          # 申请证书的域名
       TYPE: ${TYPE:-server_socks5}                                             # server_socks5 | server_ss | endpoint_wireguard |server_vless_tcp | server_tuic |server_hysteria2
       SERVER: ${SERVER:-0.0.0.0}                                               # 落地socks5/ss/wg/tuic 代理IP tuic要填写真实的公网IP地址，用于生成IP证书
       PORT: ${PORT:-10800}                                                     # 落地socks5/ss/wg/tuic 代理端口 
