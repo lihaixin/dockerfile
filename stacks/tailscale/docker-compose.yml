@@ -1,0 +1,25 @@
+services:
+  tailscale:
+    image: tailscale/tailscale:latest
+    container_name: tailscale-industrial
+    # network_mode: host  # 建议使用 host 模式以便直接访问物理网络
+    environment:
+      - TS_HOSTNAME=ikuai  # 自定义你想要的固定机器名
+      - TS_AUTHKEY=tskey-client-
+      - TS_EXTRA_ARGS=--advertise-tags=tag:industrial
+      - TS_STATEFUL=true
+    volumes:
+      - tailscale_state:/var/lib/tailscale
+      - /dev/net/tun:/dev/net/tun
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    restart: unless-stopped
+    command: >
+      sh -c "
+      /usr/local/bin/containerboot & 
+      sleep 15; 
+      tailscale serve --https=443 --bg http://127.0.0.1:18789;
+      wait"
+volumes:
+  tailscale_state:
