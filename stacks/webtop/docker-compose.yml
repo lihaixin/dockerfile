@@ -1,0 +1,25 @@
+services:
+  webtop:
+    image: lscr.io/linuxserver/webtop:ubuntu-kde # 推荐 KDE 版，最能体现性能
+    container_name: webtop
+    security_opt:
+      - seccomp:unconfined # 必须，否则某些现代 GUI 无法启动
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Shanghai
+      - SUBFOLDER=/ # 如果要反代，可以修改
+    volumes:
+      - ./config:/config
+      - /dev/dri:/dev/dri # 显卡直通关键！
+    # ports:
+    #  - 3000:3000 # HTTP
+    #  - 3001:3001 # HTTPS
+    shm_size: "2gb" # 必须增加共享内存，否则界面会崩溃
+    restart: unless-stopped
+    networks:
+      vlan:
+        ipv4_address: 172.19.0.224            # 修改不同的IP【*】
+networks:
+  vlan:
+    external: true
