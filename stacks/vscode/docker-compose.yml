@@ -1,0 +1,48 @@
+version: "3.8"
+services:
+  obsidian:
+    image: lscr.io/linuxserver/vscode:latest
+    container_name: vscode
+    security_opt:
+      - seccomp:unconfined # 解决现代 GUI 应用在旧内核上的兼容性问题
+    environment:
+      - PUID=1000 # 请根据 FnNAS 实际用户 ID 修改
+      - PGID=1000
+      - TZ=Asia/Shanghai
+      - LANG=zh_CN.UTF-8 # 设置中文环境
+      - LC_ALL=zh_CN.UTF-8
+      # 1. 解决中文乱码：自动安装中文字体
+      - DOCKER_MODS=linuxserver/mods:universal-package-install
+      - INSTALL_PACKAGES=fonts-noto-cjk|git|nodejs|nano
+      # 2. 性能优化：开启 Wayland 模式和自动 GPU 识别
+      - PIXELFLUX_WAYLAND=true
+      - AUTO_GPU=true
+      # 3. 安全设置：设置 Web 端登录密码
+      - CUSTOM_USER=admin
+      - PASSWORD=admin
+      - NODE_PATH=/config/.npm-global/lib/node_modules
+      - PATH=/lsiopy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/config/.npm-global/bin
+
+
+    volumes:
+      # 将笔记库映射到 FnNAS 硬盘的真实路径
+      # - /vol1/1000/obsidian:/config
+      - /vol1/1000/obsidian/downloads:/home/abc/Downloads
+      # 新增这一行：将配置目录下的初始化文件夹映射到系统的初始化目录
+      # - /vol1/1000/obsidian/custom-cont-init.d:/custom-cont-init.d:ro
+      # 如果你有其他存放素材的目录，可以增加映射
+      # - /vol1/1000/downloads:/data
+    # ports:
+    #  - 3000:3000 # HTTP 访问端口
+    #  - 3001:3001 # HTTPS 访问端口（推荐，支持粘贴图片）
+    #  - 8080:8080 # 预留给 Local Share 或其他插件的分享端口
+    devices:
+      - /dev/dri:/dev/dri # 挂载显卡驱动，实现硬件加速渲染
+    shm_size: "1gb" # Electron 应用正常运行的关键，防止崩溃
+    restart: unless-stopped
+    networks:
+      vlan:
+        ipv4_address: 172.19.0.222             # 修改不同的IP【*】
+networks:
+  vlan:
+    external: true
