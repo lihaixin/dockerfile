@@ -1,0 +1,20 @@
+services:
+  base:
+    image: lihaixin/base
+    restart: always
+    # network_mode: "host"
+    privileged: true
+    stdin_open: true                      # -i interactive
+    tty: true                             # -t tty
+    cpus: 0.8
+    # pid: "host"
+    environment:
+      NO: "0000210012300261101"
+      DEBUG: 0
+      # BASE: me
+    networks:
+      vlan:
+        ipv4_address: 172.19.0.209                                        # 修改不同的IP【*】
+networks:
+  vlan:
+    external: true
