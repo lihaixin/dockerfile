@@ -1,0 +1,19 @@
+services:
+  toolbox:
+    image: lihaixin/ttyd
+    restart: always
+    # network_mode: "host"
+    privileged: true
+    stdin_open: true                      # -i interactive
+    tty: true                             # -t tty
+    # pid: "host"
+    environment:
+      # NO: ""
+      DEBUG: 0
+      # BASE: me
+    networks:
+      vlan:
+        ipv4_address: 172.19.0.210                                        # 修改不同的IP【*】
+networks:
+  vlan:
+    external: true
