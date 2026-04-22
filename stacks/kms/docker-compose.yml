@@ -1,0 +1,14 @@
+services:
+  kms:
+    image: ikuaiapp/kms:latest
+    container_name: kms
+    restart: always
+    # network_mode: "host"
+    environment:
+      - NO="" # 授权码 (留空则由系统在线自动获取)
+    networks:
+      vlan:
+        ipv4_address: 172.19.0.216             # 修改不同的IP【*】
+networks:
+  vlan:
+    external: true
