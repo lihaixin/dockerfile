@@ -1,0 +1,39 @@
+services:
+  hermes:
+    image: nousresearch/hermes-agent:latest
+    container_name: hermes
+    restart: unless-stopped
+    command: gateway run
+    # network_mode: "host"
+    # user: root
+    # ports:
+    #  - "8642:8642"
+    #  - "9119:9119"
+    volumes:
+      - /vol1/1000/hermes:/opt/data
+      - /vol1/1000/hermes/output:/output
+      - /vol1/1000/obsidian/sanjinai:/config/sanjinai
+      - /vol1/1000/hermes/root:/root
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/hermes/.venv/bin:/root/.local/bin:/opt/data/npm-global/bin
+      - NPM_CONFIG_PREFIX=/opt/data/npm-global
+      - TZ=Asia/Shanghai
+    #  - PUID=1000                             # 请根据 FnNAS 实际用户 ID 修改
+    #  - PGID=1000
+    # Uncomment to forward specific env vars instead of using .env file:
+    # environment:
+    #   - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    #   - OPENAI_API_KEY=${OPENAI_API_KEY}
+    #   - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+    ### 如何进入终端开启面板
+    # su hermes
+    # hermes dashboard --host 0.0.0.0 --insecure & 
+    # http://172.19.0.220:9119
+    networks:
+      vlan:
+        ipv4_address: 172.19.0.220            # 修改不同的IP【*】
+      
+networks:
+  vlan:
+    external: true
