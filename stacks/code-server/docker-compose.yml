@@ -1,0 +1,48 @@
+services:
+  code-server:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: code-server
+    restart: unless-stopped
+    environment:
+      - PUID=1000 # 请根据 FnNAS 实际用户 ID 修改
+      - PGID=1000
+      - TZ=Asia/Shanghai
+      # 中文环境
+      - LANG=zh_CN.UTF-8
+      - LC_ALL=zh_CN.UTF-8
+      - GEN_LOCALE=zh_CN.UTF-8
+      # 1. 解决中文乱码：自动安装中文字体
+      - NODEJS_MOD_VERSION=22
+      # https://github.com/linuxserver/docker-mods/
+      - DOCKER_MODS=linuxserver/mods:universal-package-install | linuxserver/mods:code-server-nodejs | linuxserver/mods:universal-docker | linuxserver/mods:code-server-python3
+      # bubblewrap Linux 沙盒工具，codex会用到
+      - INSTALL_PACKAGES=fonts-noto-cjk|git|nano|gh|curl|wget|net-tools|bubblewrap
+      - NODE_PATH=/config/.npm-global/lib/node_modules
+      - PATH=/lsiopy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/config/.npm-global/bin
+      - PASSWORD=***                            # 设置你的登录密码
+      - SUDO_PASSWORD=***                      # 容器内 sudo 密码
+      - DEFAULT_WORKSPACE=/config/workspace           # 默认工作目录
+      # - PROXY_DOMAIN=***.******              # 替换为你实际访问的域名,在端口调用使用子域名
+    volumes:
+      - /vol1/1000/codeserver:/config                 # 配置存放路径
+      - /vol1/1000/codeserver/custom-cont-init-codeserver.d:/custom-cont-init.d:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      # - /root:/root                                  # 挂载宿主机 root 目录方便修改脚本
+      # - /vol1/1000/os:/os                            # 挂载你的镜像存储目录
+    # ports:
+    #  - 8443:8443
+    devices:
+      - /dev/dri:/dev/dri # 挂载显卡驱动，实现硬件加速渲染
+    group_add:
+      - "44"  # video
+      - "105" # render
+    shm_size: "1gb" # Electron 应用正常运行的关键，防止崩溃
+    networks:
+      vlan:
+        ipv4_address: 172.19.0.226                   # 为 code-server 分配一个固定 IP
+    # ports:                                         # 如果不走 vlan IP，可开启端口映射
+    #   - 8443:8443
+
+networks:
+  vlan:
+    external: true                                   # 使用你现有的 vlan 网络
