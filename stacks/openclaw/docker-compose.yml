@@ -1,33 +1,27 @@
 version: '3.8'
-
 services:
   openclaw:
     image: ghcr.io/openclaw/openclaw
+    # network_mode: host
     restart: unless-stopped
     user: root
     environment:
-      - TZ=Asia/Shanghai
-      - TERM=xterm-256color
-      - NODE_ENV=production
+      - TZ="Asia/Shanghai"
+      - TERM="xterm-256color"
+      - NODE_ENV="production"
       # 1. 直接在这里配置 API Key，重启不丢失
-      - TAVILY_API_KEY=tvly-dev-***
+      - TAVILY_API_KEY="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"
       # 2. 修改 NPM 全局安装路径到持久化目录
       - NPM_CONFIG_PREFIX=/root/.openclaw/npm-global
+      - OPENCLAW_STATE_DIR=""                        # 重定向整个状态目录
       # 3. 将新路径加入系统 PATH，确保直接输入命令能找到
-      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.openclaw/npm-global/bin
+      - PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.openclaw/npm-global/bin"
     volumes:
-      - openclaw_conf:/root/.openclaw
+      - /vol1/1000/openclaw:/root/.openclaw
       - /dev/shm:/dev/shm
-    shm_size: '2gb'
     networks:
       vlan:
-        ipv4_address: "172.19.0.206"
-    # 可选 启动后安装skills
-    # npm install -g clawhub && clawhub install tavily-web-search-for-openclaw 
-
+        ipv4_address: 172.19.0.222            # 修改不同的IP【*】
 networks:
   vlan:
     external: true
-
-volumes:
-  openclaw_conf:
