@@ -18,8 +18,8 @@ services:
       - PIXELFLUX_WAYLAND=true
       - AUTO_GPU=true
       # 3. 安全设置：设置 Web 端登录密码
-      - CUSTOM_USER=li
-      - PASSWORD=lihxlinux
+      - CUSTOM_USER=***
+      - PASSWORD=***
       - TITLE=obsidian
       - START_DOCKER=true
       # - FILE_MANAGER_PATH=/config/sanjinai/downloads
